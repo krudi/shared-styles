@@ -1,0 +1,34 @@
+name: Storybook Tests
+
+on: deployment_status
+
+concurrency:
+  group: test-storybook-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test-storybook:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.52.0-noble
+    strategy:
+      fail-fast: false
+      matrix:
+        test-commands:
+          - "npm run test:storybook:coverage"
+    steps:
+      - uses: krudi/reusable-actions/.github/actions/github-checkout@main
+      - uses: krudi/reusable-actions/.github/actions/node-setup@main
+        with:
+          cache: npm
+          node_version_file: .nvmrc
+      - uses: krudi/reusable-actions/.github/actions/node-install@main
+      - uses: krudi/reusable-actions/.github/actions/ci-command@main
+        with:
+          command: ${{ matrix.test-commands }}
+        env:
+          SB_URL: ${{ github.event.deployment_status.environment_url }}
