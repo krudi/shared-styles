@@ -1,0 +1,34 @@
+# Storybook files
+storybook-static
+
+# Dependencies files
+node_modules
+
+# Build output files
+build
+dist
+dev-dist
+coverage
+public
+.next
+.nuxt
+.output
+.expo
+docs/.vitepress/cache
+docs/.vitepress/dist
+docs/dev-dist
+
+# Environment files
+*.env
+!.env-*
+
+# Git files
+.gitignore
+.gitkeep
+
+# Tooling files
+.prettierignore
+*.tsbuildinfo
+
+# Lock files
+package-lock.json

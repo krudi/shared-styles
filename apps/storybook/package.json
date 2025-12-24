@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/storybook",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Storybook workspace for @krudi/styles (HTML stories).",
+    "scripts": {
+        "build": "storybook build --docs",
+        "clean": "rm -rf .turbo node_modules",
+        "dev": "storybook dev -p 6006",
+        "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "preview": "serve storybook-static",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "dependencies": {
+        "@krudi/styles": "*"
+    },
+    "devDependencies": {
+        "@storybook/addon-docs": "8.6.15",
+        "@storybook/addon-essentials": "8.6.15",
+        "@storybook/addon-interactions": "8.6.15",
+        "@storybook/addon-links": "8.6.15",
+        "@storybook/addon-storysource": "8.6.15",
+        "@storybook/addon-themes": "8.6.15",
+        "@storybook/html-vite": "8.6.15",
+        "@storybook/test": "8.6.15",
+        "eslint-plugin-storybook": "^0.8.0",
+        "storybook": "^8.6.15"
+    }
+}

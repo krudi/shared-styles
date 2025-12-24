@@ -1,0 +1,5 @@
+{
+    "extends": "@krudi/typescript-config/base.json",
+    "include": ["src/stories/**/*", ".storybook/**/*"],
+    "exclude": ["node_modules"]
+}

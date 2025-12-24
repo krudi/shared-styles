@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/styles",
+    "version": "0.1.0",
+    "private": false,
+    "description": "Reusable CSS foundations, components, and utilities extracted from krudi-io for sharing across projects.",
+    "keywords": [
+        "css",
+        "styles",
+        "utilities",
+        "components",
+        "theme",
+        "variables"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://github.com/krudi"
+    },
+    "sideEffects": [
+        "./**/*.css",
+        "./**/*.svg"
+    ],
+    "type": "module",
+    "exports": {
+        ".": "./src/styles.css",
+        "./styles.css": "./src/styles.css",
+        "./theme.css": "./src/theme.css",
+        "./variables.css": "./src/variables.css",
+        "./base/index.css": "./src/base/index.css",
+        "./layout/index.css": "./src/layout/index.css",
+        "./html/index.css": "./src/html/index.css",
+        "./elements/index.css": "./src/elements/index.css",
+        "./components/index.css": "./src/components/index.css",
+        "./utilities/index.css": "./src/utilities/index.css"
+    },
+    "main": "./src/styles.css",
+    "style": "./src/styles.css",
+    "files": [
+        "src",
+        "assets",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "typecheck": "node -e \"console.log('@krudi/styles: no typecheck required')\""
+    },
+    "engines": {
+        "node": ">= 22.18.0"
+    }
+}

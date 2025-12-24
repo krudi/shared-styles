@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@krudi/shared-styles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared styles workspace for reusable CSS packages (layout, utilities, components).",
+  "keywords": [
+    "css",
+    "styles",
+    "design-system",
+    "utilities",
+    "components",
+    "variables",
+    "layout"
+  ],
+  "homepage": "https://github.com/krudi/shared-styles#readme",
+  "bugs": {
+    "url": "https://github.com/krudi/shared-styles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krudi/shared-styles.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "krudi",
+    "email": "patryk.kudlik@gmail.com",
+    "url": "https://github.com/krudi"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo clean",
+    "dev": "turbo run dev --parallel",
+    "lint:eslint": "turbo run lint:eslint",
+    "lint:prettier": "turbo run lint:prettier",
+    "typecheck": "turbo run typecheck"
+  },
+  "overrides": {
+    "@types/node": "^22.15.33",
+    "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "@krudi/eslint-config": "*",
+    "@krudi/prettier-config": "*",
+    "@krudi/stylelint-config": "*",
+    "@krudi/typescript-config": "*"
+  },
+  "devDependencies": {
+    "turbo": "^2.6.3"
+  },
+  "packageManager": "npm@11.6.4",
+  "engines": {
+    "node": ">= 22.18.0",
+    "npm": ">= 11.6.4"
+  }
+}
