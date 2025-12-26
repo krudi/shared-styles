@@ -1,0 +1,84 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/styles",
+    "version": "0.1.0",
+    "private": false,
+    "description": "Reusable CSS foundations, components, and utilities extracted from krudi-io for sharing across projects.",
+    "keywords": [
+        "css",
+        "styles",
+        "utilities",
+        "components",
+        "theme",
+        "variables"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://github.com/krudi"
+    },
+    "sideEffects": [
+        "./**/*.css",
+        "./**/*.svg"
+    ],
+    "type": "module",
+    "exports": {
+        ".": "./dist/styles/styles.css",
+        "./all": "./dist/styles/styles.css",
+        "./core": "./dist/styles/styles.css",
+        "./theme": "./dist/styles/theme.css",
+        "./variables": "./dist/styles/variables.css",
+        "./base": "./dist/styles/base/index.css",
+        "./layout": "./dist/styles/layout/index.css",
+        "./components": "./dist/styles/components/index.css",
+        "./utilities": "./dist/styles/utilities/index.css",
+        "./html": "./dist/styles/html/index.css",
+        "./elements": "./dist/styles/elements/index.css"
+    },
+    "main": "./dist/styles/styles.css",
+    "style": "./dist/styles/styles.css",
+    "files": [
+        "src",
+        "assets",
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc -b tsconfig.build.json && postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map",
+        "clean": "rm -rf .turbo .cache node_modules",
+        "dev": "tsc -p tsconfig.json --watch",
+        "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:stylelint": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs \"**/*.css\"",
+        "lint:stylelint:fix": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs --fix \"**/*.css\"",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "devDependencies": {
+        "@krudi/eslint-config": "^0.1.8",
+        "@krudi/prettier-config": "^0.1.8",
+        "@krudi/stylelint-config": "^0.1.1",
+        "@types/node": "^22.18.0",
+        "autoprefixer": "^10.4.20",
+        "cssnano": "^7.0.6",
+        "postcss": "^8.4.49",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^16.1.0",
+        "postcss-nesting": "^13.0.1",
+        "typescript": "^5.9.2"
+    },
+    "engines": {
+        "node": ">= 22.18.0"
+    }
+}

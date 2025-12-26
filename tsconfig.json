@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "paths": {
+            "@krudi/styles/*": ["./packages/styles/src/*"]
+        }
+    },
+    "exclude": ["node_modules"]
+}

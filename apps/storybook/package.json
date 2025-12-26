@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/storybook",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Storybook workspace for @krudi/styles (HTML stories).",
+    "scripts": {
+        "build": "storybook build --docs",
+        "clean": "rm -rf .turbo .cache node_modules storybook-static",
+        "dev": "storybook dev",
+        "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:stylelint": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs \"**/*.css\"",
+        "lint:stylelint:fix": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs --fix \"**/*.css\"",
+        "preview": "serve storybook-static",
+        "test:storybook": "vitest --project storybook",
+        "test:storybook:coverage": "vitest --project storybook --coverage",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "dependencies": {
+        "@krudi/styles": "*"
+    },
+    "devDependencies": {
+        "@chromatic-com/storybook": "^4.1.3",
+        "@krudi/eslint-config": "^0.1.8",
+        "@krudi/prettier-config": "^0.1.8",
+        "@krudi/stylelint-config": "^0.1.1",
+        "@storybook/addon-a11y": "^10.1.10",
+        "@storybook/addon-docs": "^10.1.10",
+        "@storybook/addon-links": "10.1.10",
+        "@storybook/addon-themes": "10.1.10",
+        "@storybook/addon-vitest": "^10.1.10",
+        "@storybook/html-vite": "10.1.10",
+        "@types/node": "^22.18.0",
+        "@vitest/browser-playwright": "^4.0.16",
+        "@vitest/coverage-v8": "^4.0.16",
+        "playwright": "^1.57.0",
+        "storybook": "^10.1.10",
+        "typescript": "^5.9.2",
+        "vite": "^7.2.4",
+        "vitest": "^4.0.16"
+    }
+}
