@@ -1,0 +1,28 @@
+# Dependencies files
+node_modules
+
+# Build output files
+build
+dist
+dev-dist
+storybook-static
+coverage
+public
+
+# Environment files
+*.env
+!.env-*
+
+# Git files
+.gitignore
+.gitkeep
+
+# Tooling files
+.prettierignore
+.turbo
+.cache
+*.tsbuildinfo
+debug-storybook.log
+
+# Lock files
+package-lock.json

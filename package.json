@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/shared-styles",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Shared styles workspace for reusable CSS packages (layout, utilities, components).",
+    "keywords": [
+        "css",
+        "styles",
+        "design-system",
+        "utilities",
+        "components",
+        "variables",
+        "layout"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://github.com/krudi"
+    },
+    "type": "module",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "clean": "turbo clean && rm -rf .turbo node_modules",
+        "dev": "turbo run dev --parallel",
+        "lint:eslint": "turbo run lint:eslint",
+        "lint:prettier": "turbo run lint:prettier",
+        "lint:prettier:fix": "turbo run lint:prettier:fix",
+        "lint:stylelint": "turbo run lint:stylelint",
+        "lint:stylelint:fix": "turbo run lint:stylelint:fix",
+        "test:storybook": "turbo run test:storybook",
+        "test:storybook:coverage": "turbo run test:storybook:coverage",
+        "typecheck": "turbo run typecheck"
+    },
+    "overrides": {
+        "@types/node": "^22.15.33",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@krudi/eslint-config": "*",
+        "@krudi/prettier-config": "^0.1.8",
+        "@krudi/stylelint-config": "^0.1.1",
+        "@krudi/typescript-config": "^0.1.9",
+        "turbo": "^2.7.2"
+    },
+    "packageManager": "npm@11.7.0",
+    "engines": {
+        "node": ">= 22.18.0",
+        "npm": ">= 11.6.4"
+    }
+}

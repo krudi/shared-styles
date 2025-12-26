@@ -1,0 +1,59 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "ui": "tui",
+    "tasks": {
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", "storybook-static/**", ".cache/tsbuildinfo.json"],
+            "inputs": ["$TURBO_DEFAULT$", "**/.env*"],
+            "outputLogs": "new-only"
+        },
+        "dev": {
+            "persistent": true,
+            "cache": false
+        },
+        "clean": {
+            "cache": false
+        },
+        "typecheck": {
+            "dependsOn": ["^typecheck"],
+            "inputs": ["$TURBO_DEFAULT$", "**/*.ts", "**/*.tsx", "tsconfig*.json"],
+            "outputs": [".cache/tsbuildinfo.json"],
+            "outputLogs": "new-only"
+        },
+        "lint:eslint": {
+            "outputs": [".cache/.eslintcache"],
+            "outputLogs": "new-only"
+        },
+        "lint:eslint:fix": {
+            "cache": false
+        },
+        "lint:prettier": {
+            "outputs": [".cache/.prettiercache"],
+            "outputLogs": "new-only"
+        },
+        "lint:prettier:fix": {
+            "cache": false
+        },
+        "test:storybook": {
+            "dependsOn": ["^test:storybook"],
+            "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "test:storybook:coverage": {
+            "dependsOn": ["^test:storybook:coverage"],
+            "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "test": {
+            "dependsOn": ["^test:storybook"],
+            "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "preview": {
+            "dependsOn": ["^build"],
+            "cache": false
+        }
+    },
+    "globalEnv": ["SB_URL"]
+}

@@ -1,0 +1,6 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@krudi/typescript-config/base.json",
+    "include": ["packages/**/*"],
+    "exclude": ["node_modules", "dist"]
+}
