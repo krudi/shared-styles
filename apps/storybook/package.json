@@ -32,7 +32,7 @@
         "@storybook/addon-links": "10.1.10",
         "@storybook/addon-themes": "10.1.10",
         "@storybook/addon-vitest": "^10.1.10",
-        "@storybook/html-vite": "10.1.10",
+        "@storybook/html-vite": "10.1.11",
         "@types/node": "^22.18.0",
         "@vitest/browser-playwright": "^4.0.16",
         "@vitest/coverage-v8": "^4.0.16",
