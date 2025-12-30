@@ -27,7 +27,7 @@
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/stylelint-config": "^0.1.1",
-        "@storybook/addon-a11y": "^10.1.10",
+        "@storybook/addon-a11y": "^10.1.11",
         "@storybook/addon-docs": "^10.1.10",
         "@storybook/addon-links": "10.1.10",
         "@storybook/addon-themes": "10.1.10",
