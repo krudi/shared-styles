@@ -33,7 +33,7 @@ jobs:
 
       - uses: krudi/reusable-actions/.github/actions/ci-command@main
         with:
-          command: npm run build --workspace @krudi/storybook
+          command: npm run build -- --filter=@krudi/storybook...
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5

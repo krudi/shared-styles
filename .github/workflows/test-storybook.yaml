@@ -23,21 +23,29 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     timeout-minutes: 30
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
     strategy:
       fail-fast: false
       matrix:
         test-commands:
-          - "npm run test:storybook:coverage"
+          - "npm run test:storybook"
 
     steps:
       - uses: krudi/reusable-actions/.github/actions/github-checkout@main
+
       - uses: krudi/reusable-actions/.github/actions/node-setup@main
         with:
           cache: npm
           node_version_file: .nvmrc
+
       - uses: krudi/reusable-actions/.github/actions/node-install@main
+
+      - uses: krudi/reusable-actions/.github/actions/ci-command@main
+        with:
+          command: npm run build -- --filter=@krudi/storybook...
+
+      - name: Install Playwright browsers (CLI)
+        run: npx playwright install chromium --with-deps
+
       - uses: krudi/reusable-actions/.github/actions/ci-command@main
         with:
           command: ${{ matrix.test-commands }}

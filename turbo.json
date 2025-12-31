@@ -36,12 +36,11 @@
             "cache": false
         },
         "test:storybook": {
-            "dependsOn": ["^test:storybook"],
-            "outputs": ["coverage/**"],
+            "dependsOn": ["^test:storybook", "@krudi/styles#build"],
             "outputLogs": "new-only"
         },
         "test:storybook:coverage": {
-            "dependsOn": ["^test:storybook:coverage"],
+            "dependsOn": ["^test:storybook:coverage", "@krudi/styles#build"],
             "outputs": ["coverage/**"],
             "outputLogs": "new-only"
         },
