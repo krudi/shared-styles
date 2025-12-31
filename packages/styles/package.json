@@ -47,7 +47,6 @@
     "main": "./dist/styles/styles.css",
     "style": "./dist/styles/styles.css",
     "files": [
-        "src",
         "assets",
         "dist",
         "README.md",
