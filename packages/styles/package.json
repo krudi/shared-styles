@@ -26,15 +26,10 @@
         "email": "patryk.kudlik@gmail.com",
         "url": "https://github.com/krudi"
     },
-    "sideEffects": [
-        "./**/*.css",
-        "./**/*.svg"
-    ],
     "type": "module",
     "exports": {
         ".": "./dist/styles/styles.css",
-        "./all": "./dist/styles/styles.css",
-        "./core": "./dist/styles/styles.css",
+        "./ui": "./dist/styles/styles.css",
         "./theme": "./dist/styles/theme.css",
         "./variables": "./dist/styles/variables.css",
         "./base": "./dist/styles/base/index.css",
@@ -63,6 +58,9 @@
         "lint:stylelint": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs \"**/*.css\"",
         "lint:stylelint:fix": "stylelint --cache --cache-location .cache/.stylelintcache -c ./stylelint.config.mjs --fix \"**/*.css\"",
         "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "dependencies": {
+        "@krudi/icons": "*"
     },
     "devDependencies": {
         "@krudi/eslint-config": "^0.1.8",
