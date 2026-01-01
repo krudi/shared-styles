@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: publish-styles-${{ github.workflow }}-${{ github.ref }}
+  group: publish-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
