@@ -1,13 +1,8 @@
 name: Publish (styles package)
 
 on:
-  push:
-    tags:
-      - "@krudi/*@*"
-
   release:
-    types:
-      - published
+    types: [published]
 
   workflow_dispatch:
 
