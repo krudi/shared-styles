@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@krudi/styles",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "private": false,
     "description": "Reusable CSS foundations, components, and utilities extracted from krudi-io for sharing across projects.",
     "keywords": [
