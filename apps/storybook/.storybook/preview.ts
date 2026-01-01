@@ -1,4 +1,4 @@
-import '@krudi/styles/all';
+import '@krudi/styles/ui';
 
 import type { Preview } from '@storybook/html';
 
