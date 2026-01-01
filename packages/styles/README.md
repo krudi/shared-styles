@@ -3,21 +3,6 @@
 Reusable CSS design tokens, reset styles, layout primitives, and early components/utilities. Built for personal
 projects.
 
-## Scripts
-
-| Command                      | Description                  |
-| ---------------------------- | ---------------------------- |
-| `npm run build`              | Build CSS + types to `dist/` |
-| `npm run dev`                | TypeScript watch             |
-| `npm run lint:eslint`        | Lint TS                      |
-| `npm run lint:eslint:fix`    | Fix TS lint issues           |
-| `npm run lint:stylelint`     | Lint CSS                     |
-| `npm run lint:stylelint:fix` | Fix CSS lint issues          |
-| `npm run lint:prettier`      | Check formatting             |
-| `npm run lint:prettier:fix`  | Format write                 |
-| `npm run typecheck`          | TypeScript type checks       |
-| `npm run clean`              | Remove caches/node_modules   |
-
 ## Using `@krudi/styles`
 
 Install:
@@ -29,7 +14,7 @@ npm install @krudi/styles
 Import everything:
 
 ```css
-@import '@krudi/styles/all';
+@import '@krudi/styles/ui';
 ```
 
 Or compose layers with CSS cascade layers:
@@ -72,3 +57,18 @@ Import the layers first, then override inside the matching layer so specificity 
     }
 }
 ```
+
+## Scripts
+
+| Command                      | Description                  |
+| ---------------------------- | ---------------------------- |
+| `npm run build`              | Build CSS + types to `dist/` |
+| `npm run dev`                | TypeScript watch             |
+| `npm run lint:eslint`        | Lint TS                      |
+| `npm run lint:eslint:fix`    | Fix TS lint issues           |
+| `npm run lint:stylelint`     | Lint CSS                     |
+| `npm run lint:stylelint:fix` | Fix CSS lint issues          |
+| `npm run lint:prettier`      | Check formatting             |
+| `npm run lint:prettier:fix`  | Format write                 |
+| `npm run typecheck`          | TypeScript type checks       |
+| `npm run clean`              | Remove caches/node_modules   |
