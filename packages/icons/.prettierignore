@@ -1,0 +1,26 @@
+# Dependencies files
+node_modules
+
+# Build output files
+dist
+
+# Environment files
+*.env
+!.env-*
+
+# Git files
+.gitignore
+.gitkeep
+
+# Tooling files
+.prettierignore
+.turbo
+.cache
+*.tsbuildinfo
+debug-storybook.log
+
+# SVG files
+**/*.svg
+
+# Lock files
+package-lock.json

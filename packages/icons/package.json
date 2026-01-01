@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/icons",
+    "version": "0.1.0",
+    "private": false,
+    "description": "Standalone SVG icon set extracted from @krudi/shared-styles for reuse across projects.",
+    "keywords": [
+        "icons",
+        "svg",
+        "assets"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://github.com/krudi"
+    },
+    "type": "module",
+    "exports": {
+        "./*": "./dist/*"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "rm -rf dist && svgo -f src -o dist"
+    },
+    "devDependencies": {
+        "@krudi/prettier-config": "^0.1.8",
+        "svgo": "^3.3.2"
+    },
+    "engines": {
+        "node": ">= 22.18.0"
+    }
+}

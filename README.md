@@ -8,6 +8,7 @@ reset styles, layout primitives, and early components/utilities.
 | Package                                                      | Description                                                            | Version                                                                                                                | Additional Information                                                                                                   |
 | ------------------------------------------------------------ | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | [@krudi/styles](https://www.npmjs.com/package/@krudi/styles) | Shared CSS foundations, tokens, reset, layout, components, utilities   | ![NPM Version](https://img.shields.io/npm/v/@krudi/styles)                                                             | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/styles) ![NPM License](https://img.shields.io/npm/l/@krudi/styles) |
+| [@krudi/icons](https://www.npmjs.com/package/@krudi/icons)   | Standalone SVG assets (external link, phone, envelope)                 | ![NPM Version](https://img.shields.io/npm/v/@krudi/icons)                                                              | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/icons) ![NPM License](https://img.shields.io/npm/l/@krudi/icons)   |
 | [@krudi/storybook](./apps/storybook)                         | HTML Storybook workspace for visual checks and Vitest Storybook runner | ![Workflow](https://img.shields.io/github/actions/workflow/status/krudi/shared-styles/test-storybook.yaml?label=tests) | [Live preview](https://krudi.github.io/shared-styles/)                                                                   |
 
 > [!WARNING]
@@ -28,6 +29,7 @@ reset styles, layout primitives, and early components/utilities.
 ## Workspaces
 
 - `packages/styles` – CSS package (`@krudi/styles`) with tokens, reset, layout, components, utilities
+- `packages/icons` – SVG assets package (`@krudi/icons`) with common link/contact icons
 - `apps/storybook` – HTML Storybook (`@krudi/storybook`) for visual checks and tests |
 
 ## Using `@krudi/styles`
@@ -41,7 +43,7 @@ npm install @krudi/styles
 Import everything:
 
 ```css
-@import '@krudi/styles/all';
+@import '@krudi/styles/ui';
 ```
 
 Or compose layers:
