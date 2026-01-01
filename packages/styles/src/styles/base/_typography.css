@@ -104,18 +104,18 @@ a:is(:hover, :focus) {
 }
 
 a[href^='tel:']::after {
-    background-image: url('../../assets/icons/square-phone-solid-full.svg');
+    background-image: url('@krudi/icons/phone.svg');
 }
 
 a[href^='mailto:']::after {
-    background-image: url('../../assets/icons/envelope-regular-full.svg');
+    background-image: url('@krudi/icons/envelope.svg');
 }
 
 a[download]::after {
-    background-image: url('../../assets/icons/download-solid-full.svg');
+    background-image: url('@krudi/icons/download.svg');
 }
 
 a[href^='http://']::after,
 a[href^='https://']::after {
-    background-image: url('../../assets/icons/arrow-up-right-from-square-solid-full.svg');
+    background-image: url('@krudi/icons/external-link.svg');
 }
