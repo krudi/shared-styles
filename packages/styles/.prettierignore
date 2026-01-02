@@ -20,7 +20,7 @@ dist
 debug-storybook.log
 
 # SVG files
-**/*.svg
+*.svg
 
 # Lock files
 package-lock.json
