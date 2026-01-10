@@ -1,0 +1,64 @@
+.modal {
+    width: 100%;
+    max-width: var(--modal-max-width);
+    padding-block: var(--modal-padding-block);
+    padding-inline: var(--modal-padding-inline);
+    background-color: var(--modal-background-color);
+    border: 0;
+    border-radius: var(--modal-border-radius);
+    display: none;
+    opacity: 0;
+    color: var(--modal-color);
+    transition-property: display, opacity;
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete;
+    z-index: 99990;
+}
+
+.modal[open] {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+.modal[open]::backdrop {
+    opacity: 1;
+}
+
+.modal::backdrop {
+    background: var(--modal-backdrop);
+    opacity: 0;
+    transition-property: opacity, display, overlay;
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+.modal-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--modal-border-color);
+}
+
+.modal-close {
+    position: absolute;
+    right: calc(var(--modal-padding-inline) / 2);
+    top: calc(var(--modal-padding-block) / 2);
+}
+
+.modal-body {
+    padding-block-start: var(--modal-body-padding-block-start);
+}
+
+.modal-footer {
+    padding-block-start: var(--modal-footer-padding-block-start);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--modal-border-color);
+}

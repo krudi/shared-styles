@@ -1,0 +1,18 @@
+blockquote > * {
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+    font-style: italic;
+    border-inline-start-width: 0.25rem;
+    border-inline-start-style: solid;
+    border-inline-start-color: var(--c-primary);
+}
+
+blockquote p::before {
+    margin-inline-end: 0.25rem;
+    content: open-quote;
+}
+
+blockquote p::after {
+    margin-inline-start: 0.25rem;
+    content: close-quote;
+}

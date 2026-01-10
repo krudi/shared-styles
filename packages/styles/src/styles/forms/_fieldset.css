@@ -1,0 +1,15 @@
+.fieldset {
+    min-width: 0;
+    margin: 0;
+    padding-block: var(--form-fieldset-padding-block);
+    padding-inline: var(--form-fieldset-padding-inline);
+    background-color: var(--form-fieldset-background-color);
+    border-width: var(--form-fieldset-border-width);
+    border-style: var(--form-fieldset-border-style);
+    border-color: var(--form-fieldset-border-color);
+    border-radius: var(--form-fieldset-border-radius);
+}
+
+.fieldset + .fieldset {
+    margin-block-start: calc(var(--spacer) * 2);
+}

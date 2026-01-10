@@ -1,0 +1,14 @@
+.form-text {
+    display: block;
+    color: var(--form-text-color);
+}
+
+.form-text-error {
+    display: block;
+    color: var(--form-text-error-color);
+}
+
+.form-text-hint {
+    display: block;
+    color: var(--c-danger);
+}

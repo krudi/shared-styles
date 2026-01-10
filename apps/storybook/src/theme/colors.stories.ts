@@ -65,21 +65,19 @@ const swatches: Swatch[] = [
 ];
 
 const SwatchGrid = () => `
-    <main class="main" style="padding: var(--spacer-3); display: grid; gap: var(--spacer-2); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
-        ${swatches
-            .map(
-                (swatch) => `
-            <article style="border: 1px solid var(--c-white-200); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--box-shadow-default);">
-                <div class="${swatch.className}" style="padding: var(--spacer-3); display: flex; align-items: center; justify-content: space-between; gap: var(--spacer-1);">
-                    <span style="font-weight: 700;">${swatch.label}</span>
-                    <span style="font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">${swatch.token}</span>
-                </div>
-                <div class="p-2 text-gray">${swatch.usage}</div>
-            </article>
-        `
-            )
-            .join('')}
-    </main>
+    ${swatches
+        .map(
+            (swatch) => `
+        <article>
+            <div class="${swatch.className}">
+                <span>${swatch.label}</span>
+                <span>${swatch.token}</span>
+            </div>
+            <div class="p-2 text-gray">${swatch.usage}</div>
+        </article>
+    `
+        )
+        .join('')}
 `;
 
 const meta: Meta = {

@@ -1,0 +1,11 @@
+.form-label {
+    margin-block-end: var(--form-label-margin-block-end);
+    display: block;
+    cursor: pointer;
+    font-weight: var(--form-label-font-weight);
+}
+
+.form-label-required {
+    color: var(--c-danger);
+    font-weight: 700;
+}

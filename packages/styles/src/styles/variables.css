@@ -2,13 +2,16 @@
     :root {
         /* Spacings */
         --spacer-n3: 0.5rem;
-        --spacer-n2: 0.5rem;
+        --spacer-n2: 0.75rem;
         --spacer-n1: 0.875rem;
         --spacer: 1rem;
         --spacer-1: calc(var(--spacer) * 1.25);
         --spacer-2: calc(var(--spacer) * 1.5);
-        --spacer-3: calc(var(--spacer) * 2);
-        --spacer-4: calc(var(--spacer) * 6);
+        --spacer-3: calc(var(--spacer) * 1.75);
+        --spacer-4: calc(var(--spacer) * 2);
+        --spacer-5: calc(var(--spacer) * 2.5);
+        --spacer-6: calc(var(--spacer) * 4);
+        --spacer-7: calc(var(--spacer) * 8);
 
         /* Grid spacings */
         --grid-spacing: var(--spacer-4);
@@ -47,7 +50,7 @@
         --p-margin-block-start: var(--spacer-n2);
         --p-line-height: var(--large-line-height);
         --p-font-size: var(--fs-md);
-        --p-color: var(--c-gray);
+        --p-color: var(--c-black);
 
         /* Svg */
         --svg-width: 1em;
@@ -58,7 +61,12 @@
         --large-line-height: 1.8125;
         --transition-duration: 0.3s;
         --transition-decorative-duration: 0.1s;
+        --transition-default: var(--transition-duration);
         --focus-default: 0 0 0 0.125em var(--c-white), 0 0 0 0.25em var(--c-primary);
+        --outline-size: max(2px, 0.08em);
+        --outline-style: solid;
+        --outline-color: currentcolor;
+        --outline-offset: var(--outline-size);
 
         /* Border Radius */
         --border-radius-sm: 0.5rem;
@@ -78,10 +86,27 @@
         --body-font-family:
             system-ui, -apple-system, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
             'Segoe UI Emoji';
+        --menu-font-size: var(--fs-sm);
+
+        /* Z-index orders */
+        --z-index-dropdown: 998;
 
         /*
             Elements
         */
+
+        /* Modal */
+        --modal-max-width: 50rem;
+        --modal-background-color: var(--c-white);
+        --modal-border-radius: var(--border-radius-sm);
+        --modal-border-width: 1px;
+        --modal-border-color: var(--c-white-200);
+        --modal-padding-block: 2rem;
+        --modal-padding-inline: 2rem;
+        --modal-color: var(--body-color);
+        --modal-backdrop: hsl(0deg 0 0 / 50%);
+        --modal-body-padding-block-start: 2rem;
+        --modal-footer-padding-block-start: 2rem;
 
         /* Badge */
         --badge-padding-block: 0.5rem;
@@ -89,5 +114,154 @@
         --badge-border-radius: var(--border-radius-sm);
         --badge-font-size: var(--fs-xs);
         --badge-font-weight: 600;
+
+        /* Alert */
+        --alert-margin-block-block: var(--spacer);
+        --alert-padding-block: 1rem;
+        --alert-padding-inline: 1rem;
+        --alert-gap: var(--spacer-n3);
+        --alert-border-radius: var(--border-radius-sm);
+        --alert-title-font-size: var(--fs-lg);
+        --alert-title-font-weight: 500;
+        --alert-title-color: var(--c-primary-background-color-emphasis);
+        --alert-description-color: var(--c-primary-background-color-emphasis);
+
+        /* Button */
+        --button-padding-block: 0.75rem;
+        --button-padding-inline: 0.75rem;
+        --button-gap: var(--spacer-n2);
+        --button-border-radius: var(--border-radius-sm);
+        --button-letter-spacing: 0.5px;
+        --button-text-transform: uppercase;
+        --button-font-size: var(--fs-md);
+        --button-font-weight: 500;
+
+        /* Button sizes */
+        --button-sm-padding-block: 0.5rem;
+        --button-sm-padding-inline: 0.5rem;
+        --button-sm-border-radius: var(--border-radius-sm);
+
+        /* Button with icon */
+        --button-icon-padding-block: 0.5rem;
+        --button-icon-padding-inline: 0.75rem;
+        --button-icon-color: var(--c-black);
+
+        /* Button as a link */
+        --button-link-padding-block: 0;
+        --button-link-padding-inline: 0;
+        --button-link-color: var(--c-black);
+
+        /* Accordion */
+        --accordion-details-gap: var(--spacer-2);
+        --accordion-details-background-color: var(--c-white);
+        --accordion-details-color: var(--c-white-background-color-emphasis);
+        --accordion-details-border-width: 0;
+        --accordion-details-border-style: solid;
+        --accordion-details-border-color: transparent;
+        --accordion-details-border-radius: var(--border-radius-sm);
+        --accordion-summary-padding-block: 1.5rem;
+        --accordion-summary-inline-block: 1rem;
+        --accordion-summary-color: var(--c-white-background-color-emphasis);
+        --accordion-summary-font-size: var(--fs-lg);
+        --accordion-summary-font-weight: 500;
+        --accordion-text-color: var(--c-white-background-color-emphasis);
+        --accordion-icon-width: 1rem;
+        --accordion-icon-height: 1rem;
+        --accordion-icon-color: var(--c-white-background-color-emphasis);
+        --accordion-content-padding-block: 1rem;
+        --accordion-content-padding-inline: 1rem;
+        --accordion-content-font-size: var(--fs-md);
+
+        /* Forms: Fieldset */
+        --form-fieldset-padding-block: 2rem;
+        --form-fieldset-padding-inline: 2rem;
+        --form-fieldset-background-color: var(--c-white);
+        --form-fieldset-border-radius: var(--border-radius-sm);
+        --form-fieldset-border-width: 1px;
+        --form-fieldset-border-style: solid;
+        --form-fieldset-border-color: var(--c-white-300);
+
+        /* Forms: Legend */
+        --form-legend-margin-block-end: var(--spacer);
+        --form-legend-form-weight: 500;
+        --form-legend-form-size: var(--fs-lg);
+
+        /* Forms: Input */
+        --form-input-padding-block: 0.5rem;
+        --form-input-padding-inline: 0.75rem;
+        --form-input-background-color: var(--c-white);
+        --form-input-color: var(--body-color);
+        --form-input-border-width: 1px;
+        --form-input-border-style: solid;
+        --form-input-border-color: var(--c-white-300);
+        --form-input-border-radius: var(--border-radius-sm);
+        --form-input-font-size: var(--fs-md);
+        --form-input-border-color-focus: var(--c-white-300);
+        --form-input-box-shadow-focus: 0 0 0 0.25rem rgb(32 42 52 / 10%);
+
+        /* Form: Radio */
+        --form-radio-margin-block-end: 0.5rem;
+        --form-radio-label-gap: 0.5rem;
+        --form-radio-input-width: 1rem;
+        --form-radio-input-height: 1rem;
+        --form-radio-input-background-color: var(--form-input-background-color);
+        --form-radio-input-background-color-active: var(--c-primary);
+        --form-radio-input-border-width: 1px;
+        --form-radio-input-border-style: solid;
+        --form-radio-input-border-color: var(--c-white-300);
+        --form-radio-input-border-radius: var(--border-radius-full);
+
+        /* Form: Checkbox */
+        --form-checkbox-margin-block-end: 0.5rem;
+        --form-checkbox-label-gap: 0.5rem;
+        --form-checkbox-input-width: 1rem;
+        --form-checkbox-input-height: 1rem;
+        --form-checkbox-input-background-color: var(--form-input-background-color);
+        --form-checkbox-input-background-color-active: var(--c-primary);
+        --form-checkbox-input-border-width: 1px;
+        --form-checkbox-input-border-style: solid;
+        --form-checkbox-input-border-color: var(--c-white-300);
+        --form-checkbox-input-border-radius: 0.125rem;
+
+        /* Form: Datalist */
+        --form-datalist-margin-block-start: 0.5rem;
+        --form-datalist-padding-block: 0.5rem;
+        --form-datalist-padding-inline: 0.5rem;
+        --form-datalist-background-color: var(--c-white);
+        --form-datalist-border-width: 1px;
+        --form-datalist-border-style: solid;
+        --form-datalist-border-color: var(--form-input-border-color-focus);
+        --form-datalist-border-radius: var(--form-input-border-radius);
+        --form-datalist-option-padding-block: 0.5rem;
+        --form-datalist-option-padding-inline: 0.5rem;
+        --form-datalist-option-background-color: var(--c-white);
+        --form-datalist-option-background-color-hover: var(--c-white-200);
+
+        /* Forms: Label */
+        --form-label-margin-block-end: calc(var(--spacer) * 0.5);
+        --form-label-font-weight: 500;
+
+        /* Forms: Text */
+        --form-text-color: var(--c-black);
+        --form-text-error-color: var(--c-danger);
+
+        /* Horizontal Line */
+        --hr-height: 1px;
+        --hr-margin-block: var(--spacer-3);
+        --hr-background-color: var(--c-white-200);
+        --hr-opacity: 1;
+
+        /* Dropdown */
+        --dropdown-menu-list-padding-block: 0.5rem;
+        --dropdown-content-width: 192px;
+        --dropdown-content-margin-block-start: var(--spacer-n2);
+        --dropdown-content-border-width: 1px;
+        --dropdown-content-border-style: solid;
+        --dropdown-content-border-color: var(--c-white-300);
+        --dropdown-content-border-radius: var(--border-radius-sm);
+        --dropdown-content-box-shadow: var(--box-shadow-default);
+        --dropdown-item-text-padding-inline: 1rem;
+        --dropdown-item-text-padding-block: 0.5rem;
+        --dropdown-item-text-font-size: var(--fs-md);
     }
 }

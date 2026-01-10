@@ -1,0 +1,13 @@
+.legend {
+    width: 100%;
+    margin-block-end: var(--form-legend-margin-block-end);
+    padding: 0;
+    float: left;
+    line-height: inherit;
+    font-size: var(--form-legend-form-size);
+    font-weight: var(--form-legend-form-weight);
+}
+
+.legend + * {
+    clear: left;
+}

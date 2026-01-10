@@ -1,0 +1,7 @@
+.hr {
+    height: var(--hr-height);
+    margin-block: var(--hr-margin-block);
+    background-color: var(--hr-background-color);
+    border: none;
+    opacity: var(--hr-opacity);
+}

@@ -2,4 +2,25 @@ import base from '@krudi/eslint-config/base';
 import prettier from '@krudi/eslint-config/prettier';
 import storybook from '@krudi/eslint-config/storybook';
 
-export default [...base, ...prettier, ...storybook];
+export default [
+    ...base,
+    ...prettier,
+    ...storybook,
+    {
+        files: [
+            'apps/storybook/src/**/*.stories.ts',
+            'apps/storybook/src/**/*.render.ts',
+            'apps/storybook/src/**/*.playground.ts',
+        ],
+        rules: {
+            'no-restricted-globals': ['error', 'document', 'window'],
+            'no-restricted-syntax': [
+                'error',
+                {
+                    selector: "CallExpression[callee.property.name='createElement']",
+                    message: 'Use template render functions instead of DOM APIs in Storybook files.',
+                },
+            ],
+        },
+    },
+];

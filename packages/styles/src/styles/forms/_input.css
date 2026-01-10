@@ -1,0 +1,35 @@
+.form-control {
+    width: 100%;
+    padding-block: var(--form-input-padding-block);
+    padding-inline: var(--form-input-padding-inline);
+    background-color: var(--form-input-background-color);
+    display: block;
+    color: var(--form-input-color);
+    border-width: var(--form-input-border-width);
+    border-style: var(--form-input-border-style);
+    border-color: var(--form-input-border-color);
+    border-radius: var(--form-input-border-radius);
+    font-size: var(--form-input-font-size);
+    transition-property: border-color, box-shadow;
+    transition-duration: var(--transition-duration);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--form-input-border-color-focus);
+    box-shadow: var(--form-input-box-shadow-focus);
+}
+
+.form-control::placeholder {
+    opacity: 1;
+}
+
+.form-control:disabled {
+    background-color: var(--c-white-200);
+    opacity: 1;
+}
+
+.form-control::-webkit-calendar-picker-indicator {
+    display: none;
+    opacity: 0;
+}
