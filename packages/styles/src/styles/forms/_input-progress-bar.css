@@ -1,0 +1,39 @@
+:root {
+    --form-control-file-progress-bar-height: 0.5rem;
+    --form-control-file-progress-bar-background-color: var(--c-white-200);
+    --form-control-file-progress-bar-border-radius: var(--border-radius-sm);
+    --form-control-file-progress-bar-value-background-color: var(--c-primary);
+}
+
+.form-control-file-progress-bar-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.form-control-file-progress-bar {
+    width: 100%;
+    height: var(--form-control-file-progress-bar-height);
+    appearance: none;
+    background-color: var(--form-control-file-progress-bar-background-color);
+    overflow: hidden;
+    border: none;
+    border-radius: var(--form-control-file-progress-bar-border-radius);
+    transition-property: width;
+    transition-duration: var(--transition-default);
+}
+
+.form-control-file-progress-bar::-webkit-progress-bar {
+    background-color: var(--form-control-file-progress-bar-background-color);
+    border-radius: var(--form-control-file-progress-bar-border-radius);
+}
+
+/* Progress bar value */
+.form-control-file-progress-bar::-webkit-progress-value {
+    background-color: var(--form-control-file-progress-bar-value-background-color);
+    border-radius: var(--form-control-file-progress-bar-border-radius);
+}
+
+.form-control-file-progress-bar::-moz-progress-bar {
+    background-color: var(--form-control-file-progress-bar-value-background-color);
+    border-radius: var(--form-control-file-progress-bar-border-radius);
+}

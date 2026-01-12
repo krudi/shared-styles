@@ -1,0 +1,89 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-details {
+    width: 100%;
+    margin-block-end: var(--accordion-details-gap);
+    background-color: var(--accordion-details-background-color);
+    color: var(--accordion-details-color);
+    cursor: pointer;
+    border-width: var(--accordion-details-border-width);
+    border-style: var(--accordion-details-border-style);
+    border-color: var(--accordion-details-border-color);
+    border-radius: var(--accordion-details-border-radius);
+    overflow: hidden;
+}
+
+.accordion-details:last-child {
+    margin-block-end: 0;
+}
+
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+.accordion-details::details-content {
+    display: block;
+    block-size: 0;
+    overflow: hidden;
+    transition-property: block-size, content-visibility;
+    transition-duration: var(--transition-duration);
+    transition-behavior: allow-discrete;
+}
+
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+.accordion-details[open]::details-content {
+    block-size: auto;
+    /* stylelint-disable-next-line function-no-unknown */
+    block-size: calc-size(auto, size);
+}
+
+.accordion-details[open] .accordion-summary-icon {
+    rotate: 180deg;
+}
+
+.accordion-summary {
+    width: 100%;
+    padding-inline: var(--accordion-summary-inline-block);
+    padding-block: var(--accordion-summary-padding-block);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-summary::-webkit-details-marker {
+    display: none;
+    list-style: none;
+}
+
+.accordion-summary-title {
+    margin-block-end: 0;
+    color: var(--accordion-summary-color);
+    font-size: var(--accordion-summary-font-size);
+    font-weight: var(--accordion-summary-font-weight);
+}
+
+.accordion-summary-icon {
+    width: var(--accordion-icon-width);
+    height: var(--accordion-icon-height);
+    display: inline-block;
+    color: var(--accordion-icon-color);
+    background-image: url('@krudi/icons/caret-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition-property: rotate;
+    transition-duration: var(--transition-duration);
+}
+
+.accordion-content {
+    padding-block: var(--accordion-content-padding-block);
+    padding-inline: var(--accordion-content-padding-inline);
+    font-size: var(--accordion-content-font-size);
+}
+
+.accordion-content-text {
+    word-break: break-all;
+    color: var(--accordion-text-color);
+}

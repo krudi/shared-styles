@@ -10,6 +10,7 @@
         --c-info: #0dccf2;
         --c-warning: #ffc105;
         --c-danger: #dc3848;
+        --c-beige: #f8f3ec;
 
         /* Palette */
         --c-white-100: #f6f7fb;
@@ -18,6 +19,7 @@
         --c-white-200: #efefef;
         --c-white-200-hover: color-mix(in oklab, var(--c-white-200) 70%, var(--c-white-200));
         --c-white-200-background-color-emphasis: var(--c-black);
+        --c-beige-background-color-emphasis: var(--c-black);
 
         /* Theme colors */
 
@@ -56,6 +58,9 @@
         /* Danger */
         --c-danger-hover: color-mix(in oklab, var(--c-danger) 70%, var(--c-white));
         --c-danger-background-color-emphasis: var(--c-white);
+
+        /* Beige */
+        --c-beige-hover: color-mix(in oklab, var(--c-beige) 70%, var(--c-white));
     }
 
     .dark {

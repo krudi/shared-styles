@@ -104,7 +104,7 @@ a:is(:hover, :focus) {
 }
 
 a[href^='tel:']::after {
-    background-image: url('@krudi/icons/phone.svg');
+    background-image: url('@krudi/icons/square-phone.svg');
 }
 
 a[href^='mailto:']::after {
@@ -117,5 +117,5 @@ a[download]::after {
 
 a[href^='http://']::after,
 a[href^='https://']::after {
-    background-image: url('@krudi/icons/external-link.svg');
+    background-image: url('@krudi/icons/arrow-up-right-from-square.svg');
 }

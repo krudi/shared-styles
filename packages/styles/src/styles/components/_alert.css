@@ -1,0 +1,90 @@
+.alert {
+    margin-block: var(--alert-margin-block-block);
+    padding-block: var(--alert-padding-block);
+    padding-inline: var(--alert-padding-inline);
+    background-color: var(--alert-background-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--alert-gap);
+    color: var(--alert-color);
+    border-width: var(--alert-border-width);
+    border-style: var(--alert-border-style);
+    border-color: var(--alert-border-color);
+    border-radius: var(--alert-border-radius);
+}
+
+.alert-white {
+    --alert-background-color: var(--c-white);
+    --alert-color: var(--c-white-background-color-emphasis);
+    --alert-border-width: 1px;
+    --alert-border-style: solid;
+    --alert-border-color: var(--c-white-300);
+}
+
+.alert-primary {
+    --alert-background-color: var(--c-primary);
+    --alert-color: var(--c-primary-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-secondary {
+    --alert-background-color: var(--c-secondary);
+    --alert-color: var(--c-secondary-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-success {
+    --alert-background-color: var(--c-success);
+    --alert-color: var(--c-success-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-info {
+    --alert-background-color: var(--c-info);
+    --alert-color: var(--c-info-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-warning {
+    --alert-background-color: var(--c-warning);
+    --alert-color: var(--c-warning-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-danger {
+    --alert-background-color: var(--c-danger);
+    --alert-color: var(--c-danger-background-color-emphasis);
+    --alert-border-width: 0;
+    --alert-border-style: initial;
+    --alert-border-color: none;
+}
+
+.alert-close {
+    top: var(--alert-padding-block);
+    right: var(--alert-padding-inline);
+    position: absolute;
+}
+
+.alert-title {
+    margin-block-end: 0;
+    font-size: var(--alert-title-font-size);
+    font-weight: var(--alert-title-font-weight);
+    color: var(--alert-title-color);
+}
+
+.alert-description {
+    margin-block-end: 0;
+    display: block;
+    color: var(--alert-description-color);
+}
