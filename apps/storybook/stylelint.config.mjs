@@ -1,5 +1,13 @@
-import base from '@krudi/stylelint-config/base';
-
+/** @type {import('stylelint').Config} */
 export default {
-    ...base,
+    extends: ['@krudi/stylelint-config/base'],
+    ignoreFiles: [
+        '**/*.js',
+        '**/*.ts',
+        'public/**/*.css',
+        'node_modules/**/*.css',
+        'storybook-static/**/*.css',
+        'coverage/**/*.css',
+        'dist/**/*.css',
+    ],
 };
