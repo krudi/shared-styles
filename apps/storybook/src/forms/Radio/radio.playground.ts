@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { RadioArgs } from './radio.types';
 import { argTypes, defaultArgs } from './radio.controls';
 import { renderRadioPlayground } from './radio.render';
+import type { RadioArgs } from './radio.types';
 
 export const Default: StoryObj<RadioArgs> = {
     args: { ...defaultArgs },

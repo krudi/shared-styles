@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { ButtonArgs } from './button.types';
 import { argTypes, defaultArgs } from './button.controls';
 import { renderButton } from './button.render';
+import type { ButtonArgs } from './button.types';
 
 export const Default: StoryObj<ButtonArgs> = {
     args: { ...defaultArgs },

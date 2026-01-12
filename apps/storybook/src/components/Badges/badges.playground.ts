@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { BadgeArgs } from './badges.types';
 import { argTypes, defaultArgs } from './badges.controls';
 import { renderBadgesPlayground } from './badges.render';
+import type { BadgeArgs } from './badges.types';
 
 export const Default: StoryObj<BadgeArgs> = {
     args: { ...defaultArgs },

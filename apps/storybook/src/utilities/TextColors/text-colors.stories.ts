@@ -10,8 +10,7 @@ const meta: Meta<TextColorsArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Text color helpers for semantic accents and status messaging.',
+                component: 'Text color helpers for semantic accents and status messaging.',
             },
         },
     },

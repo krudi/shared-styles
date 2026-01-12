@@ -10,8 +10,7 @@ const meta: Meta<InputArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Text input field styled by the forms layer tokens.',
+                component: 'Text input field styled by the forms layer tokens.',
             },
         },
     },

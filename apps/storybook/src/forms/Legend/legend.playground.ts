@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { LegendArgs } from './legend.types';
 import { argTypes, defaultArgs } from './legend.controls';
 import { renderLegendPlayground } from './legend.render';
+import type { LegendArgs } from './legend.types';
 
 export const Default: StoryObj<LegendArgs> = {
     args: { ...defaultArgs },

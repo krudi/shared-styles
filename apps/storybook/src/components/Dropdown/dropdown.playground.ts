@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { DropdownArgs } from './dropdown.types';
 import { argTypes, defaultArgs } from './dropdown.controls';
 import { renderDropdownPlayground } from './dropdown.render';
+import type { DropdownArgs } from './dropdown.types';
 
 export const Default: StoryObj<DropdownArgs> = {
     args: { ...defaultArgs },

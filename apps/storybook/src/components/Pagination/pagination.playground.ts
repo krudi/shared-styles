@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { PaginationArgs } from './pagination.types';
 import { argTypes, defaultArgs } from './pagination.controls';
 import { renderPaginationPlayground } from './pagination.render';
+import type { PaginationArgs } from './pagination.types';
 
 export const Default: StoryObj<PaginationArgs> = {
     args: { ...defaultArgs },

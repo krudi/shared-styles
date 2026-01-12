@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/html-vite';
 
-import type { BadgeArgs } from './badges.types';
 import { badgeVariants } from './badges.render';
+import type { BadgeArgs } from './badges.types';
 
 export const defaultArgs: BadgeArgs = {
     label: 'Notify',

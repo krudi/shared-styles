@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { TypographyArgs } from './typography.types';
 import { argTypes, defaultArgs } from './typography.controls';
 import { renderTypographyPlayground } from './typography.render';
+import type { TypographyArgs } from './typography.types';
 
 export const Default: StoryObj<TypographyArgs> = {
     args: { ...defaultArgs },

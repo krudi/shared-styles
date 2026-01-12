@@ -10,8 +10,7 @@ const meta: Meta<SpacingScaleArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Tokenized spacing scale that powers the margin and padding helpers.',
+                component: 'Tokenized spacing scale that powers the margin and padding helpers.',
             },
         },
     },

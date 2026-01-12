@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { FontSizesArgs } from './font-sizes.types';
 import { argTypes, defaultArgs } from './font-sizes.controls';
 import { renderFontSizesPlayground } from './font-sizes.render';
+import type { FontSizesArgs } from './font-sizes.types';
 
 export const Default: StoryObj<FontSizesArgs> = {
     args: { ...defaultArgs },

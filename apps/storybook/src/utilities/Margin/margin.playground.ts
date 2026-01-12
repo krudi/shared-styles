@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { MarginArgs } from './margin.types';
 import { argTypes, defaultArgs } from './margin.controls';
 import { renderMarginPlayground } from './margin.render';
+import type { MarginArgs } from './margin.types';
 
 export const Default: StoryObj<MarginArgs> = {
     args: { ...defaultArgs },

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { TextDecorationArgs } from './text-decoration.types';
 import { argTypes, defaultArgs } from './text-decoration.controls';
 import { renderTextDecorationPlayground } from './text-decoration.render';
+import type { TextDecorationArgs } from './text-decoration.types';
 
 export const Default: StoryObj<TextDecorationArgs> = {
     args: { ...defaultArgs },

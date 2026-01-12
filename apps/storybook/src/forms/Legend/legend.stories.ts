@@ -10,8 +10,7 @@ const meta: Meta<LegendArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Legend styling for fieldset headings and grouped labels.',
+                component: 'Legend styling for fieldset headings and grouped labels.',
             },
         },
     },

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { HorizontalLineArgs } from './horizontal-line.types';
 import { argTypes, defaultArgs } from './horizontal-line.controls';
 import { renderHorizontalLinePlayground } from './horizontal-line.render';
+import type { HorizontalLineArgs } from './horizontal-line.types';
 
 export const Default: StoryObj<HorizontalLineArgs> = {
     args: { ...defaultArgs },

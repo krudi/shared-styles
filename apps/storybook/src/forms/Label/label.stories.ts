@@ -10,8 +10,7 @@ const meta: Meta<LabelArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Label styling for form fields with optional required indicators.',
+                component: 'Label styling for form fields with optional required indicators.',
             },
         },
     },

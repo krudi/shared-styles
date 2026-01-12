@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { InputProgressBarArgs } from './input-progress-bar.types';
 import { argTypes, defaultArgs } from './input-progress-bar.controls';
 import { renderInputProgressBarPlayground } from './input-progress-bar.render';
+import type { InputProgressBarArgs } from './input-progress-bar.types';
 
 export const Default: StoryObj<InputProgressBarArgs> = {
     args: { ...defaultArgs },

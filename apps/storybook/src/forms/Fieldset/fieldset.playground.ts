@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { FieldsetArgs } from './fieldset.types';
 import { argTypes, defaultArgs } from './fieldset.controls';
 import { renderFieldsetPlayground } from './fieldset.render';
+import type { FieldsetArgs } from './fieldset.types';
 
 export const Default: StoryObj<FieldsetArgs> = {
     args: { ...defaultArgs },

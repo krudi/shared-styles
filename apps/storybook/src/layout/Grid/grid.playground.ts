@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { GridArgs } from './grid.types';
 import { argTypes, defaultArgs } from './grid.controls';
 import { renderGridPlayground } from './grid.render';
+import type { GridArgs } from './grid.types';
 
 export const Grid: StoryObj<GridArgs> = {
     args: { ...defaultArgs },

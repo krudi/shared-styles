@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { UtilitiesArgs } from './utilities.types';
 import { argTypes, defaultArgs } from './utilities.controls';
 import { renderUtilitiesPlayground } from './utilities.render';
+import type { UtilitiesArgs } from './utilities.types';
 
 export const Default: StoryObj<UtilitiesArgs> = {
     args: { ...defaultArgs },

@@ -10,8 +10,7 @@ const meta: Meta<PaddingArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Padding helpers aligned to the spacing scale.',
+                component: 'Padding helpers aligned to the spacing scale.',
             },
         },
     },

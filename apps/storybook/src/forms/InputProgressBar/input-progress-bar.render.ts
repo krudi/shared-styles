@@ -6,5 +6,4 @@ export const renderInputProgressBar = ({ value, max }: InputProgressBarArgs): st
     </div>
 `;
 
-export const renderInputProgressBarPlayground = (args: InputProgressBarArgs): string =>
-    renderInputProgressBar(args);
+export const renderInputProgressBarPlayground = (args: InputProgressBarArgs): string => renderInputProgressBar(args);

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { ImgArgs } from './img.types';
 import { argTypes, defaultArgs } from './img.controls';
 import { renderImgPlayground } from './img.render';
+import type { ImgArgs } from './img.types';
 
 export const Default: StoryObj<ImgArgs> = {
     args: { ...defaultArgs },

@@ -14,9 +14,7 @@ export const badgeVariants: Array<{
 ];
 
 export const renderBadges = (): string => `
-    ${badgeVariants
-        .map((badge) => `<span class="badge ${badge.className}">${badge.label}</span>`)
-        .join('')}
+    ${badgeVariants.map((badge) => `<span class="badge ${badge.className}">${badge.label}</span>`).join('')}
 `;
 
 export const renderBadgesPlayground = ({ label, variant }: BadgeArgs): string => `

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { BackgroundColorsArgs } from './background-colors.types';
 import { argTypes, defaultArgs } from './background-colors.controls';
 import { renderBackgroundColorsPlayground } from './background-colors.render';
+import type { BackgroundColorsArgs } from './background-colors.types';
 
 export const Default: StoryObj<BackgroundColorsArgs> = {
     args: { ...defaultArgs },

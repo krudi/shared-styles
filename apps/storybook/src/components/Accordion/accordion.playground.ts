@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { AccordionArgs } from './accordion.types';
 import { argTypes, defaultArgs } from './accordion.controls';
 import { renderAccordionPlayground } from './accordion.render';
+import type { AccordionArgs } from './accordion.types';
 
 export const Default: StoryObj<AccordionArgs> = {
     args: { ...defaultArgs },

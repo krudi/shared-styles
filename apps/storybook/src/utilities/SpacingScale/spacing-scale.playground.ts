@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { SpacingScaleArgs } from './spacing-scale.types';
 import { argTypes, defaultArgs } from './spacing-scale.controls';
 import { renderSpacingScalePlayground } from './spacing-scale.render';
+import type { SpacingScaleArgs } from './spacing-scale.types';
 
 export const Default: StoryObj<SpacingScaleArgs> = {
     args: { ...defaultArgs },

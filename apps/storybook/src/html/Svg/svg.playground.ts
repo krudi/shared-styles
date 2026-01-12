@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { SvgArgs } from './svg.types';
 import { argTypes, defaultArgs } from './svg.controls';
 import { renderSvgPlayground } from './svg.render';
+import type { SvgArgs } from './svg.types';
 
 export const Default: StoryObj<SvgArgs> = {
     args: { ...defaultArgs },

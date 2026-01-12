@@ -10,8 +10,7 @@ const meta: Meta<MarginArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Margin helpers aligned to the spacing scale.',
+                component: 'Margin helpers aligned to the spacing scale.',
             },
         },
     },

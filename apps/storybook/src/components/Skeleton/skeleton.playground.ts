@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { SkeletonArgs } from './skeleton.types';
 import { argTypes, defaultArgs } from './skeleton.controls';
 import { renderSkeletonPlayground } from './skeleton.render';
+import type { SkeletonArgs } from './skeleton.types';
 
 export const Default: StoryObj<SkeletonArgs> = {
     args: { ...defaultArgs },

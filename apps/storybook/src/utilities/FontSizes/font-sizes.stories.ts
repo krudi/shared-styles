@@ -10,8 +10,7 @@ const meta: Meta<FontSizesArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Quick size adjustments that map to the typography scale.',
+                component: 'Quick size adjustments that map to the typography scale.',
             },
         },
     },

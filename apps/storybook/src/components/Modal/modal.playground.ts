@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { ModalArgs } from './modal.types';
 import { argTypes, defaultArgs } from './modal.controls';
 import { renderModalPlayground } from './modal.render';
+import type { ModalArgs } from './modal.types';
 
 export const Default: StoryObj<ModalArgs> = {
     args: { ...defaultArgs },

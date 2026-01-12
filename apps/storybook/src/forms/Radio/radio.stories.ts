@@ -10,8 +10,7 @@ const meta: Meta<RadioArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Radio styling for single-select inputs.',
+                component: 'Radio styling for single-select inputs.',
             },
         },
     },

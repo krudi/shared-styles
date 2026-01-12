@@ -10,8 +10,7 @@ const meta: Meta<TextArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Supportive form text styles for hints and validation messaging.',
+                component: 'Supportive form text styles for hints and validation messaging.',
             },
         },
     },

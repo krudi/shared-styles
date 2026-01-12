@@ -10,8 +10,7 @@ const meta: Meta<InputProgressBarArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Progress bar styling for file inputs and uploads.',
+                component: 'Progress bar styling for file inputs and uploads.',
             },
         },
     },

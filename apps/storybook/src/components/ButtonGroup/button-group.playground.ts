@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { ButtonGroupArgs } from './button-group.types';
 import { argTypes, defaultArgs } from './button-group.controls';
 import { renderButtonGroupPlayground } from './button-group.render';
+import type { ButtonGroupArgs } from './button-group.types';
 
 export const Default: StoryObj<ButtonGroupArgs> = {
     args: { ...defaultArgs },

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { LineClampArgs } from './line-clamp.types';
 import { argTypes, defaultArgs } from './line-clamp.controls';
 import { renderLineClampPlayground } from './line-clamp.render';
+import type { LineClampArgs } from './line-clamp.types';
 
 export const Default: StoryObj<LineClampArgs> = {
     args: { ...defaultArgs },

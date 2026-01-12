@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { TextColorsArgs } from './text-colors.types';
 import { argTypes, defaultArgs } from './text-colors.controls';
 import { renderTextColorsPlayground } from './text-colors.render';
+import type { TextColorsArgs } from './text-colors.types';
 
 export const Default: StoryObj<TextColorsArgs> = {
     args: { ...defaultArgs },

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { PaddingArgs } from './padding.types';
 import { argTypes, defaultArgs } from './padding.controls';
 import { renderPaddingPlayground } from './padding.render';
+import type { PaddingArgs } from './padding.types';
 
 export const Default: StoryObj<PaddingArgs> = {
     args: { ...defaultArgs },

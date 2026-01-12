@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { FontWeightsArgs } from './font-weights.types';
 import { argTypes, defaultArgs } from './font-weights.controls';
 import { renderFontWeightsPlayground } from './font-weights.render';
+import type { FontWeightsArgs } from './font-weights.types';
 
 export const Default: StoryObj<FontWeightsArgs> = {
     args: { ...defaultArgs },

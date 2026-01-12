@@ -13,8 +13,7 @@ const meta: Meta<ButtonArgs> = {
         layout: 'centered',
         docs: {
             description: {
-                component:
-                    'Buttons with tokenised variants, sizes, and disabled states for consistent interactions.',
+                component: 'Buttons with tokenised variants, sizes, and disabled states for consistent interactions.',
             },
         },
     },

@@ -10,8 +10,7 @@ const meta: Meta<CheckboxArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Checkbox styling for multi-select inputs.',
+                component: 'Checkbox styling for multi-select inputs.',
             },
         },
     },

@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { AlertArgs } from './alert.types';
 import { argTypes, defaultArgs } from './alert.controls';
 import { renderAlertPlayground } from './alert.render';
+import type { AlertArgs } from './alert.types';
 
 export const Default: StoryObj<AlertArgs> = {
     args: { ...defaultArgs },

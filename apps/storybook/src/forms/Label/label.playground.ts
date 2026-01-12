@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { LabelArgs } from './label.types';
 import { argTypes, defaultArgs } from './label.controls';
 import { renderLabelPlayground } from './label.render';
+import type { LabelArgs } from './label.types';
 
 export const Default: StoryObj<LabelArgs> = {
     args: { ...defaultArgs },

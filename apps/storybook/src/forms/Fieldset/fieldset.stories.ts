@@ -10,8 +10,7 @@ const meta: Meta<FieldsetArgs> = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Fieldset container styling for grouped form sections.',
+                component: 'Fieldset container styling for grouped form sections.',
             },
         },
     },

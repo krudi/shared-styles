@@ -1,8 +1,8 @@
 import type { StoryObj } from '@storybook/html-vite';
 
-import type { InputArgs } from './input.types';
 import { argTypes, defaultArgs } from './input.controls';
 import { renderInputPlayground } from './input.render';
+import type { InputArgs } from './input.types';
 
 export const Default: StoryObj<InputArgs> = {
     args: { ...defaultArgs },
