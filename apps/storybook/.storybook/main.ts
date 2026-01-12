@@ -1,6 +1,7 @@
-import type { StorybookConfig } from '@storybook/html-vite';
-import { dirname, resolve } from 'node:path';
+import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import type { StorybookConfig } from '@storybook/html-vite';
 
 const getAbsolutePath = (packageName: string) =>
     dirname(fileURLToPath(import.meta.resolve(`${packageName}/package.json`)));
