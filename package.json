@@ -37,6 +37,7 @@
         "clean": "turbo clean && rm -rf .turbo node_modules",
         "dev": "turbo run dev --parallel",
         "lint:eslint": "turbo run lint:eslint",
+        "lint:eslint:fix": "turbo run lint:eslint:fix",
         "lint:prettier": "turbo run lint:prettier",
         "lint:prettier:fix": "turbo run lint:prettier:fix",
         "lint:stylelint": "turbo run lint:stylelint",
