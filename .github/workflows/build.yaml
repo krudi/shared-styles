@@ -1,4 +1,4 @@
-name: Build (styles package)
+name: Build
 
 on:
   push:
@@ -10,8 +10,6 @@ on:
       - opened
       - synchronize
       - reopened
-    paths:
-      - "packages/styles/**"
 
 concurrency:
   group: build-${{ github.workflow }}-${{ github.ref }}
@@ -21,7 +19,8 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build-:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
