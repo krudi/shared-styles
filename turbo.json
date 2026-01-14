@@ -35,6 +35,13 @@
         "lint:prettier:fix": {
             "cache": false
         },
+        "lint:stylelint": {
+            "outputs": [".cache/.stylelintcache"],
+            "outputLogs": "new-only"
+        },
+        "lint:stylelint:fix": {
+            "cache": false
+        },
         "test:storybook": {
             "dependsOn": ["^test:storybook", "@krudi/styles#build"],
             "outputLogs": "new-only"

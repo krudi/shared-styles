@@ -13,6 +13,5 @@ components/utilities.
 | `npm run test:storybook`          | Run Vitest story tests        |
 | `npm run test:storybook:coverage` | Run story tests with coverage |
 | `npm run lint:eslint`             | Lint JS/TS                    |
-| `npm run lint:stylelint`          | Lint CSS                      |
 | `npm run lint:prettier`           | Check formatting              |
 | `npm run typecheck`               | TypeScript type checks        |

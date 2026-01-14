@@ -1,31 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
-const SkeletonTemplate = () => `
-    <main class="main" style="padding: var(--spacer-3); display: grid; gap: var(--spacer-2); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <section style="border: 1px solid var(--c-white-200); border-radius: var(--border-radius-md); padding: var(--spacer-2); box-shadow: var(--box-shadow-default);">
-            <h2 class="h4 mt-0">Lines</h2>
-            <div style="display: grid; gap: var(--spacer-n2);">
-                <span class="skeleton-line" style="width: 70%;"></span>
-                <span class="skeleton-line" style="width: 90%;"></span>
-                <span class="skeleton-line" style="width: 50%;"></span>
-            </div>
-            <p class="mt-2 text-gray mb-0">Apply <code>.skeleton-line</code> to any block to communicate loading state. Width is controlled inline or via utility classes.</p>
-        </section>
-        <section style="border: 1px solid var(--c-white-200); border-radius: var(--border-radius-md); padding: var(--spacer-2); box-shadow: var(--box-shadow-default);">
-            <h2 class="h4 mt-0">Card placeholder</h2>
-            <div style="display: grid; gap: var(--spacer-1);">
-                <span class="skeleton-line" style="width: 100%; height: 140px; border-radius: var(--border-radius-md);"></span>
-                <span class="skeleton-line" style="width: 60%;"></span>
-                <span class="skeleton-line" style="width: 40%;"></span>
-            </div>
-            <p class="mt-2 text-gray mb-0">Stack skeleton lines to mirror the shape of the final content and reduce layout shift.</p>
-        </section>
-    </main>
-`;
+import type { SkeletonArgs } from './skeleton.types';
 
-const meta: Meta = {
+const meta = {
     title: 'Components/Skeleton',
     tags: ['autodocs'],
+    render: ({ lines }: SkeletonArgs): string => `
+        ${Array.from({ length: Math.max(1, Math.min(lines, 6)) })
+            .map(() => `<span class="skeleton-line"></span>`)
+            .join('')}
+    `,
+    args: {
+        lines: 3,
+    },
+    argTypes: {
+        lines: { control: { type: 'number', min: 1, max: 6, step: 1 } },
+    },
     parameters: {
         docs: {
             description: {
@@ -34,18 +24,28 @@ const meta: Meta = {
             },
         },
     },
-};
+} satisfies Meta<SkeletonArgs>;
+
 export default meta;
 
-type Story = StoryObj;
+type Story = StoryObj<typeof meta>;
 
-export const Lines: Story = {
-    render: SkeletonTemplate,
-    name: 'Skeleton lines',
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Canonical skeleton example with three lines.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
     parameters: {
         docs: {
             description: {
-                story: 'Use <code>.skeleton-line</code> on block-level elements. Adjust width and height inline to suit the shape you are representing.',
+                story: 'Increase the line count to preview stacked loading placeholders.',
             },
         },
     },

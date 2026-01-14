@@ -1,0 +1,52 @@
+.form-checkbox {
+    margin-block-end: var(--form-checkbox-margin-block-end);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--form-checkbox-label-gap);
+}
+
+.form-checkbox-label {
+    order: 1;
+}
+
+.form-checkbox-input {
+    position: relative;
+    width: var(--form-checkbox-input-width);
+    height: var(--form-checkbox-input-height);
+    appearance: none;
+    background-color: var(--form-checkbox-input-background-color);
+    display: grid;
+    place-content: center;
+    border-width: var(--form-checkbox-input-border-width);
+    border-style: var(--form-checkbox-input-border-style);
+    border-color: var(--form-checkbox-input-border-color);
+    border-radius: var(--form-checkbox-input-border-radius);
+    vertical-align: top;
+}
+
+.form-checkbox-input::before {
+    width: calc(var(--form-checkbox-input-width) / 2);
+    height: calc(var(--form-checkbox-input-height) / 2);
+    margin: 0;
+    content: '';
+    border-radius: var(--form-checkbox-input-border-radius);
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+    box-shadow: inset 1em 1em var(--form-checkbox-input-background-color-active);
+}
+
+.form-checkbox-input:focus {
+    outline-offset: 0.125rem;
+}
+
+.form-checkbox-input:checked::before {
+    transform: scale(1);
+}
+
+.form-checkbox-input:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.5;
+}

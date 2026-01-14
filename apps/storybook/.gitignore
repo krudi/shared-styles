@@ -18,7 +18,6 @@ coverage
 .eslint-config-inspector
 .cache/.prettiercache
 .cache/vitest
-.cache/.stylelintcache
 .cache/tsbuildinfo.json
 debug-storybook.log
 

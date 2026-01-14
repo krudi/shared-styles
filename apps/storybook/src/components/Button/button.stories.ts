@@ -1,63 +1,90 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
-type ButtonArgs = {
-    label: string;
-    variant: 'primary' | 'secondary' | 'ghost';
-    size: 'sm' | 'md' | 'lg';
-    disabled: boolean;
-};
+import type { ButtonArgs } from './button.types';
 
-const renderButton = ({ label, variant, size, disabled }: ButtonArgs) => `
-    <button class="btn ${variant} ${size}" ${disabled ? 'disabled' : ''} aria-label="${label}">
-        ${label}
-    </button>
-`;
-
-const meta: Meta<ButtonArgs> = {
+const meta = {
     title: 'Components/Button',
     tags: ['autodocs'],
-    render: renderButton,
+    render: ({ label, variant, size, disabled }: ButtonArgs): string => {
+        const classes = ['btn', `btn-${variant}`];
+
+        if (size === 'sm') {
+            classes.push('btn-sm');
+        }
+
+        return `
+        <button class="${classes.join(' ')}" type="button" ${disabled ? 'disabled' : ''} aria-label="${label}">
+            ${label}
+        </button>
+    `;
+    },
+    args: {
+        label: 'Action',
+        variant: 'primary',
+        size: 'default',
+        disabled: false,
+    },
     argTypes: {
         label: { control: 'text', description: 'Text inside the button' },
         variant: {
             control: 'inline-radio',
-            options: ['primary', 'secondary', 'ghost'],
-            description: 'Visual style',
+            options: [
+                'primary',
+                'secondary',
+                'success',
+                'info',
+                'warning',
+                'danger',
+                'white',
+                'outline-primary',
+                'outline-secondary',
+                'outline-success',
+                'outline-info',
+                'outline-warning',
+                'outline-danger',
+                'outline-white',
+                'link',
+            ],
+            description: 'Visual style of the button',
         },
         size: {
             control: 'inline-radio',
-            options: ['sm', 'md', 'lg'],
+            options: ['default', 'sm'],
             description: 'Size of the button',
         },
         disabled: { control: 'boolean', description: 'Disable the button' },
     },
     parameters: {
         layout: 'centered',
+        docs: {
+            description: {
+                component: 'Buttons with tokenised variants, sizes, and disabled states for consistent interactions.',
+            },
+        },
     },
-};
+} satisfies Meta<ButtonArgs>;
 
 export default meta;
 
-export const Playground: StoryObj<ButtonArgs> = {
-    args: {
-        label: 'Action',
-        variant: 'primary',
-        size: 'md',
-        disabled: false,
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Canonical primary button example.',
+            },
+        },
     },
 };
 
-export const MobilePrimary: StoryObj<ButtonArgs> = {
-    args: {
-        label: 'Mobile CTA',
-        variant: 'primary',
-        size: 'md',
-        disabled: false,
-    },
-    globals: {
-        viewport: {
-            value: 'mobile',
-            isRotated: false,
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Use the controls to switch variant, size, and disabled state.',
+            },
         },
     },
 };

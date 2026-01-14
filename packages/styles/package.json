@@ -35,6 +35,7 @@
         "./base": "./dist/styles/base/index.css",
         "./layout": "./dist/styles/layout/index.css",
         "./components": "./dist/styles/components/index.css",
+        "./forms": "./dist/styles/forms/index.css",
         "./utilities": "./dist/styles/utilities/index.css",
         "./html": "./dist/styles/html/index.css",
         "./elements": "./dist/styles/elements/index.css"
@@ -50,7 +51,7 @@
     "scripts": {
         "build": "tsc -b tsconfig.build.json && postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map",
         "clean": "rm -rf .turbo .cache node_modules",
-        "dev": "tsc -p tsconfig.json --watch",
+        "dev": "tsc -p tsconfig.json --watch & postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map --watch",
         "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
         "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
