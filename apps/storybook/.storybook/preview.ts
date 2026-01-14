@@ -1,6 +1,7 @@
 import '@krudi/styles/ui';
 
 import type { Preview } from '@storybook/html';
+import { MINIMAL_VIEWPORTS } from 'storybook/viewport';
 
 const preview: Preview = {
     parameters: {
@@ -15,36 +16,14 @@ const preview: Preview = {
         docs: {
             codePanel: true,
         },
-        viewport: {
-            options: {
-                mobile: {
-                    name: 'Mobile (360px)',
-                    styles: { width: '360px', height: '640px' },
-                    type: 'mobile',
-                },
-                tablet: {
-                    name: 'Tablet (768px)',
-                    styles: { width: '768px', height: '1024px' },
-                    type: 'tablet',
-                },
-                desktop: {
-                    name: 'Desktop (1280px)',
-                    styles: { width: '1280px', height: '720px' },
-                    type: 'desktop',
-                },
-            },
-        },
         a11y: {
-            test: 'todo',
+            test: 'warn',
+        },
+        viewport: {
+            options: MINIMAL_VIEWPORTS,
         },
     },
     tags: ['autodocs'],
-    initialGlobals: {
-        viewport: {
-            value: 'responsive',
-            isRotated: false,
-        },
-    },
 };
 
 export default preview;

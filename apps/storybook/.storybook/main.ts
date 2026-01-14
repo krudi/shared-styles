@@ -9,12 +9,18 @@ const getAbsolutePath = (packageName: string) =>
 const config: StorybookConfig = {
     stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
+        getAbsolutePath('@storybook/addon-docs'),
         getAbsolutePath('@storybook/addon-links'),
         getAbsolutePath('@storybook/addon-themes'),
         getAbsolutePath('@storybook/addon-a11y'),
         getAbsolutePath('@storybook/addon-vitest'),
-        getAbsolutePath('@storybook/addon-docs'),
     ],
+    features: {
+        experimentalRSC: true,
+    },
+    core: {
+        disableTelemetry: true,
+    },
     framework: {
         name: getAbsolutePath('@storybook/html-vite'),
         options: {},
