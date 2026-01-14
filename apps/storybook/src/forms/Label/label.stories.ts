@@ -1,12 +1,23 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderLabel } from './label.render';
 import type { LabelArgs } from './label.types';
 
-const meta: Meta<LabelArgs> = {
+const meta = {
     title: 'Forms/Label',
     tags: ['autodocs'],
-    render: renderLabel,
+    render: ({ text, required }: LabelArgs): string => `
+        <label class="form-label">
+            ${text}${required ? ' <span class="form-label-required" aria-hidden="true">*</span>' : ''}
+        </label>
+    `,
+    args: {
+        text: 'Email address',
+        required: false,
+    },
+    argTypes: {
+        text: { control: 'text' },
+        required: { control: 'boolean' },
+    },
     parameters: {
         docs: {
             description: {
@@ -14,7 +25,29 @@ const meta: Meta<LabelArgs> = {
             },
         },
     },
-};
+} satisfies Meta<LabelArgs>;
 
 export default meta;
-export { Default, Playground } from './label.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Form label with optional required indicator styling.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Toggle the required indicator to match validation requirements.',
+            },
+        },
+    },
+};

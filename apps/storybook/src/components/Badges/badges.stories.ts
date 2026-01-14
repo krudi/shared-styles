@@ -1,12 +1,31 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderBadges } from './badges.render';
 import type { BadgeArgs } from './badges.types';
 
-const meta: Meta<BadgeArgs> = {
+const meta = {
     title: 'Components/Badges',
     tags: ['autodocs'],
-    render: renderBadges,
+    render: ({ label, variant }: BadgeArgs): string => `
+        <span class="badge badge-${variant}">${label}</span>
+    `,
+    args: {
+        label: 'Notify',
+        variant: 'primary',
+    },
+    argTypes: {
+        variant: {
+            control: { type: 'select' },
+            options: [
+                { className: 'badge-primary', label: 'Primary', usage: 'Primary highlights, key statuses.' },
+                { className: 'badge-secondary', label: 'Secondary', usage: 'Supporting categories and tags.' },
+                { className: 'badge-success', label: 'Success', usage: 'Positive confirmations.' },
+                { className: 'badge-info', label: 'Info', usage: 'Neutral informational hints.' },
+                { className: 'badge-warning', label: 'Warning', usage: 'Cautionary messaging.' },
+                { className: 'badge-danger', label: 'Danger', usage: 'Errors or destructive actions.' },
+            ].map((badge) => badge.className.replace('badge-', '')),
+        },
+        label: { control: 'text' },
+    },
     parameters: {
         docs: {
             description: {
@@ -15,7 +34,29 @@ const meta: Meta<BadgeArgs> = {
             },
         },
     },
-};
+} satisfies Meta<BadgeArgs>;
 
 export default meta;
-export { Default, Playground } from './badges.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Canonical badge example with the primary variant.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Use the controls to toggle label and variant.',
+            },
+        },
+    },
+};

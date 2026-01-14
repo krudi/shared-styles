@@ -1,12 +1,31 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderInput } from './input.render';
 import type { InputArgs } from './input.types';
 
-const meta: Meta<InputArgs> = {
+const meta = {
     title: 'Forms/Input',
     tags: ['autodocs'],
-    render: renderInput,
+    render: ({ placeholder, value, disabled }: InputArgs): string => `
+        <div class="form-block">
+            <input
+                class="form-control"
+                type="text"
+                placeholder="${placeholder}"
+                value="${value}"
+                ${disabled ? 'disabled' : ''}
+            />
+        </div>
+    `,
+    args: {
+        placeholder: 'name@example.com',
+        value: '',
+        disabled: false,
+    },
+    argTypes: {
+        placeholder: { control: 'text' },
+        value: { control: 'text' },
+        disabled: { control: 'boolean' },
+    },
     parameters: {
         docs: {
             description: {
@@ -14,7 +33,29 @@ const meta: Meta<InputArgs> = {
             },
         },
     },
-};
+} satisfies Meta<InputArgs>;
 
 export default meta;
-export { Default, Playground } from './input.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Single-line text input styled with the shared form control tokens.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Adjust placeholder and disabled state to validate input styling.',
+            },
+        },
+    },
+};

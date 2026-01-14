@@ -1,12 +1,24 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderSvg } from './svg.render';
 import type { SvgArgs } from './svg.types';
 
-const meta: Meta<SvgArgs> = {
+const meta = {
     title: 'HTML/Svg',
     tags: ['autodocs'],
-    render: renderSvg,
+    render: ({ label }: SvgArgs): string => `
+        <div style="display: inline-flex; flex-direction: column; gap: 0.75rem;">
+            <svg viewBox="0 0 600 400" role="img" aria-label="${label}">
+                <image href="https://placehold.co/600x400" width="600" height="400" />
+            </svg>
+            <span>${label}</span>
+        </div>
+    `,
+    args: {
+        label: 'Inline icon',
+    },
+    argTypes: {
+        label: { control: 'text' },
+    },
     parameters: {
         docs: {
             description: {
@@ -14,7 +26,29 @@ const meta: Meta<SvgArgs> = {
             },
         },
     },
-};
+} satisfies Meta<SvgArgs>;
 
 export default meta;
-export { Default, Playground } from './svg.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'SVG icons inherit size from the CSS variables and current text color.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Update the label to validate accessibility text.',
+            },
+        },
+    },
+};

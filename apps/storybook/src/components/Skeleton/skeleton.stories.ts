@@ -1,12 +1,21 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderSkeleton } from './skeleton.render';
 import type { SkeletonArgs } from './skeleton.types';
 
-const meta: Meta<SkeletonArgs> = {
+const meta = {
     title: 'Components/Skeleton',
     tags: ['autodocs'],
-    render: renderSkeleton,
+    render: ({ lines }: SkeletonArgs): string => `
+        ${Array.from({ length: Math.max(1, Math.min(lines, 6)) })
+            .map(() => `<span class="skeleton-line"></span>`)
+            .join('')}
+    `,
+    args: {
+        lines: 3,
+    },
+    argTypes: {
+        lines: { control: { type: 'number', min: 1, max: 6, step: 1 } },
+    },
     parameters: {
         docs: {
             description: {
@@ -15,7 +24,29 @@ const meta: Meta<SkeletonArgs> = {
             },
         },
     },
-};
+} satisfies Meta<SkeletonArgs>;
 
 export default meta;
-export { Default, Playground } from './skeleton.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Canonical skeleton example with three lines.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Increase the line count to preview stacked loading placeholders.',
+            },
+        },
+    },
+};

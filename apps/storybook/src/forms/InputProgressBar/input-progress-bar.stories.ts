@@ -1,12 +1,23 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderInputProgressBar } from './input-progress-bar.render';
 import type { InputProgressBarArgs } from './input-progress-bar.types';
 
-const meta: Meta<InputProgressBarArgs> = {
+const meta = {
     title: 'Forms/Input Progress Bar',
     tags: ['autodocs'],
-    render: renderInputProgressBar,
+    render: ({ value, max }: InputProgressBarArgs): string => `
+        <div class="form-control-file-progress-bar-wrapper">
+            <progress class="form-control-file-progress-bar" value="${value}" max="${max}"></progress>
+        </div>
+    `,
+    args: {
+        value: 60,
+        max: 100,
+    },
+    argTypes: {
+        value: { control: { type: 'range', min: 0, max: 100, step: 5 } },
+        max: { control: { type: 'number', min: 1 } },
+    },
     parameters: {
         docs: {
             description: {
@@ -14,7 +25,29 @@ const meta: Meta<InputProgressBarArgs> = {
             },
         },
     },
-};
+} satisfies Meta<InputProgressBarArgs>;
 
 export default meta;
-export { Default, Playground } from './input-progress-bar.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Progress indicator styling for file uploads or completion states.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Adjust the progress value to validate track and fill styles.',
+            },
+        },
+    },
+};

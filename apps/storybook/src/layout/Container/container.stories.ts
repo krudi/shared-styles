@@ -1,12 +1,17 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderContainer } from './container.render';
 import type { ContainerArgs } from './container.types';
 
-const meta: Meta<ContainerArgs> = {
+const meta = {
     title: 'Layout/Container',
     tags: ['autodocs'],
-    render: renderContainer,
+    render: (): string => `
+        <h2 class="h4 mt-0">Container</h2>
+        <div class="container">
+            <p class="m-0 text-gray"><code>.container</code> recenters content and constrains it to the design width.</p>
+            <p class="mt-2 mb-0 text-gray">Use the container to keep text blocks and components aligned to the layout grid.</p>
+        </div>
+    `,
     parameters: {
         docs: {
             description: {
@@ -14,7 +19,29 @@ const meta: Meta<ContainerArgs> = {
             },
         },
     },
-};
+} satisfies Meta<ContainerArgs>;
 
 export default meta;
-export { Container } from './container.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Use <code>.container</code> to center content and cap the design width across breakpoints.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Use the container utility when you need consistent page-width alignment.',
+            },
+        },
+    },
+};

@@ -1,12 +1,20 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderUtilities } from './utilities.render';
 import type { UtilitiesArgs } from './utilities.types';
 
-const meta: Meta<UtilitiesArgs> = {
+const meta = {
     title: 'Forms/Utilities',
     tags: ['autodocs'],
-    render: renderUtilities,
+    render: (): string => `
+        <div class="form-block">
+            <label class="form-label" for="utilities-name">Name</label>
+            <input class="form-control" id="utilities-name" type="text" placeholder="Jane Doe" />
+        </div>
+        <div class="form-block">
+            <label class="form-label" for="utilities-email">Email</label>
+            <input class="form-control" id="utilities-email" type="email" placeholder="name@example.com" />
+        </div>
+    `,
     parameters: {
         docs: {
             description: {
@@ -14,7 +22,29 @@ const meta: Meta<UtilitiesArgs> = {
             },
         },
     },
-};
+} satisfies Meta<UtilitiesArgs>;
 
 export default meta;
-export { Default, Playground } from './utilities.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Form layout utility spacing applied via <code>.form-block</code>.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Use <code>.form-block</code> to keep consistent vertical spacing between fields.',
+            },
+        },
+    },
+};

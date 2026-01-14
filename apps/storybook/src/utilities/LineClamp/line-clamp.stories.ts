@@ -1,12 +1,14 @@
-import type { Meta } from '@storybook/html-vite';
+import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import { renderLineClamp } from './line-clamp.render';
 import type { LineClampArgs } from './line-clamp.types';
 
-const meta: Meta<LineClampArgs> = {
+const meta = {
     title: 'Utilities/Line Clamp',
     tags: ['autodocs'],
-    render: renderLineClamp,
+    render: () => `
+        <h2 class="h4 mt-0">Line clamp</h2>
+        <p class="line-clamp-2 m-0 text-gray">This paragraph uses <code>.line-clamp-2</code> to demonstrate truncation. The utility keeps multi-line text tidy without extra markup or JavaScript.</p>
+    `,
     parameters: {
         docs: {
             description: {
@@ -14,7 +16,29 @@ const meta: Meta<LineClampArgs> = {
             },
         },
     },
-};
+} satisfies Meta<LineClampArgs>;
 
 export default meta;
-export { Default, Playground } from './line-clamp.playground';
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Clamp utilities truncate multi-line text to keep cards and lists tidy.',
+            },
+        },
+    },
+};
+
+export const Playground: Story = {
+    parameters: {
+        docs: {
+            description: {
+                story: 'Line clamp helpers are great for previews and summaries.',
+            },
+        },
+    },
+};
