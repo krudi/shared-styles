@@ -9,8 +9,6 @@ export default [
     {
         files: [
             'apps/storybook/src/**/*.stories.ts',
-            'apps/storybook/src/**/*.render.ts',
-            'apps/storybook/src/**/*.playground.ts',
         ],
     },
 ];
