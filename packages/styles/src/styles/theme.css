@@ -6,10 +6,10 @@
         --c-gray: #4e596a;
         --c-primary: #216e7d;
         --c-secondary: #353b48;
-        --c-success: #27ae60;
-        --c-info: #0dccf2;
-        --c-warning: #ffc105;
-        --c-danger: #dc3848;
+        --c-success: #1f7a3f;
+        --c-info: #006a86;
+        --c-warning: #8a6400;
+        --c-danger: #b02a37;
         --c-beige: #f8f3ec;
 
         /* Palette */
@@ -70,10 +70,10 @@
         /* Theme variable colors */
         --c-primary: #474f58;
         --c-secondary: #d2e0fb;
-        --c-success: #27ae60;
-        --c-info: #0dccf2;
-        --c-warning: #ffc105;
-        --c-danger: #dc3848;
+        --c-success: #1f7a3f;
+        --c-info: #006a86;
+        --c-warning: #8a6400;
+        --c-danger: #b02a37;
 
         /* Palette */
         --c-white-100: #151515;
