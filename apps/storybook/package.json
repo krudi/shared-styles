@@ -34,7 +34,7 @@
         "@vitest/browser-playwright": "^4.0.16",
         "@vitest/coverage-v8": "^4.0.18",
         "eslint-plugin-storybook": "10.2.0",
-        "playwright": "^1.57.0",
+        "playwright": "^1.58.0",
         "storybook": "^10.2.0",
         "typescript": "^5.9.2",
         "vite": "^7.3.1",
