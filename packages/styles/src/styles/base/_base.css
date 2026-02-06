@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -12,4 +13,29 @@ body {
     font-family: var(--body-font-family);
     font-size: var(--body-font-size);
     overflow-x: hidden;
+    accent-color: var(--c-secondary);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    :root {
+        --modal-backdrop: hsl(0deg 0 0 / 85%);
+    }
+}
+
+@media (prefers-reduced-data: reduce) {
+    :root {
+        --shadow-md: none;
+    }
+}
+
+@media (forced-colors: active) {
+    :is(a, button, input, textarea, summary) {
+        forced-color-adjust: auto;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --outline-size: max(3px, 0.12em);
+    }
 }

@@ -4,11 +4,6 @@
     --outline-color: currentcolor;
 }
 
-:is(a, button, input, textarea, summary):focus {
-    outline: var(--outline-size) var(--outline-style) var(--outline-color);
-    outline-offset: var(--outline-offset, var(--outline-size));
-}
-
 :is(a, button, input, textarea, summary):focus-visible {
     outline: var(--outline-size) var(--outline-style) var(--outline-color);
     outline-offset: var(--outline-offset, var(--outline-size));
