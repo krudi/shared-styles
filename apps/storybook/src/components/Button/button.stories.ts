@@ -20,7 +20,7 @@ const meta = {
     },
     args: {
         label: 'Action',
-        variant: 'primary',
+        variant: 'default',
         size: 'default',
         disabled: false,
     },
@@ -28,23 +28,7 @@ const meta = {
         label: { control: 'text', description: 'Text inside the button' },
         variant: {
             control: 'inline-radio',
-            options: [
-                'primary',
-                'secondary',
-                'success',
-                'info',
-                'warning',
-                'danger',
-                'white',
-                'outline-primary',
-                'outline-secondary',
-                'outline-success',
-                'outline-info',
-                'outline-warning',
-                'outline-danger',
-                'outline-white',
-                'link',
-            ],
+            options: ['default', 'secondary', 'outline', 'ghost', 'destructive', 'link'],
             description: 'Visual style of the button',
         },
         size: {
@@ -73,7 +57,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical primary button example.',
+                story: 'Canonical default button example.',
             },
         },
     },
