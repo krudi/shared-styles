@@ -1,3 +1,4 @@
+import { wireModalTrigger } from '@krudi/styles/components';
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { ModalArgs } from './modal.types';
@@ -5,23 +6,57 @@ import type { ModalArgs } from './modal.types';
 const meta = {
     title: 'Components/Modal',
     tags: ['autodocs'],
-    render: ({ title, body, primaryLabel, secondaryLabel }: ModalArgs): string => `
-        <dialog class="modal" open>
+    play: ({ canvasElement }): void => {
+        const openTrigger = canvasElement.querySelector<HTMLElement>('button[id$="-modal-open"]');
+        const dialog = canvasElement.querySelector<HTMLDialogElement>('dialog[id$="-modal"]');
+        if (!openTrigger || !dialog) {
+            return;
+        }
+
+        wireModalTrigger({ openId: openTrigger.id, dialogId: dialog.id });
+    },
+    render: ({ title, body, primaryLabel, secondaryLabel }: ModalArgs, { id }): string => `
+        <button
+            type="button"
+            class="btn btn-default"
+            id="${id}-modal-open"
+        >
+            Open modal
+        </button>
+        <dialog class="modal" id="${id}-modal">
             <header class="modal-header">
                 <h2 class="h4 m-0">${title}</h2>
-                <button type="button" class="btn btn-close modal-close" aria-label="Close">×</button>
+                <button
+                    type="button"
+                    class="btn btn-close modal-close"
+                    aria-label="Close"
+                    data-modal-close
+                >
+                    ×
+                </button>
             </header>
             <section class="modal-body">
                 <p class="mb-0">${body}</p>
             </section>
             <footer class="modal-footer">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-secondary">${secondaryLabel}</button>
-                    <button type="button" class="btn btn-primary">${primaryLabel}</button>
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-modal-close
+                    >
+                        ${secondaryLabel}
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-default"
+                        data-modal-close
+                    >
+                        ${primaryLabel}
+                    </button>
                 </div>
             </footer>
         </dialog>
-        <p class="text-gray">Dialog is rendered open for preview. Apply <code>open</code> attribute or JS to show/hide in your app.</p>
     `,
     args: {
         title: 'Modal title',

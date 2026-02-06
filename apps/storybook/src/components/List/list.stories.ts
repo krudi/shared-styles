@@ -6,7 +6,7 @@ const meta = {
     title: 'Components/List',
     tags: ['autodocs'],
     render: ({ items }: ListArgs): string => `
-        <ul class="unordered-list">
+        <ul class="unordered-list" role="list">
             ${items.map((item) => `<li>${item}</li>`).join('')}
         </ul>
     `,

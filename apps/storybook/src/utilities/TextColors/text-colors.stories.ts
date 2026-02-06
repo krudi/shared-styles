@@ -8,12 +8,7 @@ const meta = {
     render: () => `
         <h2 class="h4 mt-0">Text colors</h2>
         ${[
-            { className: 'text-primary', label: '.text-primary' },
             { className: 'text-secondary', label: '.text-secondary' },
-            { className: 'text-success', label: '.text-success' },
-            { className: 'text-info', label: '.text-info' },
-            { className: 'text-warning', label: '.text-warning' },
-            { className: 'text-danger', label: '.text-danger' },
             { className: 'text-gray', label: '.text-gray' },
         ]
             .map(
@@ -26,7 +21,7 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Text color helpers for semantic accents and status messaging.',
+                component: 'Text color helpers for accents and hierarchy.',
             },
         },
     },
@@ -41,7 +36,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Apply semantic hues for status and emphasis without altering typography styles.',
+                story: 'Apply accent hues for emphasis without altering typography styles.',
             },
         },
     },

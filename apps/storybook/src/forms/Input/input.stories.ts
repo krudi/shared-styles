@@ -59,3 +59,52 @@ export const Playground: Story = {
         },
     },
 };
+
+export const UserInvalid: Story = {
+    render: (): string => `
+        <div class="form-block">
+            <label class="form-label" for="input-user-invalid">Email</label>
+            <input
+                class="form-control"
+                id="input-user-invalid"
+                type="email"
+                placeholder="name@example.com"
+                required
+            />
+            <span class="form-text">Focus and blur the field to trigger <code>:user-invalid</code>.</span>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Shows the <code>:user-invalid</code> styling after interacting with an invalid field.',
+            },
+        },
+    },
+};
+
+export const UserValid: Story = {
+    render: (): string => `
+        <div class="form-block">
+            <label class="form-label" for="input-user-valid">Email</label>
+            <input
+                class="form-control"
+                id="input-user-valid"
+                type="email"
+                placeholder="name@example.com"
+                value="jane.doe@example.com"
+                required
+            />
+            <span class="form-text">Interact with the field to see <code>:user-valid</code>.</span>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Shows the <code>:user-valid</code> styling after interacting with a valid field.',
+            },
+        },
+    },
+};

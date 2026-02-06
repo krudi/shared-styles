@@ -1,4 +1,4 @@
 export type ButtonGroupArgs = {
     labels: string[];
-    variant: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary';
+    variant: 'default' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'link';
 };

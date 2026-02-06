@@ -9,7 +9,7 @@ const meta = {
         <div class="form-input-group">
             <span class="form-input-group-text">@</span>
             <input class="form-control" type="text" placeholder="${placeholder}" value="${value}" />
-            <button class="btn btn-primary" type="button">Go</button>
+            <button class="btn btn-default" type="button">Go</button>
         </div>
     `,
     args: {

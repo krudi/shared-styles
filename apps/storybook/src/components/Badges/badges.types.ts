@@ -1,4 +1,4 @@
-export type BadgeVariant = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger';
+export type BadgeVariant = 'default' | 'secondary' | 'outline' | 'destructive';
 
 export type BadgeArgs = {
     label: string;

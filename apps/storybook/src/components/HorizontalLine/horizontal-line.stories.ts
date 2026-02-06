@@ -7,7 +7,7 @@ const meta = {
     tags: ['autodocs'],
     render: ({ beforeText, afterText }: HorizontalLineArgs): string => `
         <p>${beforeText}</p>
-        <hr class="hr" />
+        <hr class="hr" role="presentation" />
         <p>${afterText}</p>
     `,
     args: {

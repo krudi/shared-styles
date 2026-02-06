@@ -10,18 +10,16 @@ const meta = {
     `,
     args: {
         label: 'Notify',
-        variant: 'primary',
+        variant: 'default',
     },
     argTypes: {
         variant: {
             control: { type: 'select' },
             options: [
-                { className: 'badge-primary', label: 'Primary', usage: 'Primary highlights, key statuses.' },
+                { className: 'badge-default', label: 'Default', usage: 'Primary highlights, key statuses.' },
                 { className: 'badge-secondary', label: 'Secondary', usage: 'Supporting categories and tags.' },
-                { className: 'badge-success', label: 'Success', usage: 'Positive confirmations.' },
-                { className: 'badge-info', label: 'Info', usage: 'Neutral informational hints.' },
-                { className: 'badge-warning', label: 'Warning', usage: 'Cautionary messaging.' },
-                { className: 'badge-danger', label: 'Danger', usage: 'Errors or destructive actions.' },
+                { className: 'badge-outline', label: 'Outline', usage: 'Neutral tags with outline.' },
+                { className: 'badge-destructive', label: 'Destructive', usage: 'Destructive or critical statuses.' },
             ].map((badge) => badge.className.replace('badge-', '')),
         },
         label: { control: 'text' },
@@ -45,7 +43,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical badge example with the primary variant.',
+                story: 'Canonical badge example with the default variant.',
             },
         },
     },

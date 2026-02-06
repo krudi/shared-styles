@@ -12,13 +12,13 @@ const meta = {
     `,
     args: {
         labels: ['Left', 'Middle', 'Right'],
-        variant: 'primary',
+        variant: 'default',
     },
     argTypes: {
         labels: { control: 'object' },
         variant: {
             control: 'inline-radio',
-            options: ['primary', 'secondary', 'outline-primary', 'outline-secondary'],
+            options: ['default', 'secondary', 'outline', 'ghost', 'destructive', 'link'],
         },
     },
     parameters: {

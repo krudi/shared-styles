@@ -14,13 +14,7 @@ const meta = {
                 { className: 'bg-white-200', label: '.bg-white-200' },
                 { className: 'bg-black', label: '.bg-black' },
                 { className: 'bg-gray', label: '.bg-gray' },
-                { className: 'bg-beige', label: '.bg-beige' },
-                { className: 'bg-primary', label: '.bg-primary' },
                 { className: 'bg-secondary', label: '.bg-secondary' },
-                { className: 'bg-success', label: '.bg-success' },
-                { className: 'bg-info', label: '.bg-info' },
-                { className: 'bg-warning', label: '.bg-warning' },
-                { className: 'bg-danger', label: '.bg-danger' },
             ]
                 .map(
                     (utility) => `
