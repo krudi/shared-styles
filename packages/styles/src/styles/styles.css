@@ -1,4 +1,4 @@
-@layer variables, theme, base, layout, html, components, forms, utilities;
+@layer variables, theme, base, layout, html, components, forms, utilities, overrides;
 
 @import './theme.css' layer(theme);
 @import './variables.css' layer(variables);

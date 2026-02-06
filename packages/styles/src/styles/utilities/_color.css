@@ -18,30 +18,8 @@
     color: var(--c-gray);
 }
 
-.text-beige {
-    color: var(--c-beige);
-}
 
-.text-primary {
-    color: var(--c-primary);
-}
 
 .text-secondary {
     color: var(--c-secondary);
-}
-
-.text-success {
-    color: var(--c-success);
-}
-
-.text-info {
-    color: var(--c-info);
-}
-
-.text-warning {
-    color: var(--c-warning);
-}
-
-.text-danger {
-    color: var(--c-danger);
 }

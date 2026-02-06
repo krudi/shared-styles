@@ -1,42 +1,47 @@
-/* Margin Positions */
 .mx-auto {
     margin: 0 auto;
 }
 
-/* Margin */
 .m-0 {
-    margin: 0;
+    margin-block: 0;
+    margin-inline: 0;
 }
 
 .m-n1 {
-    margin: var(--spacer-n1);
+    margin-block: var(--spacer-n1);
+    margin-inline: var(--spacer-n1);
 }
 
 .m-n2 {
-    margin: var(--spacer-n2);
+    margin-block: var(--spacer-n2);
+    margin-inline: var(--spacer-n2);
 }
 
 .m-1 {
-    margin: var(--spacer-1);
+    margin-block: var(--spacer-1);
+    margin-inline: var(--spacer-1);
 }
 
 .m-2 {
-    margin: var(--spacer-2);
+    margin-block: var(--spacer-2);
+    margin-inline: var(--spacer-2);
 }
 
 .m-3 {
-    margin: var(--spacer-3);
+    margin-block: var(--spacer-3);
+    margin-inline: var(--spacer-3);
 }
 
 .m-4 {
-    margin: var(--spacer-4);
+    margin-block: var(--spacer-4);
+    margin-inline: var(--spacer-4);
 }
 
 .m-default {
-    margin: var(--spacer);
+    margin-block: var(--spacer);
+    margin-inline: var(--spacer);
 }
 
-/* Margin Top */
 .mt-0 {
     margin-block-start: 0;
 }
@@ -69,7 +74,6 @@
     margin-block-start: var(--spacer);
 }
 
-/* Margin Bottom */
 .mb-0 {
     margin-block-end: 0;
 }
@@ -102,7 +106,6 @@
     margin-block-end: var(--spacer);
 }
 
-/* Margin Left */
 .ml-0 {
     margin-inline-start: 0;
 }
@@ -135,7 +138,6 @@
     margin-inline-start: var(--spacer);
 }
 
-/* Margin Right */
 .mr-0 {
     margin-inline-end: 0;
 }
@@ -168,7 +170,6 @@
     margin-inline-end: var(--spacer);
 }
 
-/* Margin Inline (Horizontal) */
 .mx-0 {
     margin-inline: 0;
 }
@@ -201,7 +202,6 @@
     margin-inline: var(--spacer);
 }
 
-/* Margin Block (Vertical) */
 .my-0 {
     margin-block: 0;
 }
