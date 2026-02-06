@@ -34,11 +34,12 @@
     transform: scale(0);
     transition-property: transform;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
     box-shadow: inset 1em 1em var(--form-checkbox-input-background-color-active);
 }
 
-.form-checkbox-input:focus {
-    outline-offset: 0.125rem;
+.form-checkbox-input:focus-visible {
+    outline-offset: var(--outline-offset-tight);
 }
 
 .form-checkbox-input:checked::before {

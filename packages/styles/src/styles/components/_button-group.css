@@ -1,5 +1,5 @@
 .btn-group {
     display: inline-flex;
-    gap: 0.75rem;
+    gap: var(--button-gap);
     vertical-align: middle;
 }

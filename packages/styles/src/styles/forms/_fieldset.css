@@ -13,3 +13,11 @@
 .fieldset + .fieldset {
     margin-block-start: calc(var(--spacer) * 2);
 }
+
+.fieldset:has(.form-control:user-invalid) {
+    border-color: var(--form-text-error-color);
+}
+
+.fieldset:has(.form-control:user-valid) {
+    border-color: var(--form-fieldset-border-color-valid);
+}

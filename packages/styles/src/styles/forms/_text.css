@@ -1,14 +1,17 @@
 .form-text {
     display: block;
     color: var(--form-text-color);
+    line-height: var(--base-line-height);
 }
 
 .form-text-error {
     display: block;
     color: var(--form-text-error-color);
+    line-height: var(--base-line-height);
 }
 
 .form-text-hint {
     display: block;
-    color: var(--c-danger);
+    color: var(--c-gray);
+    line-height: var(--base-line-height);
 }

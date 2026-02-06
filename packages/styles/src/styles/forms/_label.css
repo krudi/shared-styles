@@ -3,9 +3,11 @@
     display: block;
     cursor: pointer;
     font-weight: var(--form-label-font-weight);
+    text-wrap: pretty;
+    line-height: var(--base-line-height);
 }
 
 .form-label-required {
-    color: var(--c-danger);
+    color: var(--form-text-error-color);
     font-weight: 700;
 }

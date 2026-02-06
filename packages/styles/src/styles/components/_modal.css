@@ -11,8 +11,9 @@
     color: var(--modal-color);
     transition-property: display, opacity;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
     transition-behavior: allow-discrete;
-    z-index: 99990;
+    z-index: var(--z-index-modal);
 }
 
 .modal[open] {
@@ -24,6 +25,10 @@
     }
 }
 
+.modal[open]:has(.modal-body) {
+    box-shadow: var(--shadow-md);
+}
+
 .modal[open]::backdrop {
     opacity: 1;
 }
@@ -33,6 +38,7 @@
     opacity: 0;
     transition-property: opacity, display, overlay;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
     transition-behavior: allow-discrete;
 
     @starting-style {
@@ -41,9 +47,10 @@
 }
 
 .modal-header {
-    border-bottom-width: 1px;
+    border-bottom-width: var(--modal-border-width);
     border-bottom-style: solid;
     border-bottom-color: var(--modal-border-color);
+    text-wrap: balance;
 }
 
 .modal-close {
@@ -58,7 +65,14 @@
 
 .modal-footer {
     padding-block-start: var(--modal-footer-padding-block-start);
-    border-top-width: 1px;
+    border-top-width: var(--modal-border-width);
     border-top-style: solid;
     border-top-color: var(--modal-border-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal,
+    .modal::backdrop {
+        transition: none !important;
+    }
 }

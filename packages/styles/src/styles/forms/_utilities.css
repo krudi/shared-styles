@@ -1,3 +1,20 @@
 .form-block {
     margin-block-end: var(--spacer);
 }
+
+.form-block:has(.form-control:user-invalid) .form-label {
+    color: var(--form-text-error-color);
+}
+
+.form-block:has(.form-control:user-invalid) .form-text,
+.form-block:has(.form-control:user-invalid) .form-text-hint {
+    color: var(--form-text-error-color);
+}
+
+.form-block:has(.form-control:user-valid) .form-label {
+    color: var(--c-secondary);
+}
+
+.form-block:has(.form-control:user-valid) .form-text {
+    color: var(--c-secondary);
+}

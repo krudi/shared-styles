@@ -1,18 +1,18 @@
 blockquote > * {
-    padding-inline: 1.5rem;
-    padding-block: 1.5rem;
+    padding-inline: var(--blockquote-padding-inline);
+    padding-block: var(--blockquote-padding-block);
     font-style: italic;
-    border-inline-start-width: 0.25rem;
+    border-inline-start-width: var(--blockquote-border-width);
     border-inline-start-style: solid;
-    border-inline-start-color: var(--c-primary);
+    border-inline-start-color: var(--c-secondary);
 }
 
 blockquote p::before {
-    margin-inline-end: 0.25rem;
+    margin-inline-end: var(--blockquote-quote-gap);
     content: open-quote;
 }
 
 blockquote p::after {
-    margin-inline-start: 0.25rem;
+    margin-inline-start: var(--blockquote-quote-gap);
     content: close-quote;
 }

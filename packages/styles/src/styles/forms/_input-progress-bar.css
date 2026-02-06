@@ -2,7 +2,7 @@
     --form-control-file-progress-bar-height: 0.5rem;
     --form-control-file-progress-bar-background-color: var(--c-white-200);
     --form-control-file-progress-bar-border-radius: var(--border-radius-sm);
-    --form-control-file-progress-bar-value-background-color: var(--c-primary);
+    --form-control-file-progress-bar-value-background-color: var(--c-secondary);
 }
 
 .form-control-file-progress-bar-wrapper {
@@ -20,6 +20,8 @@
     border-radius: var(--form-control-file-progress-bar-border-radius);
     transition-property: width;
     transition-duration: var(--transition-default);
+    transition-timing-function: var(--transition-ease);
+    accent-color: var(--c-secondary);
 }
 
 .form-control-file-progress-bar::-webkit-progress-bar {

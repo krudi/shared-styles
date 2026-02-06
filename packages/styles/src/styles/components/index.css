@@ -1,7 +1,6 @@
 /* Component bundle */
 @import './_badge.css' layer(components);
 @import './_accordion.css' layer(components);
-@import './_alert.css' layer(components);
 @import './_button-group.css' layer(components);
 @import './_button.css' layer(components);
 @import './_dropdown.css' layer(components);
@@ -9,4 +8,3 @@
 @import './_list.css' layer(components);
 @import './_modal.css' layer(components);
 @import './_pagination.css' layer(components);
-@import './_skeleton.css' layer(components);

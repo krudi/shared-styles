@@ -13,7 +13,18 @@
     border-style: var(--accordion-details-border-style);
     border-color: var(--accordion-details-border-color);
     border-radius: var(--accordion-details-border-radius);
-    overflow: hidden;
+    overflow: visible;
+    border-bottom-width: var(--accordion-details-border-bottom-width);
+    border-bottom-style: var(--accordion-details-border-bottom-style);
+    border-bottom-color: var(--accordion-details-border-bottom-color);
+}
+
+@media (prefers-contrast: more) {
+    .accordion-details {
+        border-bottom-width: var(--accordion-details-border-bottom-width-contrast);
+        border-bottom-style: var(--accordion-details-border-bottom-style);
+        border-bottom-color: var(--accordion-details-border-bottom-color-contrast);
+    }
 }
 
 .accordion-details:last-child {
@@ -27,6 +38,7 @@
     overflow: hidden;
     transition-property: block-size, content-visibility;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
     transition-behavior: allow-discrete;
 }
 
@@ -44,7 +56,7 @@
 
 .accordion-summary {
     width: 100%;
-    padding-inline: var(--accordion-summary-inline-block);
+    padding-inline: var(--accordion-summary-padding-inline);
     padding-block: var(--accordion-summary-padding-block);
     position: relative;
     display: flex;
@@ -62,6 +74,7 @@
     color: var(--accordion-summary-color);
     font-size: var(--accordion-summary-font-size);
     font-weight: var(--accordion-summary-font-weight);
+    text-wrap: balance;
 }
 
 .accordion-summary-icon {
@@ -75,10 +88,22 @@
     background-size: contain;
     transition-property: rotate;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-details::details-content {
+        transition: none;
+    }
+
+    .accordion-summary-icon {
+        transition: none;
+    }
 }
 
 .accordion-content {
-    padding-block: var(--accordion-content-padding-block);
+    padding-block-start: 0;
+    padding-block-end: var(--accordion-content-padding-block);
     padding-inline: var(--accordion-content-padding-inline);
     font-size: var(--accordion-content-font-size);
 }

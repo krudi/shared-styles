@@ -33,11 +33,12 @@
     transform: scale(0);
     transition-property: transform;
     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-ease);
     box-shadow: inset 1em 1em var(--form-radio-input-background-color-active);
 }
 
-.form-radio-input:focus {
-    outline-offset: 0.125rem;
+.form-radio-input:focus-visible {
+    outline-offset: var(--outline-offset-tight);
 }
 
 .form-radio-input:checked::before {

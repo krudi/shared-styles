@@ -13,8 +13,8 @@
     flex: 1 1 auto;
 }
 
-.form-input-group > .form-control:focus,
-.form-input-group > .btn:focus {
+.form-input-group > .form-control:focus-visible,
+.form-input-group > .btn:focus-visible {
     z-index: 5;
 }
 
@@ -29,6 +29,16 @@
     border-bottom-left-radius: 0 !important;
 }
 
+.form-input-group > :first-child {
+    border-top-left-radius: var(--form-input-border-radius);
+    border-bottom-left-radius: var(--form-input-border-radius);
+}
+
+.form-input-group > :last-child {
+    border-top-right-radius: var(--form-input-border-radius);
+    border-bottom-right-radius: var(--form-input-border-radius);
+}
+
 .form-input-group-text {
     background-color: var(--form-input-background-color);
     padding-block: var(--form-input-padding-block);
@@ -40,4 +50,5 @@
     border-width: var(--form-input-border-width);
     border-style: var(--form-input-border-style);
     border-color: var(--form-input-border-color);
+    border-radius: var(--form-input-border-radius);
 }
