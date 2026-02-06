@@ -1,6 +1,6 @@
 {
     "extends": "@krudi/typescript-config/base.json",
-    "include": ["src/**/*", ".storybook/**/*", "vitest.config.ts", "vitest.setup.ts"],
+    "include": ["src/**/*", ".storybook/**/*", "vitest.config.ts"],
     "compilerOptions": {
         "types": ["vite/client"]
     },

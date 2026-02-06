@@ -29,7 +29,7 @@ export default defineConfig({
                             },
                         ],
                     },
-                    setupFiles: ['./vitest.setup.ts'],
+                    setupFiles: ['./.storybook/vitest.setup.ts'],
                 },
             },
         ],

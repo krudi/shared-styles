@@ -53,7 +53,6 @@ Import the layers first, then override inside the matching layer so specificity 
 
 @layer theme {
     :root {
-        --c-primary: #6b5bff;
     }
 }
 ```
