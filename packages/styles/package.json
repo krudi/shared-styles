@@ -73,7 +73,7 @@
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/stylelint-config": "^0.1.1",
         "@types/node": "^22.18.0",
-        "autoprefixer": "^10.4.20",
+        "autoprefixer": "^10.4.24",
         "cssnano": "^7.0.6",
         "postcss": "^8.4.49",
         "postcss-cli": "^11.0.0",
