@@ -21,7 +21,7 @@
         "@krudi/styles": "*"
     },
     "devDependencies": {
-        "@chromatic-com/storybook": "^5.0.0",
+        "@chromatic-com/storybook": "^5.0.1",
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@storybook/addon-a11y": "^10.2.1",
