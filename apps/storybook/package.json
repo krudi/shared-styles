@@ -24,7 +24,7 @@
         "@chromatic-com/storybook": "^5.0.1",
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
-        "@storybook/addon-a11y": "^10.2.1",
+        "@storybook/addon-a11y": "^10.2.8",
         "@storybook/addon-docs": "^10.2.8",
         "@storybook/addon-links": "^10.2.8",
         "@storybook/addon-themes": "^10.2.8",
