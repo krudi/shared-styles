@@ -57,7 +57,7 @@
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/typescript-config": "^0.1.9",
-        "turbo": "^2.8.7"
+        "turbo": "^2.8.9"
     },
     "packageManager": "npm@11.7.0",
     "engines": {
