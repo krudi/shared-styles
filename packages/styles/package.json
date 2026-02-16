@@ -72,7 +72,7 @@
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/stylelint-config": "^0.1.1",
-        "@types/node": "^22.18.0",
+        "@types/node": "^22.19.11",
         "autoprefixer": "^10.4.24",
         "cssnano": "^7.0.6",
         "postcss": "^8.4.49",
