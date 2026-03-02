@@ -30,7 +30,7 @@
         "@storybook/addon-themes": "^10.2.12",
         "@storybook/addon-vitest": "^10.2.12",
         "@storybook/html-vite": "^10.2.12",
-        "@types/node": "^22.19.11",
+        "@types/node": "^22.19.13",
         "@vitest/browser-playwright": "^4.0.16",
         "@vitest/coverage-v8": "^4.0.18",
         "eslint-plugin-storybook": "10.2.10",
