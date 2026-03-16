@@ -1,6 +1,6 @@
 export type AlertArgs = {
     title: string;
     description: string;
-    variant: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'white';
+    variant: 'primary' | 'secondary' | 'white';
     dismissible: boolean;
 };

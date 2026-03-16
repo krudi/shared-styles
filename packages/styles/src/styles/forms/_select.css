@@ -1,11 +1,20 @@
-.form-control {
+.form-select {
     width: 100%;
     padding-block: var(--form-input-padding-block);
     padding-inline: var(--form-input-padding-inline);
+    padding-inline-end: calc(var(--form-input-padding-inline) * 2.5);
+    appearance: none;
     background-color: var(--form-input-background-color);
+    background-image:
+        linear-gradient(45deg, transparent 50%, currentcolor 50%),
+        linear-gradient(135deg, currentcolor 50%, transparent 50%);
+    background-position:
+        calc(100% - 1rem) calc(50% - 0.125rem),
+        calc(100% - 0.6875rem) calc(50% - 0.125rem);
+    background-size: 0.3125rem 0.3125rem;
+    background-repeat: no-repeat;
     display: block;
     color: var(--form-input-color);
-    caret-color: var(--c-secondary);
     border-width: var(--form-input-border-width);
     border-style: var(--form-input-border-style);
     border-color: var(--form-input-border-color);
@@ -16,54 +25,51 @@
     transition-timing-function: var(--transition-ease);
 }
 
-.form-control:focus {
+.form-select:focus {
     outline: none;
     border-color: var(--form-input-border-color-focus);
     box-shadow: var(--form-input-box-shadow-focus);
 }
 
-.form-control:focus:not(:focus-visible) {
+.form-select:focus:not(:focus-visible) {
     border-color: var(--form-input-border-color);
     box-shadow: none;
 }
 
-.form-control:focus-visible {
+.form-select:focus-visible {
     border-color: var(--form-input-border-color-focus);
     box-shadow: var(--form-input-box-shadow-focus);
 }
 
-.form-control:user-invalid {
+.form-select:user-invalid {
     border-color: var(--form-text-error-color);
 }
 
-.form-control:user-invalid:focus-visible {
+.form-select:user-invalid:focus-visible {
     box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--form-text-error-color) 30%, transparent);
 }
 
-.form-control:user-valid {
+.form-select:user-valid {
     border-color: var(--c-secondary);
 }
 
-.form-control:user-valid:focus-visible {
+.form-select:user-valid:focus-visible {
     box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--c-secondary) 30%, transparent);
 }
 
 @media (prefers-contrast: more) {
-    .form-control {
+    .form-select {
         border-width: max(2px, var(--form-input-border-width));
     }
 }
 
-.form-control::placeholder {
-    opacity: 1;
-}
-
-.form-control:disabled {
+.form-select:disabled {
     background-color: var(--c-white-200);
     opacity: 1;
 }
 
-.form-control::-webkit-calendar-picker-indicator {
-    display: none;
-    opacity: 0;
+.form-select[multiple] {
+    min-block-size: 8rem;
+    padding-inline-end: var(--form-input-padding-inline);
+    background-image: none;
 }

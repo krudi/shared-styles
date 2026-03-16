@@ -4,9 +4,9 @@ const meta = {
     title: 'Showcase/Completed Form',
     tags: ['autodocs'],
     render: (): string => `
-        <form class="form-block" aria-label="Completed profile form">
-            <fieldset class="fieldset">
-                <legend class="legend">Profile details</legend>
+        <form aria-label="Completed profile form">
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Profile details</legend>
 
                 <div class="form-block">
                     <label class="form-label" for="showcase-full-name">Full name</label>
@@ -28,8 +28,8 @@ const meta = {
                 </div>
             </fieldset>
 
-            <fieldset class="fieldset">
-                <legend class="legend">Preferences</legend>
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Preferences</legend>
 
                 <div class="form-block">
                     <span class="form-label">Notifications</span>
@@ -65,20 +65,14 @@ const meta = {
                         <label class="form-radio-label" for="showcase-billing-annual">Annual</label>
                     </div>
                 </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <legend class="legend">Completion</legend>
                 <div class="form-block">
-                    <label class="form-label" for="showcase-progress">Profile completion</label>
-                    <div class="form-control-file-progress-bar-wrapper">
-                        <progress
-                            class="form-control-file-progress-bar"
-                            id="showcase-progress"
-                            value="80"
-                            max="100"
-                        ></progress>
-                    </div>
+                    <label class="form-label" for="showcase-language">Language</label>
+                    <select class="form-select" id="showcase-language">
+                        <option>English</option>
+                        <option selected>Polish</option>
+                        <option>German</option>
+                    </select>
+                    <span class="form-text-hint">Saved preferences use the same field spacing as text inputs.</span>
                 </div>
             </fieldset>
 

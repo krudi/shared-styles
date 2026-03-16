@@ -7,6 +7,9 @@
 }
 
 .form-radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--form-radio-label-gap);
     order: 1;
 }
 

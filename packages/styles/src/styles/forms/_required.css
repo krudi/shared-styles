@@ -1,0 +1,4 @@
+.form-label-required {
+    color: var(--form-text-error-color);
+    font-weight: 700;
+}

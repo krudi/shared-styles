@@ -101,7 +101,6 @@
 
 .btn-icon svg {
     fill: var(--button-color-emphasis);
-    font-size: var(--menu-font-size);
 }
 
 .btn-icon:disabled,

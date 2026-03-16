@@ -1,0 +1,25 @@
+.form-block {
+    margin-block-end: var(--form-block-margin-block-end);
+}
+
+.form-block:has(.form-control:user-invalid) .form-label,
+.form-block:has(.form-select:user-invalid) .form-label {
+    color: var(--form-text-error-color);
+}
+
+.form-block:has(.form-control:user-invalid) .form-text,
+.form-block:has(.form-control:user-invalid) .form-text-hint,
+.form-block:has(.form-select:user-invalid) .form-text,
+.form-block:has(.form-select:user-invalid) .form-text-hint {
+    color: var(--form-text-error-color);
+}
+
+.form-block:has(.form-control:user-valid) .form-label,
+.form-block:has(.form-select:user-valid) .form-label {
+    color: var(--c-secondary);
+}
+
+.form-block:has(.form-control:user-valid) .form-text,
+.form-block:has(.form-select:user-valid) .form-text {
+    color: var(--c-secondary);
+}

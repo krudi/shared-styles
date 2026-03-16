@@ -23,8 +23,6 @@
     color: var(--c-gray-background-color-emphasis);
 }
 
-
-
 .bg-secondary {
     background-color: var(--c-secondary);
     color: var(--c-secondary-background-color-emphasis);

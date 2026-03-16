@@ -6,8 +6,8 @@ const meta = {
     title: 'Forms/Legend',
     tags: ['autodocs'],
     render: ({ text }: LegendArgs): string => `
-        <fieldset class="fieldset">
-            <legend class="legend">${text}</legend>
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">${text}</legend>
             <span class="form-text">Legend labels the group of fields inside a fieldset.</span>
         </fieldset>
     `,
@@ -20,7 +20,7 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Legend styling for fieldset headings and grouped labels.',
+                component: 'Legend styling for fieldset headings and grouped labels via <code>.form-legend</code>.',
             },
         },
     },
@@ -35,7 +35,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Legend styling for grouped form content.',
+                story: 'Legend styling for grouped form content inside <code>.form-fieldset</code>.',
             },
         },
     },

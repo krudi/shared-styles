@@ -38,38 +38,6 @@
     --alert-border-color: none;
 }
 
-.alert-success {
-    --alert-background-color: var(--c-success);
-    --alert-color: var(--c-success-background-color-emphasis);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
-.alert-info {
-    --alert-background-color: var(--c-info);
-    --alert-color: var(--c-info-background-color-emphasis);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
-.alert-warning {
-    --alert-background-color: var(--c-warning);
-    --alert-color: var(--c-warning-background-color-emphasis);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
-.alert-danger {
-    --alert-background-color: var(--c-danger);
-    --alert-color: var(--c-danger-background-color-emphasis);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
 .alert-close {
     top: var(--alert-padding-block);
     right: var(--alert-padding-inline);

@@ -1,4 +1,4 @@
-.fieldset {
+.form-fieldset {
     min-width: 0;
     margin: 0;
     padding-block: var(--form-fieldset-padding-block);
@@ -10,14 +10,16 @@
     border-radius: var(--form-fieldset-border-radius);
 }
 
-.fieldset + .fieldset {
+.form-fieldset + .form-fieldset {
     margin-block-start: calc(var(--spacer) * 2);
 }
 
-.fieldset:has(.form-control:user-invalid) {
+.form-fieldset:has(.form-control:user-invalid),
+.form-fieldset:has(.form-select:user-invalid) {
     border-color: var(--form-text-error-color);
 }
 
-.fieldset:has(.form-control:user-valid) {
+.form-fieldset:has(.form-control:user-valid),
+.form-fieldset:has(.form-select:user-valid) {
     border-color: var(--form-fieldset-border-color-valid);
 }

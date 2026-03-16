@@ -120,6 +120,7 @@
     padding-inline: var(--dropdown-item-text-padding-inline);
     display: inline-flex;
     gap: var(--spacer);
+    align-items: center;
     text-decoration: none;
     color: var(--c-black);
     cursor: pointer;

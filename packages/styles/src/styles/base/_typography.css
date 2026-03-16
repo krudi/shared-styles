@@ -82,6 +82,7 @@ p:last-child {
 .a,
 a {
     color: var(--a-color);
+    text-decoration-line: var(--a-text-decoration-line);
     text-decoration-style: var(--a-text-decoration-style);
     text-decoration-thickness: var(--a-text-decoration-thickness);
     text-underline-offset: var(--a-text-underline-offset);
@@ -89,8 +90,9 @@ a {
 }
 
 a:is(:hover, :focus-visible) {
+    text-decoration-line: var(--a-text-decoration-line-hover);
     text-decoration-style: var(--a-text-decoration-style-hover);
-    color: var(--c-black);
+    color: var(--a-color-hover);
 }
 
 :is(

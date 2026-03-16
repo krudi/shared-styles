@@ -17,13 +17,18 @@ const meta = {
                 <div class="col-6">.col-6</div>
                 <div class="col-12">.col-12</div>
             </div>
+            <div class="row mt-2">
+                <div class="col-4 col-start bg-white-100" style="min-height: 6rem;">.col-start</div>
+                <div class="col-4 col-center bg-white-200" style="min-height: 6rem;">.col-center</div>
+                <div class="col-4 col-end bg-white-300" style="min-height: 6rem;">.col-end</div>
+            </div>
             <p class="mt-2 text-gray mb-0">Columns reflow to full width on smaller breakpoints for effortless responsive layouts.</p>
         </div>
     `,
     parameters: {
         docs: {
             description: {
-                component: 'Grid helpers for responsive page composition.',
+                component: 'Grid helpers for responsive page composition, including per-column alignment utilities.',
             },
         },
     },
@@ -48,7 +53,7 @@ export const Playground: Story = {
     parameters: {
         docs: {
             description: {
-                story: 'Use grid utilities to prototype responsive column layouts quickly.',
+                story: 'Use grid utilities to prototype responsive column layouts quickly, then align content with <code>.col-start</code>, <code>.col-center</code>, and <code>.col-end</code>.',
             },
         },
     },

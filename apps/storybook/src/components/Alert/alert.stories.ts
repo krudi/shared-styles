@@ -29,7 +29,7 @@ const meta = {
         description: { control: 'text' },
         variant: {
             control: 'select',
-            options: ['primary', 'success', 'info', 'warning', 'danger', 'white'],
+            options: ['primary', 'secondary', 'white'],
         },
         dismissible: { control: 'boolean' },
     },
@@ -38,7 +38,7 @@ const meta = {
         docs: {
             description: {
                 component:
-                    'Alert blocks using palette-aligned variants. Combine <code>.alert</code> with variant classes and optional close button.',
+                    'Alert blocks using the currently supported variants. Combine <code>.alert</code> with <code>.alert-primary</code>, <code>.alert-secondary</code>, or <code>.alert-white</code>.',
             },
         },
     },
@@ -63,7 +63,7 @@ export const Playground: Story = {
     parameters: {
         docs: {
             description: {
-                story: 'Use the controls to swap variant, copy, and dismissible state on a single alert.',
+                story: 'Use the controls to swap between the currently supported alert variants, copy, and dismissible state.',
             },
         },
     },

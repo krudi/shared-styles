@@ -1,16 +1,19 @@
 .form-text {
+    margin-block-start: var(--form-text-margin-block-start);
     display: block;
     color: var(--form-text-color);
     line-height: var(--base-line-height);
 }
 
 .form-text-error {
+    margin-block-start: var(--form-text-margin-block-start);
     display: block;
     color: var(--form-text-error-color);
     line-height: var(--base-line-height);
 }
 
 .form-text-hint {
+    margin-block-start: var(--form-text-margin-block-start);
     display: block;
     color: var(--c-gray);
     line-height: var(--base-line-height);

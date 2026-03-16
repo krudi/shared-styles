@@ -1,6 +1,5 @@
-@layer variables, theme, base, layout, html, components, forms, utilities, overrides;
+@layer variables, theme, base, layout, html, components, forms, utilities, overrides, sitepackage-default, sitepackage-search;
 
-@import './theme.css' layer(theme);
 @import './variables.css' layer(variables);
 @import './base/index.css' layer(base);
 @import './layout/index.css' layer(layout);
