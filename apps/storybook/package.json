@@ -28,7 +28,7 @@
         "@storybook/addon-docs": "^10.2.12",
         "@storybook/addon-links": "^10.2.10",
         "@storybook/addon-themes": "^10.2.12",
-        "@storybook/addon-vitest": "^10.2.12",
+        "@storybook/addon-vitest": "^10.2.19",
         "@storybook/html-vite": "^10.2.12",
         "@types/node": "^22.19.13",
         "@vitest/browser-playwright": "^4.0.16",
