@@ -28,8 +28,8 @@
     },
     "type": "module",
     "exports": {
-        ".": "./dist/styles/styles.css",
-        "./ui": "./dist/styles/styles.css",
+        ".": "./dist/styles/index.css",
+        "./ui": "./dist/styles/index.css",
         "./theme": "./dist/styles/theme.css",
         "./variables": "./dist/styles/variables.css",
         "./base": "./dist/styles/base/index.css",
@@ -45,8 +45,8 @@
         "./html": "./dist/styles/html/index.css",
         "./elements": "./dist/styles/elements/index.css"
     },
-    "main": "./dist/styles/styles.css",
-    "style": "./dist/styles/styles.css",
+    "main": "./dist/styles/index.css",
+    "style": "./dist/styles/index.css",
     "files": [
         "assets",
         "dist",
