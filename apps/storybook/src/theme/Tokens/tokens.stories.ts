@@ -16,7 +16,16 @@ const meta = {
                 <div style="display: grid; gap: var(--spacer-n2);">
                     <div>--fs-xs / --fs-sm / --fs-md / --fs-lg / --fs-xl</div>
                     <div>--heading-1 ... --heading-6</div>
-                    <div>--line-height-110 ... --line-height-18125</div>
+                    <div>--body-font-size / --base-line-height / --heading-font-weight / --heading-line-height</div>
+                    <div>--a-font-size / --a-font-weight / --a-line-height</div>
+                </div>
+            </section>
+            <section class="bg-white-100 p-2 radius-sm">
+                <div class="text-gray">Component Tokens</div>
+                <div style="display: grid; gap: var(--spacer-n2);">
+                    <div>--button-line-height / --badge-line-height / --form-input-line-height</div>
+                    <div>--accordion-summary-gap / --dropdown-trigger-gap / --pagination-border-radius</div>
+                    <div>--modal-close-inset-inline-end / --modal-close-inset-block-start</div>
                 </div>
             </section>
             <section class="bg-white-100 p-2 radius-sm">
@@ -44,7 +53,8 @@ const meta = {
         controls: { disable: true },
         docs: {
             description: {
-                component: 'Snapshot of key design tokens used across utilities and components.',
+                component:
+                    'Snapshot of the main semantic tokens intended for project-level overrides. Start in variables.css before editing component rules directly.',
             },
         },
     },

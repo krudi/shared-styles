@@ -36,7 +36,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'The default type ramp demonstrates automatic margins, link affordances, and heading font family overrides.',
+                story: 'The default type ramp demonstrates semantic heading tokens, paragraph rhythm, and link typography overrides.',
             },
         },
     },
