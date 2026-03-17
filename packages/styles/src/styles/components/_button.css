@@ -3,7 +3,7 @@
     padding-inline: var(--button-padding-inline);
     background-color: var(--button-background-color);
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: var(--button-gap);
     line-height: var(--button-line-height);
     text-decoration: none;

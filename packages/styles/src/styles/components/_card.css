@@ -1,0 +1,111 @@
+.card {
+    background-color: var(--card-background-color);
+    display: flex;
+    flex-direction: column;
+    color: var(--card-color);
+    border-width: var(--card-border-width);
+    border-style: var(--card-border-style);
+    border-color: var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    overflow: clip;
+}
+
+.card-content {
+    padding-block: var(--card-padding-block);
+    padding-inline: var(--card-padding-inline);
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap);
+}
+
+.card-content-body,
+.card-content-header,
+.card-content-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content-header,
+.card-content-footer {
+    gap: var(--card-gap);
+}
+
+.card-content-body {
+    gap: var(--card-gap);
+}
+
+.card-media picture,
+.card-media img {
+    display: block;
+    width: 100%;
+}
+
+.card-media img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.card-header-title {
+    margin-block-end: 0;
+    font-size: var(--card-title-font-size);
+    font-weight: var(--card-title-font-weight);
+    line-height: var(--card-title-line-height);
+    color: var(--card-title-color);
+}
+
+.card-description,
+.card-header-subtitle {
+    margin-block-end: 0;
+}
+
+.card-header-subtitle {
+    font-size: var(--card-eyebrow-font-size);
+    font-weight: var(--card-eyebrow-font-weight);
+    line-height: var(--card-eyebrow-line-height);
+    letter-spacing: var(--card-eyebrow-letter-spacing);
+    text-transform: var(--card-eyebrow-text-transform);
+    color: var(--card-eyebrow-color);
+}
+
+.card-description {
+    color: var(--card-description-color);
+}
+
+.card-footer-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacer-n2);
+}
+
+.card-footer-actions > * {
+    width: 100%;
+}
+
+.card-footer-actions > .btn {
+    justify-content: center;
+}
+
+.card-white {
+    --card-background-color: var(--c-white);
+    --card-color: var(--c-white-background-color-emphasis);
+    --card-border-color: var(--c-white-300);
+}
+
+.card-primary {
+    --card-background-color: var(--c-primary);
+    --card-color: var(--c-primary-background-color-emphasis);
+    --card-border-width: 0;
+    --card-border-color: transparent;
+    --card-eyebrow-color: color-mix(in srgb, var(--c-primary-background-color-emphasis) 72%, transparent);
+    --card-description-color: color-mix(in srgb, var(--c-primary-background-color-emphasis) 72%, transparent);
+}
+
+.card-secondary {
+    --card-background-color: var(--c-secondary);
+    --card-color: var(--c-secondary-background-color-emphasis);
+    --card-border-width: 0;
+    --card-border-color: transparent;
+    --card-eyebrow-color: color-mix(in srgb, var(--c-secondary-background-color-emphasis) 72%, transparent);
+    --card-description-color: color-mix(in srgb, var(--c-secondary-background-color-emphasis) 72%, transparent);
+}

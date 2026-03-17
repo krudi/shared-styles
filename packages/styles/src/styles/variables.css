@@ -209,6 +209,30 @@
         --alert-title-color: currentcolor;
         --alert-description-color: currentcolor;
 
+        /* Card */
+        --card-background-color: var(--c-white);
+        --card-color: var(--body-color);
+        --card-border-width: 1px;
+        --card-border-style: solid;
+        --card-border-color: var(--c-white-300);
+        --card-border-radius: var(--border-radius-sm);
+        --card-box-shadow: var(--shadow-sm);
+        --card-padding-block: var(--spacer);
+        --card-padding-inline: var(--spacer);
+        --card-gap: var(--spacer);
+        --card-eyebrow-font-size: var(--fs-xs);
+        --card-eyebrow-font-weight: 600;
+        --card-eyebrow-line-height: var(--base-line-height);
+        --card-eyebrow-letter-spacing: 0.04em;
+        --card-eyebrow-text-transform: uppercase;
+        --card-eyebrow-color: var(--body-color-muted);
+        --card-title-font-size: var(--h5-font-size);
+        --card-title-font-weight: 600;
+        --card-title-line-height: var(--heading-line-height);
+        --card-title-color: currentcolor;
+        --card-description-color: var(--body-color-muted);
+        --card-media-border-radius: calc(var(--card-border-radius) - 1px);
+
         /* Pagination */
         --pagination-item-width: 2.625rem;
         --pagination-item-height: 2.625rem;
