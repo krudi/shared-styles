@@ -5,7 +5,7 @@
     display: inline-flex;
     justify-content: space-between;
     gap: var(--button-gap);
-    line-height: var(--line-height-120);
+    line-height: var(--button-line-height);
     text-decoration: none;
     color: var(--button-color-emphasis);
     user-select: none;
@@ -96,7 +96,7 @@
 
     padding-block: var(--button-icon-padding-block);
     padding-inline: var(--button-icon-padding-inline);
-    line-height: var(--base-line-height);
+    line-height: var(--button-icon-line-height);
 }
 
 .btn-icon svg {

@@ -10,7 +10,7 @@
     border-radius: var(--badge-border-radius);
     font-size: var(--badge-font-size);
     font-weight: var(--badge-font-weight);
-    line-height: var(--line-height-120);
+    line-height: var(--badge-line-height);
 }
 
 .badge-default {

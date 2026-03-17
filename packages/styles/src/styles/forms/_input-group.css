@@ -47,6 +47,8 @@
     align-items: center;
     white-space: nowrap;
     text-align: center;
+    font-size: var(--form-input-font-size);
+    line-height: var(--form-input-line-height);
     border-width: var(--form-input-border-width);
     border-style: var(--form-input-border-style);
     border-color: var(--form-input-border-color);

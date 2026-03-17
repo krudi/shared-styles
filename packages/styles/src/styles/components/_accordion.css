@@ -61,6 +61,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--accordion-summary-gap);
 }
 
 .accordion-summary::-webkit-details-marker {
@@ -73,6 +74,7 @@
     color: var(--accordion-summary-color);
     font-size: var(--accordion-summary-font-size);
     font-weight: var(--accordion-summary-font-weight);
+    line-height: var(--accordion-summary-line-height);
     text-wrap: balance;
 }
 
@@ -105,6 +107,7 @@
     padding-block-end: var(--accordion-content-padding-block);
     padding-inline: var(--accordion-content-padding-inline);
     font-size: var(--accordion-content-font-size);
+    line-height: var(--accordion-content-line-height);
 }
 
 .accordion-content-text {

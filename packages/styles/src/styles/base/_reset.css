@@ -9,6 +9,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -38,13 +40,12 @@ html:focus-within {
         transition: none !important;
         scroll-behavior: auto !important;
     }
-
 }
 
 body {
     min-height: 100vh;
     text-rendering: optimizespeed;
-    line-height: var(--line-height-150);
+    line-height: var(--base-line-height);
 }
 
 a:not([class]) {

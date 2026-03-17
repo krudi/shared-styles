@@ -8,7 +8,7 @@
     padding-inline-start: 0;
     display: inline-flex;
     align-items: center;
-    gap: var(--spacer-n3);
+    gap: var(--pagination-control-gap);
     list-style: none;
 }
 
@@ -41,7 +41,7 @@
 .pagination-list-item-text {
     background-color: var(--pagination-background-color-hover);
     color: var(--pagination-color);
-    font-weight: 500;
+    font-weight: var(--pagination-font-weight);
     border-width: var(--pagination-border-width-active);
     border-color: var(--pagination-border-color-active);
     box-shadow: none;
@@ -51,14 +51,14 @@
 .pagination-list-item-text {
     min-width: var(--pagination-item-width);
     height: var(--pagination-item-height);
-    padding-inline: var(--spacer-n3);
+    padding-inline: var(--pagination-item-padding-inline);
     display: flex;
     justify-content: center;
     align-items: center;
     border-width: var(--pagination-border-width);
     border-style: var(--pagination-border-style);
     border-color: var(--pagination-border-color);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--pagination-border-radius);
 }
 
 .pagination-list-item-control {
@@ -66,10 +66,10 @@
     color: var(--pagination-color);
     display: inline-flex;
     align-items: center;
-    gap: var(--spacer-n3);
+    gap: var(--pagination-control-gap);
     height: var(--pagination-item-height);
-    padding-inline: var(--spacer-n2);
-    border-radius: var(--border-radius-sm);
+    padding-inline: var(--pagination-control-padding-inline);
+    border-radius: var(--pagination-border-radius);
     border: var(--pagination-border-width) var(--pagination-border-style) var(--pagination-border-color);
     background-color: var(--pagination-background-color);
     transition:

@@ -55,8 +55,8 @@
 
 .modal-close {
     position: absolute;
-    right: calc(var(--modal-padding-inline) / 2);
-    top: calc(var(--modal-padding-block) / 2);
+    right: var(--modal-close-inset-inline-end);
+    top: var(--modal-close-inset-block-start);
 }
 
 .modal-body {

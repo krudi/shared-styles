@@ -16,7 +16,7 @@
     color: var(--dropdown-trigger-color);
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--spacer) / 2);
+    gap: var(--dropdown-trigger-gap);
     font-size: var(--dropdown-trigger-font-size);
     line-height: var(--dropdown-trigger-line-height);
     letter-spacing: var(--dropdown-trigger-letter-spacing);
@@ -119,13 +119,14 @@
     padding-block: var(--dropdown-item-text-padding-block);
     padding-inline: var(--dropdown-item-text-padding-inline);
     display: inline-flex;
-    gap: var(--spacer);
+    gap: var(--dropdown-item-gap);
     align-items: center;
     text-decoration: none;
     color: var(--c-black);
     cursor: pointer;
     font-size: var(--dropdown-item-text-font-size);
-    font-weight: initial;
+    font-weight: var(--dropdown-item-text-font-weight);
+    line-height: var(--dropdown-item-text-line-height);
     border-radius: var(--dropdown-content-border-radius);
 }
 

@@ -1,66 +1,66 @@
 h1,
 .h1 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-1);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-110);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
 h2,
 .h2 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-2);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-115);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
 h3,
 .h3 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-3);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-120);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
 h4,
 .h4 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-4);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-125);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
 h5,
 .h5 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-5);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-130);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
 h6,
 .h6 {
-    font-weight: 700;
+    font-weight: var(--heading-font-weight);
     font-size: var(--heading-6);
     font-family: var(--heading-font-family);
-    line-height: var(--line-height-140);
+    line-height: var(--heading-line-height);
     display: block;
-    margin-block-end: var(--spacer);
+    margin-block-end: var(--heading-margin-block-end);
     text-wrap: balance;
 }
 
@@ -87,6 +87,8 @@ a {
     text-decoration-thickness: var(--a-text-decoration-thickness);
     text-underline-offset: var(--a-text-underline-offset);
     font-size: var(--a-font-size);
+    font-weight: var(--a-font-weight);
+    line-height: var(--a-line-height);
 }
 
 a:is(:hover, :focus-visible) {

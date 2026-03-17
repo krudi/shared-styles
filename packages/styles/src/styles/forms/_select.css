@@ -20,6 +20,7 @@
     border-color: var(--form-input-border-color);
     border-radius: var(--form-input-border-radius);
     font-size: var(--form-input-font-size);
+    line-height: var(--form-input-line-height);
     transition-property: border-color, box-shadow;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
@@ -69,7 +70,7 @@
 }
 
 .form-select[multiple] {
-    min-block-size: 8rem;
+    min-block-size: var(--form-select-multiple-min-block-size);
     padding-inline-end: var(--form-input-padding-inline);
     background-image: none;
 }
