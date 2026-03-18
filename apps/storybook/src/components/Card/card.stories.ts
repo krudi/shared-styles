@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { CardArgs } from './card.types';
 
-const imageUrl =
-    'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80';
+const imageUrl = 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80';
 
 const meta = {
     title: 'Components/Card',
@@ -23,7 +22,7 @@ const meta = {
                     <h3 class="card-header-title">${title}</h3>
                 </div>
                 <div class="card-content-body">
-                    <p class="card-description">${description}</p>
+                    <p class="card-content-body-description">${description}</p>
                 </div>
                 ${
                     showFooter
@@ -42,7 +41,8 @@ const meta = {
     args: {
         eyebrow: 'Featured',
         title: 'Flexible content card',
-        description: 'Cards group media, copy, and actions into a single reusable container for listings, teasers, and dashboards.',
+        description:
+            'Cards group media, copy, and actions into a single reusable container for listings, teasers, and dashboards.',
         variant: 'white',
         showMedia: true,
         showFooter: true,

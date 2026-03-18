@@ -54,7 +54,7 @@
     color: var(--card-title-color);
 }
 
-.card-description,
+.card-content-body-description,
 .card-header-subtitle {
     margin-block-end: 0;
 }
@@ -68,8 +68,8 @@
     color: var(--card-eyebrow-color);
 }
 
-.card-description {
-    color: var(--card-description-color);
+.card-content-body-description {
+    color: var(--card-content-body-description-color);
 }
 
 .card-footer-actions {
@@ -98,7 +98,11 @@
     --card-border-width: 0;
     --card-border-color: transparent;
     --card-eyebrow-color: color-mix(in srgb, var(--c-primary-background-color-emphasis) 72%, transparent);
-    --card-description-color: color-mix(in srgb, var(--c-primary-background-color-emphasis) 72%, transparent);
+    --card-content-body-description-color: color-mix(
+        in srgb,
+        var(--c-primary-background-color-emphasis) 72%,
+        transparent
+    );
 }
 
 .card-secondary {
@@ -107,5 +111,9 @@
     --card-border-width: 0;
     --card-border-color: transparent;
     --card-eyebrow-color: color-mix(in srgb, var(--c-secondary-background-color-emphasis) 72%, transparent);
-    --card-description-color: color-mix(in srgb, var(--c-secondary-background-color-emphasis) 72%, transparent);
+    --card-content-body-description-color: color-mix(
+        in srgb,
+        var(--c-secondary-background-color-emphasis) 72%,
+        transparent
+    );
 }
