@@ -4,7 +4,7 @@ const meta = {
     title: 'Utilities/BorderRadius',
     tags: ['autodocs'],
     render: (): string => `
-        <div style="display: grid; gap: var(--spacer);">
+        <div style="display: grid; gap: var(--spacer-4);">
             <div class="bg-white-100 radius-0 p-2">.radius-0</div>
             <div class="bg-white-100 radius-xs p-2">.radius-xs</div>
             <div class="bg-white-100 radius-sm p-2">.radius-sm</div>

@@ -4,7 +4,7 @@ const meta = {
     title: 'Utilities/Visibility',
     tags: ['autodocs'],
     render: (): string => `
-        <div style="display: grid; gap: var(--spacer);">
+        <div style="display: grid; gap: var(--spacer-4);">
             <div class="bg-white-100">
                 <span class="sr-only">Screen reader only label</span>
                 <span aria-hidden="true">Visible label (sr-only text hidden)</span>

@@ -8,13 +8,17 @@ const meta = {
     render: () => `
         <h2 class="h4 mt-0">Spacing scale</h2>
         ${[
-            { token: '--spacer-n2', label: 'Tight padding/margins for dense UI' },
-            { token: '--spacer-n1', label: 'Subhead spacing or compact chips' },
-            { token: '--spacer', label: 'Base spacing for paragraphs and list items' },
-            { token: '--spacer-1', label: 'Cards, small component gutters' },
-            { token: '--spacer-2', label: 'Section padding and layouts' },
-            { token: '--spacer-3', label: 'Large spacing for hero or page rails' },
-            { token: '--spacer-4', label: 'Page-level vertical rhythm and grids' },
+            { token: '--spacer-1', label: '0.5rem, compact controls and dense UI' },
+            { token: '--spacer-2', label: '0.75rem, tight gaps and helper text spacing' },
+            { token: '--spacer-3', label: '0.875rem, compact text-adjacent spacing' },
+            { token: '--spacer-4', label: '1rem, base spacing unit' },
+            { token: '--spacer-5', label: '1.25rem, small component gutters' },
+            { token: '--spacer-6', label: '1.5rem, section padding and layouts' },
+            { token: '--spacer-7', label: '1.75rem, large layout spacing' },
+            { token: '--spacer-8', label: '2rem, page rhythm and grids' },
+            { token: '--spacer-9', label: '2.5rem, large section spacing' },
+            { token: '--spacer-10', label: '4rem, major layout separation' },
+            { token: '--spacer-11', label: '8rem, page-scale compositions' },
         ]
             .map(
                 (spacing) => `

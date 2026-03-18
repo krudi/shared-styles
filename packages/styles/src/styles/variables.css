@@ -1,23 +1,24 @@
 @layer variables {
     :root {
         /* Spacings */
-        --spacer-n3: 0.5rem;
-        --spacer-n2: 0.75rem;
-        --spacer-n1: 0.875rem;
-        --spacer: 1rem;
-        --spacer-1: calc(var(--spacer) * 1.25);
-        --spacer-2: calc(var(--spacer) * 1.5);
-        --spacer-3: calc(var(--spacer) * 1.75);
-        --spacer-4: calc(var(--spacer) * 2);
-        --spacer-5: calc(var(--spacer) * 2.5);
-        --spacer-6: calc(var(--spacer) * 4);
-        --spacer-7: calc(var(--spacer) * 8);
+        --spacer-0: 0;
+        --spacer-1: 0.5rem;
+        --spacer-2: 0.75rem;
+        --spacer-3: 0.875rem;
+        --spacer-4: 1rem;
+        --spacer-5: 1.25rem;
+        --spacer-6: 1.5rem;
+        --spacer-7: 1.75rem;
+        --spacer-8: 2rem;
+        --spacer-9: 2.5rem;
+        --spacer-10: 4rem;
+        --spacer-11: 8rem;
 
         /* Grid spacings */
-        --grid-spacing: var(--spacer-4);
+        --grid-spacing: var(--spacer-7);
 
         /* Container spacings */
-        --container-spacer: var(--spacer);
+        --container-spacer: var(--spacer-4);
         --container-max-width: 1080px;
 
         /* Heading font size */
@@ -29,7 +30,7 @@
         --heading-6: var(--body-font-size);
         --heading-font-weight: 500;
         --heading-line-height: var(--base-line-height);
-        --heading-margin-block-end: var(--spacer-n2);
+        --heading-margin-block-end: var(--spacer-2);
         --heading-font-family:
             -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
             'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -55,7 +56,7 @@
         --a-line-height: var(--base-line-height);
 
         /* Paraphraph */
-        --p-margin-block-start: var(--spacer-n2);
+        --p-margin-block-start: var(--spacer-2);
         --p-line-height: var(--base-line-height);
         --p-font-size: var(--body-font-size);
         --p-color: var(--c-black);
@@ -136,7 +137,7 @@
         /* Button */
         --button-padding-block: 0.5rem;
         --button-padding-inline: 0.75rem;
-        --button-gap: var(--spacer-n2);
+        --button-gap: var(--spacer-2);
         --button-border-radius: var(--border-radius-sm);
         --button-letter-spacing: 0;
         --button-text-transform: none;
@@ -181,9 +182,9 @@
         --accordion-details-border-bottom-color: var(--c-white-200);
         --accordion-details-border-bottom-width-contrast: max(2px, 1px);
         --accordion-details-border-bottom-color-contrast: currentcolor;
-        --accordion-summary-padding-block: var(--spacer-1);
+        --accordion-summary-padding-block: var(--spacer-4);
         --accordion-summary-padding-inline: 0;
-        --accordion-summary-gap: var(--spacer);
+        --accordion-summary-gap: var(--spacer-4);
         --accordion-summary-color: var(--c-white-background-color-emphasis);
         --accordion-summary-font-size: var(--body-font-size);
         --accordion-summary-font-weight: 500;
@@ -192,16 +193,16 @@
         --accordion-icon-width: 1rem;
         --accordion-icon-height: 1rem;
         --accordion-icon-color: var(--c-white-background-color-emphasis);
-        --accordion-content-padding-block: var(--spacer);
+        --accordion-content-padding-block: var(--spacer-4);
         --accordion-content-padding-inline: 0;
         --accordion-content-font-size: var(--body-font-size);
         --accordion-content-line-height: var(--base-line-height);
 
         /* Alert */
-        --alert-margin-block-block: var(--spacer-3);
-        --alert-padding-block: var(--spacer-1);
-        --alert-padding-inline: var(--spacer-1);
-        --alert-gap: var(--spacer-n2);
+        --alert-margin-block-block: var(--spacer-6);
+        --alert-padding-block: var(--spacer-4);
+        --alert-padding-inline: var(--spacer-4);
+        --alert-gap: var(--spacer-2);
         --alert-border-radius: var(--border-radius-sm);
         --alert-title-font-size: var(--body-font-size);
         --alert-title-font-weight: 600;
@@ -217,9 +218,9 @@
         --card-border-color: var(--c-white-300);
         --card-border-radius: var(--border-radius-sm);
         --card-box-shadow: var(--shadow-sm);
-        --card-padding-block: var(--spacer);
-        --card-padding-inline: var(--spacer);
-        --card-gap: var(--spacer);
+        --card-padding-block: var(--spacer-4);
+        --card-padding-inline: var(--spacer-4);
+        --card-gap: var(--spacer-4);
         --card-eyebrow-font-size: var(--fs-xs);
         --card-eyebrow-font-weight: 600;
         --card-eyebrow-line-height: var(--base-line-height);
@@ -245,15 +246,15 @@
         --pagination-background-color-hover: var(--c-white-100);
         --pagination-color: var(--c-black);
         --pagination-font-weight: 500;
-        --pagination-item-padding-inline: var(--spacer-n3);
-        --pagination-control-gap: var(--spacer-n3);
-        --pagination-control-padding-inline: var(--spacer-n2);
+        --pagination-item-padding-inline: var(--spacer-1);
+        --pagination-control-gap: var(--spacer-1);
+        --pagination-control-padding-inline: var(--spacer-2);
         --pagination-border-radius: var(--border-radius-sm);
 
         /* Forms: Fieldset */
         --form-fieldset-padding-block: 1.25rem;
         --form-fieldset-padding-inline: 1.25rem;
-        --form-fieldset-margin-block-start: calc(var(--spacer) * 2);
+        --form-fieldset-margin-block-start: var(--spacer-8);
         --form-fieldset-background-color: var(--c-white);
         --form-fieldset-border-radius: var(--border-radius-sm);
         --form-fieldset-border-width: 1px;
@@ -262,7 +263,7 @@
         --form-fieldset-border-color-valid: var(--c-secondary);
 
         /* Forms: Legend */
-        --form-legend-margin-block-end: var(--spacer);
+        --form-legend-margin-block-end: var(--spacer-4);
         --form-legend-form-weight: 500;
         --form-legend-form-size: var(--body-font-size);
         --form-legend-line-height: var(--base-line-height);
@@ -321,14 +322,14 @@
         --form-datalist-option-background-color-hover: var(--c-white-200);
 
         /* Forms: Label */
-        --form-block-margin-block-end: var(--spacer-3);
-        --form-label-margin-block-end: calc(var(--spacer) * 0.5);
+        --form-block-margin-block-end: var(--spacer-6);
+        --form-label-margin-block-end: var(--spacer-1);
         --form-label-font-weight: 500;
         --form-label-line-height: var(--base-line-height);
         --form-label-required-font-weight: 700;
 
         /* Forms: Text */
-        --form-text-margin-block-start: var(--spacer-n2);
+        --form-text-margin-block-start: var(--spacer-2);
         --form-text-font-size: var(--body-font-size);
         --form-text-line-height: var(--base-line-height);
         --form-text-color: var(--c-black);
@@ -337,7 +338,7 @@
 
         /* Horizontal Line */
         --hr-height: 1px;
-        --hr-margin-block: var(--spacer-3);
+        --hr-margin-block: var(--spacer-6);
         --hr-background-color: var(--c-white-200);
         --hr-opacity: 1;
 
@@ -353,12 +354,12 @@
         --dropdown-trigger-color: var(--c-black);
         --dropdown-trigger-font-size: var(--body-font-size);
         --dropdown-trigger-line-height: var(--base-line-height);
-        --dropdown-trigger-gap: calc(var(--spacer) / 2);
+        --dropdown-trigger-gap: var(--spacer-1);
         --dropdown-trigger-letter-spacing: 0;
         --dropdown-trigger-focus-shadow: var(--focus-default);
         --dropdown-menu-list-padding-block: 0.5rem;
         --dropdown-content-width: 192px;
-        --dropdown-content-margin-block-start: var(--spacer-n2);
+        --dropdown-content-margin-block-start: var(--spacer-2);
         --dropdown-content-border-width: 1px;
         --dropdown-content-border-style: solid;
         --dropdown-content-border-color: var(--c-white-300);
@@ -366,7 +367,7 @@
         --dropdown-content-box-shadow: var(--shadow-md);
         --dropdown-item-text-padding-block: 0.5rem;
         --dropdown-item-text-padding-inline: 0.75rem;
-        --dropdown-item-gap: var(--spacer);
+        --dropdown-item-gap: var(--spacer-4);
         --dropdown-item-text-font-size: var(--body-font-size);
         --dropdown-item-text-font-weight: 400;
         --dropdown-item-text-line-height: var(--base-line-height);
