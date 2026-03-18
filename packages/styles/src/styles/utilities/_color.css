@@ -1,25 +1,25 @@
 .text-white {
-    color: var(--c-white);
+    color: var(--background);
 }
 
 .text-white-100 {
-    color: var(--c-white-100);
+    color: var(--surface-subtle);
 }
 
 .text-white-200 {
-    color: var(--c-white-200);
+    color: var(--surface-subtle-hover);
 }
 
 .text-black {
-    color: var(--c-black);
+    color: var(--foreground);
 }
 
 .text-gray {
-    color: var(--c-gray);
+    color: var(--muted-foreground);
 }
 
 
 
 .text-secondary {
-    color: var(--c-secondary);
+    color: var(--secondary);
 }

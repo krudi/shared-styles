@@ -1,0 +1,17 @@
+@layer palette {
+    :root {
+        /*
+            Public palette tokens
+            Advanced consumers may override these to rebuild the base theme.
+            Most theme customization should happen through the semantic tokens in theme.css.
+        */
+        --color-neutral-0: light-dark(#ffffff, #1c222e);
+        --color-neutral-50: light-dark(#f6f7fb, #151515);
+        --color-neutral-100: light-dark(#efefef, #2c2c2d);
+        --color-neutral-200: light-dark(#e2e5ea, #3a3a3b);
+        --color-neutral-700: light-dark(#4e596a, #b0b7c3);
+        --color-neutral-900: light-dark(#1c222e, #ffffff);
+        --color-secondary-100: light-dark(#f4f4f5, #27272a);
+        --color-destructive-600: light-dark(#dc2626, #f87171);
+    }
+}

@@ -14,24 +14,24 @@
 }
 
 .badge-default {
-    --badge-background-color: var(--c-black);
-    --badge-color: var(--c-black-background-color-emphasis);
+    --badge-background-color: var(--primary);
+    --badge-color: var(--primary-foreground);
     --badge-border-width: 0;
     --badge-border-style: initial;
     --badge-border-color: none;
 }
 
 .badge-secondary {
-    --badge-background-color: var(--c-secondary);
-    --badge-color: var(--c-black);
+    --badge-background-color: var(--secondary);
+    --badge-color: var(--secondary-foreground);
     --badge-border-width: 0;
     --badge-border-style: initial;
     --badge-border-color: none;
 }
 
 .badge-destructive {
-    --badge-background-color: var(--c-destructive);
-    --badge-color: var(--c-destructive-background-color-emphasis);
+    --badge-background-color: var(--destructive);
+    --badge-color: var(--destructive-foreground);
     --badge-border-width: 0;
     --badge-border-style: initial;
     --badge-border-color: none;
@@ -39,10 +39,10 @@
 
 .badge-outline {
     --badge-background-color: transparent;
-    --badge-color: var(--c-black);
+    --badge-color: var(--foreground);
     --badge-border-width: 1px;
     --badge-border-style: solid;
-    --badge-border-color: var(--c-gray-contrast);
+    --badge-border-color: var(--border);
 }
 
 @media (prefers-contrast: more) {

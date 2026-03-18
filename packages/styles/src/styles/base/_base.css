@@ -13,7 +13,7 @@ body {
     font-family: var(--body-font-family);
     font-size: var(--body-font-size);
     overflow-x: hidden;
-    accent-color: var(--c-secondary);
+    accent-color: var(--accent);
 }
 
 @media (prefers-reduced-transparency: reduce) {

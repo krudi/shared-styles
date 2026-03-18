@@ -8,28 +8,34 @@ const meta = {
     render: (): string => `
         ${[
             {
+                label: 'Primary',
+                className: 'bg-black',
+                token: '--primary',
+                usage: 'High-emphasis actions and surfaces.',
+            },
+            {
                 label: 'Secondary',
                 className: 'bg-secondary',
-                token: '--c-secondary',
+                token: '--secondary',
                 usage: 'Supporting actions and complementary surfaces.',
             },
             {
-                label: 'Gray',
+                label: 'Muted',
                 className: 'bg-gray',
-                token: '--c-gray',
+                token: '--muted-foreground',
                 usage: 'Muted body text and secondary UI.',
             },
             {
-                label: 'White',
+                label: 'Background',
                 className: 'bg-white',
-                token: '--c-white',
+                token: '--background',
                 usage: 'Base background with strong contrast against text.',
             },
             {
-                label: 'Black',
-                className: 'bg-black',
-                token: '--c-black',
-                usage: 'Primary text and dark surfaces.',
+                label: 'Surface',
+                className: 'bg-white-100',
+                token: '--surface-subtle',
+                usage: 'Subtle containers and raised neutral surfaces.',
             },
         ]
             .map(
@@ -49,7 +55,7 @@ const meta = {
         docs: {
             description: {
                 component:
-                    'Theme palette values mapped to utility classes. Each swatch pulls directly from the CSS custom property so the preview stays aligned with the token source.',
+                    'Semantic theme tokens mapped to utility classes. Override these semantic roles for normal theme changes. Override the palette layer only for advanced base-color customization.',
             },
         },
     },
@@ -64,7 +70,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Use the <code>bg-*</code> helpers to apply the palette to blocks while preserving accessible text contrast via paired emphasis colors.',
+                story: 'Use the semantic theme tokens as the theming API. Utility classes remain for previewing the current mappings, but components should consume semantic roles rather than color-name tokens.',
             },
         },
     },
@@ -74,7 +80,7 @@ export const Playground: Story = {
     parameters: {
         docs: {
             description: {
-                story: 'Review palette balance and usage notes as you adjust theme tokens.',
+                story: 'Review the semantic mappings while adjusting the theme. Change semantic tokens first; touch the palette layer only when you intentionally want to rebuild the color foundation.',
             },
         },
     },

@@ -15,24 +15,24 @@
 }
 
 .alert-white {
-    --alert-background-color: var(--c-white);
-    --alert-color: var(--c-white-background-color-emphasis);
+    --alert-background-color: var(--surface);
+    --alert-color: var(--surface-foreground);
     --alert-border-width: 1px;
     --alert-border-style: solid;
-    --alert-border-color: var(--c-white-300);
+    --alert-border-color: var(--border);
 }
 
 .alert-primary {
-    --alert-background-color: var(--c-primary);
-    --alert-color: var(--c-primary-background-color-emphasis);
+    --alert-background-color: var(--primary);
+    --alert-color: var(--primary-foreground);
     --alert-border-width: 0;
     --alert-border-style: initial;
     --alert-border-color: none;
 }
 
 .alert-secondary {
-    --alert-background-color: var(--c-secondary);
-    --alert-color: var(--c-secondary-background-color-emphasis);
+    --alert-background-color: var(--secondary);
+    --alert-color: var(--secondary-foreground);
     --alert-border-width: 0;
     --alert-border-style: initial;
     --alert-border-color: none;

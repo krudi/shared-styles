@@ -52,50 +52,50 @@
 
 /* Standard variants */
 .btn-default {
-    --button-background-color: var(--c-black);
-    --button-color-emphasis: var(--c-black-background-color-emphasis);
-    --button-border-color: var(--c-black-contrast);
-    --button-hover: var(--c-black-contrast);
+    --button-background-color: var(--primary);
+    --button-color-emphasis: var(--primary-foreground);
+    --button-border-color: color-mix(in srgb, var(--primary) 85%, var(--primary-foreground));
+    --button-hover: color-mix(in srgb, var(--primary) 85%, var(--primary-foreground));
 }
 
 .btn-secondary {
-    --button-background-color: var(--c-secondary);
-    --button-color-emphasis: var(--c-black);
-    --button-border-color: var(--c-secondary-contrast);
-    --button-hover: var(--c-secondary-contrast);
+    --button-background-color: var(--secondary);
+    --button-color-emphasis: var(--secondary-foreground);
+    --button-border-color: color-mix(in srgb, var(--secondary) 85%, var(--secondary-foreground));
+    --button-hover: color-mix(in srgb, var(--secondary) 85%, var(--secondary-foreground));
 }
 
 .btn-destructive {
-    --button-background-color: var(--c-destructive);
-    --button-color-emphasis: var(--c-destructive-background-color-emphasis);
-    --button-border-color: var(--c-destructive-contrast);
-    --button-hover: var(--c-destructive-contrast);
+    --button-background-color: var(--destructive);
+    --button-color-emphasis: var(--destructive-foreground);
+    --button-border-color: color-mix(in srgb, var(--destructive) 85%, var(--foreground));
+    --button-hover: color-mix(in srgb, var(--destructive) 85%, var(--foreground));
 }
 
 /* Outline */
 .btn-outline {
     --button-background-color: transparent;
-    --button-color-emphasis: var(--c-black);
+    --button-color-emphasis: var(--foreground);
     --button-border-width: 1px;
     --button-border-style: solid;
-    --button-border-color: var(--c-gray-contrast);
-    --button-hover: var(--c-white-contrast);
+    --button-border-color: var(--border);
+    --button-hover: var(--surface-subtle);
 }
 
 /* Ghost */
 .btn-ghost {
     --button-background-color: transparent;
-    --button-color-emphasis: var(--c-black);
+    --button-color-emphasis: var(--foreground);
     --button-border-width: 0;
     --button-border-style: inherit;
     --button-border-color: none;
-    --button-hover: var(--c-white-contrast);
+    --button-hover: var(--surface-subtle);
 }
 
 /* Button with icon */
 .btn-icon {
-    --button-background-color: var(--c-white-200);
-    --button-hover: var(--c-white-200-hover);
+    --button-background-color: var(--muted);
+    --button-hover: var(--surface-subtle-hover);
     --button-border-width: 0;
     --button-border-style: inherit;
     --button-border-color: none;

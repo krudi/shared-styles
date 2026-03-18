@@ -5,7 +5,7 @@
     background-color: var(--form-input-background-color);
     display: block;
     color: var(--form-input-color);
-    caret-color: var(--c-secondary);
+    caret-color: var(--accent);
     border-width: var(--form-input-border-width);
     border-style: var(--form-input-border-style);
     border-color: var(--form-input-border-color);
@@ -22,7 +22,7 @@
 }
 
 .form-control:user-valid {
-    border-color: var(--c-secondary);
+    border-color: var(--accent);
 }
 
 .form-control:user-invalid {
@@ -40,7 +40,7 @@
 }
 
 .form-control:disabled {
-    background-color: var(--c-white-200);
+    background-color: var(--surface-subtle-hover);
     opacity: 1;
 }
 

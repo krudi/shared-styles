@@ -31,7 +31,7 @@
 }
 
 .form-select:user-valid {
-    border-color: var(--c-secondary);
+    border-color: var(--accent);
 }
 
 .form-select:user-invalid {
@@ -45,7 +45,7 @@
 }
 
 .form-select:disabled {
-    background-color: var(--c-white-200);
+    background-color: var(--surface-subtle-hover);
     opacity: 1;
 }
 

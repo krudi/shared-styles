@@ -2,50 +2,30 @@
     :root {
         color-scheme: light dark;
 
-        /* Theme variable colors */
-        --c-white: light-dark(#ffffff, #1c222e);
-        --c-black: light-dark(#1c222e, #ffffff);
-        --c-gray: light-dark(#4e596a, #b0b7c3);
-        --c-secondary: light-dark(#f4f4f5, #27272a);
-        --c-destructive: light-dark(#dc2626, #f87171);
-
-        /* Palette */
-        --c-white-100: light-dark(#f6f7fb, #151515);
-        --c-white-100-hover: var(--c-white-100);
-        --c-white-100-background-color-emphasis: var(--c-black);
-        --c-white-200: light-dark(#efefef, #2c2c2d);
-        --c-white-200-hover: var(--c-white-200);
-        --c-white-200-background-color-emphasis: var(--c-black);
-        --c-white-300: light-dark(#e2e5ea, #3a3a3b);
-        --c-white-300-hover: var(--c-white-300);
-        --c-white-300-background-color-emphasis: var(--c-black);
-
-        /* Theme colors */
-
-        /* White */
-        --c-white-hover: var(--c-white);
-        --c-white-background-color-emphasis: var(--c-black);
-        --c-white-contrast: color-mix(in srgb, var(--c-white) 85%, var(--c-black));
-
-        /* Black */
-        --c-black-hover: var(--c-black);
-        --c-black-background-color-emphasis: var(--c-white);
-        --c-black-contrast: color-mix(in srgb, var(--c-black) 85%, var(--c-white));
-
-        /* Gray */
-        --c-gray-hover: var(--c-gray);
-        --c-gray-background-color-emphasis: var(--c-white);
-        --c-gray-contrast: color-mix(in srgb, var(--c-gray) 85%, var(--c-black));
-
-        /* Secondary */
-        --c-secondary-hover: var(--c-secondary);
-        --c-secondary-background-color-emphasis: var(--c-black);
-        --c-secondary-contrast: color-mix(in srgb, var(--c-secondary) 85%, var(--c-black));
-
-        /* Destructive */
-        --c-destructive-hover: var(--c-destructive);
-        --c-destructive-background-color-emphasis: var(--c-white);
-        --c-destructive-contrast: color-mix(in srgb, var(--c-destructive) 85%, var(--c-black));
+        /*
+            Public semantic theme tokens
+            Override these tokens to re-theme the system in most cases.
+            Components and higher-level tokens should depend on this semantic layer.
+        */
+        --background: var(--color-neutral-0);
+        --foreground: var(--color-neutral-900);
+        --surface: var(--color-neutral-0);
+        --surface-foreground: var(--color-neutral-900);
+        --surface-subtle: var(--color-neutral-50);
+        --surface-subtle-hover: var(--color-neutral-100);
+        --muted: var(--color-neutral-50);
+        --muted-foreground: var(--color-neutral-700);
+        --border: var(--color-neutral-200);
+        --input: var(--color-neutral-200);
+        --ring: var(--color-secondary-100);
+        --primary: var(--color-neutral-900);
+        --primary-foreground: var(--color-neutral-0);
+        --secondary: var(--color-secondary-100);
+        --secondary-foreground: var(--color-neutral-900);
+        --destructive: var(--color-destructive-600);
+        --destructive-foreground: var(--color-neutral-0);
+        --accent: var(--secondary);
+        --accent-foreground: var(--secondary-foreground);
     }
 
     .light {

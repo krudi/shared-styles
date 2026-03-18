@@ -1,29 +1,29 @@
 .bg-white {
-    background-color: var(--c-white);
-    color: var(--c-white-background-color-emphasis);
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 .bg-white-100 {
-    background-color: var(--c-white-100);
-    color: var(--c-white-100-background-color-emphasis);
+    background-color: var(--surface-subtle);
+    color: var(--foreground);
 }
 
 .bg-white-200 {
-    background-color: var(--c-white-200);
-    color: var(--c-white-200-background-color-emphasis);
+    background-color: var(--surface-subtle-hover);
+    color: var(--foreground);
 }
 
 .bg-black {
-    background-color: var(--c-black);
-    color: var(--c-black-background-color-emphasis);
+    background-color: var(--foreground);
+    color: var(--background);
 }
 
 .bg-gray {
-    background-color: var(--c-gray);
-    color: var(--c-gray-background-color-emphasis);
+    background-color: var(--muted-foreground);
+    color: var(--background);
 }
 
 .bg-secondary {
-    background-color: var(--c-secondary);
-    color: var(--c-secondary-background-color-emphasis);
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
 }

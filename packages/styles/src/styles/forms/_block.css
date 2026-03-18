@@ -16,10 +16,10 @@
 
 .form-block:has(.form-control:user-valid) .form-label,
 .form-block:has(.form-select:user-valid) .form-label {
-    color: var(--c-secondary);
+    color: var(--accent);
 }
 
 .form-block:has(.form-control:user-valid) .form-text,
 .form-block:has(.form-select:user-valid) .form-text {
-    color: var(--c-secondary);
+    color: var(--accent);
 }
