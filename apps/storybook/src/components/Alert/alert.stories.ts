@@ -5,40 +5,31 @@ import type { AlertArgs } from './alert.types';
 const meta = {
     title: 'Components/Alert',
     tags: ['autodocs'],
-    render: ({ title, description, variant, dismissible }: AlertArgs): string => `
-        <div class="alert alert-${variant}">
+    render: ({ title, description, variant }: AlertArgs): string => `
+        <div class="alert${variant === 'destructive' ? ' alert-destructive' : ''}" role="alert">
             <p class="alert-title">${title}</p>
-            <span class="alert-description">${description}</span>
-            ${
-                dismissible
-                    ? `<button type="button" class="btn btn-close alert-close" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>`
-                    : ''
-            }
+            <div class="alert-description">${description}</div>
         </div>
     `,
     args: {
-        title: 'Primary alert',
-        description: 'Use to highlight important information.',
-        variant: 'primary',
-        dismissible: true,
+        title: 'Heads up',
+        description: 'This alert surfaces important information in a compact callout without extra decoration.',
+        variant: 'default',
     },
     argTypes: {
         title: { control: 'text' },
         description: { control: 'text' },
         variant: {
             control: 'select',
-            options: ['primary', 'secondary', 'white'],
+            options: ['default', 'destructive'],
         },
-        dismissible: { control: 'boolean' },
     },
     parameters: {
         layout: 'padded',
         docs: {
             description: {
                 component:
-                    'Alert blocks using the currently supported variants. Combine <code>.alert</code> with <code>.alert-primary</code>, <code>.alert-secondary</code>, or <code>.alert-white</code>.',
+                    'Alert callout with a simplified semantic API. Use <code>.alert</code> for the default variant and <code>.alert.alert-destructive</code> for destructive messaging. Canonical markup is a plain stacked block with <code>.alert-title</code> and <code>.alert-description</code> only.',
             },
         },
     },
@@ -46,24 +37,46 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<AlertArgs>;
 
 export const Default: Story = {
     parameters: {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical alert example with default variant and copy.',
+                story: 'Canonical neutral alert callout.',
+            },
+        },
+    },
+};
+
+export const Destructive: Story = {
+    render: (): string => `
+        <div class="alert alert-destructive" role="alert">
+            <p class="alert-title">Action failed</p>
+            <div class="alert-description">Your changes could not be saved. Review the input and try again.</div>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Destructive alert variant for error or failure states.',
             },
         },
     },
 };
 
 export const Playground: Story = {
+    args: {
+        title: 'Action failed',
+        description: 'Your changes could not be saved. Review the input and try again.',
+        variant: 'destructive',
+    },
     parameters: {
         docs: {
             description: {
-                story: 'Use the controls to swap between the currently supported alert variants, copy, and dismissible state.',
+                story: 'Use the controls to preview the simplified alert variants and content without icons or dismiss controls.',
             },
         },
     },

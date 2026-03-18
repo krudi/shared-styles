@@ -94,13 +94,13 @@
     transition-property: background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: var(--border);
+    border-top-width: var(--dropdown-list-item-border-top-width);
+    border-top-style: var(--dropdown-list-item-border-top-style);
+    border-top-color: var(--dropdown-list-item-border-top-color);
 }
 
 .dropdown-list-item:first-child {
-    border-top-width: 0;
+    border-top-width: var(--dropdown-list-item-border-top-width-first);
 }
 
 .dropdown-list-item:hover,

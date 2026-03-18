@@ -116,6 +116,7 @@
         --modal-background-color: var(--surface);
         --modal-border-radius: var(--border-radius-sm);
         --modal-border-width: 1px;
+        --modal-border-style: solid;
         --modal-border-color: var(--border);
         --modal-padding-block: 2rem;
         --modal-padding-inline: 2rem;
@@ -123,6 +124,12 @@
         --modal-backdrop: hsl(0deg 0 0 / 50%);
         --modal-body-padding-block-start: 2rem;
         --modal-footer-padding-block-start: 2rem;
+        --modal-header-border-bottom-width: var(--modal-border-width);
+        --modal-header-border-bottom-style: var(--modal-border-style);
+        --modal-header-border-bottom-color: var(--modal-border-color);
+        --modal-footer-border-top-width: var(--modal-border-width);
+        --modal-footer-border-top-style: var(--modal-border-style);
+        --modal-footer-border-top-color: var(--modal-border-color);
         --modal-close-inset-inline-end: calc(var(--modal-padding-inline) / 2);
         --modal-close-inset-block-start: calc(var(--modal-padding-block) / 2);
 
@@ -183,7 +190,7 @@
         --accordion-details-border-bottom-color: var(--border);
         --accordion-details-border-bottom-width-contrast: max(2px, 1px);
         --accordion-details-border-bottom-color-contrast: currentcolor;
-        --accordion-summary-padding-block: var(--spacer-4);
+        --accordion-summary-padding-block: 1rem;
         --accordion-summary-padding-inline: 0;
         --accordion-summary-gap: var(--spacer-4);
         --accordion-summary-color: var(--surface-foreground);
@@ -194,22 +201,30 @@
         --accordion-icon-width: 1rem;
         --accordion-icon-height: 1rem;
         --accordion-icon-color: var(--surface-foreground);
-        --accordion-content-padding-block: var(--spacer-4);
+        --accordion-content-padding-block: 1rem;
         --accordion-content-padding-inline: 0;
         --accordion-content-font-size: var(--body-font-size);
         --accordion-content-line-height: var(--base-line-height);
 
         /* Alert */
         --alert-margin-block-block: var(--spacer-6);
-        --alert-padding-block: var(--spacer-4);
-        --alert-padding-inline: var(--spacer-4);
-        --alert-gap: var(--spacer-2);
+        --alert-padding-block: 0.875rem;
+        --alert-padding-inline: 1rem;
+        --alert-gap: var(--spacer-1);
         --alert-border-radius: var(--border-radius-sm);
+        --alert-background-color: var(--surface-subtle);
+        --alert-color: var(--surface-foreground);
+        --alert-border-width: 1px;
+        --alert-border-style: solid;
+        --alert-border-color: var(--border);
+        --alert-destructive-background-color: color-mix(in srgb, var(--destructive) 10%, var(--background));
+        --alert-destructive-color: var(--destructive);
+        --alert-destructive-border-color: color-mix(in srgb, var(--destructive) 28%, var(--background));
         --alert-title-font-size: var(--body-font-size);
         --alert-title-font-weight: 600;
         --alert-title-line-height: var(--base-line-height);
         --alert-title-color: currentcolor;
-        --alert-description-color: currentcolor;
+        --alert-description-color: var(--muted-foreground);
 
         /* Card */
         --card-background-color: var(--surface);
@@ -219,8 +234,8 @@
         --card-border-color: var(--border);
         --card-border-radius: var(--border-radius-sm);
         --card-box-shadow: var(--shadow-sm);
-        --card-padding-block: var(--spacer-4);
-        --card-padding-inline: var(--spacer-4);
+        --card-padding-block: 1rem;
+        --card-padding-inline: 1rem;
         --card-gap: var(--spacer-4);
         --card-eyebrow-font-size: var(--fs-xs);
         --card-eyebrow-font-weight: 600;
@@ -239,15 +254,15 @@
         --block-navigation-gap: var(--spacer-4);
         --block-navigation-columns: 1;
         --block-navigation-item-min-height: 7.5rem;
-        --block-navigation-item-padding-block: var(--spacer-4);
-        --block-navigation-item-padding-inline: var(--spacer-4);
-        --block-navigation-item-background-color: var(--surface-subtle);
-        --block-navigation-item-background-color-hover: var(--surface-subtle-hover);
-        --block-navigation-item-color: var(--primary);
+        --block-navigation-item-padding-block: 1rem;
+        --block-navigation-item-padding-inline: 1rem;
+        --block-navigation-item-background-color: var(--surface);
+        --block-navigation-item-background-color-hover: var(--surface-subtle);
+        --block-navigation-item-color: var(--surface-foreground);
         --block-navigation-item-border-width: 1px;
         --block-navigation-item-border-style: solid;
-        --block-navigation-item-border-color: var(--primary);
-        --block-navigation-item-border-color-hover: var(--primary);
+        --block-navigation-item-border-color: var(--border);
+        --block-navigation-item-border-color-hover: var(--border);
         --block-navigation-item-border-radius: var(--border-radius-sm);
         --block-navigation-item-box-shadow-hover: var(--shadow-sm);
         --block-navigation-item-text-decoration-thickness: 0.125rem;
@@ -268,9 +283,9 @@
         --pagination-background-color-hover: var(--surface-subtle);
         --pagination-color: var(--foreground);
         --pagination-font-weight: 500;
-        --pagination-item-padding-inline: var(--spacer-1);
+        --pagination-item-padding-inline: 0.5rem;
         --pagination-control-gap: var(--spacer-1);
-        --pagination-control-padding-inline: var(--spacer-2);
+        --pagination-control-padding-inline: 0.75rem;
         --pagination-border-radius: var(--border-radius-sm);
 
         /* Forms: Fieldset */
@@ -303,6 +318,8 @@
         --form-input-line-height: var(--base-line-height);
         --form-input-border-color-focus: var(--input);
         --form-select-multiple-min-block-size: 8rem;
+        --form-input-group-border-overlap: 1px;
+        --form-input-group-focus-z-index: 5;
 
         /* Form: Radio */
         --form-radio-margin-block-end: var(--spacer-1);
@@ -310,10 +327,16 @@
         --form-radio-input-width: 1rem;
         --form-radio-input-height: 1rem;
         --form-radio-input-background-color: var(--form-input-background-color);
-        --form-radio-input-background-color-active: var(--accent);
+        --form-radio-input-background-color-active: var(--primary);
         --form-radio-input-border-width: 1px;
         --form-radio-input-border-style: solid;
         --form-radio-input-border-color: var(--input);
+        --form-radio-input-border-width-active: var(--form-radio-input-border-width);
+        --form-radio-input-border-style-active: var(--form-radio-input-border-style);
+        --form-radio-input-border-color-active: var(--primary);
+        --form-radio-input-indicator-width: 0.5rem;
+        --form-radio-input-indicator-height: 0.5rem;
+        --form-radio-input-indicator-color: var(--primary-foreground);
         --form-radio-input-border-radius: var(--border-radius-full);
 
         /* Form: Checkbox */
@@ -322,10 +345,23 @@
         --form-checkbox-input-width: 1rem;
         --form-checkbox-input-height: 1rem;
         --form-checkbox-input-background-color: var(--form-input-background-color);
-        --form-checkbox-input-background-color-active: var(--accent);
+        --form-checkbox-input-background-color-active: var(--primary);
         --form-checkbox-input-border-width: 1px;
         --form-checkbox-input-border-style: solid;
         --form-checkbox-input-border-color: var(--input);
+        --form-checkbox-input-border-width-active: var(--form-checkbox-input-border-width);
+        --form-checkbox-input-border-style-active: var(--form-checkbox-input-border-style);
+        --form-checkbox-input-border-color-active: var(--primary);
+        --form-checkbox-input-indicator-width: 0.3125rem;
+        --form-checkbox-input-indicator-height: 0.5625rem;
+        --form-checkbox-input-indicator-translate-block: -0.0625rem;
+        --form-checkbox-input-indicator-border-right-width: 2px;
+        --form-checkbox-input-indicator-border-right-style: solid;
+        --form-checkbox-input-indicator-border-right-color: var(--primary-foreground);
+        --form-checkbox-input-indicator-border-bottom-width: 2px;
+        --form-checkbox-input-indicator-border-bottom-style: solid;
+        --form-checkbox-input-indicator-border-bottom-color: var(--primary-foreground);
+        --form-checkbox-input-indicator-color: var(--primary-foreground);
         --form-checkbox-input-border-radius: 0.125rem;
 
         /* Form: Datalist */
@@ -385,6 +421,10 @@
         --dropdown-content-border-color: var(--border);
         --dropdown-content-border-radius: var(--border-radius-sm);
         --dropdown-content-box-shadow: var(--shadow-md);
+        --dropdown-list-item-border-top-width: 1px;
+        --dropdown-list-item-border-top-style: solid;
+        --dropdown-list-item-border-top-color: var(--border);
+        --dropdown-list-item-border-top-width-first: 0;
         --dropdown-item-text-padding-block: 0.5rem;
         --dropdown-item-text-padding-inline: 0.75rem;
         --dropdown-item-gap: var(--spacer-4);

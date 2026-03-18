@@ -4,7 +4,7 @@ const meta = {
     title: 'Utilities/TextAlign',
     tags: ['autodocs'],
     render: (): string => `
-        <div style="display: grid; gap: var(--spacer-4);">
+        <div class="d-grid gap-4">
             <div class="bg-white-100 text-left">.text-left</div>
             <div class="bg-white-100 text-center">.text-center</div>
             <div class="bg-white-100 text-right">.text-right</div>

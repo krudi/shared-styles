@@ -3,45 +3,21 @@
     padding-block: var(--alert-padding-block);
     padding-inline: var(--alert-padding-inline);
     background-color: var(--alert-background-color);
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: var(--alert-gap);
     color: var(--alert-color);
     border-width: var(--alert-border-width);
     border-style: var(--alert-border-style);
     border-color: var(--alert-border-color);
     border-radius: var(--alert-border-radius);
+    box-shadow: none;
 }
 
-.alert-white {
-    --alert-background-color: var(--surface);
-    --alert-color: var(--surface-foreground);
-    --alert-border-width: 1px;
-    --alert-border-style: solid;
-    --alert-border-color: var(--border);
-}
-
-.alert-primary {
-    --alert-background-color: var(--primary);
-    --alert-color: var(--primary-foreground);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
-.alert-secondary {
-    --alert-background-color: var(--secondary);
-    --alert-color: var(--secondary-foreground);
-    --alert-border-width: 0;
-    --alert-border-style: initial;
-    --alert-border-color: none;
-}
-
-.alert-close {
-    top: var(--alert-padding-block);
-    right: var(--alert-padding-inline);
-    position: absolute;
+.alert-destructive {
+    --alert-background-color: var(--alert-destructive-background-color);
+    --alert-color: var(--alert-destructive-color);
+    --alert-border-color: var(--alert-destructive-border-color);
+    --alert-description-color: currentcolor;
 }
 
 .alert-title {
@@ -54,6 +30,6 @@
 
 .alert-description {
     margin-block-end: 0;
-    display: block;
+    display: grid;
     color: var(--alert-description-color);
 }

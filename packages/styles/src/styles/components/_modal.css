@@ -47,9 +47,9 @@
 }
 
 .modal-header {
-    border-bottom-width: var(--modal-border-width);
-    border-bottom-style: solid;
-    border-bottom-color: var(--modal-border-color);
+    border-bottom-width: var(--modal-header-border-bottom-width);
+    border-bottom-style: var(--modal-header-border-bottom-style);
+    border-bottom-color: var(--modal-header-border-bottom-color);
     text-wrap: balance;
 }
 
@@ -65,9 +65,9 @@
 
 .modal-footer {
     padding-block-start: var(--modal-footer-padding-block-start);
-    border-top-width: var(--modal-border-width);
-    border-top-style: solid;
-    border-top-color: var(--modal-border-color);
+    border-top-width: var(--modal-footer-border-top-width);
+    border-top-style: var(--modal-footer-border-top-style);
+    border-top-color: var(--modal-footer-border-top-color);
 }
 
 @media (prefers-reduced-motion: reduce) {

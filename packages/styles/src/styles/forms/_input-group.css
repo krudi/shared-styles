@@ -15,7 +15,7 @@
 
 .form-input-group > .form-control:focus-visible,
 .form-input-group > .btn:focus-visible {
-    z-index: 5;
+    z-index: var(--form-input-group-focus-z-index);
 }
 
 .form-input-group > :not(:last-child) {
@@ -24,7 +24,7 @@
 }
 
 .form-input-group > :not(:first-child) {
-    margin-left: -1px;
+    margin-left: calc(var(--form-input-group-border-overlap) * -1);
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }

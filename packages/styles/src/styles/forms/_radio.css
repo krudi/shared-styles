@@ -28,16 +28,16 @@
 }
 
 .form-radio-input::before {
-    width: calc(var(--form-radio-input-width) / 2);
-    height: calc(var(--form-radio-input-height) / 2);
+    width: var(--form-radio-input-indicator-width);
+    height: var(--form-radio-input-indicator-height);
     margin: 0;
     content: '';
+    background-color: var(--form-radio-input-indicator-color);
     border-radius: var(--form-radio-input-border-radius);
     transform: scale(0);
     transition-property: transform;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
-    box-shadow: inset 1em 1em var(--form-radio-input-background-color-active);
 }
 
 .form-radio-input:focus-visible {
@@ -46,6 +46,13 @@
 
 .form-radio-input:checked::before {
     transform: scale(1);
+}
+
+.form-radio-input:checked {
+    background-color: var(--form-radio-input-background-color-active);
+    border-width: var(--form-radio-input-border-width-active);
+    border-style: var(--form-radio-input-border-style-active);
+    border-color: var(--form-radio-input-border-color-active);
 }
 
 .form-radio-input:disabled {
