@@ -15,7 +15,9 @@ const meta = {
         const displayItems: Array<number | 'ellipsis'> = [];
 
         pageList.forEach((page, index) => {
-            if (index > 0 && page - pageList[index - 1] > 1) {
+            const previousPage = pageList[index - 1];
+
+            if (typeof previousPage === 'number' && page - previousPage > 1) {
                 displayItems.push('ellipsis');
             }
             displayItems.push(page);
@@ -60,7 +62,7 @@ const meta = {
         docs: {
             description: {
                 component:
-                    'Pagination bar with centered list. Active page uses <code>.pagination-list-item-text</code>; ellipsis uses <code>.pagination-list-item-ellipsis</code>.',
+                    'Pagination bar with centered list. Use <code>a.pagination-list-item-link</code> for navigable pages, <code>span.pagination-list-item-text</code> for the current page, and <code>a.pagination-list-item-control</code> for previous/next controls. Focus-visible styling is part of the component contract.',
             },
         },
     },
@@ -86,6 +88,47 @@ export const Playground: Story = {
         docs: {
             description: {
                 story: 'Adjust current and total pages to preview the active state and control spacing.',
+            },
+        },
+    },
+};
+
+export const EdgeStates: Story = {
+    render: (): string => `
+        <div class="d-grid gap-4">
+            <nav class="pagination" aria-label="Pagination start state">
+                <ul class="pagination-list" role="list">
+                    <li class="pagination-list-item">
+                        <a class="pagination-list-item-control" href="#prev" aria-label="Previous" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="pagination-list-item"><span class="pagination-list-item-text" aria-current="page">1</span></li>
+                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#2">2</a></li>
+                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#3">3</a></li>
+                    <li class="pagination-list-item">
+                        <a class="pagination-list-item-control" href="#next" aria-label="Next">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="pagination" aria-label="Pagination end state">
+                <ul class="pagination-list" role="list">
+                    <li class="pagination-list-item">
+                        <a class="pagination-list-item-control" href="#prev" aria-label="Previous">Previous</a>
+                    </li>
+                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#8">8</a></li>
+                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#9">9</a></li>
+                    <li class="pagination-list-item"><span class="pagination-list-item-text" aria-current="page">10</span></li>
+                    <li class="pagination-list-item">
+                        <a class="pagination-list-item-control" href="#next" aria-label="Next" aria-disabled="true">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Edge-state reference for first and last page behavior, including disabled previous and next controls.',
             },
         },
     },

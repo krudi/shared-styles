@@ -35,7 +35,7 @@ const meta = {
         docs: {
             description: {
                 component:
-                    'Dropdown built on native <code>popover</code> with anchor positioning. Content panel uses tokenised width, spacing, borders, and z-index. Rotate icon on open.',
+                    'Dropdown built on native <code>popover</code> with anchor positioning. Canonical markup uses <code>.dropdown</code>, a <code>button.dropdown-trigger</code>, and a <code>ul.dropdown-list</code> with <code>a.dropdown-list-item-link</code> entries. Focus-visible state is applied to both the trigger and menu items.',
             },
         },
     },
@@ -61,6 +61,36 @@ export const Playground: Story = {
         docs: {
             description: {
                 story: 'Use the controls to swap the trigger text and menu items.',
+            },
+        },
+    },
+};
+
+export const WithCurrentItem: Story = {
+    render: (): string => `
+        <div class="dropdown">
+            <button class="dropdown-trigger" popovertarget="dropdown-current" aria-haspopup="menu" aria-expanded="true" type="button">
+                Sections
+                <span class="dropdown-summary-icon" aria-hidden="true"></span>
+            </button>
+            <ul id="dropdown-current" class="dropdown-list" role="menu" aria-label="Sections" popover open>
+                <li class="dropdown-list-item">
+                    <a class="dropdown-list-item-link" role="menuitem" href="#overview">Overview</a>
+                </li>
+                <li class="dropdown-list-item">
+                    <a class="dropdown-list-item-link" role="menuitem" href="#components" aria-current="page">Components</a>
+                </li>
+                <li class="dropdown-list-item">
+                    <a class="dropdown-list-item-link" role="menuitem" href="#tokens">Tokens</a>
+                </li>
+            </ul>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Current-page state example. Use <code>aria-current="page"</code> on the active destination instead of inventing a custom active class.',
             },
         },
     },

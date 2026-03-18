@@ -21,7 +21,7 @@
     font-size: var(--button-font-size);
     font-weight: var(--button-font-weight);
     box-shadow: none;
-    transition-property: background-color;
+    transition-property: background-color, border-color, color, box-shadow;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
     text-wrap: pretty;
@@ -29,10 +29,16 @@
 
 .btn:disabled {
     pointer-events: none;
+    opacity: var(--button-disabled-opacity);
+    cursor: not-allowed;
 }
 
-.btn:disabled,
-.btn:is(:hover, :focus-visible) {
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--button-hover);
+}
+
+.btn:focus-visible {
     background-color: var(--button-hover);
 }
 
@@ -103,12 +109,6 @@
     fill: var(--button-color-emphasis);
 }
 
-.btn-icon:disabled,
-.btn-icon:hover,
-.btn-icon:focus-visible {
-    background-color: var(--button-hover);
-}
-
 /* Linked button */
 .btn-link {
     --button-background-color: transparent;
@@ -127,7 +127,6 @@
     font-weight: inherit;
 }
 
-.btn-link:disabled,
 .btn-link:hover,
 .btn-link:focus-visible {
     background-color: transparent;

@@ -44,7 +44,7 @@ const meta = {
         docs: {
             description: {
                 component:
-                    'Semantic block navigation built with <code>nav</code>, <code>ul</code>, <code>li</code>, and a full-tile <code>a</code>. Use <code>.block-navigation</code>, <code>.block-navigation-list</code>, <code>.block-navigation-list-item</code>, <code>.block-navigation-list-item-link</code>, and <code>.block-navigation-list-item-text</code>.',
+                    'Semantic block navigation built with <code>nav</code>, <code>ul</code>, <code>li</code>, and a full-tile <code>a</code>. Canonical structure: <code>nav.block-navigation &gt; ul.block-navigation-list &gt; li.block-navigation-list-item &gt; a.block-navigation-list-item-link &gt; span.block-navigation-list-item-text</code>.',
             },
         },
     },
@@ -72,6 +72,43 @@ export const Playground: Story = {
             description: {
                 story:
                     'Adjust the labels and href values to mirror your page structure. Keep the link on the <code>a</code> so the full block remains clickable.',
+            },
+        },
+    },
+};
+
+export const CompactSet: Story = {
+    render: (): string => `
+        <nav class="block-navigation" aria-label="Module navigation">
+            <ul class="block-navigation-list">
+                <li class="block-navigation-list-item">
+                    <a href="#content" class="block-navigation-list-item-link">
+                        <span class="block-navigation-list-item-text">Content</span>
+                    </a>
+                </li>
+                <li class="block-navigation-list-item">
+                    <a href="#media" class="block-navigation-list-item-link">
+                        <span class="block-navigation-list-item-text">Media</span>
+                    </a>
+                </li>
+                <li class="block-navigation-list-item">
+                    <a href="#forms" class="block-navigation-list-item-link">
+                        <span class="block-navigation-list-item-text">Forms</span>
+                    </a>
+                </li>
+                <li class="block-navigation-list-item">
+                    <a href="#navigation" class="block-navigation-list-item-link">
+                        <span class="block-navigation-list-item-text">Navigation</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Compact reference set for overview pages. The whole tile remains clickable, while the text element is reserved for typography only.',
             },
         },
     },

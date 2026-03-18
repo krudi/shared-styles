@@ -56,8 +56,7 @@
 }
 
 .dropdown-trigger:focus-visible {
-    outline: none;
-    box-shadow: var(--dropdown-trigger-focus-shadow);
+    background-color: var(--dropdown-trigger-background-color-hover);
 }
 
 .dropdown-list {
@@ -132,7 +131,6 @@
 
 .dropdown-list-item-link:focus-visible {
     outline-offset: var(--outline-offset-tight);
-    outline-color: var(--c-secondary);
 }
 
 @media (prefers-reduced-motion: reduce) {

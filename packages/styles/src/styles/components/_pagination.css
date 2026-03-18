@@ -34,8 +34,7 @@
 }
 
 .pagination-list-item-link:focus-visible {
-    outline-offset: var(--outline-offset-tight);
-    outline-color: var(--c-secondary);
+    background-color: var(--pagination-background-color-hover);
 }
 
 .pagination-list-item-text {
@@ -86,8 +85,7 @@
 }
 
 .pagination-list-item-control:focus-visible {
-    outline-offset: var(--outline-offset-tight);
-    outline-color: var(--c-secondary);
+    background-color: var(--pagination-background-color-hover);
 }
 
 .pagination-list-item-control[aria-disabled='true'] {

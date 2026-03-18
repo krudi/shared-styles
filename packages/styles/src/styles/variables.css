@@ -147,6 +147,7 @@
         --button-border-width: 1px;
         --button-border-style: solid;
         --button-border-color: var(--c-white-300);
+        --button-disabled-opacity: 0.6;
 
         /* Button sizes */
         --button-sm-padding-block: 0.5rem;
@@ -301,12 +302,11 @@
         --form-input-font-size: var(--body-font-size);
         --form-input-line-height: var(--base-line-height);
         --form-input-border-color-focus: var(--c-white-300);
-        --form-input-box-shadow-focus: 0 0 0 0.25rem rgb(32 42 52 / 10%);
         --form-select-multiple-min-block-size: 8rem;
 
         /* Form: Radio */
-        --form-radio-margin-block-end: 0.5rem;
-        --form-radio-label-gap: 0.5rem;
+        --form-radio-margin-block-end: var(--spacer-1);
+        --form-radio-label-gap: var(--spacer-1);
         --form-radio-input-width: 1rem;
         --form-radio-input-height: 1rem;
         --form-radio-input-background-color: var(--form-input-background-color);
@@ -317,8 +317,8 @@
         --form-radio-input-border-radius: var(--border-radius-full);
 
         /* Form: Checkbox */
-        --form-checkbox-margin-block-end: 0.5rem;
-        --form-checkbox-label-gap: 0.5rem;
+        --form-checkbox-margin-block-end: var(--spacer-1);
+        --form-checkbox-label-gap: var(--spacer-1);
         --form-checkbox-input-width: 1rem;
         --form-checkbox-input-height: 1rem;
         --form-checkbox-input-background-color: var(--form-input-background-color);
@@ -329,7 +329,7 @@
         --form-checkbox-input-border-radius: 0.125rem;
 
         /* Form: Datalist */
-        --form-datalist-margin-block-start: 0.5rem;
+        --form-datalist-margin-block-start: var(--spacer-1);
         --form-datalist-padding-block: 0.5rem;
         --form-datalist-padding-inline: 0.5rem;
         --form-datalist-background-color: var(--c-white);
@@ -377,7 +377,6 @@
         --dropdown-trigger-line-height: var(--base-line-height);
         --dropdown-trigger-gap: var(--spacer-1);
         --dropdown-trigger-letter-spacing: 0;
-        --dropdown-trigger-focus-shadow: var(--focus-default);
         --dropdown-menu-list-padding-block: 0.5rem;
         --dropdown-content-width: 192px;
         --dropdown-content-margin-block-start: var(--spacer-2);

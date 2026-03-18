@@ -42,7 +42,8 @@ const meta = {
         layout: 'centered',
         docs: {
             description: {
-                component: 'Buttons with tokenised variants, sizes, and disabled states for consistent interactions.',
+                component:
+                    'Buttons with tokenised variants, sizes, hover states, focus-visible treatment, and disabled handling. Canonical markup: <code>&lt;button class="btn btn-default" type="button"&gt;Action&lt;/button&gt;</code> or <code>&lt;a class="btn btn-outline" href="/target"&gt;Learn more&lt;/a&gt;</code>.',
             },
         },
     },
@@ -68,6 +69,27 @@ export const Playground: Story = {
         docs: {
             description: {
                 story: 'Use the controls to switch variant, size, and disabled state.',
+            },
+        },
+    },
+};
+
+export const Variants: Story = {
+    render: (): string => `
+        <div class="d-flex gap-2" style="flex-wrap: wrap;">
+            <button class="btn btn-default" type="button">Default</button>
+            <button class="btn btn-secondary" type="button">Secondary</button>
+            <button class="btn btn-outline" type="button">Outline</button>
+            <button class="btn btn-ghost" type="button">Ghost</button>
+            <button class="btn btn-destructive" type="button">Destructive</button>
+            <a class="btn btn-link" href="#button-link">Link</a>
+        </div>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Variant overview. Use button elements for actions and anchor elements only when the control navigates.',
             },
         },
     },

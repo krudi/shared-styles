@@ -21,41 +21,21 @@
     border-radius: var(--form-input-border-radius);
     font-size: var(--form-input-font-size);
     line-height: var(--form-input-line-height);
-    transition-property: border-color, box-shadow;
+    transition-property: border-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
 }
 
-.form-select:focus {
-    outline: none;
-    border-color: var(--form-input-border-color-focus);
-    box-shadow: var(--form-input-box-shadow-focus);
-}
-
-.form-select:focus:not(:focus-visible) {
-    border-color: var(--form-input-border-color);
-    box-shadow: none;
-}
-
 .form-select:focus-visible {
     border-color: var(--form-input-border-color-focus);
-    box-shadow: var(--form-input-box-shadow-focus);
-}
-
-.form-select:user-invalid {
-    border-color: var(--form-text-error-color);
-}
-
-.form-select:user-invalid:focus-visible {
-    box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--form-text-error-color) 30%, transparent);
 }
 
 .form-select:user-valid {
     border-color: var(--c-secondary);
 }
 
-.form-select:user-valid:focus-visible {
-    box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--c-secondary) 30%, transparent);
+.form-select:user-invalid {
+    border-color: var(--form-text-error-color);
 }
 
 @media (prefers-contrast: more) {

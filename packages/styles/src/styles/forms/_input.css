@@ -12,41 +12,21 @@
     border-radius: var(--form-input-border-radius);
     font-size: var(--form-input-font-size);
     line-height: var(--form-input-line-height);
-    transition-property: border-color, box-shadow;
+    transition-property: border-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-ease);
 }
 
-.form-control:focus {
-    outline: none;
-    border-color: var(--form-input-border-color-focus);
-    box-shadow: var(--form-input-box-shadow-focus);
-}
-
-.form-control:focus:not(:focus-visible) {
-    border-color: var(--form-input-border-color);
-    box-shadow: none;
-}
-
 .form-control:focus-visible {
     border-color: var(--form-input-border-color-focus);
-    box-shadow: var(--form-input-box-shadow-focus);
-}
-
-.form-control:user-invalid {
-    border-color: var(--form-text-error-color);
-}
-
-.form-control:user-invalid:focus-visible {
-    box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--form-text-error-color) 30%, transparent);
 }
 
 .form-control:user-valid {
     border-color: var(--c-secondary);
 }
 
-.form-control:user-valid:focus-visible {
-    box-shadow: 0 0 0 0.125em color-mix(in srgb, var(--c-secondary) 30%, transparent);
+.form-control:user-invalid {
+    border-color: var(--form-text-error-color);
 }
 
 @media (prefers-contrast: more) {
