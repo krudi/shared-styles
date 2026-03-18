@@ -234,6 +234,27 @@
         --card-description-color: var(--body-color-muted);
         --card-media-border-radius: calc(var(--card-border-radius) - 1px);
 
+        /* Block Navigation */
+        --block-navigation-gap: var(--spacer-4);
+        --block-navigation-columns: 1;
+        --block-navigation-item-min-height: 7.5rem;
+        --block-navigation-item-padding-block: var(--spacer-4);
+        --block-navigation-item-padding-inline: var(--spacer-4);
+        --block-navigation-item-background-color: var(--c-white-100);
+        --block-navigation-item-background-color-hover: var(--c-white-200);
+        --block-navigation-item-color: var(--c-primary);
+        --block-navigation-item-border-width: 1px;
+        --block-navigation-item-border-style: solid;
+        --block-navigation-item-border-color: var(--c-primary);
+        --block-navigation-item-border-color-hover: var(--c-primary);
+        --block-navigation-item-border-radius: var(--border-radius-sm);
+        --block-navigation-item-box-shadow-hover: var(--shadow-sm);
+        --block-navigation-item-text-decoration-thickness: 0.125rem;
+        --block-navigation-item-text-underline-offset: 0.2em;
+        --block-navigation-item-font-size: var(--heading-4);
+        --block-navigation-item-font-weight: 500;
+        --block-navigation-item-line-height: var(--heading-line-height);
+
         /* Pagination */
         --pagination-item-width: 2.625rem;
         --pagination-item-height: 2.625rem;
