@@ -21,20 +21,20 @@ Or compose layers with CSS cascade layers:
 
 ```css
 /* Required core */
-@import '@krudi/styles/variables' layer(variables);
-@import '@krudi/styles/theme' layer(theme);
+@import '@krudi/styles/css/variables' layer(variables);
+@import '@krudi/styles/css/theme' layer(theme);
 
 /* Recommended reset + layout */
-@import '@krudi/styles/base' layer(base);
-@import '@krudi/styles/layout' layer(layout);
+@import '@krudi/styles/css/base' layer(base);
+@import '@krudi/styles/css/layout' layer(layout);
 
 /* Optional pieces */
-@import '@krudi/styles/components' layer(components);
-@import '@krudi/styles/utilities' layer(utilities);
+@import '@krudi/styles/css/components' layer(components);
+@import '@krudi/styles/css/utilities' layer(utilities);
 
 /* Additional layers if needed */
-@import '@krudi/styles/html' layer(html);
-@import '@krudi/styles/elements' layer(elements);
+@import '@krudi/styles/css/html' layer(html);
+@import '@krudi/styles/css/elements' layer(elements);
 ```
 
 ### Overriding tokens or theme values
@@ -42,8 +42,8 @@ Or compose layers with CSS cascade layers:
 Import the layers first, then override inside the matching layer so specificity stays low and the cascade stays intact:
 
 ```css
-@import '@krudi/styles/variables' layer(variables);
-@import '@krudi/styles/theme' layer(theme);
+@import '@krudi/styles/css/variables' layer(variables);
+@import '@krudi/styles/css/theme' layer(theme);
 
 @layer variables {
     :root {
@@ -80,7 +80,7 @@ These tokens are intended to be the main project-level customization points. Low
 
 | Command                      | Description                  |
 | ---------------------------- | ---------------------------- |
-| `npm run build`              | Build CSS + types to `dist/` |
+| `npm run build`              | Build CSS and JS to `dist/`  |
 | `npm run dev`                | TypeScript watch             |
 | `npm run lint:eslint`        | Lint TS                      |
 | `npm run lint:eslint:fix`    | Fix TS lint issues           |
