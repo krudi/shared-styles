@@ -1,4 +1,4 @@
-import { wireModalTrigger } from '@krudi/styles/components';
+import { wireModalTrigger } from '@krudi/styles/js';
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { ModalArgs } from './modal.types';

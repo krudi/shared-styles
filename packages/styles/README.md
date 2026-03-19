@@ -14,7 +14,7 @@ npm install @krudi/styles
 Import everything:
 
 ```css
-@import '@krudi/styles';
+@import '@krudi/styles/css';
 ```
 
 Or compose layers with CSS cascade layers:

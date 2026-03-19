@@ -29,16 +29,27 @@
     "type": "module",
     "exports": {
         ".": "./dist/styles/index.css",
-        "./ui": "./dist/styles/index.css",
-        "./theme": "./dist/styles/theme.css",
-        "./variables": "./dist/styles/variables.css",
-        "./base": "./dist/styles/base/index.css",
-        "./layout": "./dist/styles/layout/index.css",
-        "./components": {
-            "style": "./dist/styles/components/index.css",
-            "import": "./dist/index.js",
-            "default": "./dist/styles/components/index.css",
-            "types": "./dist/index.d.ts"
+        "./css": "./dist/styles/index.css",
+        "./css/variables": "./dist/styles/variables.css",
+        "./css/theme": "./dist/styles/theme.css",
+        "./css/base": "./dist/styles/base/index.css",
+        "./css/layout": "./dist/styles/layout/index.css",
+        "./css/components": "./dist/styles/components/index.css",
+        "./css/forms": "./dist/styles/forms/index.css",
+        "./css/utilities": "./dist/styles/utilities/index.css",
+        "./css/html": "./dist/styles/html/index.css",
+        "./css/elements": "./dist/styles/elements/index.css",
+        "./js": {
+            "types": "./dist/scripts/index.d.ts",
+            "import": "./dist/scripts/index.js"
+        },
+        "./js/modal": {
+            "types": "./dist/scripts/modal.d.ts",
+            "import": "./dist/scripts/modal.js"
+        },
+        "./js/theme-switch": {
+            "types": "./dist/scripts/theme-switch.d.ts",
+            "import": "./dist/scripts/theme-switch.js"
         },
         "./forms": "./dist/styles/forms/index.css",
         "./utilities": "./dist/styles/utilities/index.css",

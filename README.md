@@ -43,7 +43,7 @@ npm install @krudi/styles
 Import everything:
 
 ```css
-@import '@krudi/styles/ui';
+@import '@krudi/styles/css';
 ```
 
 Or compose layers:
