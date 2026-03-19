@@ -36,9 +36,9 @@
         "./layout": "./dist/styles/layout/index.css",
         "./components": {
             "style": "./dist/styles/components/index.css",
-            "import": "./dist/modal.js",
+            "import": "./dist/index.js",
             "default": "./dist/styles/components/index.css",
-            "types": "./dist/modal.d.ts"
+            "types": "./dist/index.d.ts"
         },
         "./forms": "./dist/styles/forms/index.css",
         "./utilities": "./dist/styles/utilities/index.css",

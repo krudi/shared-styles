@@ -11,3 +11,4 @@
 @import './_list.css' layer(components);
 @import './_modal.css' layer(components);
 @import './_pagination.css' layer(components);
+@import './_theme-switch.css' layer(components);

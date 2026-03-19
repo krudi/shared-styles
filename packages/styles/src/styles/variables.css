@@ -431,6 +431,11 @@
         --dropdown-item-text-font-size: var(--body-font-size);
         --dropdown-item-text-font-weight: 400;
         --dropdown-item-text-line-height: var(--base-line-height);
+
+        /* Theme Switch */
+        --theme-switch-size: 2.5rem;
+        --theme-switch-icon-width: 1.125rem;
+        --theme-switch-icon-height: 1.125rem;
         --dropdown-icon-width: 1rem;
         --dropdown-icon-height: 1rem;
     }

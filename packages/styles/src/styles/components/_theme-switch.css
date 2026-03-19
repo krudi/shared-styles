@@ -1,0 +1,46 @@
+.theme-switch {
+    inline-size: var(--theme-switch-size);
+    block-size: var(--theme-switch-size);
+    padding: 0;
+    align-items: center;
+}
+
+.theme-switch-icon {
+    inline-size: var(--theme-switch-icon-width);
+    block-size: var(--theme-switch-icon-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: currentcolor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-repeat: no-repeat;
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-position: center;
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-size: contain;
+}
+
+.theme-switch-icon[data-theme-switch-icon='light'] {
+    mask-image: url('@krudi/icons/moon.svg');
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-image: url('@krudi/icons/moon.svg');
+}
+
+.theme-switch-icon[data-theme-switch-icon='dark'] {
+    mask-image: url('@krudi/icons/sun.svg');
+
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask-image: url('@krudi/icons/sun.svg');
+}
+
+.theme-switch[data-theme-switch-state='light'] [data-theme-switch-icon='dark'],
+.theme-switch[data-theme-switch-state='dark'] [data-theme-switch-icon='light'] {
+    display: none;
+}
