@@ -50,3 +50,28 @@ export const Playground: Story = {
         },
     },
 };
+
+export const WithGroupedFields: Story = {
+    render: (): string => `
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Billing address</legend>
+            <span class="form-text">Legends now remain in normal flow above helper text and grouped controls.</span>
+            <div class="form-block">
+                <label class="form-label" for="legend-street">Street</label>
+                <input class="form-control" id="legend-street" type="text" placeholder="Example Street 10" />
+            </div>
+            <div class="form-block">
+                <label class="form-label" for="legend-city">City</label>
+                <input class="form-control" id="legend-city" type="text" placeholder="Hamburg" />
+            </div>
+        </fieldset>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Use this pattern to verify that <code>.form-legend</code> aligns naturally with helper text and subsequent <code>.form-block</code> content.',
+            },
+        },
+    },
+};

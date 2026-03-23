@@ -56,3 +56,43 @@ export const Playground: Story = {
         },
     },
 };
+
+export const NestedFieldsets: Story = {
+    render: (): string => `
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Organisation details</legend>
+            <div class="form-block">
+                <label class="form-label" for="fieldset-company">Company</label>
+                <input class="form-control" id="fieldset-company" type="text" placeholder="Example GmbH" />
+            </div>
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Primary contact</legend>
+                <div class="form-block">
+                    <label class="form-label" for="fieldset-contact-name">Name</label>
+                    <input class="form-control" id="fieldset-contact-name" type="text" placeholder="Jane Doe" />
+                </div>
+                <div class="form-block">
+                    <label class="form-label" for="fieldset-contact-email">Email</label>
+                    <input
+                        class="form-control"
+                        id="fieldset-contact-email"
+                        type="email"
+                        placeholder="name@example.com"
+                    />
+                </div>
+            </fieldset>
+            <div class="form-block">
+                <label class="form-label" for="fieldset-notes">Notes</label>
+                <input class="form-control" id="fieldset-notes" type="text" placeholder="Additional context" />
+            </div>
+        </fieldset>
+    `,
+    parameters: {
+        controls: { disable: true },
+        docs: {
+            description: {
+                story: 'Nested <code>.form-fieldset</code> elements keep a separate block-end margin so grouped sub-sections do not collapse into surrounding controls.',
+            },
+        },
+    },
+};
