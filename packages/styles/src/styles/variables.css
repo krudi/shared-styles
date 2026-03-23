@@ -15,7 +15,7 @@
         --spacer-11: 8rem;
 
         /* Grid spacings */
-        --grid-spacing: var(--spacer-7);
+        --grid-spacing: var(--spacer-6);
 
         /* Container spacings */
         --container-spacer: var(--spacer-4);
@@ -386,8 +386,8 @@
         --form-label-required-font-weight: 700;
 
         /* Forms: Text */
-        --form-text-margin-block-start: var(--spacer-2);
-        --form-text-font-size: var(--body-font-size);
+        --form-text-margin-block-start: var(--spacer-1);
+        --form-text-font-size: var(--fs-sm);
         --form-text-line-height: var(--base-line-height);
         --form-text-color: var(--foreground);
         --form-text-hint-color: var(--muted-foreground);
@@ -409,6 +409,7 @@
         --dropdown-trigger-background-color: var(--surface);
         --dropdown-trigger-background-color-hover: var(--surface-subtle);
         --dropdown-trigger-color: var(--foreground);
+        --dropdown-trigger-min-block-size: 2.5rem;
         --dropdown-trigger-font-size: var(--body-font-size);
         --dropdown-trigger-line-height: var(--base-line-height);
         --dropdown-trigger-gap: var(--spacer-1);

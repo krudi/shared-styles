@@ -1,10 +1,10 @@
 .container {
-    width: min(var(--container-max-width), 100% - var(--spacer-3));
+    width: min(var(--container-max-width), 100% - var(--spacer-6));
     margin-inline: auto;
     container-type: inline-size;
 }
 
 .container-fluid {
-    width: min(var(--container-max-width), 100% - var(--spacer-3));
+    width: min(var(--container-max-width), 100% - var(--spacer-6));
     container-type: inline-size;
 }

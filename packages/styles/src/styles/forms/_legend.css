@@ -1,13 +1,13 @@
 .form-legend {
-    width: 100%;
-    margin-block-end: var(--form-legend-margin-block-end);
+    width: auto;
+    margin-block-end: 0;
     padding: 0;
-    float: left;
+    float: none;
     line-height: var(--form-legend-line-height);
     font-size: var(--form-legend-form-size);
     font-weight: var(--form-legend-form-weight);
 }
 
 .form-legend + * {
-    clear: left;
+    clear: none;
 }

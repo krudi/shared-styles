@@ -2,6 +2,10 @@
     margin-block-end: var(--form-block-margin-block-end);
 }
 
+.form-block > .form-block:last-of-type {
+    margin-block-end: 0;
+}
+
 .form-block:has(.form-control:user-invalid) .form-label,
 .form-block:has(.form-select:user-invalid) .form-label {
     color: var(--form-text-error-color);
