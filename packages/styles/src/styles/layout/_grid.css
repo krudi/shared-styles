@@ -103,19 +103,21 @@
     grid-column: span 12;
 }
 
-.col-start {
-    display: grid;
-    place-items: start;
-}
+@media screen and (min-width: 993px) {
+    .col-start {
+        display: grid;
+        place-items: start;
+    }
 
-.col-center {
-    display: grid;
-    place-items: start center;
-}
+    .col-center {
+        display: grid;
+        place-items: start center;
+    }
 
-.col-end {
-    display: grid;
-    place-items: start end;
+    .col-end {
+        display: grid;
+        place-items: start end;
+    }
 }
 
 @media screen and (max-width: 992px) {
