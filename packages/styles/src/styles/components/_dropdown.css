@@ -6,6 +6,7 @@
 .dropdown-trigger {
     cursor: pointer;
     user-select: none;
+    min-block-size: var(--dropdown-trigger-min-block-size);
     padding-block: var(--dropdown-trigger-padding-block);
     padding-inline: var(--dropdown-trigger-padding-inline);
     border-width: var(--dropdown-trigger-border-width);
@@ -31,10 +32,16 @@
     width: var(--dropdown-icon-width);
     height: var(--dropdown-icon-height);
     display: inline-block;
-    background-image: url('@krudi/icons/caret-down.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    flex: 0 0 auto;
+    background-color: currentcolor;
+    mask-image: url('@krudi/icons/caret-down.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('@krudi/icons/caret-down.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
     transition: transform var(--transition-decorative-duration) var(--transition-ease);
 }
 
