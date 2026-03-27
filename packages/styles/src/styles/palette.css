@@ -9,6 +9,10 @@
         --color-neutral-50: light-dark(#f6f7fb, #151515);
         --color-neutral-100: light-dark(#efefef, #2c2c2d);
         --color-neutral-200: light-dark(#e2e5ea, #3a3a3b);
+        --color-neutral-300: light-dark(#d5dae2, #4a4a4d);
+        --color-neutral-400: light-dark(#c3c9d3, #5c5f66);
+        --color-neutral-500: light-dark(#aeb6c3, #71757d);
+        --color-neutral-600: light-dark(#8f99aa, #8f95a0);
         --color-neutral-700: light-dark(#4e596a, #b0b7c3);
         --color-neutral-900: light-dark(#1c222e, #ffffff);
         --color-secondary-100: light-dark(#f4f4f5, #27272a);
