@@ -33,7 +33,7 @@
         "@types/node": "^22.19.13",
         "@vitest/browser-playwright": "^4.1.1",
         "@vitest/coverage-v8": "^4.1.0",
-        "eslint-plugin-storybook": "10.3.1",
+        "eslint-plugin-storybook": "10.3.3",
         "playwright": "^1.58.2",
         "storybook": "^10.3.3",
         "typescript": "^5.9.2",
