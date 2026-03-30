@@ -1,0 +1,105 @@
+.tabs {
+    display: grid;
+    gap: var(--spacer-4);
+}
+
+.tabs-list {
+    align-items: center;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-sm);
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--spacer-1);
+    padding: var(--spacer-1);
+    width: fit-content;
+}
+
+.tabs-trigger {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: calc(var(--border-radius-sm) - 0.125rem);
+    color: var(--muted-foreground);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    justify-content: center;
+    min-height: 2.75rem;
+    padding-block: var(--spacer-2);
+    padding-inline: var(--spacer-4);
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color var(--transition-default) var(--transition-ease),
+        box-shadow var(--transition-default) var(--transition-ease),
+        color var(--transition-default) var(--transition-ease);
+}
+
+.tabs-trigger:hover,
+.tabs-trigger:focus-visible {
+    background: color-mix(in srgb, var(--surface) 88%, var(--background));
+    color: var(--foreground);
+}
+
+.tabs-trigger:focus-visible {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset);
+}
+
+.tabs-trigger[aria-selected='true'],
+.tabs-trigger.is-active {
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    color: var(--foreground);
+}
+
+.tabs-panels {
+    display: grid;
+}
+
+.tabs-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    display: none;
+    padding: clamp(var(--spacer-4), 2vw, var(--spacer-6));
+}
+
+.tabs-panel.is-active {
+    display: grid;
+    gap: var(--spacer-3);
+}
+
+.tabs-panel-title,
+.tabs-panel-description {
+    margin: 0;
+}
+
+.tabs-panel-title {
+    font-size: var(--heading-3);
+    line-height: 1.1;
+}
+
+.tabs-panel-description {
+    color: var(--muted-foreground);
+}
+
+@media (max-width: 47.99rem) {
+    .tabs-list {
+        width: 100%;
+    }
+
+    .tabs-trigger {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tabs-trigger {
+        transition: none;
+    }
+}

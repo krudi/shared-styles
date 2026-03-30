@@ -3,6 +3,76 @@
 Reusable CSS design tokens, reset styles, layout primitives, and early components/utilities. Built for personal
 projects.
 
+## Included Components
+
+- `Accordion`
+- `Alert`
+- `Badge`
+- `Block Navigation`
+- `Button`
+- `Button Group`
+- `Card`
+- `Dropdown`
+- `Horizontal Line`
+- `List`
+- `Modal`
+- `Pagination`
+- `Pricing Table`
+- `Tabs`
+- `Theme Switch`
+
+### Pricing Table
+
+Use the pricing-table component for a single offer card inside a grid or comparison layout.
+
+```html
+<article class="pricing-table-card">
+    <div class="pricing-table-card-accent"></div>
+    <div class="pricing-table-card-content">
+        <header class="pricing-table-card-header">
+            <p class="pricing-table-card-eyebrow">Most popular</p>
+            <h3 class="pricing-table-card-title">Annual</h3>
+            <div class="pricing-table-card-description">
+                <p>Yearly access with updates and support for active client projects.</p>
+            </div>
+        </header>
+        <div class="pricing-table-card-footer">
+            <p class="pricing-table-card-price">EUR 499</p>
+            <a class="btn btn-default pricing-table-card-button" href="#">Buy now</a>
+        </div>
+    </div>
+</article>
+```
+
+### Tabs
+
+Use tabs for compact content groups where only one panel should be emphasized at a time.
+
+```html
+<section class="tabs" id="example-tabs" aria-label="Example tabs">
+    <div class="tabs-list" role="tablist" aria-label="Example tabs">
+        <button class="tabs-trigger is-active" id="tab-overview" role="tab" type="button" aria-selected="true" aria-controls="panel-overview">Overview</button>
+        <button class="tabs-trigger" id="tab-details" role="tab" type="button" aria-selected="false" aria-controls="panel-details" tabindex="-1">Details</button>
+    </div>
+    <div class="tabs-panels">
+        <article class="tabs-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+            <h3 class="tabs-panel-title">Keep the active section clear</h3>
+            <p class="tabs-panel-description">Attach your preferred JS or framework state to switch the active trigger and panel.</p>
+        </article>
+    </div>
+</section>
+```
+
+```ts
+import { wireTabs } from '@krudi/styles/js';
+
+const root = document.getElementById('example-tabs');
+
+if (root instanceof HTMLElement) {
+    wireTabs({ root });
+}
+```
+
 ## Using `@krudi/styles`
 
 Install:

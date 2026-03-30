@@ -1,0 +1,108 @@
+.pricing-table-card {
+    background: var(--surface-subtle, color-mix(in srgb, var(--surface) 92%, var(--background)));
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    transition:
+        border-color var(--transition-default) var(--transition-ease),
+        box-shadow var(--transition-default) var(--transition-ease),
+        transform var(--transition-default) var(--transition-ease);
+}
+
+.pricing-table-card-accent {
+    background: color-mix(in srgb, var(--foreground) 82%, var(--primary));
+    height: 0.375rem;
+}
+
+.pricing-table-card-featured {
+    border-color: color-mix(in srgb, var(--primary) 32%, var(--border));
+    box-shadow: var(--shadow-md);
+    transform: translateY(-0.25rem);
+}
+
+.pricing-table-card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--spacer-5);
+    height: 100%;
+    min-height: 100%;
+    padding: clamp(var(--spacer-4), 2vw, var(--spacer-6));
+}
+
+.pricing-table-card-header {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--spacer-3);
+}
+
+.pricing-table-card-eyebrow {
+    color: var(--muted-foreground);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.pricing-table-card-title,
+.pricing-table-card-price {
+    margin: 0;
+}
+
+.pricing-table-card-title {
+    font-size: clamp(2rem, 2vw + 1rem, var(--heading-2));
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.pricing-table-card-description {
+    color: var(--muted-foreground);
+}
+
+.pricing-table-card-description > *:first-child {
+    margin-top: 0;
+}
+
+.pricing-table-card-description > *:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-table-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer-4);
+    margin-top: auto;
+    padding-top: var(--spacer-2);
+}
+
+.pricing-table-card-price {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.pricing-table-card-button {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (min-width: 48rem) {
+    .pricing-table-card {
+        min-height: 34rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-table-card {
+        transition: none;
+    }
+}
