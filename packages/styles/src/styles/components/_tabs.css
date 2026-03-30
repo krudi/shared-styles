@@ -1,34 +1,34 @@
 .tabs {
     display: grid;
-    gap: var(--spacer-4);
+    gap: var(--tabs-gap);
 }
 
 .tabs-list {
     align-items: center;
-    background: var(--surface-subtle);
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius-sm);
+    background: var(--tabs-list-background);
+    border: var(--tabs-list-border-width) var(--tabs-list-border-style) var(--tabs-list-border-color);
+    border-radius: var(--tabs-list-border-radius);
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--spacer-1);
-    padding: var(--spacer-1);
+    gap: var(--tabs-list-gap);
+    padding: var(--tabs-list-padding);
     width: fit-content;
 }
 
 .tabs-trigger {
     align-items: center;
-    background: transparent;
+    background: var(--tabs-trigger-background);
     border: 0;
-    border-radius: calc(var(--border-radius-sm) - 0.125rem);
-    color: var(--muted-foreground);
+    border-radius: var(--tabs-trigger-border-radius);
+    color: var(--tabs-trigger-color);
     cursor: pointer;
     display: inline-flex;
-    font-size: var(--button-font-size);
-    font-weight: var(--button-font-weight);
+    font-size: var(--tabs-trigger-font-size);
+    font-weight: var(--tabs-trigger-font-weight);
     justify-content: center;
-    min-height: 2.75rem;
-    padding-block: var(--spacer-2);
-    padding-inline: var(--spacer-4);
+    min-height: var(--tabs-trigger-min-height);
+    padding-block: var(--tabs-trigger-padding-block);
+    padding-inline: var(--tabs-trigger-padding-inline);
     text-align: center;
     text-decoration: none;
     transition:
@@ -39,8 +39,8 @@
 
 .tabs-trigger:hover,
 .tabs-trigger:focus-visible {
-    background: color-mix(in srgb, var(--surface) 88%, var(--background));
-    color: var(--foreground);
+    background: var(--tabs-trigger-background-hover);
+    color: var(--tabs-trigger-color-hover);
 }
 
 .tabs-trigger:focus-visible {
@@ -50,9 +50,9 @@
 
 .tabs-trigger[aria-selected='true'],
 .tabs-trigger.is-active {
-    background: var(--surface);
-    box-shadow: var(--shadow-sm);
-    color: var(--foreground);
+    background: var(--tabs-trigger-background-active);
+    box-shadow: var(--tabs-trigger-box-shadow-active);
+    color: var(--tabs-trigger-color-active);
 }
 
 .tabs-panels {
@@ -60,17 +60,17 @@
 }
 
 .tabs-panel {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius-sm);
-    box-shadow: var(--shadow-sm);
+    background: var(--tabs-panel-background);
+    border: var(--tabs-panel-border-width) var(--tabs-panel-border-style) var(--tabs-panel-border-color);
+    border-radius: var(--tabs-panel-border-radius);
+    box-shadow: var(--tabs-panel-box-shadow);
     display: none;
-    padding: clamp(var(--spacer-4), 2vw, var(--spacer-6));
+    padding: var(--tabs-panel-padding);
 }
 
 .tabs-panel.is-active {
     display: grid;
-    gap: var(--spacer-3);
+    gap: var(--tabs-panel-gap);
 }
 
 .tabs-panel-title,
@@ -79,12 +79,12 @@
 }
 
 .tabs-panel-title {
-    font-size: var(--heading-3);
-    line-height: 1.1;
+    font-size: var(--tabs-panel-title-font-size);
+    line-height: var(--tabs-panel-title-line-height);
 }
 
 .tabs-panel-description {
-    color: var(--muted-foreground);
+    color: var(--tabs-panel-description-color);
 }
 
 @media (max-width: 47.99rem) {

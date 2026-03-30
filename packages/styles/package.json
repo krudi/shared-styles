@@ -30,6 +30,7 @@
     "exports": {
         ".": "./dist/styles/index.css",
         "./css": "./dist/styles/index.css",
+        "./css/palette": "./dist/styles/palette.css",
         "./css/variables": "./dist/styles/variables.css",
         "./css/theme": "./dist/styles/theme.css",
         "./css/base": "./dist/styles/base/index.css",
@@ -38,7 +39,6 @@
         "./css/forms": "./dist/styles/forms/index.css",
         "./css/utilities": "./dist/styles/utilities/index.css",
         "./css/html": "./dist/styles/html/index.css",
-        "./css/elements": "./dist/styles/elements/index.css",
         "./js": {
             "types": "./dist/scripts/index.d.ts",
             "import": "./dist/scripts/index.js"
@@ -53,8 +53,7 @@
         },
         "./forms": "./dist/styles/forms/index.css",
         "./utilities": "./dist/styles/utilities/index.css",
-        "./html": "./dist/styles/html/index.css",
-        "./elements": "./dist/styles/elements/index.css"
+        "./html": "./dist/styles/html/index.css"
     },
     "main": "./dist/styles/index.css",
     "style": "./dist/styles/index.css",

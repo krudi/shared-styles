@@ -1,8 +1,9 @@
 .pricing-table-card {
-    background: var(--surface-subtle, color-mix(in srgb, var(--surface) 92%, var(--background)));
-    border: 1px solid var(--border);
-    border-radius: var(--border-radius-sm);
-    box-shadow: var(--shadow-sm);
+    background: var(--pricing-table-card-background-color);
+    border: var(--pricing-table-card-border-width) var(--pricing-table-card-border-style)
+        var(--pricing-table-card-border-color);
+    border-radius: var(--pricing-table-card-border-radius);
+    box-shadow: var(--pricing-table-card-box-shadow);
     display: flex;
     flex-direction: column;
     overflow: clip;
@@ -16,40 +17,40 @@
 }
 
 .pricing-table-card-accent {
-    background: color-mix(in srgb, var(--foreground) 82%, var(--primary));
-    height: 0.375rem;
+    background: var(--pricing-table-card-accent-background);
+    height: var(--pricing-table-card-accent-height);
 }
 
 .pricing-table-card-featured {
-    border-color: color-mix(in srgb, var(--primary) 32%, var(--border));
-    box-shadow: var(--shadow-md);
-    transform: translateY(-0.25rem);
+    border-color: var(--pricing-table-card-featured-border-color);
+    box-shadow: var(--pricing-table-card-featured-box-shadow);
+    transform: translateY(var(--pricing-table-card-featured-translate-y));
 }
 
 .pricing-table-card-content {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    gap: var(--spacer-5);
+    gap: var(--pricing-table-card-gap);
     height: 100%;
     min-height: 100%;
-    padding: clamp(var(--spacer-4), 2vw, var(--spacer-6));
+    padding: var(--pricing-table-card-padding);
 }
 
 .pricing-table-card-header {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    gap: var(--spacer-3);
+    gap: var(--pricing-table-card-header-gap);
 }
 
 .pricing-table-card-eyebrow {
-    color: var(--muted-foreground);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    color: var(--pricing-table-card-eyebrow-color);
+    font-size: var(--pricing-table-card-eyebrow-font-size);
+    font-weight: var(--pricing-table-card-eyebrow-font-weight);
+    letter-spacing: var(--pricing-table-card-eyebrow-letter-spacing);
     margin: 0;
-    text-transform: uppercase;
+    text-transform: var(--pricing-table-card-eyebrow-text-transform);
 }
 
 .pricing-table-card-title,
@@ -58,13 +59,13 @@
 }
 
 .pricing-table-card-title {
-    font-size: clamp(2rem, 2vw + 1rem, var(--heading-2));
-    line-height: 1.1;
+    font-size: var(--pricing-table-card-title-font-size);
+    line-height: var(--pricing-table-card-title-line-height);
     text-wrap: balance;
 }
 
 .pricing-table-card-description {
-    color: var(--muted-foreground);
+    color: var(--pricing-table-card-description-color);
 }
 
 .pricing-table-card-description > *:first-child {
@@ -78,16 +79,16 @@
 .pricing-table-card-footer {
     display: flex;
     flex-direction: column;
-    gap: var(--spacer-4);
+    gap: var(--pricing-table-card-footer-gap);
     margin-top: auto;
-    padding-top: var(--spacer-2);
+    padding-top: var(--pricing-table-card-footer-padding-top);
 }
 
 .pricing-table-card-price {
-    font-size: clamp(2.25rem, 4vw, 3.25rem);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1;
+    font-size: var(--pricing-table-card-price-font-size);
+    font-weight: var(--pricing-table-card-price-font-weight);
+    letter-spacing: var(--pricing-table-card-price-letter-spacing);
+    line-height: var(--pricing-table-card-price-line-height);
 }
 
 .pricing-table-card-button {
@@ -97,7 +98,7 @@
 
 @media (min-width: 48rem) {
     .pricing-table-card {
-        min-height: 34rem;
+        min-height: var(--pricing-table-card-desktop-min-height);
     }
 }
 

@@ -3,6 +3,7 @@
 @import './_accordion.css' layer(components);
 @import './_alert.css' layer(components);
 @import './_block-navigation.css' layer(components);
+@import './_blockquote.css' layer(components);
 @import './_card.css' layer(components);
 @import './_button-group.css' layer(components);
 @import './_button.css' layer(components);
