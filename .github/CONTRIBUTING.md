@@ -1,6 +1,6 @@
 # Workflow
 
-All needed information about the [Git](https://git-scm.com) workflow.
+Shared contribution notes for package, Storybook, and docs changes.
 
 ## Creating a new branch
 
@@ -30,3 +30,21 @@ Those commit messages are based on [Conventional Commits](https://www.convention
 After pushing your branch, you need to create a pull request for code review and test. Select the branch from, which you
 created the new branch as the target branch (at the moment **main** branch is default). The title of the pull request
 can have any description.
+
+## Docs and Design-System Maintenance
+
+When a change affects public styling behavior, keep these surfaces aligned in the same pull request:
+
+- Package surface: update exports or bundle imports when adding/removing entrypoints
+- Source tokens: document any new public tokens and prefer semantic names over one-off implementation names
+- Storybook: add or update stories for new public components, forms, or utilities
+- READMEs/docs: update installation, entrypoints, and examples when behavior changes
+
+Use these docs as the source of truth:
+
+- `README.md`
+- `packages/styles/README.md`
+- `apps/storybook/README.md`
+- `docs/ARCHITECTURE.md`
+- `docs/COMPONENT_COVERAGE.md`
+- `docs/TOKEN_GUIDELINES.md`

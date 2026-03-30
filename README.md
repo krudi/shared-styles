@@ -23,14 +23,15 @@ reset styles, layout primitives, and early components/utilities.
 > You need to have [Node.js](https://github.com/nodejs) installed on your computer before running this project.
 
 1. First clone this repository and navigate into your project directory
-2. Install the dependencies: `npm run install`
+2. Install the dependencies: `npm install`
 3. Run the development server: `npm run dev`
 
 ## Workspaces
 
-- `packages/styles` – CSS package (`@krudi/styles`) with tokens, reset, layout, components, utilities
+- `packages/styles` – CSS package (`@krudi/styles`) with palette, theme, tokens, base, layout, HTML, components, forms,
+  utilities, and JS helpers
 - `packages/icons` – SVG assets package (`@krudi/icons`) with common link/contact icons
-- `apps/storybook` – HTML Storybook (`@krudi/storybook`) for visual checks and tests |
+- `apps/storybook` – HTML Storybook (`@krudi/storybook`) for visual checks, docs, and tests
 
 ## Using `@krudi/styles`
 
@@ -50,12 +51,14 @@ Or compose layers:
 
 ```css
 /* Required core */
+@import '@krudi/styles/css/palette' layer(palette);
 @import '@krudi/styles/css/variables' layer(variables);
 @import '@krudi/styles/css/theme' layer(theme);
 
 /* Recommended reset + layout */
 @import '@krudi/styles/css/base' layer(base);
 @import '@krudi/styles/css/layout' layer(layout);
+@import '@krudi/styles/css/forms' layer(forms);
 
 /* Optional pieces */
 @import '@krudi/styles/css/components' layer(components);
@@ -63,16 +66,24 @@ Or compose layers:
 
 /* Additional layers if needed */
 @import '@krudi/styles/css/html' layer(html);
-@import '@krudi/styles/css/elements' layer(elements);
 ```
 
-See [`packages/styles/README.md`](./packages/styles/README.md) for override guidance and entrypoints.
+See [`packages/styles/README.md`](./packages/styles/README.md) for entrypoints and override guidance
 
-## Commands for linting/fixing files
+## Commands
+
+Workspace-level scripts:
+
+- `npm run build` – build all workspaces
+- `npm run dev` – run workspace dev scripts in parallel
+- `npm run test:storybook` – run Storybook-based tests
+- `npm run typecheck` – type-check all workspaces
+
+Linting/fixing:
 
 Navigate into your project directory and start linting your files.
 
 - `npm run lint:eslint`: lints [JavaScript](https://www.javascript.com) files
-    - `npm run lint:eslint:fix`: to eliminate all possible errors
+- `npm run lint:eslint:fix`: to eliminate all possible errors
 - `npm run lint:stylelint`: lints [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS) files
-    - `npm run lint:stylelint:fix`: to eliminate all possible errors
+- `npm run lint:stylelint:fix`: to eliminate all possible errors

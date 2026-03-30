@@ -1,7 +1,40 @@
 # @krudi/styles
 
-Reusable CSS design tokens, reset styles, layout primitives, and early components/utilities. Built for personal
-projects.
+Reusable CSS design tokens, theme primitives, layout foundations, form styles, components, utilities, and small
+progressive-enhancement helpers. Built for personal projects.
+
+## Package Architecture
+
+`@krudi/styles` is layered so consumers can override the system at the right level:
+
+- `palette` – raw color primitives used to build the default theme
+- `theme` – semantic tokens such as `--background`, `--border`, `--primary`
+- `variables` – global spacing/type/radius/shadow tokens plus component-level customization hooks
+- `base` / `layout` / `html` – global element and structural styling
+- `components` / `forms` / `utilities` – opt-in authoring layers
+
+For a deeper explanation, see [../../docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md).
+
+## Exports
+
+CSS entrypoints:
+
+- `@krudi/styles/css`
+- `@krudi/styles/css/palette`
+- `@krudi/styles/css/variables`
+- `@krudi/styles/css/theme`
+- `@krudi/styles/css/base`
+- `@krudi/styles/css/layout`
+- `@krudi/styles/css/html`
+- `@krudi/styles/css/components`
+- `@krudi/styles/css/forms`
+- `@krudi/styles/css/utilities`
+
+JS helpers:
+
+- `@krudi/styles/js` – exports `wireModalTrigger`, `wireTabs`, `wireThemeSwitch`
+- `@krudi/styles/js/modal`
+- `@krudi/styles/js/theme-switch`
 
 ## Included Components
 
@@ -9,6 +42,7 @@ projects.
 - `Alert`
 - `Badge`
 - `Block Navigation`
+- `Blockquote`
 - `Button`
 - `Button Group`
 - `Card`
@@ -38,7 +72,11 @@ Use the pricing-table component for a single offer card inside a grid or compari
         </header>
         <div class="pricing-table-card-footer">
             <p class="pricing-table-card-price">EUR 499</p>
-            <a class="btn btn-default pricing-table-card-button" href="#">Buy now</a>
+            <a
+                class="btn btn-default pricing-table-card-button"
+                href="#"
+                >Buy now</a
+            >
         </div>
     </div>
 </article>
@@ -49,15 +87,49 @@ Use the pricing-table component for a single offer card inside a grid or compari
 Use tabs for compact content groups where only one panel should be emphasized at a time.
 
 ```html
-<section class="tabs" id="example-tabs" aria-label="Example tabs">
-    <div class="tabs-list" role="tablist" aria-label="Example tabs">
-        <button class="tabs-trigger is-active" id="tab-overview" role="tab" type="button" aria-selected="true" aria-controls="panel-overview">Overview</button>
-        <button class="tabs-trigger" id="tab-details" role="tab" type="button" aria-selected="false" aria-controls="panel-details" tabindex="-1">Details</button>
+<section
+    class="tabs"
+    id="example-tabs"
+    aria-label="Example tabs"
+>
+    <div
+        class="tabs-list"
+        role="tablist"
+        aria-label="Example tabs"
+    >
+        <button
+            class="tabs-trigger is-active"
+            id="tab-overview"
+            role="tab"
+            type="button"
+            aria-selected="true"
+            aria-controls="panel-overview"
+        >
+            Overview
+        </button>
+        <button
+            class="tabs-trigger"
+            id="tab-details"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-details"
+            tabindex="-1"
+        >
+            Details
+        </button>
     </div>
     <div class="tabs-panels">
-        <article class="tabs-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+        <article
+            class="tabs-panel is-active"
+            id="panel-overview"
+            role="tabpanel"
+            aria-labelledby="tab-overview"
+        >
             <h3 class="tabs-panel-title">Keep the active section clear</h3>
-            <p class="tabs-panel-description">Attach your preferred JS or framework state to switch the active trigger and panel.</p>
+            <p class="tabs-panel-description">
+                Attach your preferred JS or framework state to switch the active trigger and panel.
+            </p>
         </article>
     </div>
 </section>
@@ -71,6 +143,27 @@ const root = document.getElementById('example-tabs');
 if (root instanceof HTMLElement) {
     wireTabs({ root });
 }
+```
+
+### Modal
+
+```ts
+import { wireModalTrigger } from '@krudi/styles/js';
+
+const cleanup = wireModalTrigger({
+    openId: 'open-dialog',
+    dialogId: 'dialog-example',
+});
+```
+
+### Theme Switch
+
+```ts
+import { wireThemeSwitch } from '@krudi/styles/js';
+
+const cleanup = wireThemeSwitch({
+    switchId: 'theme-switch',
+});
 ```
 
 ## Using `@krudi/styles`
@@ -91,12 +184,14 @@ Or compose layers with CSS cascade layers:
 
 ```css
 /* Required core */
+@import '@krudi/styles/css/palette' layer(palette);
 @import '@krudi/styles/css/variables' layer(variables);
 @import '@krudi/styles/css/theme' layer(theme);
 
 /* Recommended reset + layout */
 @import '@krudi/styles/css/base' layer(base);
 @import '@krudi/styles/css/layout' layer(layout);
+@import '@krudi/styles/css/forms' layer(forms);
 
 /* Optional pieces */
 @import '@krudi/styles/css/components' layer(components);
@@ -104,7 +199,6 @@ Or compose layers with CSS cascade layers:
 
 /* Additional layers if needed */
 @import '@krudi/styles/css/html' layer(html);
-@import '@krudi/styles/css/elements' layer(elements);
 ```
 
 ### Overriding tokens or theme values
@@ -112,23 +206,30 @@ Or compose layers with CSS cascade layers:
 Import the layers first, then override inside the matching layer so specificity stays low and the cascade stays intact:
 
 ```css
+@import '@krudi/styles/css/palette' layer(palette);
 @import '@krudi/styles/css/variables' layer(variables);
 @import '@krudi/styles/css/theme' layer(theme);
 
 @layer variables {
     :root {
-        --spacer: 1.25rem;
         --body-font-size: 1.125rem;
         --base-line-height: 1.5;
         --heading-font-weight: 600;
-        --heading-margin-block-end: var(--spacer);
+        --heading-margin-block-end: var(--spacer-5);
         --button-line-height: var(--base-line-height);
         --form-input-line-height: var(--base-line-height);
+        --tabs-trigger-padding-inline: var(--spacer-5);
+        --pricing-table-card-border-radius: var(--border-radius-md);
     }
 }
 
 @layer theme {
     :root {
+        --primary: #11213b;
+        --primary-foreground: #ffffff;
+        --secondary: #e8f0ff;
+        --secondary-foreground: #11213b;
+        --ring: color-mix(in srgb, var(--primary) 22%, white);
     }
 }
 ```
@@ -137,26 +238,46 @@ Import the layers first, then override inside the matching layer so specificity 
 
 If you are installing the package into another project, start by overriding these semantic tokens in `@layer variables`:
 
+- Theme: `--background`, `--foreground`, `--surface`, `--surface-foreground`, `--border`, `--input`, `--primary`,
+  `--primary-foreground`, `--secondary`, `--secondary-foreground`, `--destructive`
 - Global type: `--body-font-size`, `--base-line-height`, `--body-font-family`
-- Headings: `--heading-1` to `--heading-6`, `--heading-font-weight`, `--heading-line-height`, `--heading-margin-block-end`
-- Links: `--a-font-size`, `--a-font-weight`, `--a-line-height`
-- Forms: `--form-input-font-size`, `--form-input-line-height`, `--form-label-font-weight`, `--form-label-line-height`, `--form-text-font-size`, `--form-text-line-height`
-- Buttons and badges: `--button-font-size`, `--button-font-weight`, `--button-line-height`, `--badge-font-size`, `--badge-font-weight`, `--badge-line-height`
-- Components: `--accordion-summary-line-height`, `--accordion-summary-gap`, `--dropdown-trigger-line-height`, `--dropdown-item-text-line-height`, `--pagination-border-radius`, `--modal-close-inset-inline-end`
+- Headings: `--heading-1` to `--heading-6`, `--heading-font-weight`, `--heading-line-height`,
+  `--heading-margin-block-end`
+- Layout: `--grid-spacing`, `--container-spacer`, `--container-max-width`
+- Links: `--a-color`, `--a-font-size`, `--a-font-weight`, `--a-line-height`
+- Forms: `--form-input-font-size`, `--form-input-line-height`, `--form-label-font-weight`, `--form-label-line-height`,
+  `--form-text-font-size`, `--form-text-line-height`
+- Buttons and badges: `--button-font-size`, `--button-font-weight`, `--button-line-height`, `--badge-font-size`,
+  `--badge-font-weight`, `--badge-line-height`
+- Components: `--accordion-summary-line-height`, `--accordion-summary-gap`, `--card-border-radius`,
+  `--dropdown-trigger-line-height`, `--dropdown-item-text-line-height`, `--modal-close-inset-inline-end`,
+  `--pagination-border-radius`, `--pricing-table-card-padding`, `--pricing-table-card-desktop-min-height`,
+  `--tabs-trigger-padding-inline`, `--tabs-panel-padding`
 
-These tokens are intended to be the main project-level customization points. Lower-level implementation values should usually stay unchanged unless you have a specific component need.
+These tokens are intended to be the main project-level customization points. Lower-level implementation values should
+usually stay unchanged unless you have a specific component need.
+
+See [../../docs/TOKEN_GUIDELINES.md](../../docs/TOKEN_GUIDELINES.md) for the rule of thumb on when new tokens should be
+introduced for old or new elements.
+
+## Coverage and Documentation
+
+- Storybook is the primary visual documentation surface for components, forms, layout, utilities, and tokens.
+- The coverage tracker lives in [../../docs/COMPONENT_COVERAGE.md](../../docs/COMPONENT_COVERAGE.md).
+- When adding a new component, update the bundle import, add at least one Storybook story, and document any new public
+  tokens.
 
 ## Scripts
 
-| Command                      | Description                  |
-| ---------------------------- | ---------------------------- |
-| `npm run build`              | Build CSS and JS to `dist/`  |
-| `npm run dev`                | TypeScript watch             |
-| `npm run lint:eslint`        | Lint TS                      |
-| `npm run lint:eslint:fix`    | Fix TS lint issues           |
-| `npm run lint:stylelint`     | Lint CSS                     |
-| `npm run lint:stylelint:fix` | Fix CSS lint issues          |
-| `npm run lint:prettier`      | Check formatting             |
-| `npm run lint:prettier:fix`  | Format write                 |
-| `npm run typecheck`          | TypeScript type checks       |
-| `npm run clean`              | Remove caches/node_modules   |
+| Command                      | Description                 |
+| ---------------------------- | --------------------------- |
+| `npm run build`              | Build CSS and JS to `dist/` |
+| `npm run dev`                | Watch TypeScript and CSS    |
+| `npm run lint:eslint`        | Lint TS                     |
+| `npm run lint:eslint:fix`    | Fix TS lint issues          |
+| `npm run lint:stylelint`     | Lint CSS                    |
+| `npm run lint:stylelint:fix` | Fix CSS lint issues         |
+| `npm run lint:prettier`      | Check formatting            |
+| `npm run lint:prettier:fix`  | Format write                |
+| `npm run typecheck`          | TypeScript type checks      |
+| `npm run clean`              | Remove caches/node_modules  |
