@@ -36,6 +36,7 @@ const meta = {
                     <div>--button-line-height / --badge-line-height / --form-input-line-height</div>
                     <div>--accordion-summary-gap / --dropdown-trigger-gap / --pagination-border-radius</div>
                     <div>--modal-close-inset-inline-end / --modal-close-inset-block-start</div>
+                    <div>--tabs-trigger-padding-inline / --tabs-panel-padding / --pricing-table-card-padding</div>
                 </div>
             </section>
             <section class="bg-white-100 p-2 radius-sm">
