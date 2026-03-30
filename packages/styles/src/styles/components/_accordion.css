@@ -88,8 +88,15 @@
     width: var(--accordion-icon-width);
     height: var(--accordion-icon-height);
     display: inline-block;
-    color: var(--accordion-icon-color);
-    background-image: url('@krudi/icons/caret-down.svg');
+    background-color: var(--accordion-icon-color);
+    mask-image: url('@krudi/icons/caret-down.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('@krudi/icons/caret-down.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

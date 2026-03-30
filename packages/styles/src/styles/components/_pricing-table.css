@@ -82,6 +82,9 @@
     gap: var(--pricing-table-card-footer-gap);
     margin-top: auto;
     padding-top: var(--pricing-table-card-footer-padding-top);
+    border-top-width: var(--pricing-table-card-footer-border-top-width);
+    border-top-style: var(--pricing-table-card-footer-border-top-style);
+    border-top-color: var(--pricing-table-card-footer-border-top-color);
 }
 
 .pricing-table-card-price {

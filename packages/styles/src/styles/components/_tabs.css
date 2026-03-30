@@ -33,7 +33,6 @@
     text-decoration: none;
     transition:
         background-color var(--transition-default) var(--transition-ease),
-        box-shadow var(--transition-default) var(--transition-ease),
         color var(--transition-default) var(--transition-ease);
 }
 
