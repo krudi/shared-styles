@@ -36,7 +36,7 @@ jobs:
           command: npm run build -- --filter=@krudi/storybook...
 
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload Storybook artifact
         uses: actions/upload-pages-artifact@v4
