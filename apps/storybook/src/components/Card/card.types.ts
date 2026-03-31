@@ -1,5 +1,5 @@
 export type CardArgs = {
-    eyebrow: string;
+    subtitle: string;
     title: string;
     description: string;
     variant: 'white' | 'primary' | 'secondary';

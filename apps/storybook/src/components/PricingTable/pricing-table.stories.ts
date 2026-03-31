@@ -2,19 +2,12 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { PricingTableArgs } from './pricing-table.types';
 
-const renderCard = ({
-    eyebrow,
-    title,
-    description,
-    price,
-    buttonLabel,
-    featured,
-}: PricingTableArgs): string => `
+const renderCard = ({ subtitle, title, description, price, buttonLabel, featured }: PricingTableArgs): string => `
     <article class="pricing-table-card${featured ? ' pricing-table-card-featured' : ''}" style="max-width: 24rem;">
         <div class="pricing-table-card-accent"></div>
         <div class="pricing-table-card-content">
             <header class="pricing-table-card-header">
-                <p class="pricing-table-card-eyebrow">${eyebrow}</p>
+                <p class="pricing-table-card-subtitle">${subtitle}</p>
                 <h3 class="pricing-table-card-title">${title}</h3>
                 <div class="pricing-table-card-description">
                     <p>${description}</p>
@@ -33,7 +26,7 @@ const meta = {
     tags: ['autodocs'],
     render: (args: PricingTableArgs): string => renderCard(args),
     args: {
-        eyebrow: 'Starter workflow',
+        subtitle: 'Starter workflow',
         title: 'Free Trial',
         description:
             'Explore the full setup with reusable components, editor-friendly defaults, and a low-friction way to validate your first build.',
@@ -42,7 +35,7 @@ const meta = {
         featured: false,
     },
     argTypes: {
-        eyebrow: { control: 'text' },
+        subtitle: { control: 'text' },
         title: { control: 'text' },
         description: { control: 'text' },
         price: { control: 'text' },

@@ -7,7 +7,7 @@ const imageUrl = 'https://images.unsplash.com/photo-1494526585095-c41746248156?a
 const meta = {
     title: 'Components/Card',
     tags: ['autodocs'],
-    render: ({ eyebrow, title, description, variant, showMedia, showFooter }: CardArgs): string => `
+    render: ({ subtitle, title, description, variant, showMedia, showFooter }: CardArgs): string => `
         <article class="card card-${variant}" style="max-width: 24rem;">
             ${
                 showMedia
@@ -18,7 +18,7 @@ const meta = {
             }
             <div class="card-content">
                 <div class="card-content-header">
-                    <p class="card-header-subtitle">${eyebrow}</p>
+                    <p class="card-header-subtitle">${subtitle}</p>
                     <h3 class="card-header-title">${title}</h3>
                 </div>
                 <div class="card-content-body">
@@ -39,7 +39,7 @@ const meta = {
         </article>
     `,
     args: {
-        eyebrow: 'Featured',
+        subtitle: 'Featured',
         title: 'Flexible content card',
         description:
             'Cards group media, copy, and actions into a single reusable container for listings, teasers, and dashboards.',
@@ -48,7 +48,7 @@ const meta = {
         showFooter: true,
     },
     argTypes: {
-        eyebrow: { control: 'text' },
+        subtitle: { control: 'text' },
         title: { control: 'text' },
         description: { control: 'text' },
         variant: {

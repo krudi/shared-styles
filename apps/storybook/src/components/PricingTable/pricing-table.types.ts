@@ -1,5 +1,5 @@
 export type PricingTableArgs = {
-    eyebrow: string;
+    subtitle: string;
     title: string;
     description: string;
     price: string;
