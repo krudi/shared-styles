@@ -64,7 +64,7 @@ Use the pricing-table component for a single offer card inside a grid or compari
     <div class="pricing-table-card-accent"></div>
     <div class="pricing-table-card-content">
         <header class="pricing-table-card-header">
-            <p class="pricing-table-card-eyebrow">Most popular</p>
+            <p class="pricing-table-card-subtitle">Most popular</p>
             <h3 class="pricing-table-card-title">Annual</h3>
             <div class="pricing-table-card-description">
                 <p>Yearly access with updates and support for active client projects.</p>
