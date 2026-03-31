@@ -60,12 +60,12 @@
 }
 
 .card-header-subtitle {
-    font-size: var(--card-eyebrow-font-size);
-    font-weight: var(--card-eyebrow-font-weight);
-    line-height: var(--card-eyebrow-line-height);
-    letter-spacing: var(--card-eyebrow-letter-spacing);
-    text-transform: var(--card-eyebrow-text-transform);
-    color: var(--card-eyebrow-color);
+    font-size: var(--card-subtitle-font-size);
+    font-weight: var(--card-subtitle-font-weight);
+    line-height: var(--card-subtitle-line-height);
+    letter-spacing: var(--card-subtitle-letter-spacing);
+    text-transform: var(--card-subtitle-text-transform);
+    color: var(--card-subtitle-color);
 }
 
 .card-content-body-description {
@@ -97,12 +97,8 @@
     --card-color: var(--primary-foreground);
     --card-border-width: 0;
     --card-border-color: transparent;
-    --card-eyebrow-color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
-    --card-content-body-description-color: color-mix(
-        in srgb,
-        var(--primary-foreground) 72%,
-        transparent
-    );
+    --card-subtitle-color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
+    --card-content-body-description-color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
 }
 
 .card-secondary {
@@ -110,10 +106,6 @@
     --card-color: var(--secondary-foreground);
     --card-border-width: 0;
     --card-border-color: transparent;
-    --card-eyebrow-color: color-mix(in srgb, var(--secondary-foreground) 72%, transparent);
-    --card-content-body-description-color: color-mix(
-        in srgb,
-        var(--secondary-foreground) 72%,
-        transparent
-    );
+    --card-subtitle-color: color-mix(in srgb, var(--secondary-foreground) 72%, transparent);
+    --card-content-body-description-color: color-mix(in srgb, var(--secondary-foreground) 72%, transparent);
 }

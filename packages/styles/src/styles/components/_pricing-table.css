@@ -44,13 +44,13 @@
     gap: var(--pricing-table-card-header-gap);
 }
 
-.pricing-table-card-eyebrow {
-    color: var(--pricing-table-card-eyebrow-color);
-    font-size: var(--pricing-table-card-eyebrow-font-size);
-    font-weight: var(--pricing-table-card-eyebrow-font-weight);
-    letter-spacing: var(--pricing-table-card-eyebrow-letter-spacing);
+.pricing-table-card-subtitle {
+    color: var(--pricing-table-card-subtitle-color);
+    font-size: var(--pricing-table-card-subtitle-font-size);
+    font-weight: var(--pricing-table-card-subtitle-font-weight);
+    letter-spacing: var(--pricing-table-card-subtitle-letter-spacing);
     margin: 0;
-    text-transform: var(--pricing-table-card-eyebrow-text-transform);
+    text-transform: var(--pricing-table-card-subtitle-text-transform);
 }
 
 .pricing-table-card-title,
