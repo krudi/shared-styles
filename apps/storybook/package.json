@@ -32,7 +32,7 @@
         "@storybook/html-vite": "^10.2.19",
         "@types/node": "^22.19.13",
         "@vitest/browser-playwright": "^4.1.2",
-        "@vitest/coverage-v8": "^4.1.0",
+        "@vitest/coverage-v8": "^4.1.2",
         "eslint-plugin-storybook": "10.3.3",
         "playwright": "^1.58.2",
         "storybook": "^10.3.3",
