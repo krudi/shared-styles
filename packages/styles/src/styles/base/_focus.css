@@ -1,12 +1,12 @@
 :is(a, button, input, textarea, summary) {
-    --outline-size: max(2px, 0.08em);
-    --outline-style: solid;
-    --outline-color: currentcolor;
+    --krd-outline-size: max(2px, 0.08em);
+    --krd-outline-style: solid;
+    --krd-outline-color: currentcolor;
 }
 
 :is(a, button, input, textarea, summary):focus-visible {
-    outline: var(--outline-size) var(--outline-style) var(--outline-color);
-    outline-offset: var(--outline-offset, var(--outline-size));
+    outline: var(--krd-outline-size) var(--krd-outline-style) var(--krd-outline-color);
+    outline-offset: var(--krd-outline-offset, var(--krd-outline-size));
 }
 
 :is(a, button, input, textarea, summary):focus:not(:focus-visible) {

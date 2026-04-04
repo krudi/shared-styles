@@ -1,22 +1,22 @@
 .card {
-    background-color: var(--card-background-color);
+    background-color: var(--krd-card-background-color);
     display: flex;
     flex-direction: column;
-    color: var(--card-color);
-    border-width: var(--card-border-width);
-    border-style: var(--card-border-style);
-    border-color: var(--card-border-color);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--card-box-shadow);
+    color: var(--krd-card-color);
+    border-width: var(--krd-card-border-width);
+    border-style: var(--krd-card-border-style);
+    border-color: var(--krd-card-border-color);
+    border-radius: var(--krd-card-border-radius);
+    box-shadow: var(--krd-card-box-shadow);
     overflow: clip;
 }
 
 .card-content {
-    padding-block: var(--card-padding-block);
-    padding-inline: var(--card-padding-inline);
+    padding-block: var(--krd-card-padding-block);
+    padding-inline: var(--krd-card-padding-inline);
     display: flex;
     flex-direction: column;
-    gap: var(--card-gap);
+    gap: var(--krd-card-gap);
 }
 
 .card-content-body,
@@ -28,11 +28,11 @@
 
 .card-content-header,
 .card-content-footer {
-    gap: var(--card-gap);
+    gap: var(--krd-card-gap);
 }
 
 .card-content-body {
-    gap: var(--card-gap);
+    gap: var(--krd-card-gap);
 }
 
 .card-media picture,
@@ -48,10 +48,10 @@
 
 .card-header-title {
     margin-block-end: 0;
-    font-size: var(--card-title-font-size);
-    font-weight: var(--card-title-font-weight);
-    line-height: var(--card-title-line-height);
-    color: var(--card-title-color);
+    font-size: var(--krd-card-title-font-size);
+    font-weight: var(--krd-card-title-font-weight);
+    line-height: var(--krd-card-title-line-height);
+    color: var(--krd-card-title-color);
 }
 
 .card-content-body-description,
@@ -60,22 +60,22 @@
 }
 
 .card-header-subtitle {
-    font-size: var(--card-subtitle-font-size);
-    font-weight: var(--card-subtitle-font-weight);
-    line-height: var(--card-subtitle-line-height);
-    letter-spacing: var(--card-subtitle-letter-spacing);
-    text-transform: var(--card-subtitle-text-transform);
-    color: var(--card-subtitle-color);
+    font-size: var(--krd-card-subtitle-font-size);
+    font-weight: var(--krd-card-subtitle-font-weight);
+    line-height: var(--krd-card-subtitle-line-height);
+    letter-spacing: var(--krd-card-subtitle-letter-spacing);
+    text-transform: var(--krd-card-subtitle-text-transform);
+    color: var(--krd-card-subtitle-color);
 }
 
 .card-content-body-description {
-    color: var(--card-content-body-description-color);
+    color: var(--krd-card-content-body-description-color);
 }
 
 .card-footer-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--spacer-2);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--krd-space-2);
 }
 
 .card-footer-actions > * {
@@ -87,25 +87,25 @@
 }
 
 .card-white {
-    --card-background-color: var(--surface);
-    --card-color: var(--surface-foreground);
-    --card-border-color: var(--border);
+    --krd-card-background-color: var(--krd-color-surface);
+    --krd-card-color: var(--krd-color-surface-foreground);
+    --krd-card-border-color: var(--krd-color-border);
 }
 
 .card-primary {
-    --card-background-color: var(--primary);
-    --card-color: var(--primary-foreground);
-    --card-border-width: 0;
-    --card-border-color: transparent;
-    --card-subtitle-color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
-    --card-content-body-description-color: color-mix(in srgb, var(--primary-foreground) 72%, transparent);
+    --krd-card-background-color: var(--krd-color-primary);
+    --krd-card-color: var(--krd-color-primary-foreground);
+    --krd-card-border-width: 0;
+    --krd-card-border-color: transparent;
+    --krd-card-subtitle-color: color-mix(in srgb, var(--krd-color-primary-foreground) 72%, transparent);
+    --krd-card-content-body-description-color: color-mix(in srgb, var(--krd-color-primary-foreground) 72%, transparent);
 }
 
 .card-secondary {
-    --card-background-color: var(--secondary);
-    --card-color: var(--secondary-foreground);
-    --card-border-width: 0;
-    --card-border-color: transparent;
-    --card-subtitle-color: color-mix(in srgb, var(--secondary-foreground) 72%, transparent);
-    --card-content-body-description-color: color-mix(in srgb, var(--secondary-foreground) 72%, transparent);
+    --krd-card-background-color: var(--krd-color-secondary);
+    --krd-card-color: var(--krd-color-secondary-foreground);
+    --krd-card-border-width: 0;
+    --krd-card-border-color: transparent;
+    --krd-card-subtitle-color: color-mix(in srgb, var(--krd-color-secondary-foreground) 72%, transparent);
+    --krd-card-content-body-description-color: color-mix(in srgb, var(--krd-color-secondary-foreground) 72%, transparent);
 }

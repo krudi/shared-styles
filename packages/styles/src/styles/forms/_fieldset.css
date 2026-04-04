@@ -1,31 +1,31 @@
 .form-fieldset {
     min-width: 0;
     margin: 0;
-    padding-block: var(--form-fieldset-padding-block);
-    padding-inline: var(--form-fieldset-padding-inline);
-    background-color: var(--form-fieldset-background-color);
-    border-width: var(--form-fieldset-border-width);
-    border-style: var(--form-fieldset-border-style);
-    border-color: var(--form-fieldset-border-color);
-    border-radius: var(--form-fieldset-border-radius);
+    padding-block: var(--krd-form-fieldset-padding-block);
+    padding-inline: var(--krd-form-fieldset-padding-inline);
+    background-color: var(--krd-form-fieldset-background-color);
+    border-width: var(--krd-form-fieldset-border-width);
+    border-style: var(--krd-form-fieldset-border-style);
+    border-color: var(--krd-form-fieldset-border-color);
+    border-radius: var(--krd-form-fieldset-border-radius);
 }
 
 .form-fieldset + .form-fieldset {
-    margin-block-start: var(--form-fieldset-margin-block-start);
+    margin-block-start: var(--krd-form-fieldset-margin-block-start);
 }
 
 .form-fieldset .form-fieldset {
-    margin-block-end: var(--form-block-margin-block-end);
+    margin-block-end: var(--krd-form-block-margin-block-end);
 }
 
 .form-fieldset:has(.form-control:user-invalid),
 .form-fieldset:has(.form-select:user-invalid) {
-    border-color: var(--form-text-error-color);
+    border-color: var(--krd-form-text-error-color);
 }
 
 .form-fieldset:has(.form-control:user-valid),
 .form-fieldset:has(.form-select:user-valid) {
-    border-color: var(--form-fieldset-border-color-valid);
+    border-color: var(--krd-form-fieldset-border-color-valid);
 }
 
 .form-fieldset > .form-block:last-of-type {

@@ -1,25 +1,25 @@
 .text-white {
-    color: var(--background);
+    color: var(--krd-color-background);
 }
 
 .text-white-100 {
-    color: var(--surface-subtle);
+    color: var(--krd-color-surface-subtle);
 }
 
 .text-white-200 {
-    color: var(--surface-subtle-hover);
+    color: var(--krd-color-surface-subtle-hover);
 }
 
 .text-black {
-    color: var(--foreground);
+    color: var(--krd-color-foreground);
 }
 
 .text-gray {
-    color: var(--muted-foreground);
+    color: var(--krd-color-muted-foreground);
 }
 
 
 
 .text-secondary {
-    color: var(--secondary);
+    color: var(--krd-color-secondary);
 }

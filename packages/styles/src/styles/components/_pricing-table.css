@@ -1,9 +1,9 @@
 .pricing-table-card {
-    background: var(--pricing-table-card-background-color);
-    border: var(--pricing-table-card-border-width) var(--pricing-table-card-border-style)
-        var(--pricing-table-card-border-color);
-    border-radius: var(--pricing-table-card-border-radius);
-    box-shadow: var(--pricing-table-card-box-shadow);
+    background: var(--krd-pricing-table-card-background-color);
+    border: var(--krd-pricing-table-card-border-width) var(--krd-pricing-table-card-border-style)
+        var(--krd-pricing-table-card-border-color);
+    border-radius: var(--krd-pricing-table-card-border-radius);
+    box-shadow: var(--krd-pricing-table-card-box-shadow);
     display: flex;
     flex-direction: column;
     overflow: clip;
@@ -11,46 +11,46 @@
     min-height: 100%;
     position: relative;
     transition:
-        border-color var(--transition-default) var(--transition-ease),
-        box-shadow var(--transition-default) var(--transition-ease),
-        transform var(--transition-default) var(--transition-ease);
+        border-color var(--krd-transition-default) var(--krd-transition-ease),
+        box-shadow var(--krd-transition-default) var(--krd-transition-ease),
+        transform var(--krd-transition-default) var(--krd-transition-ease);
 }
 
 .pricing-table-card-accent {
-    background: var(--pricing-table-card-accent-background);
-    height: var(--pricing-table-card-accent-height);
+    background: var(--krd-pricing-table-card-accent-background);
+    height: var(--krd-pricing-table-card-accent-height);
 }
 
 .pricing-table-card-featured {
-    border-color: var(--pricing-table-card-featured-border-color);
-    box-shadow: var(--pricing-table-card-featured-box-shadow);
-    transform: translateY(var(--pricing-table-card-featured-translate-y));
+    border-color: var(--krd-pricing-table-card-featured-border-color);
+    box-shadow: var(--krd-pricing-table-card-featured-box-shadow);
+    transform: translateY(var(--krd-pricing-table-card-featured-translate-y));
 }
 
 .pricing-table-card-content {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    gap: var(--pricing-table-card-gap);
+    gap: var(--krd-pricing-table-card-gap);
     height: 100%;
     min-height: 100%;
-    padding: var(--pricing-table-card-padding);
+    padding: var(--krd-pricing-table-card-padding);
 }
 
 .pricing-table-card-header {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    gap: var(--pricing-table-card-header-gap);
+    gap: var(--krd-pricing-table-card-header-gap);
 }
 
 .pricing-table-card-subtitle {
-    color: var(--pricing-table-card-subtitle-color);
-    font-size: var(--pricing-table-card-subtitle-font-size);
-    font-weight: var(--pricing-table-card-subtitle-font-weight);
-    letter-spacing: var(--pricing-table-card-subtitle-letter-spacing);
+    color: var(--krd-pricing-table-card-subtitle-color);
+    font-size: var(--krd-pricing-table-card-subtitle-font-size);
+    font-weight: var(--krd-pricing-table-card-subtitle-font-weight);
+    letter-spacing: var(--krd-pricing-table-card-subtitle-letter-spacing);
     margin: 0;
-    text-transform: var(--pricing-table-card-subtitle-text-transform);
+    text-transform: var(--krd-pricing-table-card-subtitle-text-transform);
 }
 
 .pricing-table-card-title,
@@ -59,13 +59,13 @@
 }
 
 .pricing-table-card-title {
-    font-size: var(--pricing-table-card-title-font-size);
-    line-height: var(--pricing-table-card-title-line-height);
+    font-size: var(--krd-pricing-table-card-title-font-size);
+    line-height: var(--krd-pricing-table-card-title-line-height);
     text-wrap: balance;
 }
 
 .pricing-table-card-description {
-    color: var(--pricing-table-card-description-color);
+    color: var(--krd-pricing-table-card-description-color);
 }
 
 .pricing-table-card-description > *:first-child {
@@ -79,19 +79,19 @@
 .pricing-table-card-footer {
     display: flex;
     flex-direction: column;
-    gap: var(--pricing-table-card-footer-gap);
+    gap: var(--krd-pricing-table-card-footer-gap);
     margin-top: auto;
-    padding-top: var(--pricing-table-card-footer-padding-top);
-    border-top-width: var(--pricing-table-card-footer-border-top-width);
-    border-top-style: var(--pricing-table-card-footer-border-top-style);
-    border-top-color: var(--pricing-table-card-footer-border-top-color);
+    padding-top: var(--krd-pricing-table-card-footer-padding-top);
+    border-top-width: var(--krd-pricing-table-card-footer-border-top-width);
+    border-top-style: var(--krd-pricing-table-card-footer-border-top-style);
+    border-top-color: var(--krd-pricing-table-card-footer-border-top-color);
 }
 
 .pricing-table-card-price {
-    font-size: var(--pricing-table-card-price-font-size);
-    font-weight: var(--pricing-table-card-price-font-weight);
-    letter-spacing: var(--pricing-table-card-price-letter-spacing);
-    line-height: var(--pricing-table-card-price-line-height);
+    font-size: var(--krd-pricing-table-card-price-font-size);
+    font-weight: var(--krd-pricing-table-card-price-font-weight);
+    letter-spacing: var(--krd-pricing-table-card-price-letter-spacing);
+    line-height: var(--krd-pricing-table-card-price-line-height);
 }
 
 .pricing-table-card-button {
@@ -101,7 +101,7 @@
 
 @media (min-width: 48rem) {
     .pricing-table-card {
-        min-height: var(--pricing-table-card-desktop-min-height);
+        min-height: var(--krd-pricing-table-card-desktop-min-height);
     }
 }
 

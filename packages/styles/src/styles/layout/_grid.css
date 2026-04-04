@@ -1,7 +1,7 @@
 .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-spacing);
+    gap: var(--krd-layout-grid-spacing);
 }
 
 @container (max-width: 992px) {

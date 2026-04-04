@@ -45,7 +45,7 @@ html:focus-within {
 body {
     min-height: 100vh;
     text-rendering: optimizespeed;
-    line-height: var(--base-line-height);
+    line-height: var(--krd-base-line-height);
 }
 
 a:not([class]) {
