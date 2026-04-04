@@ -1,0 +1,15 @@
+import { Controls, Description, Meta, Primary, Stories as StoryList, Subtitle, Title } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocs } from '@krudi/storybook-design-tokens';
+import * as Stories from './fieldset.stories';
+
+<Meta of={Stories} name="Docs" />
+
+<Title />
+<Subtitle />
+<Description of={Stories} />
+<Primary />
+<Controls />
+
+<StoryList includePrimary={false} />
+
+<DesignTokenDocs of={Stories} />

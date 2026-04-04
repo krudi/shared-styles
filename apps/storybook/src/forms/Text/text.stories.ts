@@ -4,7 +4,6 @@ import type { TextArgs } from './text.types';
 
 const meta = {
     title: 'Forms/Text',
-    tags: ['autodocs'],
     render: (): string => `
         <span class="form-text">Helper text appears below fields.</span>
         <span class="form-text-hint">Hint text draws attention to requirements.</span>
@@ -13,7 +12,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Supportive form text styles for hints and validation messaging.',
+                component: `Text — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -29,16 +30,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Helper, hint, and error text treatments for form feedback.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Pair these text styles with inputs to reinforce validation states.',
             },
         },
     },

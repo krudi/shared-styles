@@ -4,7 +4,6 @@ import type { HorizontalLineArgs } from './horizontal-line.types';
 
 const meta = {
     title: 'Components/Horizontal Line',
-    tags: ['autodocs'],
     render: ({ beforeText, afterText }: HorizontalLineArgs): string => `
         <p>${beforeText}</p>
         <hr class="hr" role="presentation" />
@@ -22,8 +21,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Single-purpose horizontal rule styled via tokens. Use <code>.hr</code> on an <code>&lt;hr&gt;</code> element.',
+                component: `Horizontal Line — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -39,16 +39,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical horizontal rule example with supporting text.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Adjust the copy around the divider to preview layout and rhythm.',
             },
         },
     },

@@ -4,7 +4,6 @@ import type { AlertArgs } from './alert.types';
 
 const meta = {
     title: 'Components/Alert',
-    tags: ['autodocs'],
     render: ({ title, description, variant }: AlertArgs): string => `
         <div class="alert${variant === 'destructive' ? ' alert-destructive' : ''}" role="alert">
             <p class="alert-title">${title}</p>
@@ -12,7 +11,6 @@ const meta = {
         </div>
     `,
     args: {
-        title: 'Heads up',
         description: 'This alert surfaces important information in a compact callout without extra decoration.',
         variant: 'default',
     },
@@ -28,8 +26,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Alert callout with a simplified semantic API. Use <code>.alert</code> for the default variant and <code>.alert.alert-destructive</code> for destructive messaging. Canonical markup is a plain stacked block with <code>.alert-title</code> and <code>.alert-description</code> only.',
+                component: `Alert — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;div role="alert"&gt;…&lt;/div&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -44,7 +43,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical neutral alert callout.',
+                story: 'Neutral alert — concise informational callout. Keep title and description short and scannable.',
             },
         },
     },
@@ -61,22 +60,7 @@ export const Destructive: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Destructive alert variant for error or failure states.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    args: {
-        title: 'Action failed',
-        description: 'Your changes could not be saved. Review the input and try again.',
-        variant: 'destructive',
-    },
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use the controls to preview the simplified alert variants and content without icons or dismiss controls.',
+                story: 'Destructive alert — use for errors or critical failures. Prefer actionable guidance or links to remediation.',
             },
         },
     },

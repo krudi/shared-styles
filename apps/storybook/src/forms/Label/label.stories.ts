@@ -4,7 +4,6 @@ import type { LabelArgs } from './label.types';
 
 const meta = {
     title: 'Forms/Label',
-    tags: ['autodocs'],
     render: ({ text, required }: LabelArgs): string => `
         <label class="form-label">
             ${text}${required ? ' <span class="form-label-required" aria-hidden="true">*</span>' : ''}
@@ -21,7 +20,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Label styling for form fields with optional required indicators.',
+                component: `Label — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -37,16 +38,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Form label with optional required indicator styling.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Toggle the required indicator to match validation requirements.',
             },
         },
     },

@@ -4,7 +4,6 @@ import type { InputGroupArgs } from './input-group.types';
 
 const meta = {
     title: 'Forms/Input Group',
-    tags: ['autodocs'],
     render: ({ value, placeholder }: InputGroupArgs): string => `
         <div class="form-input-group">
             <span class="form-input-group-text">@</span>
@@ -21,9 +20,12 @@ const meta = {
         placeholder: { control: 'text' },
     },
     parameters: {
+        designTokens: 'Forms/Input',
         docs: {
             description: {
-                component: 'Inline input groups for appended or prepended content.',
+                component: `Input Group — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -39,16 +41,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Grouped input with leading text and trailing action button.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use input groups for composite inputs and inline actions.',
             },
         },
     },
