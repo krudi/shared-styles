@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@krudi/storybook-design-tokens",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Storybook addon for rendering annotated CSS custom properties as design token tables.",
+  "keywords": [
+    "storybook-addon",
+    "design-tokens",
+    "css"
+  ],
+  "homepage": "https://github.com/krudi/shared-styles#readme",
+  "bugs": {
+    "url": "https://github.com/krudi/shared-styles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krudi/shared-styles.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "krudi",
+    "email": "patryk.kudlik@gmail.com",
+    "url": "https://krudi.io"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./preset": "./dist/preset.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "prebuild": "node -e \"fs.rmSync('./dist', { recursive: true, force: true })\"",
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "npm run build && storybook dev -p 44878 -c .storybook",
+    "build:storybook": "npm run build && storybook build -c .storybook",
+    "clean": "rm -rf .cache dist node_modules",
+    "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
+    "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+    "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+    "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@krudi/eslint-config": "^0.1.8",
+    "@krudi/prettier-config": "^0.1.8",
+    "@storybook/addon-docs": "^10.3.3",
+    "@storybook/react-vite": "^10.3.3",
+    "@types/node": "^22.19.13",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^10.3.3",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1",
+    "vite": "^7.3.1"
+  },
+  "engines": {
+    "node": ">= 24.14.0"
+  },
+  "peerDependencies": {
+    "storybook": "^10.0.0"
+  },
+  "storybook": {
+    "displayName": "Design Tokens",
+    "supportedFrameworks": [
+      "html-vite",
+      "react-vite"
+    ]
+  }
+}

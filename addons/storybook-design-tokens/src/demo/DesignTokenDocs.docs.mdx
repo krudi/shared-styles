@@ -1,0 +1,12 @@
+import { Description, Meta, Title } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocs } from '../index';
+import * as Stories from './DesignTokenDocs.stories';
+
+<Meta of={Stories} name="Docs" />
+
+<Title />
+<Description of={Stories} />
+
+<DesignTokenDocs group="Components/Button" />
+
+<DesignTokenDocs group="Brand/Design Tokens/Colour" />
