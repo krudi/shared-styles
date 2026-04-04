@@ -1,5 +1,4 @@
 import React from 'react';
-
 import designTokens from 'virtual:krudi-storybook-design-tokens';
 
 import type { DesignTokenGroup, DesignTokenRow, StoryMetaLike } from './types';
