@@ -1,9 +1,8 @@
 name: Deploy (Storybook)
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
   workflow_dispatch:
 
@@ -13,19 +12,22 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.event.release.tag_name || github.ref }}
   cancel-in-progress: false
 
 jobs:
   deploy:
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, '@krudi/styles@') }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
-      - uses: krudi/reusable-actions/.github/actions/github-checkout@main
+      - name: Checkout release ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name || github.ref }}
 
       - uses: krudi/reusable-actions/.github/actions/node-setup@main
 
