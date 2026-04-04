@@ -38,10 +38,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-    -webkit-mask-image: url('@krudi/icons/caret-down.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
+    mask-image: url('@krudi/icons/caret-down.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
     transition: transform var(--krd-transition-decorative-duration) var(--krd-transition-ease);
 }
 
