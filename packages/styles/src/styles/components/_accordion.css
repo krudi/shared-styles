@@ -93,10 +93,6 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-    mask-image: url('@krudi/icons/caret-down.svg');
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
