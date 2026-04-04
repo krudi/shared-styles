@@ -4,7 +4,6 @@ import type { RadioArgs } from './radio.types';
 
 const meta = {
     title: 'Forms/Radio',
-    tags: ['autodocs'],
     render: (): string => `
         <div class="form-block">
             <div class="form-radio">
@@ -20,7 +19,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Radio styling for single-select inputs.',
+                component: `Radio — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -36,16 +37,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Radio styling for single-select inputs with aligned labels.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use radio inputs for mutually exclusive choices.',
             },
         },
     },

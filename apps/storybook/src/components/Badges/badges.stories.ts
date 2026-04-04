@@ -4,7 +4,6 @@ import type { BadgeArgs } from './badges.types';
 
 const meta = {
     title: 'Components/Badges',
-    tags: ['autodocs'],
     render: ({ label, variant }: BadgeArgs): string => `
         <span class="badge badge-${variant}">${label}</span>
     `,
@@ -27,8 +26,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Status and taxonomy chips built on the design token radius, padding, and font sizing. Variants align to the theme palette.',
+                component: `Badges — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -49,12 +49,17 @@ export const Default: Story = {
     },
 };
 
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use the controls to toggle label and variant.',
-            },
-        },
-    },
+export const Secondary = {
+    args: { variant: 'secondary' },
+    parameters: { controls: { disable: true }, docs: { description: { story: 'Secondary — Secondary' } } },
+};
+
+export const Outline = {
+    args: { variant: 'outline' },
+    parameters: { controls: { disable: true }, docs: { description: { story: 'Outline — Outline' } } },
+};
+
+export const Destructive = {
+    args: { variant: 'destructive' },
+    parameters: { controls: { disable: true }, docs: { description: { story: 'Destructive — Destructive' } } },
 };

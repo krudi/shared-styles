@@ -4,7 +4,6 @@ import type { FieldsetArgs } from './fieldset.types';
 
 const meta = {
     title: 'Forms/Fieldset',
-    tags: ['autodocs'],
     render: (): string => `
         <fieldset class="form-fieldset">
             <legend class="form-legend">Contact preferences</legend>
@@ -25,8 +24,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Fieldset container styling for grouped form sections using the current <code>.form-fieldset</code> API.',
+                component: `Fieldset — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -42,16 +42,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Fieldset styling groups related form controls with consistent padding, borders, and validation-aware select/input states.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use <code>.form-fieldset</code> with <code>.form-legend</code> to group related fields under a shared visual container.',
             },
         },
     },

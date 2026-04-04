@@ -6,7 +6,6 @@ const imageUrl = 'https://images.unsplash.com/photo-1494526585095-c41746248156?a
 
 const meta = {
     title: 'Components/Card',
-    tags: ['autodocs'],
     render: ({ subtitle, title, description, variant, showMedia, showFooter }: CardArgs): string => `
         <article class="card card-${variant}" style="max-width: 24rem;">
             ${
@@ -62,8 +61,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Card container for grouped media, headings, body copy, and actions. Use <code>.card</code> with optional <code>.card-header</code>, <code>.card-body</code>, <code>.card-footer</code>, and <code>.card-media</code> sections.',
+                component: `Card — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;section&gt;…&lt;/section&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -84,12 +84,26 @@ export const Default: Story = {
     },
 };
 
-export const Playground: Story = {
+export const White = {
+    args: { variant: 'white' },
     parameters: {
-        docs: {
-            description: {
-                story: 'Use the controls to preview the supported card variants and optional sections.',
-            },
-        },
+        controls: { disable: true },
+        docs: { description: { story: 'White variant — shows the white appearance.' } },
+    },
+};
+
+export const Primary = {
+    args: { variant: 'primary' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Primary variant — shows the primary appearance.' } },
+    },
+};
+
+export const Secondary = {
+    args: { variant: 'secondary' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Secondary variant — shows the secondary appearance.' } },
     },
 };

@@ -4,7 +4,6 @@ import type { SelectArgs } from './select.types';
 
 const meta = {
     title: 'Forms/Select',
-    tags: ['autodocs'],
     render: ({ disabled, multiple }: SelectArgs): string => `
         <div class="form-block">
             <label class="form-label" for="select-role">
@@ -29,10 +28,12 @@ const meta = {
         multiple: { control: 'boolean' },
     },
     parameters: {
+        designTokens: 'Forms/Input',
         docs: {
             description: {
-                component:
-                    'Select controls styled with the shared form tokens, including native arrow treatment and validation states.',
+                component: `Select — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;select&gt;…&lt;/select&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -48,16 +49,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Single-select dropdown styled with the same tokens as text inputs.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Toggle disabled and multiple selection states to validate the current <code>.form-select</code> styles.',
             },
         },
     },

@@ -1,4 +1,3 @@
-import { wireTabs } from '@krudi/styles/js';
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { TabsArgs, TabsItem } from './tabs.types';
@@ -7,21 +6,18 @@ const defaultItems: TabsItem[] = [
     {
         id: 'overview',
         label: 'Overview',
-        title: 'Start with a clean implementation baseline',
         description:
             'Use tabs for compact content groups like feature overviews, pricing explanations, onboarding steps, or documentation summaries.',
     },
     {
         id: 'features',
         label: 'Features',
-        title: 'Keep related details together without long scrolling',
         description:
             'The shared tabs style fits product pages and dashboard-style interfaces where users switch between a few clearly named content sections.',
     },
     {
         id: 'support',
         label: 'Support',
-        title: 'Pair with your own behavior layer when interaction is needed',
         description:
             'This first shared version focuses on the canonical visual structure. You can attach your preferred JS or framework logic to switch the active trigger and panel.',
     },
@@ -75,7 +71,6 @@ const renderTabs = ({ activeTab, items }: TabsArgs, storyId = 'tabs'): string =>
 
 const meta = {
     title: 'Components/Tabs',
-    tags: ['autodocs'],
     play: ({ canvasElement }): void => {
         const root = canvasElement.querySelector<HTMLElement>('[data-tabs]');
 
@@ -105,8 +100,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Tabs for compact content switching with a canonical structure of <code>.tabs</code>, <code>.tabs-list</code>, <code>.tabs-trigger</code>, and <code>.tabs-panel</code>. Use the exported <code>wireTabs()</code> helper from <code>@krudi/styles/js</code> for keyboard navigation, roving tabindex, and ARIA state syncing.',
+                component: `Start with a clean implementation baseline — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -122,16 +118,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical tabs example with one active trigger and matching panel.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Switch the active tab or replace the labels/content to preview common documentation and product-page use cases.',
             },
         },
     },

@@ -23,7 +23,6 @@ const renderCard = ({ subtitle, title, description, price, buttonLabel, featured
 
 const meta = {
     title: 'Components/Pricing Table',
-    tags: ['autodocs'],
     render: (args: PricingTableArgs): string => renderCard(args),
     args: {
         subtitle: 'Starter workflow',
@@ -43,11 +42,13 @@ const meta = {
         featured: { control: 'boolean' },
     },
     parameters: {
+        designTokens: ['Components/Card', 'Components/Pricing Table'],
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Pricing card for plan comparisons, landing pages, and grid-based offer sections. Canonical structure: <code>.pricing-table-card &gt; .pricing-table-card-accent + .pricing-table-card-content</code> with header, description, price, and a full-width CTA.',
+                component: `Pricing Table — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -63,16 +64,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical single pricing card with default spacing, accent bar, and full-width action.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Adjust the text content and toggle the featured state to preview the elevated comparison-card treatment.',
             },
         },
     },

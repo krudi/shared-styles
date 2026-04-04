@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import type { ListArgs } from './list.types';
-
 const meta = {
     title: 'Components/List',
-    tags: ['autodocs'],
     render: ({ items }: ListArgs): string => `
         <ul class="unordered-list" role="list">
             ${items.map((item) => `<li>${item}</li>`).join('')}
@@ -24,8 +21,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Reset-style unordered list helper. Apply <code>.unordered-list</code> to remove default margins and control spacing yourself.',
+                component: `List — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;ul&gt;…&lt;/ul&gt;</code>.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -41,16 +39,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical unordered list example.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Add or remove list items with the controls to see spacing and bullets update.',
             },
         },
     },
