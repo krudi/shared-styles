@@ -29,6 +29,7 @@
     },
     "type": "module",
     "workspaces": [
+        "addons/*",
         "packages/*",
         "apps/*"
     ],
@@ -50,8 +51,12 @@
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/stylelint-config": "^0.1.1",
+        "@storybook/addon-docs": "^10.3.3",
         "@types/node": "^24.0.0",
-        "typescript": "^5.9.2"
+        "eslint-plugin-storybook": "^10.3.3",
+        "storybook": "^10.3.3",
+        "typescript": "^5.9.2",
+        "vite": "^7.3.1"
     },
     "devDependencies": {
         "@krudi/eslint-config": "^0.1.8",
