@@ -7,9 +7,10 @@ progressive-enhancement helpers. Built for personal projects.
 
 `@krudi/styles` is layered so consumers can override the system at the right level:
 
-- `palette` – raw color primitives used to build the default theme
-- `theme` – semantic tokens such as `--background`, `--border`, `--primary`
-- `variables` – global spacing/type/radius/shadow tokens plus component-level customization hooks
+- internal token CSS files are the source of truth, split into `brand`, `common`, and `components`
+- `palette` loads the brand token layer
+- `theme` defines theme-level CSS behavior such as color scheme
+- `variables` adds the composed system and component hooks used by the CSS package
 - `base` / `layout` / `html` – global element and structural styling
 - `components` / `forms` / `utilities` – opt-in authoring layers
 
@@ -212,47 +213,39 @@ Import the layers first, then override inside the matching layer so specificity 
 
 @layer variables {
     :root {
-        --body-font-size: 1.125rem;
-        --base-line-height: 1.5;
-        --heading-font-weight: 600;
-        --heading-margin-block-end: var(--spacer-5);
-        --button-line-height: var(--base-line-height);
-        --form-input-line-height: var(--base-line-height);
-        --tabs-trigger-padding-inline: var(--spacer-5);
-        --pricing-table-card-border-radius: var(--border-radius-md);
+        --krd-body-font-size: 1.125rem;
+        --krd-base-line-height: 1.5;
+        --krd-heading-font-weight: 600;
+        --krd-heading-margin-block-end: var(--krd-space-5);
+        --krd-button-line-height: var(--krd-base-line-height);
+        --krd-form-input-line-height: var(--krd-base-line-height);
+        --krd-tabs-trigger-padding-inline: var(--krd-space-5);
+        --krd-pricing-table-card-border-radius: var(--krd-radius-md);
     }
 }
 
 @layer theme {
     :root {
-        --primary: #11213b;
-        --primary-foreground: #ffffff;
-        --secondary: #e8f0ff;
-        --secondary-foreground: #11213b;
-        --ring: color-mix(in srgb, var(--primary) 22%, white);
+        --krd-color-primary: #11213b;
+        --krd-color-primary-foreground: #ffffff;
+        --krd-color-secondary: #e8f0ff;
+        --krd-color-secondary-foreground: #11213b;
+        --krd-color-ring: color-mix(in srgb, var(--krd-color-primary) 22%, white);
     }
 }
 ```
 
+If you are working directly with the styles package, add overrides to your own stylesheet after importing
+`@krudi/styles/css` or one of its layer files.
+
 ### Recommended Override Tokens
 
-If you are installing the package into another project, start by overriding these semantic tokens in `@layer variables`:
+If you are installing the package into another project, use the generated `--krd-*` tokens directly:
 
-- Theme: `--background`, `--foreground`, `--surface`, `--surface-foreground`, `--border`, `--input`, `--primary`,
-  `--primary-foreground`, `--secondary`, `--secondary-foreground`, `--destructive`
-- Global type: `--body-font-size`, `--base-line-height`, `--body-font-family`
-- Headings: `--heading-1` to `--heading-6`, `--heading-font-weight`, `--heading-line-height`,
-  `--heading-margin-block-end`
-- Layout: `--grid-spacing`, `--container-spacer`, `--container-max-width`
-- Links: `--a-color`, `--a-font-size`, `--a-font-weight`, `--a-line-height`
-- Forms: `--form-input-font-size`, `--form-input-line-height`, `--form-label-font-weight`, `--form-label-line-height`,
-  `--form-text-font-size`, `--form-text-line-height`
-- Buttons and badges: `--button-font-size`, `--button-font-weight`, `--button-line-height`, `--badge-font-size`,
-  `--badge-font-weight`, `--badge-line-height`
-- Components: `--accordion-summary-line-height`, `--accordion-summary-gap`, `--card-border-radius`,
-  `--dropdown-trigger-line-height`, `--dropdown-item-text-line-height`, `--modal-close-inset-inline-end`,
-  `--pagination-border-radius`, `--pricing-table-card-padding`, `--pricing-table-card-desktop-min-height`,
-  `--tabs-trigger-padding-inline`, `--tabs-panel-padding`
+- Brand: `--krd-color-primary`, `--krd-color-background`, `--krd-space-4`, `--krd-radius-sm`
+- Common: `--krd-layout-container-max-width`, `--krd-links-color`, `--krd-inputs-border-radius`
+- Components: `--krd-button-padding-inline`, `--krd-card-border-radius`, `--krd-modal-padding-inline`,
+  `--krd-pagination-border-radius`, `--krd-tabs-panel-padding`
 
 These tokens are intended to be the main project-level customization points. Lower-level implementation values should
 usually stay unchanged unless you have a specific component need.

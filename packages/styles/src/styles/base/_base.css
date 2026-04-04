@@ -5,26 +5,26 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--body-background-color);
-    line-height: var(--body-line-height);
+    background-color: var(--krd-body-background-color);
+    line-height: var(--krd-body-line-height);
     text-size-adjust: 100%;
     text-rendering: optimizelegibility;
-    color: var(--body-color);
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size);
+    color: var(--krd-body-color);
+    font-family: var(--krd-body-font-family);
+    font-size: var(--krd-body-font-size);
     overflow-x: hidden;
-    accent-color: var(--accent);
+    accent-color: var(--krd-color-accent);
 }
 
 @media (prefers-reduced-transparency: reduce) {
     :root {
-        --modal-backdrop: hsl(0deg 0 0 / 85%);
+        --krd-modal-backdrop: hsl(0deg 0 0 / 85%);
     }
 }
 
 @media (prefers-reduced-data: reduce) {
     :root {
-        --shadow-md: none;
+        --krd-elevation-md: none;
     }
 }
 
@@ -36,6 +36,6 @@ body {
 
 @media (prefers-contrast: more) {
     :root {
-        --outline-size: max(3px, 0.12em);
+        --krd-outline-size: max(3px, 0.12em);
     }
 }

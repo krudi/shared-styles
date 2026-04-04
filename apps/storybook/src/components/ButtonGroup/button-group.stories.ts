@@ -4,7 +4,6 @@ import type { ButtonGroupArgs } from './button-group.types';
 
 const meta = {
     title: 'Components/Button Group',
-    tags: ['autodocs'],
     render: ({ labels, variant }: ButtonGroupArgs): string => `
         <div class="btn-group">
             ${labels.map((label) => `<button type="button" class="btn btn-${variant}">${label}</button>`).join('')}
@@ -18,15 +17,17 @@ const meta = {
         labels: { control: 'object' },
         variant: {
             control: 'inline-radio',
-            options: ['default', 'secondary', 'outline', 'ghost', 'destructive', 'link'],
+            options: ['default'],
         },
     },
     parameters: {
+        designTokens: 'Components/Button',
         layout: 'centered',
         docs: {
             description: {
-                component:
-                    'Inline button grouping with consistent gap via <code>.btn-group</code>. Combine with any button variants.',
+                component: `Button Group — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -42,16 +43,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical three-button group example.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Swap the button labels and variant while preserving the grouped radius.',
             },
         },
     },

@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/html-vite';
 
 const meta = {
     title: 'Forms/Validation',
-    tags: ['autodocs'],
     render: (): string => `
         <div class="form-block">
             <label class="form-label" for="validation-email">Email</label>
@@ -49,7 +48,9 @@ const meta = {
         controls: { disable: true },
         docs: {
             description: {
-                component: 'Validation states using <code>:user-valid</code> and <code>:user-invalid</code>.',
+                component: `Validation — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },

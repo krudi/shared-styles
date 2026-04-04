@@ -4,7 +4,6 @@ import type { TypographyArgs } from './typography.types';
 
 const meta = {
     title: 'Base/Typography',
-    tags: ['autodocs'],
     render: (): string => `
         <h1 class="mt-0">Heading 1</h1>
         <h2>Heading 2</h2>
@@ -20,8 +19,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Headings, paragraphs, and link treatments driven by the base type scale and link variables.',
+                component: `Typography — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -37,16 +37,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'The default type ramp demonstrates semantic heading tokens, paragraph rhythm, and link typography overrides.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Review headings, body text, and link styles together for hierarchy checks.',
             },
         },
     },

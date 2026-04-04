@@ -4,7 +4,6 @@ import type { ButtonArgs } from './button.types';
 
 const meta = {
     title: 'Components/Button',
-    tags: ['autodocs'],
     render: ({ label, variant, size, disabled }: ButtonArgs): string => {
         const classes = ['btn', `btn-${variant}`];
 
@@ -42,8 +41,9 @@ const meta = {
         layout: 'centered',
         docs: {
             description: {
-                component:
-                    'Buttons with tokenised variants, sizes, hover states, focus-visible treatment, and disabled handling. Canonical markup: <code>&lt;button class="btn btn-default" type="button"&gt;Action&lt;/button&gt;</code> or <code>&lt;a class="btn btn-outline" href="/target"&gt;Learn more&lt;/a&gt;</code>.',
+                component: `Button — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;button&gt;…&lt;/button&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -58,17 +58,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical default button example.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use the controls to switch variant, size, and disabled state.',
+                story: 'Default button example — use for primary actions. Shows default styling, focus and disabled handling.',
             },
         },
     },
@@ -89,8 +79,48 @@ export const Variants: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Variant overview. Use button elements for actions and anchor elements only when the control navigates.',
+                story: 'Variant overview — shows all visual variants. Prefer <button> for actions; style anchors only for navigation.',
             },
         },
+    },
+};
+
+export const Secondary = {
+    args: { variant: 'secondary' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Secondary variant — shows the secondary appearance.' } },
+    },
+};
+
+export const Outline = {
+    args: { variant: 'outline' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Outline variant — shows the outline appearance.' } },
+    },
+};
+
+export const Ghost = {
+    args: { variant: 'ghost' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Ghost variant — shows the ghost appearance.' } },
+    },
+};
+
+export const Destructive = {
+    args: { variant: 'destructive' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Destructive variant — shows the destructive appearance.' } },
+    },
+};
+
+export const Link = {
+    args: { variant: 'link' },
+    parameters: {
+        controls: { disable: true },
+        docs: { description: { story: 'Link variant — shows the link appearance.' } },
     },
 };

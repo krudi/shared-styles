@@ -1,21 +1,119 @@
 @layer palette {
     :root {
-        /*
-            Public palette tokens
-            Advanced consumers may override these to rebuild the base theme.
-            Most theme customization should happen through the semantic tokens in theme.css.
-        */
-        --color-neutral-0: light-dark(#ffffff, #1c222e);
-        --color-neutral-50: light-dark(#f6f7fb, #151515);
-        --color-neutral-100: light-dark(#efefef, #2c2c2d);
-        --color-neutral-200: light-dark(#e2e5ea, #3a3a3b);
-        --color-neutral-300: light-dark(#d5dae2, #4a4a4d);
-        --color-neutral-400: light-dark(#c3c9d3, #5c5f66);
-        --color-neutral-500: light-dark(#aeb6c3, #71757d);
-        --color-neutral-600: light-dark(#8f99aa, #8f95a0);
-        --color-neutral-700: light-dark(#4e596a, #b0b7c3);
-        --color-neutral-900: light-dark(#1c222e, #ffffff);
-        --color-secondary-100: light-dark(#f4f4f5, #27272a);
-        --color-destructive-600: light-dark(#dc2626, #f87171);
+        /**
+         * @tokens Brand/Design Tokens/Colour
+         * @presenter Color
+         */
+        --krd-color-palette-neutral-0: light-dark(#ffffff, #1c222e);
+        --krd-color-palette-neutral-50: light-dark(#f6f7fb, #151515);
+        --krd-color-palette-neutral-100: light-dark(#efefef, #2c2c2d);
+        --krd-color-palette-neutral-200: light-dark(#e2e5ea, #3a3a3b);
+        --krd-color-palette-neutral-300: light-dark(#d5dae2, #4a4a4d);
+        --krd-color-palette-neutral-400: light-dark(#c3c9d3, #5c5f66);
+        --krd-color-palette-neutral-500: light-dark(#aeb6c3, #71757d);
+        --krd-color-palette-neutral-600: light-dark(#8f99aa, #8f95a0);
+        --krd-color-palette-neutral-700: light-dark(#4e596a, #b0b7c3);
+        --krd-color-palette-neutral-900: light-dark(#1c222e, #ffffff);
+        --krd-color-palette-secondary-100: light-dark(#f4f4f5, #27272a);
+        --krd-color-palette-destructive-600: light-dark(#dc2626, #f87171);
+
+        /**
+         * @tokens Brand/Design Tokens/Foundation
+         */
+        --krd-elevation-sm: 0 0.25rem 0.75rem -0.5rem rgb(0 0 0 / 12%);
+        --krd-elevation-md: 0 0.375rem 1rem -0.5rem rgb(0 0 0 / 10%);
+        --krd-elevation-lg: 0 0.5rem 1.5rem -0.75rem rgb(0 0 0 / 12%);
+        --krd-focus-outline-size: max(2px, 0.08em);
+        --krd-focus-outline-style: solid;
+        --krd-focus-outline-color: currentcolor;
+        --krd-focus-outline-offset: max(2px, 0.08em);
+        --krd-focus-outline-offset-tight: 0.125rem;
+        --krd-focus: 0 0 0 0.125em var(--krd-color-background), 0 0 0 0.25em var(--krd-color-ring);
+        --krd-radius-xs: 0.25rem;
+        --krd-radius-sm: 0.5rem;
+        --krd-radius-md: 1rem;
+        --krd-radius-lg: 1.5rem;
+        --krd-radius-xl: 2rem;
+        --krd-radius-full: 50%;
+
+        /**
+         * @tokens Brand/Design Tokens/Space
+         * @presenter Spacing
+         */
+        --krd-space-0: 0;
+        --krd-space-1: 0.5rem;
+        --krd-space-2: 0.75rem;
+        --krd-space-3: 0.875rem;
+        --krd-space-4: 1rem;
+        --krd-space-5: 1.25rem;
+        --krd-space-6: 1.5rem;
+        --krd-space-7: 1.75rem;
+        --krd-space-8: 2rem;
+        --krd-space-9: 2.5rem;
+        --krd-space-10: 4rem;
+        --krd-space-11: 8rem;
+
+        /**
+         * @tokens Brand/Design Tokens/Typography
+         */
+        --krd-typography-font-family:
+            -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
+            'Segoe UI Emoji', 'Segoe UI Symbol';
+        --krd-typography-body-text-font-size-sm: 1rem;
+        --krd-typography-body-text-font-size: clamp(1.0625rem, 1.0268rem + 0.1786vw, 1.1875rem);
+        --krd-typography-body-text-font-size-lg: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
+        --krd-typography-body-text-font-size-xl: clamp(1.4375rem, 1.3304rem + 0.5357vw, 1.8125rem);
+        --krd-typography-body-text-font-weight: 400;
+        --krd-typography-body-text-line-height-sm: 1.5;
+        --krd-typography-body-text-line-height: 1.55;
+        --krd-typography-body-text-line-height-lg: 1.5;
+        --krd-typography-body-text-line-height-xl: 1.35;
+        --krd-typography-heading-1: clamp(1.875rem, 1.625rem + 1.25vw, 2.75rem);
+        --krd-typography-heading-font-weight: 600;
+        --krd-typography-heading-line-height: 1.4;
+        --krd-typography-heading-line-height-1: 1.15;
+        --krd-typography-heading-line-height-2: 1.3;
+        --krd-typography-heading-line-height-3: 1.3;
+        --krd-typography-heading-line-height-4: 1.4;
+        --krd-typography-heading-line-height-5: 1.4;
+        --krd-typography-heading-line-height-6: 1.4;
+        --krd-typography-heading-margin-block-end: 0;
+        --krd-typography-heading-text-wrap: balance;
+        --krd-typography-font-size-xs: 0.75rem;
+        --krd-typography-font-size-sm: 1rem;
+        --krd-typography-font-size-lg: clamp(1.125rem, 2.2vw, 1.5rem);
+        --krd-typography-font-size-xl: clamp(1.25rem, 2.2vw, 1.765rem);
+        --krd-typography-base-line-height: 1.4;
+        --krd-typography-heading-2: var(--krd-typography-body-text-font-size-xl);
+        --krd-typography-heading-3: var(--krd-typography-body-text-font-size-lg);
+        --krd-typography-heading-4: var(--krd-typography-body-text-font-size);
+        --krd-typography-heading-5: var(--krd-typography-body-text-font-size-sm);
+        --krd-typography-heading-6: var(--krd-typography-body-text-font-size-sm);
+        --krd-typography-heading-font-family: var(--krd-typography-font-family);
+        --krd-typography-font-size-md: var(--krd-typography-body-text-font-size);
+
+        /**
+         * @tokens Brand/Design Tokens/Colour
+         * @presenter Color
+         */
+        --krd-color-background: var(--krd-color-palette-neutral-0);
+        --krd-color-foreground: var(--krd-color-palette-neutral-900);
+        --krd-color-surface: var(--krd-color-palette-neutral-0);
+        --krd-color-surface-foreground: var(--krd-color-palette-neutral-900);
+        --krd-color-surface-subtle: var(--krd-color-palette-neutral-50);
+        --krd-color-surface-subtle-hover: var(--krd-color-palette-neutral-100);
+        --krd-color-muted: var(--krd-color-palette-neutral-50);
+        --krd-color-muted-foreground: var(--krd-color-palette-neutral-700);
+        --krd-color-border: var(--krd-color-palette-neutral-200);
+        --krd-color-input: var(--krd-color-palette-neutral-200);
+        --krd-color-ring: var(--krd-color-palette-secondary-100);
+        --krd-color-primary: var(--krd-color-palette-neutral-900);
+        --krd-color-primary-foreground: var(--krd-color-palette-neutral-0);
+        --krd-color-secondary: var(--krd-color-palette-secondary-100);
+        --krd-color-secondary-foreground: var(--krd-color-palette-neutral-900);
+        --krd-color-destructive: var(--krd-color-palette-destructive-600);
+        --krd-color-destructive-foreground: var(--krd-color-palette-neutral-0);
+        --krd-color-accent: var(--krd-color-secondary);
+        --krd-color-accent-foreground: var(--krd-color-secondary-foreground);
     }
 }

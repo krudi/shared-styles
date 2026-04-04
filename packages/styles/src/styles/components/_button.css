@@ -1,50 +1,50 @@
 .btn {
-    padding-block: var(--button-padding-block);
-    padding-inline: var(--button-padding-inline);
-    background-color: var(--button-background-color);
+    padding-block: var(--krd-button-padding-block);
+    padding-inline: var(--krd-button-padding-inline);
+    background-color: var(--krd-button-background-color);
     display: inline-flex;
     justify-content: center;
-    gap: var(--button-gap);
-    line-height: var(--button-line-height);
+    gap: var(--krd-button-gap);
+    line-height: var(--krd-button-line-height);
     text-decoration: none;
-    color: var(--button-color-emphasis);
+    color: var(--krd-button-color-emphasis);
     user-select: none;
-    border-width: var(--button-border-width);
-    border-style: var(--button-border-style);
-    border-color: var(--button-border-color);
+    border-width: var(--krd-button-border-width);
+    border-style: var(--krd-button-border-style);
+    border-color: var(--krd-button-border-color);
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
-    letter-spacing: var(--button-letter-spacing);
-    text-transform: var(--button-text-transform);
-    border-radius: var(--button-border-radius);
-    font-size: var(--button-font-size);
-    font-weight: var(--button-font-weight);
+    letter-spacing: var(--krd-button-letter-spacing);
+    text-transform: var(--krd-button-text-transform);
+    border-radius: var(--krd-button-border-radius);
+    font-size: var(--krd-button-font-size);
+    font-weight: var(--krd-button-font-weight);
     box-shadow: none;
     transition-property: background-color, border-color, color, box-shadow;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
     text-wrap: pretty;
 }
 
 .btn:disabled {
     pointer-events: none;
-    opacity: var(--button-disabled-opacity);
+    opacity: var(--krd-button-disabled-opacity);
     cursor: not-allowed;
 }
 
 .btn:hover,
 .btn:focus-visible {
-    background-color: var(--button-hover);
+    background-color: var(--krd-button-hover);
 }
 
 .btn:focus-visible {
-    background-color: var(--button-hover);
+    background-color: var(--krd-button-hover);
 }
 
 @media (prefers-contrast: more) {
     .btn {
-        border-width: max(2px, var(--button-border-width));
+        border-width: max(2px, var(--krd-button-border-width));
         border-style: solid;
         border-color: currentcolor;
     }
@@ -52,73 +52,77 @@
 
 /* Standard variants */
 .btn-default {
-    --button-background-color: var(--primary);
-    --button-color-emphasis: var(--primary-foreground);
-    --button-border-color: color-mix(in srgb, var(--primary) 85%, var(--primary-foreground));
-    --button-hover: color-mix(in srgb, var(--primary) 85%, var(--primary-foreground));
+    --krd-button-background-color: var(--krd-color-primary);
+    --krd-button-color-emphasis: var(--krd-color-primary-foreground);
+    --krd-button-border-color: color-mix(in srgb, var(--krd-color-primary) 85%, var(--krd-color-primary-foreground));
+    --krd-button-hover: color-mix(in srgb, var(--krd-color-primary) 85%, var(--krd-color-primary-foreground));
 }
 
 .btn-secondary {
-    --button-background-color: var(--secondary);
-    --button-color-emphasis: var(--secondary-foreground);
-    --button-border-color: color-mix(in srgb, var(--secondary) 85%, var(--secondary-foreground));
-    --button-hover: color-mix(in srgb, var(--secondary) 85%, var(--secondary-foreground));
+    --krd-button-background-color: var(--krd-color-secondary);
+    --krd-button-color-emphasis: var(--krd-color-secondary-foreground);
+    --krd-button-border-color: color-mix(
+        in srgb,
+        var(--krd-color-secondary) 85%,
+        var(--krd-color-secondary-foreground)
+    );
+    --krd-button-hover: color-mix(in srgb, var(--krd-color-secondary) 85%, var(--krd-color-secondary-foreground));
 }
 
 .btn-destructive {
-    --button-background-color: var(--destructive);
-    --button-color-emphasis: var(--destructive-foreground);
-    --button-border-color: color-mix(in srgb, var(--destructive) 85%, var(--foreground));
-    --button-hover: color-mix(in srgb, var(--destructive) 85%, var(--foreground));
+    --krd-button-background-color: var(--krd-color-destructive);
+    --krd-button-color-emphasis: var(--krd-color-destructive-foreground);
+    --krd-button-border-color: color-mix(in srgb, var(--krd-color-destructive) 85%, var(--krd-color-foreground));
+    --krd-button-hover: color-mix(in srgb, var(--krd-color-destructive) 85%, var(--krd-color-foreground));
 }
 
 /* Outline */
 .btn-outline {
-    --button-background-color: transparent;
-    --button-color-emphasis: var(--foreground);
-    --button-border-width: 1px;
-    --button-border-style: solid;
-    --button-border-color: var(--border);
-    --button-hover: var(--surface-subtle);
+    --krd-button-background-color: transparent;
+    --krd-button-color-emphasis: var(--krd-color-foreground);
+    --krd-button-border-width: 1px;
+    --krd-button-border-style: solid;
+    --krd-button-border-color: var(--krd-color-border);
+    --krd-button-hover: var(--krd-color-surface-subtle);
 }
 
 /* Ghost */
 .btn-ghost {
-    --button-background-color: transparent;
-    --button-color-emphasis: var(--foreground);
-    --button-border-width: 0;
-    --button-border-style: inherit;
-    --button-border-color: none;
-    --button-hover: var(--surface-subtle);
+    --krd-button-background-color: transparent;
+    --krd-button-color-emphasis: var(--krd-color-foreground);
+    --krd-button-border-width: 0;
+    --krd-button-border-style: inherit;
+    --krd-button-border-color: none;
+    --krd-button-hover: var(--krd-color-surface-subtle);
 }
 
 /* Button with icon */
 .btn-icon {
-    --button-background-color: var(--muted);
-    --button-hover: var(--surface-subtle-hover);
-    --button-border-width: 0;
-    --button-border-style: inherit;
-    --button-border-color: none;
+    --krd-button-background-color: var(--krd-color-muted);
+    --krd-button-hover: var(--krd-color-surface-subtle-hover);
+    --krd-button-border-width: 0;
+    --krd-button-border-style: inherit;
+    --krd-button-border-color: none;
 
-    padding-block: var(--button-icon-padding-block);
-    padding-inline: var(--button-icon-padding-inline);
-    line-height: var(--button-icon-line-height);
+    padding-block: var(--krd-button-icon-padding-block);
+    padding-inline: var(--krd-button-icon-padding-inline);
+    line-height: var(--krd-button-icon-line-height);
 }
 
 .btn-icon svg {
-    fill: var(--button-color-emphasis);
+    fill: var(--krd-button-color-emphasis);
 }
 
 /* Linked button */
 .btn-link {
-    --button-background-color: transparent;
-    --button-color-emphasis: var(--button-link-color);
-    --button-border-width: 0;
-    --button-border-style: inherit;
-    --button-border-color: none;
+    --krd-button-background-color: transparent;
+    --krd-button-color-emphasis: var(--krd-button-link-color);
+    --krd-button-border-width: 0;
+    --krd-button-border-style: inherit;
+    --krd-button-border-color: none;
 
-    padding-block: var(--button-link-padding-block);
-    padding-inline: var(--button-link-padding-inline);
+    padding-block: var(--krd-button-link-padding-block);
+    padding-inline: var(--krd-button-link-padding-inline);
     display: inline-flex;
     align-items: center;
     text-transform: inherit;
@@ -134,11 +138,11 @@
 
 /* Close button */
 .btn-close {
-    --button-padding-block: 0;
-    --button-padding-inline: 0;
-    --button-border-width: 0;
-    --button-border-style: inherit;
-    --button-border-color: none;
+    --krd-button-padding-block: 0;
+    --krd-button-padding-inline: 0;
+    --krd-button-border-width: 0;
+    --krd-button-border-style: inherit;
+    --krd-button-border-color: none;
 
     display: flex;
     align-items: center;
@@ -147,6 +151,6 @@
 
 /* Size */
 .btn-sm {
-    padding-block: var(--button-sm-padding-block);
-    padding-inline: var(--button-sm-padding-inline);
+    padding-block: var(--krd-button-sm-padding-block);
+    padding-inline: var(--krd-button-sm-padding-inline);
 }

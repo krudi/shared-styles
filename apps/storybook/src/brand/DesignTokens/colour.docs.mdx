@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocs } from '@krudi/storybook-design-tokens';
+
+<Meta title="Brand/Design Tokens/Colour" />
+
+# Colour
+
+Colour tokens now live directly in `packages/styles/src/styles/palette.css`.
+
+This follows the project token-source approach:
+
+- palette values are stored as source tokens
+- semantic UI colours are mapped in the same brand layer
+- generated CSS variables are published with the `--krd-` prefix
+
+<DesignTokenDocs
+    group="Brand/Design Tokens/Colour"
+    title="Colour Tokens"
+/>
+
+## Source
+
+- Token source: `packages/styles/src/styles/palette.css`
+- CSS entry points: `packages/styles/src/styles/palette.css` and `packages/styles/src/styles/theme.css`

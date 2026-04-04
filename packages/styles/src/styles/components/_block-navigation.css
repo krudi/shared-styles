@@ -7,8 +7,8 @@
     margin-block-end: 0;
     padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(var(--block-navigation-columns), minmax(0, 1fr));
-    gap: var(--block-navigation-gap);
+    grid-template-columns: repeat(var(--krd-block-navigation-columns), minmax(0, 1fr));
+    gap: var(--krd-block-navigation-gap);
     list-style: none;
 }
 
@@ -17,41 +17,41 @@
 }
 
 .block-navigation-list-item-link {
-    min-block-size: var(--block-navigation-item-min-height);
-    background-color: var(--block-navigation-item-background-color);
-    color: var(--block-navigation-item-color);
-    border-width: var(--block-navigation-item-border-width);
-    border-style: var(--block-navigation-item-border-style);
-    border-color: var(--block-navigation-item-border-color);
-    border-radius: var(--block-navigation-item-border-radius);
-    padding-block: var(--block-navigation-item-padding-block);
-    padding-inline: var(--block-navigation-item-padding-inline);
+    min-block-size: var(--krd-block-navigation-item-min-height);
+    background-color: var(--krd-block-navigation-item-background-color);
+    color: var(--krd-block-navigation-item-color);
+    border-width: var(--krd-block-navigation-item-border-width);
+    border-style: var(--krd-block-navigation-item-border-style);
+    border-color: var(--krd-block-navigation-item-border-color);
+    border-radius: var(--krd-block-navigation-item-border-radius);
+    padding-block: var(--krd-block-navigation-item-padding-block);
+    padding-inline: var(--krd-block-navigation-item-padding-inline);
     display: flex;
     align-items: flex-start;
     text-decoration: none;
     transition:
-        background-color var(--transition-default) var(--transition-ease),
-        border-color var(--transition-default) var(--transition-ease),
-        box-shadow var(--transition-default) var(--transition-ease);
+        background-color var(--krd-transition-default) var(--krd-transition-ease),
+        border-color var(--krd-transition-default) var(--krd-transition-ease),
+        box-shadow var(--krd-transition-default) var(--krd-transition-ease);
 }
 
 .block-navigation-list-item-link:focus,
 .block-navigation-list-item-link:hover {
-    background-color: var(--block-navigation-item-background-color-hover);
-    border-color: var(--block-navigation-item-border-color-hover);
-    box-shadow: var(--block-navigation-item-box-shadow-hover);
+    background-color: var(--krd-block-navigation-item-background-color-hover);
+    border-color: var(--krd-block-navigation-item-border-color-hover);
+    box-shadow: var(--krd-block-navigation-item-box-shadow-hover);
 }
 
 .block-navigation-list-item-text {
-    font-size: var(--block-navigation-item-font-size);
-    font-weight: var(--block-navigation-item-font-weight);
-    line-height: var(--block-navigation-item-line-height);
+    font-size: var(--krd-block-navigation-item-font-size);
+    font-weight: var(--krd-block-navigation-item-font-weight);
+    line-height: var(--krd-block-navigation-item-line-height);
     color: currentcolor;
     text-decoration: underline;
     text-decoration-color: transparent;
-    text-decoration-thickness: var(--block-navigation-item-text-decoration-thickness);
-    text-underline-offset: var(--block-navigation-item-text-underline-offset);
-    transition: text-decoration-color var(--transition-default) var(--transition-ease);
+    text-decoration-thickness: var(--krd-block-navigation-item-text-decoration-thickness);
+    text-underline-offset: var(--krd-block-navigation-item-text-underline-offset);
+    transition: text-decoration-color var(--krd-transition-default) var(--krd-transition-ease);
 }
 
 .block-navigation-list-item-link:hover .block-navigation-list-item-text,
@@ -61,6 +61,6 @@
 
 @media (min-width: 48rem) {
     .block-navigation-list {
-        --block-navigation-columns: 2;
+        --krd-block-navigation-columns: 2;
     }
 }

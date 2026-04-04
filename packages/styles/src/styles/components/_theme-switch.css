@@ -1,13 +1,13 @@
 .theme-switch {
-    inline-size: var(--theme-switch-size);
-    block-size: var(--theme-switch-size);
+    inline-size: var(--krd-theme-switch-size);
+    block-size: var(--krd-theme-switch-size);
     padding: 0;
     align-items: center;
 }
 
 .theme-switch-icon {
-    inline-size: var(--theme-switch-icon-width);
-    block-size: var(--theme-switch-icon-height);
+    inline-size: var(--krd-theme-switch-icon-width);
+    block-size: var(--krd-theme-switch-icon-height);
     display: inline-flex;
     align-items: center;
     justify-content: center;

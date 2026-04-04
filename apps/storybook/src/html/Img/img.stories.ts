@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import type { ImgArgs } from './img.types';
-
 const meta = {
     title: 'HTML/Image',
-    tags: ['autodocs'],
     render: ({ alt }: ImgArgs): string => `
         <picture>
             <img src="https://placehold.co/600x400" alt="${alt}" />
@@ -19,7 +16,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Responsive image styling with default border radius.',
+                component: `Image — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -35,16 +34,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Images inherit responsive sizing and a small border radius.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Update the alt text to verify accessibility labels.',
             },
         },
     },

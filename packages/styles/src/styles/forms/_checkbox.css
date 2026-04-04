@@ -1,64 +1,64 @@
 .form-checkbox {
-    margin-block-end: var(--form-checkbox-margin-block-end);
+    margin-block-end: var(--krd-form-checkbox-margin-block-end);
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: var(--form-checkbox-label-gap);
+    gap: var(--krd-form-checkbox-label-gap);
 }
 
 .form-checkbox-label {
     display: inline-flex;
     align-items: center;
-    gap: var(--form-checkbox-label-gap);
+    gap: var(--krd-form-checkbox-label-gap);
     order: 1;
 }
 
 .form-checkbox-input {
     position: relative;
-    width: var(--form-checkbox-input-width);
-    height: var(--form-checkbox-input-height);
+    width: var(--krd-form-checkbox-input-width);
+    height: var(--krd-form-checkbox-input-height);
     appearance: none;
-    background-color: var(--form-checkbox-input-background-color);
+    background-color: var(--krd-form-checkbox-input-background-color);
     display: grid;
     place-content: center;
-    border-width: var(--form-checkbox-input-border-width);
-    border-style: var(--form-checkbox-input-border-style);
-    border-color: var(--form-checkbox-input-border-color);
-    border-radius: var(--form-checkbox-input-border-radius);
+    border-width: var(--krd-form-checkbox-input-border-width);
+    border-style: var(--krd-form-checkbox-input-border-style);
+    border-color: var(--krd-form-checkbox-input-border-color);
+    border-radius: var(--krd-form-checkbox-input-border-radius);
     vertical-align: top;
 }
 
 .form-checkbox-input::before {
-    width: var(--form-checkbox-input-indicator-width);
-    height: var(--form-checkbox-input-indicator-height);
+    width: var(--krd-form-checkbox-input-indicator-width);
+    height: var(--krd-form-checkbox-input-indicator-height);
     margin: 0;
     content: '';
-    border-right-width: var(--form-checkbox-input-indicator-border-right-width);
-    border-right-style: var(--form-checkbox-input-indicator-border-right-style);
-    border-right-color: var(--form-checkbox-input-indicator-border-right-color);
-    border-bottom-width: var(--form-checkbox-input-indicator-border-bottom-width);
-    border-bottom-style: var(--form-checkbox-input-indicator-border-bottom-style);
-    border-bottom-color: var(--form-checkbox-input-indicator-border-bottom-color);
-    transform: translateY(var(--form-checkbox-input-indicator-translate-block)) rotate(45deg) scale(0);
+    border-right-width: var(--krd-form-checkbox-input-indicator-border-right-width);
+    border-right-style: var(--krd-form-checkbox-input-indicator-border-right-style);
+    border-right-color: var(--krd-form-checkbox-input-indicator-border-right-color);
+    border-bottom-width: var(--krd-form-checkbox-input-indicator-border-bottom-width);
+    border-bottom-style: var(--krd-form-checkbox-input-indicator-border-bottom-style);
+    border-bottom-color: var(--krd-form-checkbox-input-indicator-border-bottom-color);
+    transform: translateY(var(--krd-form-checkbox-input-indicator-translate-block)) rotate(45deg) scale(0);
     transform-origin: center;
     transition-property: transform;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
 }
 
 .form-checkbox-input:focus-visible {
-    outline-offset: var(--outline-offset-tight);
+    outline-offset: var(--krd-outline-offset-tight);
 }
 
 .form-checkbox-input:checked::before {
-    transform: translateY(var(--form-checkbox-input-indicator-translate-block)) rotate(45deg) scale(1);
+    transform: translateY(var(--krd-form-checkbox-input-indicator-translate-block)) rotate(45deg) scale(1);
 }
 
 .form-checkbox-input:checked {
-    background-color: var(--form-checkbox-input-background-color-active);
-    border-width: var(--form-checkbox-input-border-width-active);
-    border-style: var(--form-checkbox-input-border-style-active);
-    border-color: var(--form-checkbox-input-border-color-active);
+    background-color: var(--krd-form-checkbox-input-background-color-active);
+    border-width: var(--krd-form-checkbox-input-border-width-active);
+    border-style: var(--krd-form-checkbox-input-border-style-active);
+    border-color: var(--krd-form-checkbox-input-border-color-active);
 }
 
 .form-checkbox-input:disabled {

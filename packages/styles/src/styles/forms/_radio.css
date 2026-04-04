@@ -1,47 +1,47 @@
 .form-radio {
-    margin-block-end: var(--form-radio-margin-block-end);
+    margin-block-end: var(--krd-form-radio-margin-block-end);
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: var(--form-radio-label-gap);
+    gap: var(--krd-form-radio-label-gap);
 }
 
 .form-radio-label {
     display: inline-flex;
     align-items: center;
-    gap: var(--form-radio-label-gap);
+    gap: var(--krd-form-radio-label-gap);
     order: 1;
 }
 
 .form-radio-input {
-    width: var(--form-radio-input-width);
-    height: var(--form-radio-input-height);
+    width: var(--krd-form-radio-input-width);
+    height: var(--krd-form-radio-input-height);
     appearance: none;
-    background-color: var(--form-radio-input-background-color);
+    background-color: var(--krd-form-radio-input-background-color);
     display: grid;
     place-content: center;
-    border-width: var(--form-radio-input-border-width);
-    border-style: var(--form-radio-input-border-style);
-    border-color: var(--form-radio-input-border-color);
-    border-radius: var(--form-radio-input-border-radius);
+    border-width: var(--krd-form-radio-input-border-width);
+    border-style: var(--krd-form-radio-input-border-style);
+    border-color: var(--krd-form-radio-input-border-color);
+    border-radius: var(--krd-form-radio-input-border-radius);
     vertical-align: top;
 }
 
 .form-radio-input::before {
-    width: var(--form-radio-input-indicator-width);
-    height: var(--form-radio-input-indicator-height);
+    width: var(--krd-form-radio-input-indicator-width);
+    height: var(--krd-form-radio-input-indicator-height);
     margin: 0;
     content: '';
-    background-color: var(--form-radio-input-indicator-color);
-    border-radius: var(--form-radio-input-border-radius);
+    background-color: var(--krd-form-radio-input-indicator-color);
+    border-radius: var(--krd-form-radio-input-border-radius);
     transform: scale(0);
     transition-property: transform;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
 }
 
 .form-radio-input:focus-visible {
-    outline-offset: var(--outline-offset-tight);
+    outline-offset: var(--krd-outline-offset-tight);
 }
 
 .form-radio-input:checked::before {
@@ -49,10 +49,10 @@
 }
 
 .form-radio-input:checked {
-    background-color: var(--form-radio-input-background-color-active);
-    border-width: var(--form-radio-input-border-width-active);
-    border-style: var(--form-radio-input-border-style-active);
-    border-color: var(--form-radio-input-border-color-active);
+    background-color: var(--krd-form-radio-input-background-color-active);
+    border-width: var(--krd-form-radio-input-border-width-active);
+    border-style: var(--krd-form-radio-input-border-style-active);
+    border-color: var(--krd-form-radio-input-border-color-active);
 }
 
 .form-radio-input:disabled {

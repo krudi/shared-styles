@@ -1,4 +1,4 @@
 .form-label-required {
-    color: var(--form-text-error-color);
-    font-weight: var(--form-label-required-font-weight);
+    color: var(--krd-form-text-error-color);
+    font-weight: var(--krd-form-label-required-font-weight);
 }

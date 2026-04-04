@@ -4,7 +4,6 @@ import type { CheckboxArgs } from './checkbox.types';
 
 const meta = {
     title: 'Forms/Checkbox',
-    tags: ['autodocs'],
     render: (): string => `
         <div class="form-block">
             <div class="form-checkbox">
@@ -20,7 +19,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Checkbox styling for multi-select inputs.',
+                component: `Checkbox — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;input type="checkbox"&gt;…&lt;/input&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -36,16 +37,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Checkbox styling for multi-select inputs with aligned labels.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use checkbox inputs for independent toggles.',
             },
         },
     },

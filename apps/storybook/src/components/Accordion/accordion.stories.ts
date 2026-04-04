@@ -4,7 +4,6 @@ import type { AccordionArgs } from './accordion.types';
 
 const meta = {
     title: 'Components/Accordion',
-    tags: ['autodocs'],
     render: ({ title, content, open }: AccordionArgs): string => `
         <div class="accordion">
             <details class="accordion-details" ${open ? 'open' : ''}>
@@ -19,7 +18,6 @@ const meta = {
         </div>
     `,
     args: {
-        title: 'What is included?',
         content: 'Token-based spacing, borders, and typography. Extend with your own content inside the content block.',
         open: true,
     },
@@ -32,8 +30,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Accordion built on native <code>details</code> and <code>summary</code> with tokenised spacing, borders, typography, and explicit keyboard focus styling. Keep the interactive heading inside <code>.accordion-summary-title</code> and regular content inside <code>.accordion-content</code>.',
+                component: `Accordion — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -49,16 +48,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical accordion example with default spacing and typography.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Adjust the summary and body copy; toggle open state to preview the chevron rotation and spacing.',
             },
         },
     },

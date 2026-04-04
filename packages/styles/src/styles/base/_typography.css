@@ -1,77 +1,99 @@
 h1,
 .h1 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-1);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-1);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-1-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h2,
 .h2 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-2);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-2);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-2-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h3,
 .h3 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-3);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-3);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-3-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h4,
 .h4 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-4);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-4);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-4-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h5,
 .h5 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-5);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-5);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-5-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 h6,
 .h6 {
-    font-weight: var(--heading-font-weight);
-    font-size: var(--heading-6);
-    font-family: var(--heading-font-family);
-    line-height: var(--heading-line-height);
+    font-weight: var(--krd-heading-font-weight);
+    font-size: var(--krd-heading-6);
+    font-family: var(--krd-heading-font-family);
+    line-height: var(--krd-heading-6-line-height);
     display: block;
-    margin-block-end: var(--heading-margin-block-end);
-    text-wrap: balance;
+    margin-block-end: var(--krd-heading-margin-block-end);
+    text-wrap: var(--krd-heading-text-wrap);
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .p,
 p {
-    margin-block-end: var(--p-margin-block-start);
-    line-height: var(--p-line-height);
-    color: var(--p-color);
-    font-size: var(--p-font-size);
+    margin-block-end: var(--krd-p-margin-block-start);
+    font-family: var(--krd-p-font-family);
+    font-weight: var(--krd-p-font-weight);
+    line-height: var(--krd-p-line-height);
+    color: var(--krd-p-color);
+    font-size: var(--krd-p-font-size);
     text-wrap: pretty;
+    hyphenate-limit-chars: var(--krd-typography-hyphenate-limit-chars);
     hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .p,
@@ -81,53 +103,21 @@ p:last-child {
 
 .a,
 a {
-    color: var(--a-color);
-    text-decoration-line: var(--a-text-decoration-line);
-    text-decoration-style: var(--a-text-decoration-style);
-    text-decoration-thickness: var(--a-text-decoration-thickness);
-    text-underline-offset: var(--a-text-underline-offset);
-    font-size: var(--a-font-size);
-    font-weight: var(--a-font-weight);
-    line-height: var(--a-line-height);
+    color: var(--krd-a-color);
+    text-decoration-line: var(--krd-a-text-decoration-line);
+    text-decoration-style: var(--krd-a-text-decoration-style);
+    text-decoration-thickness: var(--krd-a-text-decoration-thickness);
+    text-underline-offset: var(--krd-a-text-underline-offset);
+    font-family: var(--krd-a-font-family);
+    font-size: var(--krd-a-font-size);
+    font-weight: var(--krd-a-font-weight);
+    line-height: var(--krd-a-line-height);
 }
 
 a:is(:hover, :focus-visible) {
-    text-decoration-line: var(--a-text-decoration-line-hover);
-    text-decoration-style: var(--a-text-decoration-style-hover);
-    color: var(--a-color-hover);
-}
-
-:is(
-        a[href^='tel:']:not([class]),
-        a[href^='mailto:']:not([class]),
-        a[download]:not([class]),
-        a[href^='http://']:not([class]),
-        a[href^='https://']:not([class])
-    ):not(:has(img))::after {
-    width: 1em;
-    height: 1em;
-    margin-inline: 0.25rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    content: ' ';
-    vertical-align: middle;
-    color: var(--a-color);
-}
-
-a[href^='tel:']::after {
-    background-image: url('@krudi/icons/square-phone.svg');
-}
-
-a[href^='mailto:']::after {
-    background-image: url('@krudi/icons/envelope.svg');
-}
-
-a[download]::after {
-    background-image: url('@krudi/icons/download.svg');
-}
-
-a[href^='http://']::after,
-a[href^='https://']::after {
-    background-image: url('@krudi/icons/arrow-up-right-from-square.svg');
+    text-decoration-line: var(--krd-a-text-decoration-line-hover);
+    text-decoration-style: var(--krd-a-text-decoration-style-hover);
+    text-decoration-thickness: var(--krd-a-text-decoration-thickness-hover);
+    text-underline-offset: var(--krd-a-text-underline-offset-hover);
+    color: var(--krd-a-color-hover);
 }

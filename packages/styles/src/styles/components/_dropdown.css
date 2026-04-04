@@ -6,31 +6,31 @@
 .dropdown-trigger {
     cursor: pointer;
     user-select: none;
-    min-block-size: var(--dropdown-trigger-min-block-size);
-    padding-block: var(--dropdown-trigger-padding-block);
-    padding-inline: var(--dropdown-trigger-padding-inline);
-    border-width: var(--dropdown-trigger-border-width);
-    border-style: var(--dropdown-trigger-border-style);
-    border-color: var(--dropdown-trigger-border-color);
-    border-radius: var(--dropdown-trigger-border-radius);
-    background-color: var(--dropdown-trigger-background-color);
-    color: var(--dropdown-trigger-color);
+    min-block-size: var(--krd-dropdown-trigger-min-block-size);
+    padding-block: var(--krd-dropdown-trigger-padding-block);
+    padding-inline: var(--krd-dropdown-trigger-padding-inline);
+    border-width: var(--krd-dropdown-trigger-border-width);
+    border-style: var(--krd-dropdown-trigger-border-style);
+    border-color: var(--krd-dropdown-trigger-border-color);
+    border-radius: var(--krd-dropdown-trigger-border-radius);
+    background-color: var(--krd-dropdown-trigger-background-color);
+    color: var(--krd-dropdown-trigger-color);
     display: inline-flex;
     align-items: center;
-    gap: var(--dropdown-trigger-gap);
-    font-size: var(--dropdown-trigger-font-size);
-    line-height: var(--dropdown-trigger-line-height);
-    letter-spacing: var(--dropdown-trigger-letter-spacing);
-    anchor-name: --dropdown-trigger;
-    text-transform: var(--button-text-transform);
+    gap: var(--krd-dropdown-trigger-gap);
+    font-size: var(--krd-dropdown-trigger-font-size);
+    line-height: var(--krd-dropdown-trigger-line-height);
+    letter-spacing: var(--krd-dropdown-trigger-letter-spacing);
+    anchor-name: --krd-dropdown-trigger;
+    text-transform: var(--krd-button-text-transform);
     transition-property: background-color, border-color, color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
 }
 
 .dropdown-summary-icon {
-    width: var(--dropdown-icon-width);
-    height: var(--dropdown-icon-height);
+    width: var(--krd-dropdown-icon-width);
+    height: var(--krd-dropdown-icon-height);
     display: inline-block;
     flex: 0 0 auto;
     background-color: currentcolor;
@@ -38,11 +38,7 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-    -webkit-mask-image: url('@krudi/icons/caret-down.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
-    transition: transform var(--transition-decorative-duration) var(--transition-ease);
+    transition: transform var(--krd-transition-decorative-duration) var(--krd-transition-ease);
 }
 
 .dropdown:has(.dropdown-list:popover-open) .dropdown-summary-icon {
@@ -54,40 +50,40 @@
 }
 
 .dropdown:has(.dropdown-list:popover-open) .dropdown-trigger {
-    color: var(--dropdown-trigger-color);
-    border-color: var(--dropdown-trigger-border-color);
+    color: var(--krd-dropdown-trigger-color);
+    border-color: var(--krd-dropdown-trigger-border-color);
 }
 
 .dropdown-trigger:is(:hover, :focus-visible) {
-    background-color: var(--dropdown-trigger-background-color-hover);
+    background-color: var(--krd-dropdown-trigger-background-color-hover);
 }
 
 .dropdown-trigger:focus-visible {
-    background-color: var(--dropdown-trigger-background-color-hover);
+    background-color: var(--krd-dropdown-trigger-background-color-hover);
 }
 
 .dropdown-list {
-    width: var(--dropdown-content-width);
-    background-color: var(--surface);
+    width: var(--krd-dropdown-content-width);
+    background-color: var(--krd-color-surface);
     overflow: hidden;
-    z-index: var(--z-index-dropdown);
+    z-index: var(--krd-z-index-dropdown);
     display: none;
     opacity: 0;
-    border-width: var(--dropdown-content-border-width);
-    border-style: var(--dropdown-content-border-style);
-    border-color: var(--dropdown-content-border-color);
-    border-radius: var(--dropdown-content-border-radius);
-    box-shadow: var(--dropdown-content-box-shadow);
-    padding-block: var(--dropdown-menu-list-padding-block);
+    border-width: var(--krd-dropdown-content-border-width);
+    border-style: var(--krd-dropdown-content-border-style);
+    border-color: var(--krd-dropdown-content-border-color);
+    border-radius: var(--krd-dropdown-content-border-radius);
+    box-shadow: var(--krd-dropdown-content-box-shadow);
+    padding-block: var(--krd-dropdown-menu-list-padding-block);
     padding-inline-start: 0;
     flex-direction: column;
     list-style: none;
     position: fixed;
     inset: unset;
-    position-anchor: --dropdown-trigger;
-    inset-block-start: calc(anchor(bottom) + var(--dropdown-content-margin-block-start));
+    position-anchor: --krd-dropdown-trigger;
+    inset-block-start: calc(anchor(bottom) + var(--krd-dropdown-content-margin-block-start));
     inset-inline-start: anchor(start);
-    transition: opacity var(--transition-duration) var(--transition-ease);
+    transition: opacity var(--krd-transition-duration) var(--krd-transition-ease);
 }
 
 .dropdown-list:popover-open {
@@ -99,45 +95,45 @@
     width: 100%;
     display: block;
     transition-property: background-color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
-    border-top-width: var(--dropdown-list-item-border-top-width);
-    border-top-style: var(--dropdown-list-item-border-top-style);
-    border-top-color: var(--dropdown-list-item-border-top-color);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
+    border-top-width: var(--krd-dropdown-list-item-border-top-width);
+    border-top-style: var(--krd-dropdown-list-item-border-top-style);
+    border-top-color: var(--krd-dropdown-list-item-border-top-color);
 }
 
 .dropdown-list-item:first-child {
-    border-top-width: var(--dropdown-list-item-border-top-width-first);
+    border-top-width: var(--krd-dropdown-list-item-border-top-width-first);
 }
 
 .dropdown-list-item:hover,
 .dropdown-list-item:focus-visible,
 .dropdown-list-item:focus-within {
-    background-color: var(--surface-subtle-hover);
+    background-color: var(--krd-color-surface-subtle-hover);
 }
 
 .dropdown-list-item:has(.dropdown-list-item-link[aria-current='page']) {
-    background-color: var(--surface-subtle);
+    background-color: var(--krd-color-surface-subtle);
 }
 
 .dropdown-list-item-link {
     width: 100%;
-    padding-block: var(--dropdown-item-text-padding-block);
-    padding-inline: var(--dropdown-item-text-padding-inline);
+    padding-block: var(--krd-dropdown-item-text-padding-block);
+    padding-inline: var(--krd-dropdown-item-text-padding-inline);
     display: inline-flex;
-    gap: var(--dropdown-item-gap);
+    gap: var(--krd-dropdown-item-gap);
     align-items: center;
     text-decoration: none;
-    color: var(--foreground);
+    color: var(--krd-color-foreground);
     cursor: pointer;
-    font-size: var(--dropdown-item-text-font-size);
-    font-weight: var(--dropdown-item-text-font-weight);
-    line-height: var(--dropdown-item-text-line-height);
-    border-radius: var(--dropdown-content-border-radius);
+    font-size: var(--krd-dropdown-item-text-font-size);
+    font-weight: var(--krd-dropdown-item-text-font-weight);
+    line-height: var(--krd-dropdown-item-text-line-height);
+    border-radius: var(--krd-dropdown-content-border-radius);
 }
 
 .dropdown-list-item-link:focus-visible {
-    outline-offset: var(--outline-offset-tight);
+    outline-offset: var(--krd-outline-offset-tight);
 }
 
 @media (prefers-reduced-motion: reduce) {

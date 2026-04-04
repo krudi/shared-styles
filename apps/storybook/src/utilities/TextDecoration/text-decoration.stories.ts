@@ -1,10 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
-import type { TextDecorationArgs } from './text-decoration.types';
-
 const meta = {
     title: 'Utilities/Text Decoration',
-    tags: ['autodocs'],
     render: () => `
         <h2 class="h4 mt-0">Text decoration</h2>
         ${[
@@ -23,7 +20,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Decoration helpers for text emphasis and inline styling.',
+                component: `Text Decoration — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -39,16 +38,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Decoration helpers are ideal for inline emphasis without custom CSS.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use decoration utilities to refine inline emphasis states.',
             },
         },
     },
