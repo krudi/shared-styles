@@ -262,9 +262,17 @@
          */
         /* Alert */
         --krd-alert-margin-block-block: var(--krd-alert-margin-block);
-        --krd-alert-destructive-background-color: color-mix(in srgb, var(--krd-color-destructive) 10%, var(--krd-color-background));
+        --krd-alert-destructive-background-color: color-mix(
+            in srgb,
+            var(--krd-color-destructive) 10%,
+            var(--krd-color-background)
+        );
         --krd-alert-destructive-color: var(--krd-color-destructive);
-        --krd-alert-destructive-border-color: color-mix(in srgb, var(--krd-color-destructive) 28%, var(--krd-color-background));
+        --krd-alert-destructive-border-color: color-mix(
+            in srgb,
+            var(--krd-color-destructive) 28%,
+            var(--krd-color-background)
+        );
         --krd-alert-title-font-size: var(--krd-body-font-size);
         --krd-alert-title-font-weight: 600;
         --krd-alert-title-line-height: var(--krd-base-line-height);
@@ -497,9 +505,17 @@
         --krd-pricing-table-card-box-shadow: var(--krd-card-box-shadow);
         --krd-pricing-table-card-gap: var(--krd-card-gap);
         --krd-pricing-table-card-padding: clamp(var(--krd-card-padding-inline), 2vw, var(--krd-space-5));
-        --krd-pricing-table-card-accent-background: color-mix(in srgb, var(--krd-color-foreground) 82%, var(--krd-color-primary));
+        --krd-pricing-table-card-accent-background: color-mix(
+            in srgb,
+            var(--krd-color-foreground) 82%,
+            var(--krd-color-primary)
+        );
         --krd-pricing-table-card-accent-height: 0.25rem;
-        --krd-pricing-table-card-featured-border-color: color-mix(in srgb, var(--krd-color-primary) 32%, var(--krd-color-border));
+        --krd-pricing-table-card-featured-border-color: color-mix(
+            in srgb,
+            var(--krd-color-primary) 32%,
+            var(--krd-color-border)
+        );
         --krd-pricing-table-card-featured-box-shadow: var(--krd-elevation-md);
         --krd-pricing-table-card-featured-translate-y: -0.25rem;
         --krd-pricing-table-card-header-gap: var(--krd-space-2);
@@ -535,7 +551,11 @@
         --krd-tabs-list-gap: var(--krd-space-1);
         --krd-tabs-list-padding: var(--krd-space-1);
         --krd-tabs-trigger-background: transparent;
-        --krd-tabs-trigger-background-hover: color-mix(in srgb, var(--krd-color-surface) 72%, var(--krd-color-surface-subtle));
+        --krd-tabs-trigger-background-hover: color-mix(
+            in srgb,
+            var(--krd-color-surface) 72%,
+            var(--krd-color-surface-subtle)
+        );
         --krd-tabs-trigger-background-active: var(--krd-color-surface);
         --krd-tabs-trigger-color: var(--krd-color-muted-foreground);
         --krd-tabs-trigger-color-hover: var(--krd-color-foreground);

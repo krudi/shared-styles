@@ -61,7 +61,11 @@
 .btn-secondary {
     --krd-button-background-color: var(--krd-color-secondary);
     --krd-button-color-emphasis: var(--krd-color-secondary-foreground);
-    --krd-button-border-color: color-mix(in srgb, var(--krd-color-secondary) 85%, var(--krd-color-secondary-foreground));
+    --krd-button-border-color: color-mix(
+        in srgb,
+        var(--krd-color-secondary) 85%,
+        var(--krd-color-secondary-foreground)
+    );
     --krd-button-hover: color-mix(in srgb, var(--krd-color-secondary) 85%, var(--krd-color-secondary-foreground));
 }
 

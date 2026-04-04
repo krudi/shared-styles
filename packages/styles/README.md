@@ -235,7 +235,8 @@ Import the layers first, then override inside the matching layer so specificity 
 }
 ```
 
-If you are working directly with the styles package, add overrides to your own stylesheet after importing `@krudi/styles/css` or one of its layer files.
+If you are working directly with the styles package, add overrides to your own stylesheet after importing
+`@krudi/styles/css` or one of its layer files.
 
 ### Recommended Override Tokens
 

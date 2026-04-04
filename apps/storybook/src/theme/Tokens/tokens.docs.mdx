@@ -1,6 +1,9 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Theme/Tokens" parameters={{ controls: { disable: true } }} />
+<Meta
+    title="Theme/Tokens"
+    parameters={{ controls: { disable: true } }}
+/>
 
 # Tokens
 
@@ -16,37 +19,37 @@ The generated `--krd-*` names are the public reference surface for the package.
 
 Primitive colour tokens live in `palette.css`.
 
-| Token | Purpose |
-| :-- | :-- |
-| `--krd-color-palette-neutral-0` | Base page and surface light value |
-| `--krd-color-palette-neutral-50` | Subtle backgrounds |
-| `--krd-color-palette-neutral-100` | Hover surfaces |
-| `--krd-color-palette-neutral-200` | Borders and inputs |
-| `--krd-color-palette-neutral-700` | Muted text |
-| `--krd-color-palette-neutral-900` | Strong text and primary dark surfaces |
-| `--krd-color-palette-secondary-100` | Secondary and ring palette source |
-| `--krd-color-palette-destructive-600` | Error and destructive source |
+| Token                                 | Purpose                               |
+| :------------------------------------ | :------------------------------------ |
+| `--krd-color-palette-neutral-0`       | Base page and surface light value     |
+| `--krd-color-palette-neutral-50`      | Subtle backgrounds                    |
+| `--krd-color-palette-neutral-100`     | Hover surfaces                        |
+| `--krd-color-palette-neutral-200`     | Borders and inputs                    |
+| `--krd-color-palette-neutral-700`     | Muted text                            |
+| `--krd-color-palette-neutral-900`     | Strong text and primary dark surfaces |
+| `--krd-color-palette-secondary-100`   | Secondary and ring palette source     |
+| `--krd-color-palette-destructive-600` | Error and destructive source          |
 
 ## Theme
 
 Semantic theme tokens live in `theme.css` and should be the main re-theming API.
 
-| Token | Purpose |
-| :-- | :-- |
-| `--krd-color-background` | App background |
-| `--krd-color-foreground` | Default text colour |
-| `--krd-color-surface` | Elevated or card-like surfaces |
-| `--krd-color-surface-foreground` | Text on surfaces |
-| `--krd-color-surface-subtle` | Low-emphasis surface fill |
-| `--krd-color-muted-foreground` | Secondary text |
-| `--krd-color-border` | Standard separators |
-| `--krd-color-input` | Form field borders |
-| `--krd-color-ring` | Focus ring colour |
-| `--krd-color-primary` | Primary action fill |
-| `--krd-color-primary-foreground` | Text on primary |
-| `--krd-color-secondary` | Secondary fill |
-| `--krd-color-destructive` | Destructive fill or text |
-| `--krd-color-accent` | Accent fill |
+| Token                            | Purpose                        |
+| :------------------------------- | :----------------------------- |
+| `--krd-color-background`         | App background                 |
+| `--krd-color-foreground`         | Default text colour            |
+| `--krd-color-surface`            | Elevated or card-like surfaces |
+| `--krd-color-surface-foreground` | Text on surfaces               |
+| `--krd-color-surface-subtle`     | Low-emphasis surface fill      |
+| `--krd-color-muted-foreground`   | Secondary text                 |
+| `--krd-color-border`             | Standard separators            |
+| `--krd-color-input`              | Form field borders             |
+| `--krd-color-ring`               | Focus ring colour              |
+| `--krd-color-primary`            | Primary action fill            |
+| `--krd-color-primary-foreground` | Text on primary                |
+| `--krd-color-secondary`          | Secondary fill                 |
+| `--krd-color-destructive`        | Destructive fill or text       |
+| `--krd-color-accent`             | Accent fill                    |
 
 ## System
 
@@ -54,55 +57,56 @@ Shared scales live in `variables.css`.
 
 ### Space
 
-| Token | Example value |
-| :-- | :-- |
-| `--krd-space-1` | `0.5rem` |
-| `--krd-space-4` | `1rem` |
-| `--krd-space-6` | `1.5rem` |
-| `--krd-space-8` | `2rem` |
-| `--krd-space-10` | `4rem` |
+| Token            | Example value |
+| :--------------- | :------------ |
+| `--krd-space-1`  | `0.5rem`      |
+| `--krd-space-4`  | `1rem`        |
+| `--krd-space-6`  | `1.5rem`      |
+| `--krd-space-8`  | `2rem`        |
+| `--krd-space-10` | `4rem`        |
 
 ### Typography
 
-| Token | Purpose |
-| :-- | :-- |
-| `--krd-font-size-xs` | Small supporting text |
-| `--krd-font-size-sm` | Base small text |
-| `--krd-font-size-md` | Default body size |
-| `--krd-font-size-lg` | Large supporting text |
-| `--krd-font-size-xl` | Display-support size |
-| `--krd-heading-1` to `--krd-heading-6` | Heading scale |
-| `--krd-body-font-size` | Paragraph body size |
-| `--krd-base-line-height` | Shared line-height baseline |
+| Token                                  | Purpose                     |
+| :------------------------------------- | :-------------------------- |
+| `--krd-font-size-xs`                   | Small supporting text       |
+| `--krd-font-size-sm`                   | Base small text             |
+| `--krd-font-size-md`                   | Default body size           |
+| `--krd-font-size-lg`                   | Large supporting text       |
+| `--krd-font-size-xl`                   | Display-support size        |
+| `--krd-heading-1` to `--krd-heading-6` | Heading scale               |
+| `--krd-body-font-size`                 | Paragraph body size         |
+| `--krd-base-line-height`               | Shared line-height baseline |
 
 ### Shape and elevation
 
-| Token | Purpose |
-| :-- | :-- |
-| `--krd-radius-xs` | Tight corners |
-| `--krd-radius-sm` | Default control radius |
-| `--krd-radius-md` | Card or panel radius |
-| `--krd-radius-full` | Circular shapes |
-| `--krd-elevation-sm` | Subtle depth |
-| `--krd-elevation-md` | Standard depth |
-| `--krd-elevation-lg` | Strong depth |
+| Token                | Purpose                |
+| :------------------- | :--------------------- |
+| `--krd-radius-xs`    | Tight corners          |
+| `--krd-radius-sm`    | Default control radius |
+| `--krd-radius-md`    | Card or panel radius   |
+| `--krd-radius-full`  | Circular shapes        |
+| `--krd-elevation-sm` | Subtle depth           |
+| `--krd-elevation-md` | Standard depth         |
+| `--krd-elevation-lg` | Strong depth           |
 
 ## Component hooks
 
 Component tokens stay scoped so teams can customize patterns without breaking the shared system.
 
-| Area | Example hooks |
-| :-- | :-- |
-| Buttons | `--krd-button-padding-inline`, `--krd-button-border-radius`, `--krd-button-font-size` |
-| Forms | `--krd-form-input-font-size`, `--krd-form-label-font-weight`, `--krd-form-text-line-height` |
-| Layout | `--krd-layout-grid-spacing`, `--krd-layout-container-spacer`, `--krd-layout-container-max-width` |
-| Navigation and disclosure | `--krd-accordion-summary-gap`, `--krd-dropdown-trigger-gap`, `--krd-pagination-border-radius` |
-| Panels and overlays | `--krd-card-border-radius`, `--krd-modal-padding-inline`, `--krd-tabs-panel-padding` |
-| Commerce | `--krd-pricing-table-card-padding`, `--krd-pricing-table-card-desktop-min-height` |
+| Area                      | Example hooks                                                                                    |
+| :------------------------ | :----------------------------------------------------------------------------------------------- |
+| Buttons                   | `--krd-button-padding-inline`, `--krd-button-border-radius`, `--krd-button-font-size`            |
+| Forms                     | `--krd-form-input-font-size`, `--krd-form-label-font-weight`, `--krd-form-text-line-height`      |
+| Layout                    | `--krd-layout-grid-spacing`, `--krd-layout-container-spacer`, `--krd-layout-container-max-width` |
+| Navigation and disclosure | `--krd-accordion-summary-gap`, `--krd-dropdown-trigger-gap`, `--krd-pagination-border-radius`    |
+| Panels and overlays       | `--krd-card-border-radius`, `--krd-modal-padding-inline`, `--krd-tabs-panel-padding`             |
+| Commerce                  | `--krd-pricing-table-card-padding`, `--krd-pricing-table-card-desktop-min-height`                |
 
 ## Usage
 
-Override palette only when you want to rebuild the base theme. In most projects, override semantic theme tokens first and component hooks second.
+Override palette only when you want to rebuild the base theme. In most projects, override semantic theme tokens first
+and component hooks second.
 
 ```css
 @layer theme {
