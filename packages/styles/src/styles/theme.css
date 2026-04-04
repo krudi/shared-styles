@@ -2,30 +2,51 @@
     :root {
         color-scheme: light dark;
 
-        /*
-            Public semantic theme tokens
-            Override these tokens to re-theme the system in most cases.
-            Components and higher-level tokens should depend on this semantic layer.
-        */
-        --background: var(--color-neutral-0);
-        --foreground: var(--color-neutral-900);
-        --surface: var(--color-neutral-0);
-        --surface-foreground: var(--color-neutral-900);
-        --surface-subtle: var(--color-neutral-50);
-        --surface-subtle-hover: var(--color-neutral-100);
-        --muted: var(--color-neutral-50);
-        --muted-foreground: var(--color-neutral-700);
-        --border: var(--color-neutral-200);
-        --input: var(--color-neutral-200);
-        --ring: var(--color-secondary-100);
-        --primary: var(--color-neutral-900);
-        --primary-foreground: var(--color-neutral-0);
-        --secondary: var(--color-secondary-100);
-        --secondary-foreground: var(--color-neutral-900);
-        --destructive: var(--color-destructive-600);
-        --destructive-foreground: var(--color-neutral-0);
-        --accent: var(--secondary);
-        --accent-foreground: var(--secondary-foreground);
+        /**
+         * @tokens Forms/Input, Forms/Select, Forms/Input Group
+         */
+        --krd-inputs-padding-block: 0.375rem;
+        --krd-inputs-padding-inline: 0.75rem;
+        --krd-inputs-border-width: 1px;
+        --krd-inputs-border-style: solid;
+        --krd-inputs-group-border-overlap: 1px;
+        --krd-inputs-group-focus-z-index: 5;
+        --krd-inputs-select-multiple-min-block-size: 8rem;
+        --krd-inputs-border-radius: var(--krd-radius-sm);
+        --krd-inputs-font-size: var(--krd-typography-body-text-font-size);
+        --krd-inputs-line-height: var(--krd-typography-base-line-height);
+        --krd-inputs-background-color: var(--krd-color-surface);
+        --krd-inputs-color: var(--krd-color-foreground);
+        --krd-inputs-border-color: var(--krd-color-input);
+        --krd-inputs-focus-border-color: var(--krd-color-input);
+
+        /**
+         * @tokens Layout/Container
+         * @presenter Spacing
+         */
+        --krd-layout-container-max-width: 1080px;
+        --krd-layout-container-spacer: var(--krd-space-4);
+
+        /**
+         * @tokens Layout/Grid
+         * @presenter Spacing
+         */
+        --krd-layout-grid-spacing: var(--krd-space-6);
+
+        --krd-links-text-decoration-line: underline;
+        --krd-links-text-decoration-line-hover: underline;
+        --krd-links-text-decoration-style: solid;
+        --krd-links-text-decoration-style-hover: dashed;
+        --krd-links-text-decoration-thickness: 0.125rem;
+        --krd-links-text-decoration-thickness-hover: 0.1875rem;
+        --krd-links-text-underline-offset: 0.1563rem;
+        --krd-links-text-underline-offset-hover: 0.0938rem;
+        --krd-links-font-family: inherit;
+        --krd-links-font-size: inherit;
+        --krd-links-font-weight: inherit;
+        --krd-links-line-height: inherit;
+        --krd-links-color: var(--krd-color-foreground);
+        --krd-links-hover-color: var(--krd-color-foreground);
     }
 
     .light {

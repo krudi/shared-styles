@@ -1,512 +1,590 @@
 @layer variables {
     :root {
-        /* Spacings */
-        --spacer-0: 0;
-        --spacer-1: 0.5rem;
-        --spacer-2: 0.75rem;
-        --spacer-3: 0.875rem;
-        --spacer-4: 1rem;
-        --spacer-5: 1.25rem;
-        --spacer-6: 1.5rem;
-        --spacer-7: 1.75rem;
-        --spacer-8: 2rem;
-        --spacer-9: 2.5rem;
-        --spacer-10: 4rem;
-        --spacer-11: 8rem;
+        /*
+            System tokens
+            Public `--krd-*` tokens are defined directly in `palette.css`,
+            `theme.css`, and this file. This layer defines the component and
+            composed values used by the CSS package itself.
+        */
 
-        /* Grid spacings */
-        --grid-spacing: var(--spacer-6);
+        /**
+         * @tokens Components/Accordion
+         */
+        --krd-accordion-details-background-color: transparent;
+        --krd-accordion-details-border-bottom-width: 1px;
+        --krd-accordion-details-border-bottom-style: solid;
+        --krd-accordion-summary-font-weight: 500;
+        --krd-accordion-icon-width: 1rem;
+        --krd-accordion-icon-height: 1rem;
 
-        /* Container spacings */
-        --container-spacer: var(--spacer-4);
-        --container-max-width: 1080px;
+        /**
+         * @tokens Components/Alert
+         */
+        --krd-alert-padding-block: 0.875rem;
+        --krd-alert-padding-inline: 1rem;
+        --krd-alert-border-width: 1px;
+        --krd-alert-border-style: solid;
 
-        /* Heading font size */
-        --heading-1: clamp(calc(var(--body-font-size) * 1.6), 2.8vw, calc(var(--body-font-size) * 1.8));
-        --heading-2: clamp(calc(var(--body-font-size) * 1.4), 2.4vw, calc(var(--body-font-size) * 1.6));
-        --heading-3: clamp(calc(var(--body-font-size) * 1.2), 2vw, calc(var(--body-font-size) * 1.4));
-        --heading-4: clamp(var(--body-font-size), 1.8vw, calc(var(--body-font-size) * 1.2));
-        --heading-5: var(--body-font-size);
-        --heading-6: var(--body-font-size);
-        --heading-font-weight: 500;
-        --heading-line-height: var(--base-line-height);
-        --heading-margin-block-end: 0;
-        --heading-font-family:
-            -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
-            'Segoe UI Emoji', 'Segoe UI Symbol';
+        /**
+         * @tokens Components/Badges
+         */
+        --krd-badge-padding-block: 0.25rem;
+        --krd-badge-padding-inline: 0.5rem;
+        --krd-badge-font-weight: 600;
+        --krd-badge-border-radius: var(--krd-radius-sm);
+        --krd-badge-font-size: var(--krd-typography-font-size-xs);
+        --krd-badge-line-height: var(--krd-typography-base-line-height);
 
-        /* Font size */
-        --fs-xs: 0.75rem;
-        --fs-sm: 1rem;
-        --fs-md: 1.25rem;
-        --fs-lg: clamp(1.125rem, 2.2vw, 1.5rem);
-        --fs-xl: clamp(1.25rem, 2.2vw, 1.765rem);
+        /**
+         * @tokens Components/Button
+         */
+        --krd-button-letter-spacing: 0;
+        --krd-button-text-transform: none;
+        --krd-button-font-weight: 500;
+        --krd-button-border-width: 1px;
+        --krd-button-border-style: solid;
+        --krd-button-disabled-opacity: 0.6;
+        --krd-button-padding-block: var(--krd-space-1);
+        --krd-button-padding-inline: var(--krd-space-2);
+        --krd-button-gap: var(--krd-space-2);
+        --krd-button-border-radius: var(--krd-radius-sm);
+        --krd-button-font-size: var(--krd-typography-body-text-font-size);
+        --krd-button-line-height: var(--krd-typography-base-line-height);
+        --krd-button-icon-padding-block: var(--krd-space-1);
+        --krd-button-icon-padding-inline: var(--krd-space-2);
+        --krd-button-link-padding-block: var(--krd-space-0);
+        --krd-button-link-padding-inline: var(--krd-space-0);
+        --krd-button-sm-padding-block: var(--krd-space-1);
+        --krd-button-sm-padding-inline: var(--krd-space-1);
+        --krd-button-sm-border-radius: var(--krd-radius-sm);
+        --krd-button-border-color: var(--krd-color-border);
+        --krd-button-icon-color: var(--krd-color-foreground);
+        --krd-button-icon-line-height: var(--krd-button-line-height);
+        --krd-button-link-color: var(--krd-color-foreground);
 
-        /* Link */
-        --a-color: var(--foreground);
-        --a-color-hover: var(--foreground);
-        --a-text-decoration-line: underline;
-        --a-text-decoration-line-hover: underline;
-        --a-text-decoration-style: solid;
-        --a-text-decoration-style-hover: dashed;
-        --a-text-decoration-thickness: 0.0625rem;
-        --a-text-underline-offset: 0.0625rem;
-        --a-font-size: var(--body-font-size);
-        --a-font-weight: inherit;
-        --a-line-height: var(--base-line-height);
+        /**
+         * @tokens Components/Card
+         */
+        --krd-card-border-width: 1px;
+        --krd-card-border-style: solid;
+        --krd-card-border-radius: var(--krd-radius-sm);
+        --krd-card-box-shadow: var(--krd-elevation-sm);
+        --krd-card-padding-block: var(--krd-space-4);
+        --krd-card-padding-inline: var(--krd-space-4);
+        --krd-card-gap: var(--krd-space-4);
+        --krd-card-background-color: var(--krd-color-surface);
+        --krd-card-color: var(--krd-color-foreground);
+        --krd-card-border-color: var(--krd-color-border);
 
-        /* Paraphraph */
-        --p-margin-block-start: var(--spacer-2);
-        --p-line-height: var(--base-line-height);
-        --p-font-size: var(--body-font-size);
-        --p-color: var(--foreground);
+        /**
+         * @tokens Components/Modal
+         */
+        --krd-modal-max-width: 50rem;
+        --krd-modal-border-width: 1px;
+        --krd-modal-border-style: solid;
+        --krd-modal-padding-block: 2rem;
+        --krd-modal-padding-inline: 2rem;
+        --krd-modal-backdrop: hsl(0deg 0 0 / 50%);
+        --krd-modal-body-padding-block-start: 2rem;
+        --krd-modal-footer-padding-block-start: 2rem;
+        --krd-modal-border-radius: var(--krd-radius-sm);
+        --krd-modal-close-inset-inline-end: calc(var(--krd-modal-padding-inline) / 2);
+        --krd-modal-close-inset-block-start: calc(var(--krd-modal-padding-block) / 2);
+        --krd-modal-background-color: var(--krd-color-surface);
+        --krd-modal-border-color: var(--krd-color-border);
+        --krd-modal-color: var(--krd-color-foreground);
 
-        /* Svg */
-        --svg-width: 1em;
-        --svg-height: 1em;
+        /**
+         * @tokens Components/Pagination
+         */
+        --krd-pagination-item-width: 2.625rem;
+        --krd-pagination-item-height: 2.625rem;
+        --krd-pagination-border-width: 0;
+        --krd-pagination-border-style: solid;
+        --krd-pagination-border-color: transparent;
+        --krd-pagination-border-width-active: 1px;
+        --krd-pagination-font-weight: 500;
+        --krd-pagination-item-padding-inline: 0.5rem;
+        --krd-pagination-control-padding-inline: 0.75rem;
+        --krd-pagination-control-gap: var(--krd-space-1);
+        --krd-pagination-border-radius: var(--krd-radius-sm);
+        --krd-pagination-border-color-active: var(--krd-color-border);
+        --krd-pagination-background-color: var(--krd-color-surface);
+        --krd-pagination-background-color-hover: var(--krd-color-surface-subtle);
+        --krd-pagination-color: var(--krd-color-foreground);
 
-        /* Utilities */
-        --base-line-height: 1.4;
-        --transition-duration-fast: 0.15s;
-        --transition-duration: 0.3s;
-        --transition-duration-slow: 0.45s;
-        --transition-decorative-duration: 0.1s;
-        --transition-ease: ease-in-out;
-        --transition-default: var(--transition-duration);
-        --focus-default: 0 0 0 0.125em var(--background), 0 0 0 0.25em var(--ring);
-        --outline-size: max(2px, 0.08em);
-        --outline-style: solid;
-        --outline-color: currentcolor;
-        --outline-offset: max(2px, 0.08em);
-        --outline-offset-tight: 0.125rem;
+        /**
+         * @tokens Components/Tabs
+         */
+        --krd-tabs-trigger-padding-inline: var(--krd-space-5);
+        --krd-tabs-panel-padding: var(--krd-space-6);
 
-        /* Border Radius */
-        --border-radius-xs: 0.25rem;
-        --border-radius-sm: 0.5rem;
-        --border-radius-md: 1rem;
-        --border-radius-lg: 1.5rem;
-        --border-radius-xl: 2rem;
-        --border-radius-full: 50%;
-
-        /* Box-shadow */
-        --shadow-sm: 0 0.25rem 0.75rem -0.5rem rgb(0 0 0 / 12%);
-        --shadow-md: 0 0.375rem 1rem -0.5rem rgb(0 0 0 / 10%);
-        --shadow-lg: 0 0.5rem 1.5rem -0.75rem rgb(0 0 0 / 12%);
+        /**
+         * @tokens Base/Typography
+         */
+        /* Typography */
+        --krd-typography-hyphenate-limit-chars: auto;
 
         /* Body */
-        --body-background-color: var(--background);
-        --body-line-height: var(--base-line-height);
-        --body-color: var(--foreground);
-        --body-font-size: var(--fs-md);
-        --body-font-family:
-            -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
-            'Segoe UI Emoji', 'Segoe UI Symbol';
+        --krd-body-font-size-sm: var(--krd-typography-body-text-font-size-sm);
+        --krd-body-font-size: var(--krd-typography-body-text-font-size);
+        --krd-body-font-size-lg: var(--krd-typography-body-text-font-size-lg);
+        --krd-body-font-size-xl: var(--krd-typography-body-text-font-size-xl);
+        --krd-body-line-height-sm: var(--krd-typography-body-text-line-height-sm);
+        --krd-body-line-height: var(--krd-typography-body-text-line-height);
+        --krd-body-line-height-lg: var(--krd-typography-body-text-line-height-lg);
+        --krd-body-line-height-xl: var(--krd-typography-body-text-line-height-xl);
+        --krd-body-font-weight: var(--krd-typography-body-text-font-weight);
+
+        /* Headings */
+        --krd-heading-1: var(--krd-typography-heading-1);
+        --krd-heading-2: var(--krd-body-font-size-xl);
+        --krd-heading-3: var(--krd-body-font-size-lg);
+        --krd-heading-4: var(--krd-body-font-size);
+        --krd-heading-5: var(--krd-body-font-size-sm);
+        --krd-heading-6: var(--krd-body-font-size-sm);
+        --krd-heading-font-weight: var(--krd-typography-heading-font-weight);
+        --krd-heading-1-line-height: var(--krd-typography-heading-line-height-1);
+        --krd-heading-2-line-height: var(--krd-typography-heading-line-height-2);
+        --krd-heading-3-line-height: var(--krd-typography-heading-line-height-3);
+        --krd-heading-4-line-height: var(--krd-typography-heading-line-height-4);
+        --krd-heading-5-line-height: var(--krd-typography-heading-line-height-5);
+        --krd-heading-6-line-height: var(--krd-typography-heading-line-height-6);
+        --krd-heading-line-height: var(--krd-typography-heading-line-height);
+        --krd-heading-margin-block-end: var(--krd-typography-heading-margin-block-end);
+        --krd-heading-text-wrap: var(--krd-typography-heading-text-wrap);
+        --krd-heading-font-family: var(--krd-typography-heading-font-family);
+
+        /* Font size */
+        --krd-font-size-xs: var(--krd-typography-font-size-xs);
+        --krd-font-size-sm: var(--krd-typography-font-size-sm);
+        --krd-font-size-md: var(--krd-body-font-size);
+        --krd-font-size-lg: var(--krd-typography-font-size-lg);
+        --krd-font-size-xl: var(--krd-typography-font-size-xl);
+
+        /* Link */
+        --krd-a-color: var(--krd-links-color);
+        --krd-a-color-hover: var(--krd-links-hover-color);
+        --krd-a-text-decoration-line: var(--krd-links-text-decoration-line);
+        --krd-a-text-decoration-line-hover: var(--krd-links-text-decoration-line-hover);
+        --krd-a-text-decoration-style: var(--krd-links-text-decoration-style);
+        --krd-a-text-decoration-style-hover: var(--krd-links-text-decoration-style-hover);
+        --krd-a-text-decoration-thickness: var(--krd-links-text-decoration-thickness);
+        --krd-a-text-decoration-thickness-hover: var(--krd-links-text-decoration-thickness-hover);
+        --krd-a-text-underline-offset: var(--krd-links-text-underline-offset);
+        --krd-a-text-underline-offset-hover: var(--krd-links-text-underline-offset-hover);
+        --krd-a-font-family: var(--krd-links-font-family);
+        --krd-a-font-size: var(--krd-links-font-size);
+        --krd-a-font-weight: var(--krd-links-font-weight);
+        --krd-a-line-height: var(--krd-links-line-height);
+
+        /* Paraphraph */
+        --krd-p-margin-block-start: var(--krd-space-2);
+        --krd-p-font-family: var(--krd-body-font-family);
+        --krd-p-font-size: var(--krd-body-font-size);
+        --krd-p-font-size-sm: var(--krd-body-font-size-sm);
+        --krd-p-font-size-lg: var(--krd-body-font-size-lg);
+        --krd-p-font-weight: var(--krd-body-font-weight);
+        --krd-p-line-height: var(--krd-body-line-height);
+        --krd-p-line-height-sm: var(--krd-body-line-height-sm);
+        --krd-p-line-height-lg: var(--krd-body-line-height-lg);
+        --krd-p-color: var(--krd-color-foreground);
+
+        /* Svg */
+        --krd-svg-width: 1em;
+        --krd-svg-height: 1em;
+
+        /* Utilities */
+        --krd-base-line-height: var(--krd-typography-base-line-height);
+        --krd-transition-duration-fast: 0.15s;
+        --krd-transition-duration: 0.3s;
+        --krd-transition-duration-slow: 0.45s;
+        --krd-transition-decorative-duration: 0.1s;
+        --krd-transition-ease: ease-in-out;
+        --krd-transition-default: var(--krd-transition-duration);
+        --krd-focus-default: var(--krd-focus);
+        --krd-outline-size: var(--krd-focus-outline-size);
+        --krd-outline-style: var(--krd-focus-outline-style);
+        --krd-outline-color: var(--krd-focus-outline-color);
+        --krd-outline-offset: var(--krd-focus-outline-offset);
+        --krd-outline-offset-tight: var(--krd-focus-outline-offset-tight);
+
+        /* Body */
+        --krd-body-background-color: var(--krd-color-background);
+        --krd-body-color: var(--krd-color-foreground);
+        --krd-body-font-family: var(--krd-typography-font-family);
 
         /* Z-index orders */
-        --z-index-navigation: 999;
-        --z-index-dropdown: 998;
-        --z-index-modal: 99990;
+        --krd-z-index-navigation: 999;
+        --krd-z-index-dropdown: 998;
+        --krd-z-index-modal: 99990;
 
         /*
             Elements
         */
 
+        /**
+         * @tokens Components/Modal
+         */
         /* Modal */
-        --modal-max-width: 50rem;
-        --modal-background-color: var(--surface);
-        --modal-border-radius: var(--border-radius-sm);
-        --modal-border-width: 1px;
-        --modal-border-style: solid;
-        --modal-border-color: var(--border);
-        --modal-padding-block: 2rem;
-        --modal-padding-inline: 2rem;
-        --modal-color: var(--body-color);
-        --modal-backdrop: hsl(0deg 0 0 / 50%);
-        --modal-body-padding-block-start: 2rem;
-        --modal-footer-padding-block-start: 2rem;
-        --modal-header-border-bottom-width: var(--modal-border-width);
-        --modal-header-border-bottom-style: var(--modal-border-style);
-        --modal-header-border-bottom-color: var(--modal-border-color);
-        --modal-footer-border-top-width: var(--modal-border-width);
-        --modal-footer-border-top-style: var(--modal-border-style);
-        --modal-footer-border-top-color: var(--modal-border-color);
-        --modal-close-inset-inline-end: calc(var(--modal-padding-inline) / 2);
-        --modal-close-inset-block-start: calc(var(--modal-padding-block) / 2);
+        --krd-modal-header-border-bottom-width: var(--krd-modal-border-width);
+        --krd-modal-header-border-bottom-style: var(--krd-modal-border-style);
+        --krd-modal-header-border-bottom-color: var(--krd-modal-border-color);
+        --krd-modal-footer-border-top-width: var(--krd-modal-border-width);
+        --krd-modal-footer-border-top-style: var(--krd-modal-border-style);
+        --krd-modal-footer-border-top-color: var(--krd-modal-border-color);
 
-        /* Badge */
-        --badge-padding-block: 0.25rem;
-        --badge-padding-inline: 0.5rem;
-        --badge-border-radius: var(--border-radius-sm);
-        --badge-font-size: var(--fs-xs);
-        --badge-font-weight: 600;
-        --badge-line-height: var(--base-line-height);
-
-        /* Button */
-        --button-padding-block: 0.5rem;
-        --button-padding-inline: 0.75rem;
-        --button-gap: var(--spacer-2);
-        --button-border-radius: var(--border-radius-sm);
-        --button-letter-spacing: 0;
-        --button-text-transform: none;
-        --button-font-size: var(--body-font-size);
-        --button-font-weight: 500;
-        --button-line-height: var(--base-line-height);
-        --button-border-width: 1px;
-        --button-border-style: solid;
-        --button-border-color: var(--border);
-        --button-disabled-opacity: 0.6;
-
-        /* Button sizes */
-        --button-sm-padding-block: 0.5rem;
-        --button-sm-padding-inline: 0.5rem;
-        --button-sm-border-radius: var(--border-radius-sm);
-
-        /* Button with icon */
-        --button-icon-padding-block: 0.5rem;
-        --button-icon-padding-inline: 0.75rem;
-        --button-icon-color: var(--foreground);
-        --button-icon-line-height: var(--button-line-height);
-
-        /* Button as a link */
-        --button-link-padding-block: 0;
-        --button-link-padding-inline: 0;
-        --button-link-color: var(--foreground);
-
+        /**
+         * @tokens Components/Blockquote
+         */
         /* Blockquote */
-        --blockquote-padding-block: 1.5rem;
-        --blockquote-padding-inline: 1.5rem;
-        --blockquote-border-width: 0.25rem;
-        --blockquote-quote-gap: 0.25rem;
+        --krd-blockquote-padding-block: 1.5rem;
+        --krd-blockquote-padding-inline: 1.5rem;
+        --krd-blockquote-border-width: 0.25rem;
+        --krd-blockquote-quote-gap: 0.25rem;
 
+        /**
+         * @tokens Components/Accordion
+         */
         /* Accordion */
-        --accordion-details-background-color: transparent;
-        --accordion-details-color: var(--surface-foreground);
-        --accordion-details-border-width: 0;
-        --accordion-details-border-style: solid;
-        --accordion-details-border-color: transparent;
-        --accordion-details-border-radius: 0;
-        --accordion-details-border-bottom-width: 1px;
-        --accordion-details-border-bottom-style: solid;
-        --accordion-details-border-bottom-color: var(--border);
-        --accordion-details-border-bottom-width-contrast: max(2px, 1px);
-        --accordion-details-border-bottom-color-contrast: currentcolor;
-        --accordion-summary-padding-block: 1rem;
-        --accordion-summary-padding-inline: 0;
-        --accordion-summary-gap: var(--spacer-4);
-        --accordion-summary-color: var(--surface-foreground);
-        --accordion-summary-font-size: var(--body-font-size);
-        --accordion-summary-font-weight: 500;
-        --accordion-summary-line-height: var(--base-line-height);
-        --accordion-text-color: var(--surface-foreground);
-        --accordion-icon-width: 1rem;
-        --accordion-icon-height: 1rem;
-        --accordion-icon-color: var(--surface-foreground);
-        --accordion-content-padding-block: 1rem;
-        --accordion-content-padding-inline: 0;
-        --accordion-content-font-size: var(--body-font-size);
-        --accordion-content-line-height: var(--base-line-height);
+        --krd-accordion-details-border-width: 0;
+        --krd-accordion-details-border-style: solid;
+        --krd-accordion-details-border-color: transparent;
+        --krd-accordion-details-border-radius: 0;
+        --krd-accordion-details-border-bottom-width-contrast: max(2px, 1px);
+        --krd-accordion-details-border-bottom-color-contrast: currentcolor;
+        --krd-accordion-summary-padding-inline: 0;
+        --krd-accordion-text-color: var(--krd-color-surface-foreground);
+        --krd-accordion-content-padding-inline: 0;
 
+        /**
+         * @tokens Components/Alert
+         */
         /* Alert */
-        --alert-margin-block-block: var(--spacer-6);
-        --alert-padding-block: 0.875rem;
-        --alert-padding-inline: 1rem;
-        --alert-gap: var(--spacer-1);
-        --alert-border-radius: var(--border-radius-sm);
-        --alert-background-color: var(--surface-subtle);
-        --alert-color: var(--surface-foreground);
-        --alert-border-width: 1px;
-        --alert-border-style: solid;
-        --alert-border-color: var(--border);
-        --alert-destructive-background-color: color-mix(in srgb, var(--destructive) 10%, var(--background));
-        --alert-destructive-color: var(--destructive);
-        --alert-destructive-border-color: color-mix(in srgb, var(--destructive) 28%, var(--background));
-        --alert-title-font-size: var(--body-font-size);
-        --alert-title-font-weight: 600;
-        --alert-title-line-height: var(--base-line-height);
-        --alert-title-color: currentcolor;
-        --alert-description-color: var(--muted-foreground);
+        --krd-alert-margin-block-block: var(--krd-alert-margin-block);
+        --krd-alert-destructive-background-color: color-mix(in srgb, var(--krd-color-destructive) 10%, var(--krd-color-background));
+        --krd-alert-destructive-color: var(--krd-color-destructive);
+        --krd-alert-destructive-border-color: color-mix(in srgb, var(--krd-color-destructive) 28%, var(--krd-color-background));
+        --krd-alert-title-font-size: var(--krd-body-font-size);
+        --krd-alert-title-font-weight: 600;
+        --krd-alert-title-line-height: var(--krd-base-line-height);
+        --krd-alert-title-color: currentcolor;
+        --krd-alert-description-color: var(--krd-color-muted-foreground);
 
+        /**
+         * @tokens Components/Card
+         */
         /* Card */
-        --card-background-color: var(--surface);
-        --card-color: var(--body-color);
-        --card-border-width: 1px;
-        --card-border-style: solid;
-        --card-border-color: var(--border);
-        --card-border-radius: var(--border-radius-sm);
-        --card-box-shadow: var(--shadow-sm);
-        --card-padding-block: 1rem;
-        --card-padding-inline: 1rem;
-        --card-gap: var(--spacer-4);
-        --card-subtitle-font-size: var(--fs-xs);
-        --card-subtitle-font-weight: 600;
-        --card-subtitle-line-height: var(--base-line-height);
-        --card-subtitle-letter-spacing: 0.04em;
-        --card-subtitle-text-transform: uppercase;
-        --card-subtitle-color: var(--muted-foreground);
-        --card-title-font-size: var(--heading-5);
-        --card-title-font-weight: 600;
-        --card-title-line-height: var(--heading-line-height);
-        --card-title-color: currentcolor;
-        --card-description-color: var(--muted-foreground);
-        --card-content-body-description-color: var(--card-description-color);
-        --card-media-border-radius: calc(var(--card-border-radius) - 1px);
+        --krd-card-subtitle-font-size: var(--krd-font-size-xs);
+        --krd-card-subtitle-font-weight: 600;
+        --krd-card-subtitle-line-height: var(--krd-base-line-height);
+        --krd-card-subtitle-letter-spacing: 0.04em;
+        --krd-card-subtitle-text-transform: uppercase;
+        --krd-card-subtitle-color: var(--krd-color-muted-foreground);
+        --krd-card-title-font-size: var(--krd-heading-5);
+        --krd-card-title-font-weight: 600;
+        --krd-card-title-line-height: var(--krd-heading-5-line-height);
+        --krd-card-title-color: currentcolor;
+        --krd-card-description-color: var(--krd-color-muted-foreground);
+        --krd-card-content-body-description-color: var(--krd-card-description-color);
+        --krd-card-media-border-radius: calc(var(--krd-card-border-radius) - 1px);
 
+        /**
+         * @tokens Components/Block Navigation
+         */
         /* Block Navigation */
-        --block-navigation-gap: var(--spacer-4);
-        --block-navigation-columns: 1;
-        --block-navigation-item-min-height: 7.5rem;
-        --block-navigation-item-padding-block: 1rem;
-        --block-navigation-item-padding-inline: 1rem;
-        --block-navigation-item-background-color: var(--surface);
-        --block-navigation-item-background-color-hover: var(--surface-subtle);
-        --block-navigation-item-color: var(--surface-foreground);
-        --block-navigation-item-border-width: 1px;
-        --block-navigation-item-border-style: solid;
-        --block-navigation-item-border-color: var(--border);
-        --block-navigation-item-border-color-hover: var(--border);
-        --block-navigation-item-border-radius: var(--border-radius-sm);
-        --block-navigation-item-box-shadow-hover: var(--shadow-sm);
-        --block-navigation-item-text-decoration-thickness: 0.125rem;
-        --block-navigation-item-text-underline-offset: 0.2em;
-        --block-navigation-item-font-size: var(--heading-4);
-        --block-navigation-item-font-weight: 500;
-        --block-navigation-item-line-height: var(--heading-line-height);
+        --krd-block-navigation-gap: var(--krd-space-4);
+        --krd-block-navigation-columns: 1;
+        --krd-block-navigation-item-min-height: 7.5rem;
+        --krd-block-navigation-item-padding-block: 1rem;
+        --krd-block-navigation-item-padding-inline: 1rem;
+        --krd-block-navigation-item-background-color: var(--krd-color-surface);
+        --krd-block-navigation-item-background-color-hover: var(--krd-color-surface-subtle);
+        --krd-block-navigation-item-color: var(--krd-color-surface-foreground);
+        --krd-block-navigation-item-border-width: 1px;
+        --krd-block-navigation-item-border-style: solid;
+        --krd-block-navigation-item-border-color: var(--krd-color-border);
+        --krd-block-navigation-item-border-color-hover: var(--krd-color-border);
+        --krd-block-navigation-item-border-radius: var(--krd-radius-sm);
+        --krd-block-navigation-item-box-shadow-hover: var(--krd-elevation-sm);
+        --krd-block-navigation-item-text-decoration-thickness: 0.125rem;
+        --krd-block-navigation-item-text-underline-offset: 0.2em;
+        --krd-block-navigation-item-font-size: var(--krd-heading-4);
+        --krd-block-navigation-item-font-weight: 500;
+        --krd-block-navigation-item-line-height: var(--krd-heading-4-line-height);
 
-        /* Pagination */
-        --pagination-item-width: 2.625rem;
-        --pagination-item-height: 2.625rem;
-        --pagination-border-width: 0;
-        --pagination-border-style: solid;
-        --pagination-border-color: transparent;
-        --pagination-border-width-active: 1px;
-        --pagination-border-color-active: var(--border);
-        --pagination-background-color: var(--surface);
-        --pagination-background-color-hover: var(--surface-subtle);
-        --pagination-color: var(--foreground);
-        --pagination-font-weight: 500;
-        --pagination-item-padding-inline: 0.5rem;
-        --pagination-control-gap: var(--spacer-1);
-        --pagination-control-padding-inline: 0.75rem;
-        --pagination-border-radius: var(--border-radius-sm);
-
+        /**
+         * @tokens Forms/Fieldset
+         */
         /* Forms: Fieldset */
-        --form-fieldset-padding-block: 1.25rem;
-        --form-fieldset-padding-inline: 1.25rem;
-        --form-fieldset-margin-block-start: var(--spacer-8);
-        --form-fieldset-background-color: var(--surface);
-        --form-fieldset-border-radius: var(--border-radius-sm);
-        --form-fieldset-border-width: 1px;
-        --form-fieldset-border-style: solid;
-        --form-fieldset-border-color: var(--border);
-        --form-fieldset-border-color-valid: var(--accent);
+        --krd-form-fieldset-padding-block: 1.25rem;
+        --krd-form-fieldset-padding-inline: 1.25rem;
+        --krd-form-fieldset-margin-block-start: var(--krd-space-8);
+        --krd-form-fieldset-background-color: var(--krd-color-surface);
+        --krd-form-fieldset-border-radius: var(--krd-radius-sm);
+        --krd-form-fieldset-border-width: 1px;
+        --krd-form-fieldset-border-style: solid;
+        --krd-form-fieldset-border-color: var(--krd-color-border);
+        --krd-form-fieldset-border-color-valid: var(--krd-color-accent);
 
+        /**
+         * @tokens Forms/Legend
+         */
         /* Forms: Legend */
-        --form-legend-margin-block-end: var(--spacer-4);
-        --form-legend-form-weight: 500;
-        --form-legend-form-size: var(--body-font-size);
-        --form-legend-line-height: var(--base-line-height);
+        --krd-form-legend-margin-block-end: var(--krd-space-4);
+        --krd-form-legend-form-weight: 500;
+        --krd-form-legend-form-size: var(--krd-body-font-size);
+        --krd-form-legend-line-height: var(--krd-base-line-height);
 
+        /**
+         * @tokens Forms/Input, Forms/Select, Forms/Input Group
+         */
         /* Forms: Input */
-        --form-input-padding-block: 0.375rem;
-        --form-input-padding-inline: 0.75rem;
-        --form-input-background-color: var(--surface);
-        --form-input-color: var(--body-color);
-        --form-input-border-width: 1px;
-        --form-input-border-style: solid;
-        --form-input-border-color: var(--input);
-        --form-input-border-radius: var(--border-radius-sm);
-        --form-input-font-size: var(--body-font-size);
-        --form-input-line-height: var(--base-line-height);
-        --form-input-border-color-focus: var(--input);
-        --form-select-multiple-min-block-size: 8rem;
-        --form-input-group-border-overlap: 1px;
-        --form-input-group-focus-z-index: 5;
+        --krd-form-input-padding-block: var(--krd-inputs-padding-block);
+        --krd-form-input-padding-inline: var(--krd-inputs-padding-inline);
+        --krd-form-input-background-color: var(--krd-inputs-background-color);
+        --krd-form-input-color: var(--krd-inputs-color);
+        --krd-form-input-border-width: var(--krd-inputs-border-width);
+        --krd-form-input-border-style: var(--krd-inputs-border-style);
+        --krd-form-input-border-color: var(--krd-inputs-border-color);
+        --krd-form-input-border-radius: var(--krd-inputs-border-radius);
+        --krd-form-input-font-size: var(--krd-inputs-font-size);
+        --krd-form-input-line-height: var(--krd-inputs-line-height);
+        --krd-form-input-border-color-focus: var(--krd-inputs-focus-border-color);
+        --krd-form-select-multiple-min-block-size: var(--krd-inputs-select-multiple-min-block-size);
+        --krd-form-input-group-border-overlap: var(--krd-inputs-group-border-overlap);
+        --krd-form-input-group-focus-z-index: var(--krd-inputs-group-focus-z-index);
 
+        /**
+         * @tokens Forms/Radio
+         */
         /* Form: Radio */
-        --form-radio-margin-block-end: var(--spacer-1);
-        --form-radio-label-gap: var(--spacer-1);
-        --form-radio-input-width: 1rem;
-        --form-radio-input-height: 1rem;
-        --form-radio-input-background-color: var(--form-input-background-color);
-        --form-radio-input-background-color-active: var(--primary);
-        --form-radio-input-border-width: 1px;
-        --form-radio-input-border-style: solid;
-        --form-radio-input-border-color: var(--input);
-        --form-radio-input-border-width-active: var(--form-radio-input-border-width);
-        --form-radio-input-border-style-active: var(--form-radio-input-border-style);
-        --form-radio-input-border-color-active: var(--primary);
-        --form-radio-input-indicator-width: 0.5rem;
-        --form-radio-input-indicator-height: 0.5rem;
-        --form-radio-input-indicator-color: var(--primary-foreground);
-        --form-radio-input-border-radius: var(--border-radius-full);
+        --krd-form-radio-margin-block-end: var(--krd-space-1);
+        --krd-form-radio-label-gap: var(--krd-space-1);
+        --krd-form-radio-input-width: 1rem;
+        --krd-form-radio-input-height: 1rem;
+        --krd-form-radio-input-background-color: var(--krd-form-input-background-color);
+        --krd-form-radio-input-background-color-active: var(--krd-color-primary);
+        --krd-form-radio-input-border-width: 1px;
+        --krd-form-radio-input-border-style: solid;
+        --krd-form-radio-input-border-color: var(--krd-color-input);
+        --krd-form-radio-input-border-width-active: var(--krd-form-radio-input-border-width);
+        --krd-form-radio-input-border-style-active: var(--krd-form-radio-input-border-style);
+        --krd-form-radio-input-border-color-active: var(--krd-color-primary);
+        --krd-form-radio-input-indicator-width: 0.5rem;
+        --krd-form-radio-input-indicator-height: 0.5rem;
+        --krd-form-radio-input-indicator-color: var(--krd-color-primary-foreground);
+        --krd-form-radio-input-border-radius: var(--krd-radius-full);
 
+        /**
+         * @tokens Forms/Checkbox
+         */
         /* Form: Checkbox */
-        --form-checkbox-margin-block-end: var(--spacer-1);
-        --form-checkbox-label-gap: var(--spacer-1);
-        --form-checkbox-input-width: 1rem;
-        --form-checkbox-input-height: 1rem;
-        --form-checkbox-input-background-color: var(--form-input-background-color);
-        --form-checkbox-input-background-color-active: var(--primary);
-        --form-checkbox-input-border-width: 1px;
-        --form-checkbox-input-border-style: solid;
-        --form-checkbox-input-border-color: var(--input);
-        --form-checkbox-input-border-width-active: var(--form-checkbox-input-border-width);
-        --form-checkbox-input-border-style-active: var(--form-checkbox-input-border-style);
-        --form-checkbox-input-border-color-active: var(--primary);
-        --form-checkbox-input-indicator-width: 0.3125rem;
-        --form-checkbox-input-indicator-height: 0.5625rem;
-        --form-checkbox-input-indicator-translate-block: -0.0625rem;
-        --form-checkbox-input-indicator-border-right-width: 2px;
-        --form-checkbox-input-indicator-border-right-style: solid;
-        --form-checkbox-input-indicator-border-right-color: var(--primary-foreground);
-        --form-checkbox-input-indicator-border-bottom-width: 2px;
-        --form-checkbox-input-indicator-border-bottom-style: solid;
-        --form-checkbox-input-indicator-border-bottom-color: var(--primary-foreground);
-        --form-checkbox-input-indicator-color: var(--primary-foreground);
-        --form-checkbox-input-border-radius: 0.125rem;
+        --krd-form-checkbox-margin-block-end: var(--krd-space-1);
+        --krd-form-checkbox-label-gap: var(--krd-space-1);
+        --krd-form-checkbox-input-width: 1rem;
+        --krd-form-checkbox-input-height: 1rem;
+        --krd-form-checkbox-input-background-color: var(--krd-form-input-background-color);
+        --krd-form-checkbox-input-background-color-active: var(--krd-color-primary);
+        --krd-form-checkbox-input-border-width: 1px;
+        --krd-form-checkbox-input-border-style: solid;
+        --krd-form-checkbox-input-border-color: var(--krd-color-input);
+        --krd-form-checkbox-input-border-width-active: var(--krd-form-checkbox-input-border-width);
+        --krd-form-checkbox-input-border-style-active: var(--krd-form-checkbox-input-border-style);
+        --krd-form-checkbox-input-border-color-active: var(--krd-color-primary);
+        --krd-form-checkbox-input-indicator-width: 0.3125rem;
+        --krd-form-checkbox-input-indicator-height: 0.5625rem;
+        --krd-form-checkbox-input-indicator-translate-block: -0.0625rem;
+        --krd-form-checkbox-input-indicator-border-right-width: 2px;
+        --krd-form-checkbox-input-indicator-border-right-style: solid;
+        --krd-form-checkbox-input-indicator-border-right-color: var(--krd-color-primary-foreground);
+        --krd-form-checkbox-input-indicator-border-bottom-width: 2px;
+        --krd-form-checkbox-input-indicator-border-bottom-style: solid;
+        --krd-form-checkbox-input-indicator-border-bottom-color: var(--krd-color-primary-foreground);
+        --krd-form-checkbox-input-indicator-color: var(--krd-color-primary-foreground);
+        --krd-form-checkbox-input-border-radius: 0.125rem;
 
         /* Form: Datalist */
-        --form-datalist-margin-block-start: var(--spacer-1);
-        --form-datalist-padding-block: 0.5rem;
-        --form-datalist-padding-inline: 0.5rem;
-        --form-datalist-background-color: var(--surface);
-        --form-datalist-border-width: 1px;
-        --form-datalist-border-style: solid;
-        --form-datalist-border-color: var(--form-input-border-color-focus);
-        --form-datalist-border-radius: var(--form-input-border-radius);
-        --form-datalist-option-padding-block: 0.5rem;
-        --form-datalist-option-padding-inline: 0.5rem;
-        --form-datalist-option-background-color: var(--surface);
-        --form-datalist-option-background-color-hover: var(--surface-subtle-hover);
+        --krd-form-datalist-margin-block-start: var(--krd-space-1);
+        --krd-form-datalist-padding-block: 0.5rem;
+        --krd-form-datalist-padding-inline: 0.5rem;
+        --krd-form-datalist-background-color: var(--krd-color-surface);
+        --krd-form-datalist-border-width: 1px;
+        --krd-form-datalist-border-style: solid;
+        --krd-form-datalist-border-color: var(--krd-form-input-border-color-focus);
+        --krd-form-datalist-border-radius: var(--krd-form-input-border-radius);
+        --krd-form-datalist-option-padding-block: 0.5rem;
+        --krd-form-datalist-option-padding-inline: 0.5rem;
+        --krd-form-datalist-option-background-color: var(--krd-color-surface);
+        --krd-form-datalist-option-background-color-hover: var(--krd-color-surface-subtle-hover);
 
+        /**
+         * @tokens Forms/Label
+         */
         /* Forms: Label */
-        --form-block-margin-block-end: var(--spacer-6);
-        --form-label-margin-block-end: var(--spacer-1);
-        --form-label-font-weight: 500;
-        --form-label-line-height: var(--base-line-height);
-        --form-label-required-font-weight: 700;
+        --krd-form-block-margin-block-end: var(--krd-space-6);
+        --krd-form-label-margin-block-end: var(--krd-space-1);
+        --krd-form-label-font-weight: 500;
+        --krd-form-label-line-height: var(--krd-base-line-height);
+        --krd-form-label-required-font-weight: 700;
 
+        /**
+         * @tokens Forms/Text
+         */
         /* Forms: Text */
-        --form-text-margin-block-start: var(--spacer-1);
-        --form-text-font-size: var(--fs-sm);
-        --form-text-line-height: var(--base-line-height);
-        --form-text-color: var(--foreground);
-        --form-text-hint-color: var(--muted-foreground);
-        --form-text-error-color: var(--destructive);
+        --krd-form-text-margin-block-start: var(--krd-space-1);
+        --krd-form-text-font-size: var(--krd-font-size-sm);
+        --krd-form-text-line-height: var(--krd-base-line-height);
+        --krd-form-text-color: var(--krd-color-foreground);
+        --krd-form-text-hint-color: var(--krd-color-muted-foreground);
+        --krd-form-text-error-color: var(--krd-color-destructive);
 
+        /**
+         * @tokens Components/Horizontal Line
+         */
         /* Horizontal Line */
-        --hr-height: 1px;
-        --hr-margin-block: var(--spacer-6);
-        --hr-background-color: var(--border);
-        --hr-opacity: 1;
+        --krd-hr-height: 1px;
+        --krd-hr-margin-block: var(--krd-space-6);
+        --krd-hr-background-color: var(--krd-color-border);
+        --krd-hr-opacity: 1;
 
+        /**
+         * @tokens Components/Dropdown
+         */
         /* Dropdown */
-        --dropdown-trigger-padding-block: 0.5rem;
-        --dropdown-trigger-padding-inline: 0.75rem;
-        --dropdown-trigger-border-width: 1px;
-        --dropdown-trigger-border-style: solid;
-        --dropdown-trigger-border-color: var(--input);
-        --dropdown-trigger-border-radius: var(--border-radius-sm);
-        --dropdown-trigger-background-color: var(--surface);
-        --dropdown-trigger-background-color-hover: var(--surface-subtle);
-        --dropdown-trigger-color: var(--foreground);
-        --dropdown-trigger-min-block-size: 2.5rem;
-        --dropdown-trigger-font-size: var(--body-font-size);
-        --dropdown-trigger-line-height: var(--base-line-height);
-        --dropdown-trigger-gap: var(--spacer-1);
-        --dropdown-trigger-letter-spacing: 0;
-        --dropdown-menu-list-padding-block: 0.5rem;
-        --dropdown-content-width: 192px;
-        --dropdown-content-margin-block-start: var(--spacer-2);
-        --dropdown-content-border-width: 1px;
-        --dropdown-content-border-style: solid;
-        --dropdown-content-border-color: var(--border);
-        --dropdown-content-border-radius: var(--border-radius-sm);
-        --dropdown-content-box-shadow: var(--shadow-md);
-        --dropdown-list-item-border-top-width: 1px;
-        --dropdown-list-item-border-top-style: solid;
-        --dropdown-list-item-border-top-color: var(--border);
-        --dropdown-list-item-border-top-width-first: 0;
-        --dropdown-item-text-padding-block: 0.5rem;
-        --dropdown-item-text-padding-inline: 0.75rem;
-        --dropdown-item-gap: var(--spacer-4);
-        --dropdown-item-text-font-size: var(--body-font-size);
-        --dropdown-item-text-font-weight: 400;
-        --dropdown-item-text-line-height: var(--base-line-height);
+        --krd-dropdown-trigger-padding-block: 0.5rem;
+        --krd-dropdown-trigger-padding-inline: 0.75rem;
+        --krd-dropdown-trigger-border-width: 1px;
+        --krd-dropdown-trigger-border-style: solid;
+        --krd-dropdown-trigger-border-color: var(--krd-color-input);
+        --krd-dropdown-trigger-border-radius: var(--krd-radius-sm);
+        --krd-dropdown-trigger-background-color: var(--krd-color-surface);
+        --krd-dropdown-trigger-background-color-hover: var(--krd-color-surface-subtle);
+        --krd-dropdown-trigger-color: var(--krd-color-foreground);
+        --krd-dropdown-trigger-min-block-size: 2.5rem;
+        --krd-dropdown-trigger-font-size: var(--krd-body-font-size);
+        --krd-dropdown-trigger-line-height: var(--krd-base-line-height);
+        --krd-dropdown-trigger-gap: var(--krd-space-1);
+        --krd-dropdown-trigger-letter-spacing: 0;
+        --krd-dropdown-menu-list-padding-block: 0.5rem;
+        --krd-dropdown-content-width: 192px;
+        --krd-dropdown-content-margin-block-start: var(--krd-space-2);
+        --krd-dropdown-content-border-width: 1px;
+        --krd-dropdown-content-border-style: solid;
+        --krd-dropdown-content-border-color: var(--krd-color-border);
+        --krd-dropdown-content-border-radius: var(--krd-radius-sm);
+        --krd-dropdown-content-box-shadow: var(--krd-elevation-md);
+        --krd-dropdown-list-item-border-top-width: 1px;
+        --krd-dropdown-list-item-border-top-style: solid;
+        --krd-dropdown-list-item-border-top-color: var(--krd-color-border);
+        --krd-dropdown-list-item-border-top-width-first: 0;
+        --krd-dropdown-item-text-padding-block: 0.5rem;
+        --krd-dropdown-item-text-padding-inline: 0.75rem;
+        --krd-dropdown-item-gap: var(--krd-space-4);
+        --krd-dropdown-item-text-font-size: var(--krd-body-font-size);
+        --krd-dropdown-item-text-font-weight: 400;
+        --krd-dropdown-item-text-line-height: var(--krd-base-line-height);
 
+        /**
+         * @tokens Components/Pricing Table
+         */
         /* Pricing Table */
-        --pricing-table-card-background-color: var(--card-background-color);
-        --pricing-table-card-border-width: 1px;
-        --pricing-table-card-border-style: solid;
-        --pricing-table-card-border-color: var(--card-border-color);
-        --pricing-table-card-border-radius: var(--card-border-radius);
-        --pricing-table-card-box-shadow: var(--card-box-shadow);
-        --pricing-table-card-gap: var(--card-gap);
-        --pricing-table-card-padding: clamp(var(--card-padding-inline), 2vw, var(--spacer-5));
-        --pricing-table-card-accent-background: color-mix(in srgb, var(--foreground) 82%, var(--primary));
-        --pricing-table-card-accent-height: 0.25rem;
-        --pricing-table-card-featured-border-color: color-mix(in srgb, var(--primary) 32%, var(--border));
-        --pricing-table-card-featured-box-shadow: var(--shadow-md);
-        --pricing-table-card-featured-translate-y: -0.25rem;
-        --pricing-table-card-header-gap: var(--spacer-2);
-        --pricing-table-card-subtitle-color: var(--card-subtitle-color);
-        --pricing-table-card-subtitle-font-size: var(--card-subtitle-font-size);
-        --pricing-table-card-subtitle-font-weight: var(--card-subtitle-font-weight);
-        --pricing-table-card-subtitle-letter-spacing: var(--card-subtitle-letter-spacing);
-        --pricing-table-card-subtitle-text-transform: var(--card-subtitle-text-transform);
-        --pricing-table-card-title-font-size: var(--heading-3);
-        --pricing-table-card-title-line-height: var(--heading-line-height);
-        --pricing-table-card-description-color: var(--card-description-color);
-        --pricing-table-card-footer-gap: var(--spacer-3);
-        --pricing-table-card-footer-padding-top: var(--spacer-4);
-        --pricing-table-card-footer-border-top-width: 1px;
-        --pricing-table-card-footer-border-top-style: solid;
-        --pricing-table-card-footer-border-top-color: var(--border);
-        --pricing-table-card-price-font-size: clamp(2rem, 3vw, 2.75rem);
-        --pricing-table-card-price-font-weight: 600;
-        --pricing-table-card-price-letter-spacing: -0.02em;
-        --pricing-table-card-price-line-height: 1.05;
-        --pricing-table-card-desktop-min-height: 28rem;
+        --krd-pricing-table-card-background-color: var(--krd-card-background-color);
+        --krd-pricing-table-card-border-width: 1px;
+        --krd-pricing-table-card-border-style: solid;
+        --krd-pricing-table-card-border-color: var(--krd-card-border-color);
+        --krd-pricing-table-card-border-radius: var(--krd-card-border-radius);
+        --krd-pricing-table-card-box-shadow: var(--krd-card-box-shadow);
+        --krd-pricing-table-card-gap: var(--krd-card-gap);
+        --krd-pricing-table-card-padding: clamp(var(--krd-card-padding-inline), 2vw, var(--krd-space-5));
+        --krd-pricing-table-card-accent-background: color-mix(in srgb, var(--krd-color-foreground) 82%, var(--krd-color-primary));
+        --krd-pricing-table-card-accent-height: 0.25rem;
+        --krd-pricing-table-card-featured-border-color: color-mix(in srgb, var(--krd-color-primary) 32%, var(--krd-color-border));
+        --krd-pricing-table-card-featured-box-shadow: var(--krd-elevation-md);
+        --krd-pricing-table-card-featured-translate-y: -0.25rem;
+        --krd-pricing-table-card-header-gap: var(--krd-space-2);
+        --krd-pricing-table-card-subtitle-color: var(--krd-card-subtitle-color);
+        --krd-pricing-table-card-subtitle-font-size: var(--krd-card-subtitle-font-size);
+        --krd-pricing-table-card-subtitle-font-weight: var(--krd-card-subtitle-font-weight);
+        --krd-pricing-table-card-subtitle-letter-spacing: var(--krd-card-subtitle-letter-spacing);
+        --krd-pricing-table-card-subtitle-text-transform: var(--krd-card-subtitle-text-transform);
+        --krd-pricing-table-card-title-font-size: var(--krd-heading-3);
+        --krd-pricing-table-card-title-line-height: var(--krd-heading-3-line-height);
+        --krd-pricing-table-card-description-color: var(--krd-card-description-color);
+        --krd-pricing-table-card-footer-gap: var(--krd-space-3);
+        --krd-pricing-table-card-footer-padding-top: var(--krd-space-4);
+        --krd-pricing-table-card-footer-border-top-width: 1px;
+        --krd-pricing-table-card-footer-border-top-style: solid;
+        --krd-pricing-table-card-footer-border-top-color: var(--krd-color-border);
+        --krd-pricing-table-card-price-font-size: clamp(2rem, 3vw, 2.75rem);
+        --krd-pricing-table-card-price-font-weight: 600;
+        --krd-pricing-table-card-price-letter-spacing: -0.02em;
+        --krd-pricing-table-card-price-line-height: 1.05;
+        --krd-pricing-table-card-desktop-min-height: 28rem;
 
+        /**
+         * @tokens Components/Tabs
+         */
         /* Tabs */
-        --tabs-gap: var(--spacer-4);
-        --tabs-list-background: var(--surface-subtle);
-        --tabs-list-border-width: 1px;
-        --tabs-list-border-style: solid;
-        --tabs-list-border-color: var(--border);
-        --tabs-list-border-radius: var(--border-radius-sm);
-        --tabs-list-gap: var(--spacer-1);
-        --tabs-list-padding: var(--spacer-1);
-        --tabs-trigger-background: transparent;
-        --tabs-trigger-background-hover: color-mix(in srgb, var(--surface) 72%, var(--surface-subtle));
-        --tabs-trigger-background-active: var(--surface);
-        --tabs-trigger-color: var(--muted-foreground);
-        --tabs-trigger-color-hover: var(--foreground);
-        --tabs-trigger-color-active: var(--foreground);
-        --tabs-trigger-border-radius: var(--border-radius-xs);
-        --tabs-trigger-font-size: var(--button-font-size);
-        --tabs-trigger-font-weight: var(--button-font-weight);
-        --tabs-trigger-min-height: 2.5rem;
-        --tabs-trigger-padding-block: var(--spacer-2);
-        --tabs-trigger-padding-inline: var(--spacer-3);
-        --tabs-trigger-box-shadow-active: none;
-        --tabs-panel-background: var(--surface);
-        --tabs-panel-border-width: 1px;
-        --tabs-panel-border-style: solid;
-        --tabs-panel-border-color: var(--border);
-        --tabs-panel-border-radius: var(--border-radius-sm);
-        --tabs-panel-box-shadow: var(--shadow-sm);
-        --tabs-panel-padding: clamp(var(--spacer-4), 2vw, var(--spacer-5));
-        --tabs-panel-gap: var(--spacer-3);
-        --tabs-panel-title-font-size: var(--heading-3);
-        --tabs-panel-title-line-height: var(--heading-line-height);
-        --tabs-panel-description-color: var(--muted-foreground);
+        --krd-tabs-gap: var(--krd-space-4);
+        --krd-tabs-list-background: var(--krd-color-surface-subtle);
+        --krd-tabs-list-border-width: 1px;
+        --krd-tabs-list-border-style: solid;
+        --krd-tabs-list-border-color: var(--krd-color-border);
+        --krd-tabs-list-border-radius: var(--krd-radius-sm);
+        --krd-tabs-list-gap: var(--krd-space-1);
+        --krd-tabs-list-padding: var(--krd-space-1);
+        --krd-tabs-trigger-background: transparent;
+        --krd-tabs-trigger-background-hover: color-mix(in srgb, var(--krd-color-surface) 72%, var(--krd-color-surface-subtle));
+        --krd-tabs-trigger-background-active: var(--krd-color-surface);
+        --krd-tabs-trigger-color: var(--krd-color-muted-foreground);
+        --krd-tabs-trigger-color-hover: var(--krd-color-foreground);
+        --krd-tabs-trigger-color-active: var(--krd-color-foreground);
+        --krd-tabs-trigger-border-radius: var(--krd-radius-xs);
+        --krd-tabs-trigger-font-size: var(--krd-button-font-size);
+        --krd-tabs-trigger-font-weight: var(--krd-button-font-weight);
+        --krd-tabs-trigger-min-height: 2.5rem;
+        --krd-tabs-trigger-padding-block: var(--krd-space-2);
+        --krd-tabs-trigger-padding-inline: var(--krd-space-3);
+        --krd-tabs-trigger-box-shadow-active: none;
+        --krd-tabs-panel-background: var(--krd-color-surface);
+        --krd-tabs-panel-border-width: 1px;
+        --krd-tabs-panel-border-style: solid;
+        --krd-tabs-panel-border-color: var(--krd-color-border);
+        --krd-tabs-panel-border-radius: var(--krd-radius-sm);
+        --krd-tabs-panel-box-shadow: var(--krd-elevation-sm);
+        --krd-tabs-panel-padding: clamp(var(--krd-space-4), 2vw, var(--krd-space-5));
+        --krd-tabs-panel-gap: var(--krd-space-3);
+        --krd-tabs-panel-title-font-size: var(--krd-heading-3);
+        --krd-tabs-panel-title-line-height: var(--krd-heading-3-line-height);
+        --krd-tabs-panel-description-color: var(--krd-color-muted-foreground);
 
+        /**
+         * @tokens Components/ThemeSwitch
+         */
         /* Theme Switch */
-        --theme-switch-size: 2.5rem;
-        --theme-switch-icon-width: 1.125rem;
-        --theme-switch-icon-height: 1.125rem;
-        --dropdown-icon-width: 1rem;
-        --dropdown-icon-height: 1rem;
+        --krd-theme-switch-size: 2.5rem;
+        --krd-theme-switch-icon-width: 1.125rem;
+        --krd-theme-switch-icon-height: 1.125rem;
+        --krd-dropdown-icon-width: 1rem;
+        --krd-dropdown-icon-height: 1rem;
+    }
+
+    [data-density='compact'],
+    .density-compact {
+        --krd-body-font-size-sm: 0.875rem;
+        --krd-body-font-size: 0.9375rem;
+        --krd-body-font-size-lg: clamp(1.0625rem, 1.0268rem + 0.1786vw, 1.1875rem);
+        --krd-body-font-size-xl: clamp(1.1875rem, 1.1339rem + 0.2679vw, 1.375rem);
+        --krd-body-line-height-sm: 1.4;
+        --krd-body-line-height: 1.45;
+        --krd-body-line-height-lg: 1.4;
+        --krd-body-line-height-xl: 1.3;
+        --krd-heading-1: clamp(1.375rem, 1.3214rem + 0.2679vw, 1.5625rem);
+        --krd-heading-2: var(--krd-body-font-size-xl);
+        --krd-heading-3: var(--krd-body-font-size-lg);
+        --krd-heading-4: var(--krd-body-font-size);
+        --krd-heading-5: var(--krd-body-font-size-sm);
+        --krd-heading-6: var(--krd-body-font-size-sm);
     }
 }

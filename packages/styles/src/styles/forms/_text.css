@@ -1,23 +1,23 @@
 .form-text {
-    margin-block-start: var(--form-text-margin-block-start);
+    margin-block-start: var(--krd-form-text-margin-block-start);
     display: block;
-    font-size: var(--form-text-font-size);
-    color: var(--form-text-color);
-    line-height: var(--form-text-line-height);
+    font-size: var(--krd-form-text-font-size);
+    color: var(--krd-form-text-color);
+    line-height: var(--krd-form-text-line-height);
 }
 
 .form-text-error {
-    margin-block-start: var(--form-text-margin-block-start);
+    margin-block-start: var(--krd-form-text-margin-block-start);
     display: block;
-    font-size: var(--form-text-font-size);
-    color: var(--form-text-error-color);
-    line-height: var(--form-text-line-height);
+    font-size: var(--krd-form-text-font-size);
+    color: var(--krd-form-text-error-color);
+    line-height: var(--krd-form-text-line-height);
 }
 
 .form-text-hint {
-    margin-block-start: var(--form-text-margin-block-start);
+    margin-block-start: var(--krd-form-text-margin-block-start);
     display: block;
-    font-size: var(--form-text-font-size);
-    color: var(--form-text-hint-color);
-    line-height: var(--form-text-line-height);
+    font-size: var(--krd-form-text-font-size);
+    color: var(--krd-form-text-hint-color);
+    line-height: var(--krd-form-text-line-height);
 }

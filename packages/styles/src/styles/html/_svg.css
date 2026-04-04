@@ -1,5 +1,5 @@
 svg {
-    width: var(--svg-width);
-    height: var(--svg-height);
+    width: var(--krd-svg-width);
+    height: var(--krd-svg-height);
     fill: currentcolor;
 }

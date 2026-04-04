@@ -1,57 +1,57 @@
 .tabs {
     display: grid;
-    gap: var(--tabs-gap);
+    gap: var(--krd-tabs-gap);
 }
 
 .tabs-list {
     align-items: center;
-    background: var(--tabs-list-background);
-    border: var(--tabs-list-border-width) var(--tabs-list-border-style) var(--tabs-list-border-color);
-    border-radius: var(--tabs-list-border-radius);
+    background: var(--krd-tabs-list-background);
+    border: var(--krd-tabs-list-border-width) var(--krd-tabs-list-border-style) var(--krd-tabs-list-border-color);
+    border-radius: var(--krd-tabs-list-border-radius);
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--tabs-list-gap);
-    padding: var(--tabs-list-padding);
+    gap: var(--krd-tabs-list-gap);
+    padding: var(--krd-tabs-list-padding);
     width: fit-content;
 }
 
 .tabs-trigger {
     align-items: center;
-    background: var(--tabs-trigger-background);
+    background: var(--krd-tabs-trigger-background);
     border: 0;
-    border-radius: var(--tabs-trigger-border-radius);
-    color: var(--tabs-trigger-color);
+    border-radius: var(--krd-tabs-trigger-border-radius);
+    color: var(--krd-tabs-trigger-color);
     cursor: pointer;
     display: inline-flex;
-    font-size: var(--tabs-trigger-font-size);
-    font-weight: var(--tabs-trigger-font-weight);
+    font-size: var(--krd-tabs-trigger-font-size);
+    font-weight: var(--krd-tabs-trigger-font-weight);
     justify-content: center;
-    min-height: var(--tabs-trigger-min-height);
-    padding-block: var(--tabs-trigger-padding-block);
-    padding-inline: var(--tabs-trigger-padding-inline);
+    min-height: var(--krd-tabs-trigger-min-height);
+    padding-block: var(--krd-tabs-trigger-padding-block);
+    padding-inline: var(--krd-tabs-trigger-padding-inline);
     text-align: center;
     text-decoration: none;
     transition:
-        background-color var(--transition-default) var(--transition-ease),
-        color var(--transition-default) var(--transition-ease);
+        background-color var(--krd-transition-default) var(--krd-transition-ease),
+        color var(--krd-transition-default) var(--krd-transition-ease);
 }
 
 .tabs-trigger:hover,
 .tabs-trigger:focus-visible {
-    background: var(--tabs-trigger-background-hover);
-    color: var(--tabs-trigger-color-hover);
+    background: var(--krd-tabs-trigger-background-hover);
+    color: var(--krd-tabs-trigger-color-hover);
 }
 
 .tabs-trigger:focus-visible {
-    outline: var(--outline-size) var(--outline-style) var(--outline-color);
-    outline-offset: var(--outline-offset);
+    outline: var(--krd-outline-size) var(--krd-outline-style) var(--krd-outline-color);
+    outline-offset: var(--krd-outline-offset);
 }
 
 .tabs-trigger[aria-selected='true'],
 .tabs-trigger.is-active {
-    background: var(--tabs-trigger-background-active);
-    box-shadow: var(--tabs-trigger-box-shadow-active);
-    color: var(--tabs-trigger-color-active);
+    background: var(--krd-tabs-trigger-background-active);
+    box-shadow: var(--krd-tabs-trigger-box-shadow-active);
+    color: var(--krd-tabs-trigger-color-active);
 }
 
 .tabs-panels {
@@ -59,17 +59,17 @@
 }
 
 .tabs-panel {
-    background: var(--tabs-panel-background);
-    border: var(--tabs-panel-border-width) var(--tabs-panel-border-style) var(--tabs-panel-border-color);
-    border-radius: var(--tabs-panel-border-radius);
-    box-shadow: var(--tabs-panel-box-shadow);
+    background: var(--krd-tabs-panel-background);
+    border: var(--krd-tabs-panel-border-width) var(--krd-tabs-panel-border-style) var(--krd-tabs-panel-border-color);
+    border-radius: var(--krd-tabs-panel-border-radius);
+    box-shadow: var(--krd-tabs-panel-box-shadow);
     display: none;
-    padding: var(--tabs-panel-padding);
+    padding: var(--krd-tabs-panel-padding);
 }
 
 .tabs-panel.is-active {
     display: grid;
-    gap: var(--tabs-panel-gap);
+    gap: var(--krd-tabs-panel-gap);
 }
 
 .tabs-panel-title,
@@ -78,12 +78,12 @@
 }
 
 .tabs-panel-title {
-    font-size: var(--tabs-panel-title-font-size);
-    line-height: var(--tabs-panel-title-line-height);
+    font-size: var(--krd-tabs-panel-title-font-size);
+    line-height: var(--krd-tabs-panel-title-line-height);
 }
 
 .tabs-panel-description {
-    color: var(--tabs-panel-description-color);
+    color: var(--krd-tabs-panel-description-color);
 }
 
 @media (max-width: 47.99rem) {

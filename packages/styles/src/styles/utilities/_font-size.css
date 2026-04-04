@@ -1,19 +1,19 @@
 .text-xs {
-    font-size: var(--fs-xs);
+    font-size: var(--krd-font-size-xs);
 }
 
 .text-sm {
-    font-size: var(--fs-sm);
+    font-size: var(--krd-font-size-sm);
 }
 
 .text-md {
-    font-size: var(--fs-md);
+    font-size: var(--krd-font-size-md);
 }
 
 .text-lg {
-    font-size: var(--fs-lg);
+    font-size: var(--krd-font-size-lg);
 }
 
 .text-xl {
-    font-size: var(--fs-xl);
+    font-size: var(--krd-font-size-xl);
 }

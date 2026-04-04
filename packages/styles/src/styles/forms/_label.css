@@ -1,13 +1,13 @@
 .form-label {
-    margin-block-end: var(--form-label-margin-block-end);
+    margin-block-end: var(--krd-form-label-margin-block-end);
     display: block;
     cursor: pointer;
-    font-weight: var(--form-label-font-weight);
+    font-weight: var(--krd-form-label-font-weight);
     text-wrap: pretty;
-    line-height: var(--form-label-line-height);
+    line-height: var(--krd-form-label-line-height);
 }
 
 .form-label-required {
-    color: var(--form-text-error-color);
-    font-weight: var(--form-label-required-font-weight);
+    color: var(--krd-form-text-error-color);
+    font-weight: var(--krd-form-label-required-font-weight);
 }
