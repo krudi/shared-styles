@@ -56,7 +56,9 @@
         /**
          * @tokens Brand/Design Tokens/Typography
          */
-        --krd-typography-font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        --krd-typography-font-family:
+            -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif, 'Apple Color Emoji',
+            'Segoe UI Emoji', 'Segoe UI Symbol';
         --krd-typography-body-text-font-size-sm: 1rem;
         --krd-typography-body-text-font-size: clamp(1.0625rem, 1.0268rem + 0.1786vw, 1.1875rem);
         --krd-typography-body-text-font-size-lg: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);

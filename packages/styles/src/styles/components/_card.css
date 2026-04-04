@@ -107,5 +107,9 @@
     --krd-card-border-width: 0;
     --krd-card-border-color: transparent;
     --krd-card-subtitle-color: color-mix(in srgb, var(--krd-color-secondary-foreground) 72%, transparent);
-    --krd-card-content-body-description-color: color-mix(in srgb, var(--krd-color-secondary-foreground) 72%, transparent);
+    --krd-card-content-body-description-color: color-mix(
+        in srgb,
+        var(--krd-color-secondary-foreground) 72%,
+        transparent
+    );
 }
