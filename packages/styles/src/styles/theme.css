@@ -32,7 +32,6 @@
          * @presenter Spacing
          */
         --krd-layout-grid-spacing: var(--krd-space-6);
-
         --krd-links-text-decoration-line: underline;
         --krd-links-text-decoration-line-hover: underline;
         --krd-links-text-decoration-style: solid;
