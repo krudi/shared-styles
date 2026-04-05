@@ -56,6 +56,7 @@
 
 .accordion-summary {
     width: 100%;
+    cursor: pointer;
     padding-inline: var(--krd-accordion-summary-padding-inline);
     padding-block: var(--krd-accordion-summary-padding-block);
     position: relative;
@@ -88,6 +89,7 @@
     width: var(--krd-accordion-icon-width);
     height: var(--krd-accordion-icon-height);
     display: inline-block;
+    flex: 0 0 auto;
     background-color: var(--krd-accordion-icon-color);
     mask-image: url('@krudi/icons/caret-down.svg');
     mask-repeat: no-repeat;
@@ -120,6 +122,6 @@
 }
 
 .accordion-content-text {
-    word-break: break-all;
     color: var(--krd-accordion-text-color);
+    overflow-wrap: break-word;
 }

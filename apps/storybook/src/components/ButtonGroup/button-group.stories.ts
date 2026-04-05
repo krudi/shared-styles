@@ -4,16 +4,18 @@ import type { ButtonGroupArgs } from './button-group.types';
 
 const meta = {
     title: 'Components/Button Group',
-    render: ({ labels, variant }: ButtonGroupArgs): string => `
-        <div class="btn-group">
+    render: ({ ariaLabel, labels, variant }: ButtonGroupArgs): string => `
+        <div class="btn-group" role="group" aria-label="${ariaLabel}">
             ${labels.map((label) => `<button type="button" class="btn btn-${variant}">${label}</button>`).join('')}
         </div>
     `,
     args: {
+        ariaLabel: 'Button group actions',
         labels: ['Left', 'Middle', 'Right'],
         variant: 'default',
     },
     argTypes: {
+        ariaLabel: { control: 'text' },
         labels: { control: 'object' },
         variant: {
             control: 'inline-radio',
@@ -21,7 +23,7 @@ const meta = {
         },
     },
     parameters: {
-        designTokens: 'Components/Button',
+        designTokens: 'Components/Button Group',
         layout: 'centered',
         docs: {
             description: {

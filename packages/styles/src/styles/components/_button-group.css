@@ -1,5 +1,5 @@
 .btn-group {
     display: inline-flex;
-    gap: var(--krd-button-gap);
-    vertical-align: middle;
+    gap: var(--krd-button-group-gap);
+    vertical-align: var(--krd-button-group-vertical-align);
 }

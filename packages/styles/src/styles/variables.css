@@ -11,12 +11,17 @@
          * @tokens Components/Accordion
          */
         --krd-accordion-details-background-color: transparent;
+        --krd-accordion-details-color: var(--krd-color-foreground);
         --krd-accordion-details-border-bottom-width: 1px;
         --krd-accordion-details-border-bottom-style: solid;
+        --krd-accordion-details-border-bottom-color: var(--krd-color-border);
         --krd-accordion-summary-color: var(--krd-color-surface-foreground);
         --krd-accordion-summary-font-size: var(--krd-body-font-size);
         --krd-accordion-summary-font-weight: 500;
         --krd-accordion-summary-line-height: var(--krd-base-line-height);
+        --krd-accordion-summary-padding-block: var(--krd-space-4);
+        --krd-accordion-summary-gap: var(--krd-space-4);
+        --krd-accordion-icon-color: currentcolor;
         --krd-accordion-icon-width: 1rem;
         --krd-accordion-icon-height: 1rem;
 
@@ -64,6 +69,12 @@
         --krd-button-icon-color: var(--krd-color-foreground);
         --krd-button-icon-line-height: var(--krd-button-line-height);
         --krd-button-link-color: var(--krd-color-foreground);
+
+        /**
+         * @tokens Components/Button Group
+         */
+        --krd-button-group-gap: var(--krd-space-2);
+        --krd-button-group-vertical-align: middle;
 
         /**
          * @tokens Components/Card
@@ -256,7 +267,10 @@
         --krd-accordion-details-border-bottom-color-contrast: currentcolor;
         --krd-accordion-summary-padding-inline: 0;
         --krd-accordion-text-color: var(--krd-accordion-summary-color);
+        --krd-accordion-content-padding-block: var(--krd-space-4);
         --krd-accordion-content-padding-inline: 0;
+        --krd-accordion-content-font-size: var(--krd-body-font-size);
+        --krd-accordion-content-line-height: var(--krd-body-line-height);
 
         /**
          * @tokens Components/Alert
