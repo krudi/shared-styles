@@ -24,18 +24,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout release ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.release.tag_name || github.ref }}
 
-      - uses: krudi/reusable-actions/.github/actions/node-setup@main
-
-      - uses: krudi/reusable-actions/.github/actions/node-install@main
-
-      - uses: krudi/reusable-actions/.github/actions/ci-command@main
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
         with:
-          command: npm run build -- --filter=@krudi/storybook...
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Storybook workspace
+        run: npm run build -- --filter=@krudi/storybook...
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v6
