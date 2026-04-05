@@ -141,9 +141,7 @@ import { wireTabs } from '@krudi/styles/js';
 
 const root = document.getElementById('example-tabs');
 
-if (root instanceof HTMLElement) {
-    wireTabs({ root });
-}
+wireTabs(root);
 ```
 
 ### Modal
@@ -162,9 +160,9 @@ const cleanup = wireModalTrigger({
 ```ts
 import { wireThemeSwitch } from '@krudi/styles/js';
 
-const cleanup = wireThemeSwitch({
-    switchId: 'theme-switch',
-});
+const switchElement = document.querySelector<HTMLButtonElement>('[data-theme-switch]');
+
+const cleanup = wireThemeSwitch(switchElement);
 ```
 
 ## Using `@krudi/styles`

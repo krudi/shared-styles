@@ -28,7 +28,6 @@
     },
     "type": "module",
     "exports": {
-        ".": "./dist/styles/index.css",
         "./css": "./dist/styles/index.css",
         "./css/palette": "./dist/styles/palette.css",
         "./css/variables": "./dist/styles/variables.css",

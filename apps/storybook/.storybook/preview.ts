@@ -1,4 +1,4 @@
-import '@krudi/styles';
+import '@krudi/styles/css';
 import './preview.css';
 
 import { withThemeByClassName } from '@storybook/addon-themes';

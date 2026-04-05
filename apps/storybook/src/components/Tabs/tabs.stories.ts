@@ -1,3 +1,4 @@
+import { wireTabs } from '@krudi/styles/js';
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { TabsArgs, TabsItem } from './tabs.types';
@@ -6,29 +7,32 @@ const defaultItems: TabsItem[] = [
     {
         id: 'overview',
         label: 'Overview',
+        title: 'Overview',
         description:
             'Use tabs for compact content groups like feature overviews, pricing explanations, onboarding steps, or documentation summaries.',
     },
     {
         id: 'features',
         label: 'Features',
+        title: 'Features',
         description:
             'The shared tabs style fits product pages and dashboard-style interfaces where users switch between a few clearly named content sections.',
     },
     {
         id: 'support',
         label: 'Support',
+        title: 'Support',
         description:
             'This first shared version focuses on the canonical visual structure. You can attach your preferred JS or framework logic to switch the active trigger and panel.',
     },
 ];
 
-const renderTabs = ({ activeTab, items }: TabsArgs, storyId = 'tabs'): string => {
+const renderTabs = ({ activeTab, ariaLabel, items }: TabsArgs, storyId = 'tabs'): string => {
     const activeId = items.some((item) => item.id === activeTab) ? activeTab : items[0]?.id;
 
     return `
-        <section class="tabs" id="${storyId}-tabs" data-tabs aria-label="Component tabs">
-            <div class="tabs-list" role="tablist" aria-label="Component tabs">
+        <section class="tabs" id="${storyId}-tabs" data-tabs aria-label="${ariaLabel}">
+            <div class="tabs-list" role="tablist" aria-label="${ariaLabel}">
                 ${items
                     .map(
                         (item) => `
@@ -78,11 +82,12 @@ const meta = {
             return;
         }
 
-        wireTabs({ root });
+        wireTabs(root);
     },
     render: (args: TabsArgs, { id }): string => renderTabs(args, id),
     args: {
         activeTab: 'overview',
+        ariaLabel: 'Component tabs',
         items: defaultItems,
     },
     argTypes: {
@@ -90,6 +95,10 @@ const meta = {
             control: 'select',
             options: defaultItems.map((item) => item.id),
             description: 'Tab id that should be shown as active in the static preview',
+        },
+        ariaLabel: {
+            control: 'text',
+            description: 'Accessible label announced for the tabs region and tab list',
         },
         items: {
             control: 'object',

@@ -1,3 +1,4 @@
+import { wireThemeSwitch } from '@krudi/styles/js';
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
 import type { ThemeSwitchArgs } from './theme-switch.types';
@@ -7,11 +8,11 @@ const meta = {
     play: ({ canvasElement }): void => {
         const switchElement = canvasElement.querySelector<HTMLButtonElement>('button[data-theme-switch]');
 
-        if (!switchElement?.id) {
+        if (!switchElement) {
             return;
         }
 
-        wireThemeSwitch({ switchId: switchElement.id });
+        wireThemeSwitch(switchElement);
     },
     render: ({ label }: ThemeSwitchArgs, { id }): string => `
         <button

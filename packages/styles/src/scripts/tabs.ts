@@ -1,7 +1,3 @@
-type TabsOptions = {
-    root: HTMLElement;
-};
-
 const getTabs = (root: HTMLElement): HTMLButtonElement[] =>
     Array.from(root.querySelectorAll<HTMLElement>('[role="tab"]')).filter(
         (tab): tab is HTMLButtonElement => tab instanceof HTMLButtonElement
@@ -32,7 +28,11 @@ const setPanelState = (panel: HTMLElement, selected: boolean): void => {
     panel.hidden = !selected;
 };
 
-export const wireTabs = ({ root }: TabsOptions): (() => void) => {
+export const wireTabs = (root: HTMLElement | null): (() => void) => {
+    if (!root) {
+        return () => undefined;
+    }
+
     const tabs = getTabs(root);
     const panels = getPanels(root);
 
