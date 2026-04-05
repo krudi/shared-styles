@@ -1,4 +1,4 @@
-@layer variables {
+@layer krd-variables {
     :root {
         /*
             System tokens
@@ -13,7 +13,10 @@
         --krd-accordion-details-background-color: transparent;
         --krd-accordion-details-border-bottom-width: 1px;
         --krd-accordion-details-border-bottom-style: solid;
+        --krd-accordion-summary-color: var(--krd-color-surface-foreground);
+        --krd-accordion-summary-font-size: var(--krd-body-font-size);
         --krd-accordion-summary-font-weight: 500;
+        --krd-accordion-summary-line-height: var(--krd-base-line-height);
         --krd-accordion-icon-width: 1rem;
         --krd-accordion-icon-height: 1rem;
 
@@ -252,7 +255,7 @@
         --krd-accordion-details-border-bottom-width-contrast: max(2px, 1px);
         --krd-accordion-details-border-bottom-color-contrast: currentcolor;
         --krd-accordion-summary-padding-inline: 0;
-        --krd-accordion-text-color: var(--krd-color-surface-foreground);
+        --krd-accordion-text-color: var(--krd-accordion-summary-color);
         --krd-accordion-content-padding-inline: 0;
 
         /**
