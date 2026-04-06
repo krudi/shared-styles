@@ -9,15 +9,18 @@
 - [ ] Documentation change/changes (add new documentation or fix)
 - [ ] Test change/changes (add new test/tests or fix)
 
-## Checklist
+## Problem
 
-- [ ] I have read the
-      [Contributing Guidelines](https://github.com/krudi/shared-styles/blob/main/.github/CONTRIBUTING.md)
-- [ ] My code follows the project checks (`npm run lint:eslint`, `npm run lint:stylelint`, `npm run lint:prettier`,
-      `npm run typecheck` as applicable)
-- [ ] I updated Storybook/docs if the public style API, tokens, or components changed
-- [ ] I updated bundle imports/exports if I added or removed a public entrypoint
+Briefly describe the issue or limitation.
+
+## Solution
+
+Explain what you changed and how it solves the problem.
 
 ## Related topics
 
 - [Example link](https://example.com)
+
+## Checklist
+
+- [ ] I have read the [Contributing Guidelines](https://github.com/krudi/shared-styles/blob/main/CONTRIBUTING.md)
