@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { ListArgs } from './list.types';
+
 const meta = {
     title: 'Components/List',
     render: ({ items }: ListArgs): string => `

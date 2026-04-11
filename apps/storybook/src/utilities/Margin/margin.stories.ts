@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { MarginArgs } from './margin.types';
+
 const meta = {
     title: 'Utilities/Margin',
     render: (): string => `

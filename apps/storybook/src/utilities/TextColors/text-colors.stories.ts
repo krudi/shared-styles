@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { TextColorsArgs } from './text-colors.types';
+
 const meta = {
     title: 'Utilities/Text Colors',
     render: () => `

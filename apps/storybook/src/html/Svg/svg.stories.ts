@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { SvgArgs } from './svg.types';
+
 const meta = {
     title: 'HTML/Svg',
     render: ({ label }: SvgArgs): string => `

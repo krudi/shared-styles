@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { FontWeightsArgs } from './font-weights.types';
+
 const meta = {
     title: 'Utilities/Font Weights',
     render: () => `

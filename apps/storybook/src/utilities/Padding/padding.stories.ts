@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { PaddingArgs } from './padding.types';
+
 const meta = {
     title: 'Utilities/Padding',
     render: (): string => `

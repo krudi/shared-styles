@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { GapArgs } from './gap.types';
+
 const meta = {
     title: 'Utilities/Gap',
     render: (): string => `

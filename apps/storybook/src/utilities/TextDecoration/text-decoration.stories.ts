@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { TextDecorationArgs } from './text-decoration.types';
+
 const meta = {
     title: 'Utilities/Text Decoration',
     render: () => `

@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { BackgroundColorsArgs } from './background-colors.types';
+
 const meta = {
     title: 'Utilities/Background Colors',
     render: () => `

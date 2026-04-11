@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { LineClampArgs } from './line-clamp.types';
+
 const meta = {
     title: 'Utilities/Line Clamp',
     render: () => `

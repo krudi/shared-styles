@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { UtilitiesArgs } from './utilities.types';
+
 const meta = {
     title: 'Forms/Utilities',
     render: (): string => `

@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { ImgArgs } from './img.types';
+
 const meta = {
     title: 'HTML/Image',
     render: ({ alt }: ImgArgs): string => `

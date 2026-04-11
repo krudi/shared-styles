@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { NavigationArgs } from './navigation.types';
+
 const meta = {
     title: 'Forms/Navigation',
     render: (): string => `

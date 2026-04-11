@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { FontSizesArgs } from './font-sizes.types';
+
 const meta = {
     title: 'Utilities/Font Sizes',
     render: () => `

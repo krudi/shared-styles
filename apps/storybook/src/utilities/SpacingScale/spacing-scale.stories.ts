@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html-vite';
 
+import type { SpacingScaleArgs } from './spacing-scale.types';
+
 const meta = {
     title: 'Utilities/SpacingScale',
     render: () => `
