@@ -55,7 +55,7 @@ const renderTabs = ({ activeTab, ariaLabel, items }: TabsArgs, storyId = 'tabs')
                 ${items
                     .map(
                         (item) => `
-                            <article
+                            <div
                                 class="tabs-panel${item.id === activeId ? ' is-active' : ''}"
                                 id="${storyId}-panel-${item.id}"
                                 role="tabpanel"
@@ -64,7 +64,7 @@ const renderTabs = ({ activeTab, ariaLabel, items }: TabsArgs, storyId = 'tabs')
                             >
                                 <h3 class="tabs-panel-title">${item.title}</h3>
                                 <p class="tabs-panel-description">${item.description}</p>
-                            </article>
+                            </div>
                         `
                     )
                     .join('')}

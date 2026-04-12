@@ -280,7 +280,7 @@
         --krd-alert-margin-block-block: var(--krd-alert-margin-block);
         --krd-alert-destructive-background-color: color-mix(
             in srgb,
-            var(--krd-color-destructive) 10%,
+            var(--krd-color-destructive) 4%,
             var(--krd-color-background)
         );
         --krd-alert-destructive-color: var(--krd-color-destructive);

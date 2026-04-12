@@ -19,5 +19,5 @@
 }
 
 .text-secondary {
-    color: var(--krd-color-secondary);
+    color: var(--krd-color-secondary-foreground);
 }
