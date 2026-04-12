@@ -15,7 +15,7 @@
 
 .form-input-group > .form-control:focus-visible,
 .form-input-group > .btn:focus-visible {
-    z-index: var(--form-input-group-focus-z-index);
+    z-index: var(--krd-form-input-group-focus-z-index);
 }
 
 .form-input-group > :not(:last-child) {
@@ -24,33 +24,33 @@
 }
 
 .form-input-group > :not(:first-child) {
-    margin-left: calc(var(--form-input-group-border-overlap) * -1);
+    margin-left: calc(var(--krd-form-input-group-border-overlap) * -1);
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
 
 .form-input-group > :first-child {
-    border-top-left-radius: var(--form-input-border-radius);
-    border-bottom-left-radius: var(--form-input-border-radius);
+    border-top-left-radius: var(--krd-form-input-border-radius);
+    border-bottom-left-radius: var(--krd-form-input-border-radius);
 }
 
 .form-input-group > :last-child {
-    border-top-right-radius: var(--form-input-border-radius);
-    border-bottom-right-radius: var(--form-input-border-radius);
+    border-top-right-radius: var(--krd-form-input-border-radius);
+    border-bottom-right-radius: var(--krd-form-input-border-radius);
 }
 
 .form-input-group-text {
-    background-color: var(--form-input-background-color);
-    padding-block: var(--form-input-padding-block);
-    padding-inline: var(--form-input-padding-inline);
+    background-color: var(--krd-form-input-background-color);
+    padding-block: var(--krd-form-input-padding-block);
+    padding-inline: var(--krd-form-input-padding-inline);
     display: flex;
     align-items: center;
     white-space: nowrap;
     text-align: center;
-    font-size: var(--form-input-font-size);
-    line-height: var(--form-input-line-height);
-    border-width: var(--form-input-border-width);
-    border-style: var(--form-input-border-style);
-    border-color: var(--form-input-border-color);
-    border-radius: var(--form-input-border-radius);
+    font-size: var(--krd-form-input-font-size);
+    line-height: var(--krd-form-input-line-height);
+    border-width: var(--krd-form-input-border-width);
+    border-style: var(--krd-form-input-border-style);
+    border-color: var(--krd-form-input-border-color);
+    border-radius: var(--krd-form-input-border-radius);
 }

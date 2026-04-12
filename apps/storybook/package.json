@@ -4,40 +4,65 @@
     "version": "0.1.0",
     "private": true,
     "description": "Storybook workspace for @krudi/styles (HTML stories).",
+    "keywords": [
+        "storybook-addon",
+        "design-tokens",
+        "css"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://krudi.io"
+    },
+    "type": "module",
     "scripts": {
-        "build": "storybook build --docs",
+        "build": "npm --workspace @krudi/storybook-design-tokens run build && storybook build --docs",
         "clean": "rm -rf .turbo .cache node_modules storybook-static",
-        "dev": "storybook dev",
-        "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
-        "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "dev": "npm --workspace @krudi/storybook-design-tokens run build && storybook dev --port 44877",
+        "lint:eslint": "eslint --flag unstable_native_nodejs_ts_config . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint --flag unstable_native_nodejs_ts_config . --fix --cache --cache-location .cache/.eslintcache",
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
         "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
-        "preview": "serve storybook-static",
+        "preview": "serve storybook-static --listen 44877",
         "test:storybook": "vitest --project storybook",
         "test:storybook:coverage": "vitest --project storybook --coverage",
-        "typecheck": "tsc -p tsconfig.json --noEmit"
+        "typecheck": "npm --workspace @krudi/storybook-design-tokens run build && tsc -p tsconfig.json --noEmit"
     },
     "dependencies": {
+        "@krudi/storybook-design-tokens": "*",
         "@krudi/styles": "*"
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^5.1.1",
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
-        "@storybook/addon-a11y": "^10.3.3",
-        "@storybook/addon-docs": "^10.3.3",
-        "@storybook/addon-links": "^10.3.3",
-        "@storybook/addon-themes": "^10.3.3",
-        "@storybook/addon-vitest": "^10.3.3",
-        "@storybook/html-vite": "^10.3.3",
-        "@types/node": "^22.19.13",
+        "@storybook/addon-a11y": "^10.3.5",
+        "@storybook/addon-docs": "^10.3.5",
+        "@storybook/addon-links": "^10.3.5",
+        "@storybook/addon-themes": "^10.3.5",
+        "@storybook/addon-vitest": "^10.3.5",
+        "@storybook/html-vite": "^10.3.5",
+        "@types/node": "^25.5.2",
         "@vitest/browser-playwright": "^4.1.2",
         "@vitest/coverage-v8": "^4.1.2",
-        "eslint-plugin-storybook": "10.3.3",
-        "playwright": "^1.59.0",
-        "storybook": "^10.3.3",
-        "typescript": "^5.9.2",
-        "vite": "^7.3.1",
-        "vitest": "^4.1.0"
+        "eslint-plugin-storybook": "10.3.5",
+        "playwright": "^1.59.1",
+        "remark-gfm": "^4.0.1",
+        "storybook": "^10.3.5",
+        "typescript": "^6.0.2",
+        "vite": "^8.0.4",
+        "vitest": "^4.1.2"
+    },
+    "engines": {
+        "node": ">= 24.14.0"
     }
 }

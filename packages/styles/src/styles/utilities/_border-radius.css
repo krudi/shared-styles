@@ -3,25 +3,25 @@
 }
 
 .radius-xs {
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--krd-radius-xs);
 }
 
 .radius-sm {
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--krd-radius-sm);
 }
 
 .radius-md {
-    border-radius: var(--border-radius-md);
+    border-radius: var(--krd-radius-md);
 }
 
 .radius-lg {
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--krd-radius-lg);
 }
 
 .radius-xl {
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--krd-radius-xl);
 }
 
 .radius-full {
-    border-radius: var(--border-radius-full);
+    border-radius: var(--krd-radius-full);
 }

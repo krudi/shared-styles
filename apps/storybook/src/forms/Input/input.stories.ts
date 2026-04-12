@@ -4,7 +4,6 @@ import type { InputArgs } from './input.types';
 
 const meta = {
     title: 'Forms/Input',
-    tags: ['autodocs'],
     render: ({ placeholder, value, disabled }: InputArgs): string => `
         <div class="form-block">
             <input
@@ -29,7 +28,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Text input field styled by the forms layer tokens.',
+                component: `Input — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;input&gt;…&lt;/input&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -45,16 +46,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Single-line text input styled with the shared form control tokens.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Adjust placeholder and disabled state to validate input styling.',
             },
         },
     },

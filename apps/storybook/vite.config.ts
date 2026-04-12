@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
+import type { UserConfig } from 'vite';
 
-export default defineConfig({
+export default {
     plugins: [],
-});
+} satisfies UserConfig;

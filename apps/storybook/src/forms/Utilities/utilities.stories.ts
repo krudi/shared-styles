@@ -4,7 +4,6 @@ import type { UtilitiesArgs } from './utilities.types';
 
 const meta = {
     title: 'Forms/Utilities',
-    tags: ['autodocs'],
     render: (): string => `
         <div class="form-block">
             <label class="form-label" for="utilities-name">Name</label>
@@ -32,8 +31,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Form utility helpers for stacked fields, required indicators, and validation-aware helper text.',
+                component: `Utilities — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -49,16 +49,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Form utility spacing is applied via <code>.form-block</code>, while labels and helper text pick up the new required and spacing helpers.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use <code>.form-block</code> to keep consistent vertical spacing and validation styling across inputs and selects.',
             },
         },
     },

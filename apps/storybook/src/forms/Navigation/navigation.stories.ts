@@ -4,7 +4,6 @@ import type { NavigationArgs } from './navigation.types';
 
 const meta = {
     title: 'Forms/Navigation',
-    tags: ['autodocs'],
     render: (): string => `
         <div class="form-navigation">
             <button class="btn btn-outline" type="button">Back</button>
@@ -14,8 +13,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Form navigation spacing helper for action rows that follow form content. Apply <code>.form-navigation</code> to the wrapper around next/back actions.',
+                component: `Navigation — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },

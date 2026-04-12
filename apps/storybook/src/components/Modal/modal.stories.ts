@@ -5,7 +5,6 @@ import type { ModalArgs } from './modal.types';
 
 const meta = {
     title: 'Components/Modal',
-    tags: ['autodocs'],
     play: ({ canvasElement }): void => {
         const openTrigger = canvasElement.querySelector<HTMLElement>('button[id$="-modal-open"]');
         const dialog = canvasElement.querySelector<HTMLDialogElement>('dialog[id$="-modal"]');
@@ -59,7 +58,6 @@ const meta = {
         </dialog>
     `,
     args: {
-        title: 'Modal title',
         body: 'Use .modal on a <dialog> element. Tokens control max-width, padding, border, and backdrop.',
         primaryLabel: 'Confirm',
         secondaryLabel: 'Cancel',
@@ -74,8 +72,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Modal styling for native <code>&lt;dialog&gt;</code>. Backdrop, transitions, and padding come from CSS tokens.',
+                component: `Modal — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;dialog&gt;…&lt;/dialog&gt;</code>.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -90,17 +89,7 @@ export const Default: Story = {
         controls: { disable: true },
         docs: {
             description: {
-                story: 'Canonical modal example with title, body, and footer actions.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Tweak the title, body copy, and button labels to preview modal layout variations.',
+                story: 'Canonical modal — includes heading, body content and footer actions. Ensure focus is managed and close controls are available.',
             },
         },
     },

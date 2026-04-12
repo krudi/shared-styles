@@ -4,37 +4,36 @@ import type { ColorsArgs } from './colors.types';
 
 const meta = {
     title: 'Theme/Colors',
-    tags: ['autodocs'],
     render: (): string => `
         ${[
             {
                 label: 'Primary',
                 className: 'bg-black',
-                token: '--primary',
+                token: '--krd-color-primary',
                 usage: 'High-emphasis actions and surfaces.',
             },
             {
                 label: 'Secondary',
                 className: 'bg-secondary',
-                token: '--secondary',
+                token: '--krd-color-secondary',
                 usage: 'Supporting actions and complementary surfaces.',
             },
             {
                 label: 'Muted',
                 className: 'bg-gray',
-                token: '--muted-foreground',
+                token: '--krd-color-muted-foreground',
                 usage: 'Muted body text and secondary UI.',
             },
             {
                 label: 'Background',
                 className: 'bg-white',
-                token: '--background',
+                token: '--krd-color-background',
                 usage: 'Base background with strong contrast against text.',
             },
             {
                 label: 'Surface',
                 className: 'bg-white-100',
-                token: '--surface-subtle',
+                token: '--krd-color-surface-subtle',
                 usage: 'Subtle containers and raised neutral surfaces.',
             },
         ]
@@ -54,8 +53,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Semantic theme tokens mapped to utility classes. Override these semantic roles for normal theme changes. Override the palette layer only for advanced base-color customization.',
+                component: `Colors — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -71,16 +71,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Use the semantic theme tokens as the theming API. Utility classes remain for previewing the current mappings, but components should consume semantic roles rather than color-name tokens.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Review the semantic mappings while adjusting the theme. Change semantic tokens first; touch the palette layer only when you intentionally want to rebuild the color foundation.',
             },
         },
     },

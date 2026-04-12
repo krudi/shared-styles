@@ -33,11 +33,14 @@
         "README.md"
     ],
     "scripts": {
-        "build": "rm -rf dist && svgo -f src -o dist"
+        "build": "rm -rf dist && svgo -f src -o dist",
+        "clean": "rm -rf .cache dist node_modules",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache"
     },
     "devDependencies": {
         "@krudi/prettier-config": "^0.1.8",
-        "svgo": "^3.3.3"
+        "svgo": "^4.0.1"
     },
     "engines": {
         "node": ">= 24.14.0"

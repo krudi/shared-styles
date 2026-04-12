@@ -7,5 +7,6 @@ export type TabsItem = {
 
 export type TabsArgs = {
     activeTab: string;
+    ariaLabel: string;
     items: TabsItem[];
 };

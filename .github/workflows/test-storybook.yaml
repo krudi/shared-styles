@@ -30,22 +30,24 @@ jobs:
           - "npm run test:storybook"
 
     steps:
-      - uses: krudi/reusable-actions/.github/actions/github-checkout@main
 
-      - uses: krudi/reusable-actions/.github/actions/node-setup@main
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
         with:
           cache: npm
-          node_version_file: .nvmrc
+          node-version-file: .nvmrc
 
-      - uses: krudi/reusable-actions/.github/actions/node-install@main
+      - name: Install dependencies
+        run: npm install
 
-      - uses: krudi/reusable-actions/.github/actions/ci-command@main
-        with:
-          command: npm run build -- --filter=@krudi/storybook...
+      - name: Build Storybook workspace
+        run: npm run build -- --filter=@krudi/storybook...
 
       - name: Install Playwright browsers (CLI)
         run: npx playwright install chromium --with-deps
 
-      - uses: krudi/reusable-actions/.github/actions/ci-command@main
-        with:
-          command: ${{ matrix.test-commands }}
+      - name: Run Storybook tests
+        run: ${{ matrix.test-commands }}

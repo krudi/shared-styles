@@ -4,7 +4,6 @@ import type { GapArgs } from './gap.types';
 
 const meta = {
     title: 'Utilities/Gap',
-    tags: ['autodocs'],
     render: (): string => `
         <h2 class="h4 mt-0">Gap helpers</h2>
         <div class="d-grid gap-4">
@@ -29,8 +28,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component:
-                    'Use <code>.gap-*</code>, <code>.row-gap-*</code>, and <code>.column-gap-*</code> to space flex and grid children with the shared spacer scale.',
+                component: `Gap — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -46,16 +46,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical gap utility examples for both flex and grid layouts.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use gap utilities instead of inline gap styles so layout spacing stays tied to the spacer scale.',
             },
         },
     },

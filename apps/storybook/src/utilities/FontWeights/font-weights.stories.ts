@@ -4,7 +4,6 @@ import type { FontWeightsArgs } from './font-weights.types';
 
 const meta = {
     title: 'Utilities/Font Weights',
-    tags: ['autodocs'],
     render: () => `
         <h2 class="h4 mt-0">Font weights</h2>
         ${[
@@ -24,7 +23,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Weight utilities for emphasis, hierarchy, and readability.',
+                component: `Font Weights — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -40,16 +41,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Pair font weight utilities with semantic headings to fine-tune emphasis.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use weight utilities to dial in hierarchy across typographic elements.',
             },
         },
     },

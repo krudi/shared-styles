@@ -1,4 +1,4 @@
-import '@krudi/styles';
+import '@krudi/styles/css';
 import './preview.css';
 
 import { withThemeByClassName } from '@storybook/addon-themes';
@@ -33,6 +33,11 @@ const preview: Preview = {
                 className: `!bg-background`,
             },
         },
+        options: {
+            storySort: {
+                order: ['Brand', 'Base', 'Components', 'Forms', 'Html', 'Layout', 'Theme', 'Utilities'],
+            },
+        },
         a11y: {
             test: 'error',
         },
@@ -40,7 +45,6 @@ const preview: Preview = {
             options: MINIMAL_VIEWPORTS,
         },
     },
-    tags: ['autodocs'],
 };
 
 export default preview;

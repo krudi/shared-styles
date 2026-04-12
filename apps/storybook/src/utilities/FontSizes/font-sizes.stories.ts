@@ -4,7 +4,6 @@ import type { FontSizesArgs } from './font-sizes.types';
 
 const meta = {
     title: 'Utilities/Font Sizes',
-    tags: ['autodocs'],
     render: () => `
         <h2 class="h4 mt-0">Font sizing</h2>
         ${[
@@ -24,7 +23,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Quick size adjustments that map to the typography scale.',
+                component: `Font Sizes — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -40,16 +41,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Use these scale helpers for quick typography adjustments while keeping the base font family.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Font size helpers stay aligned with the type ramp for consistent hierarchy.',
             },
         },
     },

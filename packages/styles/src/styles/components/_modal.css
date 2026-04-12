@@ -1,19 +1,19 @@
 .modal {
     width: 100%;
-    max-width: var(--modal-max-width);
-    padding-block: var(--modal-padding-block);
-    padding-inline: var(--modal-padding-inline);
-    background-color: var(--modal-background-color);
+    max-width: var(--krd-modal-max-width);
+    padding-block: var(--krd-modal-padding-block);
+    padding-inline: var(--krd-modal-padding-inline);
+    background-color: var(--krd-modal-background-color);
     border: 0;
-    border-radius: var(--modal-border-radius);
+    border-radius: var(--krd-modal-border-radius);
     display: none;
     opacity: 0;
-    color: var(--modal-color);
+    color: var(--krd-modal-color);
     transition-property: display, opacity;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
     transition-behavior: allow-discrete;
-    z-index: var(--z-index-modal);
+    z-index: var(--krd-z-index-modal);
 }
 
 .modal[open] {
@@ -26,7 +26,7 @@
 }
 
 .modal[open]:has(.modal-body) {
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--krd-elevation-md);
 }
 
 .modal[open]::backdrop {
@@ -34,11 +34,11 @@
 }
 
 .modal::backdrop {
-    background: var(--modal-backdrop);
+    background: var(--krd-modal-backdrop);
     opacity: 0;
     transition-property: opacity, display, overlay;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
     transition-behavior: allow-discrete;
 
     @starting-style {
@@ -47,27 +47,27 @@
 }
 
 .modal-header {
-    border-bottom-width: var(--modal-header-border-bottom-width);
-    border-bottom-style: var(--modal-header-border-bottom-style);
-    border-bottom-color: var(--modal-header-border-bottom-color);
+    border-bottom-width: var(--krd-modal-header-border-bottom-width);
+    border-bottom-style: var(--krd-modal-header-border-bottom-style);
+    border-bottom-color: var(--krd-modal-header-border-bottom-color);
     text-wrap: balance;
 }
 
 .modal-close {
     position: absolute;
-    right: var(--modal-close-inset-inline-end);
-    top: var(--modal-close-inset-block-start);
+    right: var(--krd-modal-close-inset-inline-end);
+    top: var(--krd-modal-close-inset-block-start);
 }
 
 .modal-body {
-    padding-block-start: var(--modal-body-padding-block-start);
+    padding-block-start: var(--krd-modal-body-padding-block-start);
 }
 
 .modal-footer {
-    padding-block-start: var(--modal-footer-padding-block-start);
-    border-top-width: var(--modal-footer-border-top-width);
-    border-top-style: var(--modal-footer-border-top-style);
-    border-top-color: var(--modal-footer-border-top-color);
+    padding-block-start: var(--krd-modal-footer-padding-block-start);
+    border-top-width: var(--krd-modal-footer-border-top-width);
+    border-top-style: var(--krd-modal-footer-border-top-style);
+    border-top-color: var(--krd-modal-footer-border-top-color);
 }
 
 @media (prefers-reduced-motion: reduce) {

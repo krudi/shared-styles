@@ -4,7 +4,6 @@ import type { LegendArgs } from './legend.types';
 
 const meta = {
     title: 'Forms/Legend',
-    tags: ['autodocs'],
     render: ({ text }: LegendArgs): string => `
         <fieldset class="form-fieldset">
             <legend class="form-legend">${text}</legend>
@@ -20,7 +19,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Legend styling for fieldset headings and grouped labels via <code>.form-legend</code>.',
+                component: `Legend — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -36,16 +37,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Legend styling for grouped form content inside <code>.form-fieldset</code>.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Update legend copy to label grouped fields.',
             },
         },
     },

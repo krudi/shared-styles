@@ -4,7 +4,6 @@ import type { GridArgs } from './grid.types';
 
 const meta = {
     title: 'Layout/Grid',
-    tags: ['autodocs'],
     render: (): string => `
         <h2 class="h4 mt-0">Grid</h2>
         <div class="container">
@@ -28,7 +27,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Grid helpers for responsive page composition, including per-column alignment utilities.',
+                component: `Grid — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -44,16 +45,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Compose <code>.row</code> and <code>.col-*</code> classes to create responsive layouts.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use grid utilities to prototype responsive column layouts quickly, then align content with <code>.col-start</code>, <code>.col-center</code>, and <code>.col-end</code>.',
             },
         },
     },

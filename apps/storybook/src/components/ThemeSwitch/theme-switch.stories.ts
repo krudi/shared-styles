@@ -5,15 +5,14 @@ import type { ThemeSwitchArgs } from './theme-switch.types';
 
 const meta = {
     title: 'Components/ThemeSwitch',
-    tags: ['autodocs'],
     play: ({ canvasElement }): void => {
         const switchElement = canvasElement.querySelector<HTMLButtonElement>('button[data-theme-switch]');
 
-        if (!switchElement?.id) {
+        if (!switchElement) {
             return;
         }
 
-        wireThemeSwitch({ switchId: switchElement.id });
+        wireThemeSwitch(switchElement);
     },
     render: ({ label }: ThemeSwitchArgs, { id }): string => `
         <button
@@ -44,8 +43,9 @@ const meta = {
         layout: 'centered',
         docs: {
             description: {
-                component:
-                    'Theme switch built on <code>.btn.btn-icon</code> and <code>.theme-switch</code>. Use the exported <code>wireThemeSwitch()</code> helper from <code>@krudi/styles/js</code> to toggle the root <code>.dark</code> class while keeping a single manual <code>aria-label</code> on the button.',
+                component: `ThemeSwitch — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },

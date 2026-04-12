@@ -1,37 +1,37 @@
 .form-control {
     width: 100%;
-    padding-block: var(--form-input-padding-block);
-    padding-inline: var(--form-input-padding-inline);
-    background-color: var(--form-input-background-color);
+    padding-block: var(--krd-form-input-padding-block);
+    padding-inline: var(--krd-form-input-padding-inline);
+    background-color: var(--krd-form-input-background-color);
     display: block;
-    color: var(--form-input-color);
-    caret-color: var(--accent);
-    border-width: var(--form-input-border-width);
-    border-style: var(--form-input-border-style);
-    border-color: var(--form-input-border-color);
-    border-radius: var(--form-input-border-radius);
-    font-size: var(--form-input-font-size);
-    line-height: var(--form-input-line-height);
+    color: var(--krd-form-input-color);
+    caret-color: var(--krd-color-accent);
+    border-width: var(--krd-form-input-border-width);
+    border-style: var(--krd-form-input-border-style);
+    border-color: var(--krd-form-input-border-color);
+    border-radius: var(--krd-form-input-border-radius);
+    font-size: var(--krd-form-input-font-size);
+    line-height: var(--krd-form-input-line-height);
     transition-property: border-color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-ease);
+    transition-duration: var(--krd-transition-duration);
+    transition-timing-function: var(--krd-transition-ease);
 }
 
 .form-control:focus-visible {
-    border-color: var(--form-input-border-color-focus);
+    border-color: var(--krd-form-input-border-color-focus);
 }
 
 .form-control:user-valid {
-    border-color: var(--accent);
+    border-color: var(--krd-color-accent);
 }
 
 .form-control:user-invalid {
-    border-color: var(--form-text-error-color);
+    border-color: var(--krd-form-text-error-color);
 }
 
 @media (prefers-contrast: more) {
     .form-control {
-        border-width: max(2px, var(--form-input-border-width));
+        border-width: max(2px, var(--krd-form-input-border-width));
     }
 }
 
@@ -40,7 +40,7 @@
 }
 
 .form-control:disabled {
-    background-color: var(--surface-subtle-hover);
+    background-color: var(--krd-color-surface-subtle-hover);
     opacity: 1;
 }
 

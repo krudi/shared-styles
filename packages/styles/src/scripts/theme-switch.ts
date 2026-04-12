@@ -1,5 +1,4 @@
-type ThemeSwitchIds = {
-    switchId: string;
+type ThemeSwitchOptions = {
     targetSelector?: string;
     darkClassName?: string;
     lightClassName?: string;
@@ -16,16 +15,13 @@ const resolveThemeTarget = (targetSelector?: string): HTMLElement | null => {
     return document.documentElement;
 };
 
-export const wireThemeSwitch = ({
-    switchId,
-    targetSelector,
-    darkClassName = 'dark',
-    lightClassName = 'light',
-}: ThemeSwitchIds): (() => void) => {
-    const switchElement = document.getElementById(switchId);
+export const wireThemeSwitch = (
+    switchElement: HTMLButtonElement | null,
+    { targetSelector, darkClassName = 'dark', lightClassName = 'light' }: ThemeSwitchOptions = {}
+): (() => void) => {
     const themeTarget = resolveThemeTarget(targetSelector);
 
-    if (!(switchElement instanceof HTMLButtonElement) || !themeTarget) {
+    if (!switchElement || !themeTarget) {
         return noop;
     }
 

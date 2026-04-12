@@ -4,7 +4,6 @@ import type { SvgArgs } from './svg.types';
 
 const meta = {
     title: 'HTML/Svg',
-    tags: ['autodocs'],
     render: ({ label }: SvgArgs): string => `
         <div>
             <svg viewBox="0 0 600 400" role="img" aria-label="${label}">
@@ -22,7 +21,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Base SVG styling for icons and inline vector graphics.',
+                component: `Svg — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive. Example markup: <code>&lt;svg&gt;…&lt;/svg&gt;</code>.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -38,16 +39,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'SVG icons inherit size from the CSS variables and current text color.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Update the label to validate accessibility text.',
             },
         },
     },

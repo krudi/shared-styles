@@ -4,7 +4,6 @@ import type { BackgroundColorsArgs } from './background-colors.types';
 
 const meta = {
     title: 'Utilities/Background Colors',
-    tags: ['autodocs'],
     render: () => `
         <h2 class="h4 mt-0">Background colors</h2>
         <div class="row">
@@ -29,7 +28,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Background color utilities with built-in contrast emphasis for text.',
+                component: `Background Colors — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens: see the Tokens story under the theme section (theme/Tokens) for reference to CSS variables and token names.`,
             },
         },
     },
@@ -45,16 +46,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Background utilities include built-in text emphasis colors to preserve contrast.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use background helpers for quick surface emphasis in layouts.',
             },
         },
     },

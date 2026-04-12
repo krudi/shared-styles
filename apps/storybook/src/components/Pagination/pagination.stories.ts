@@ -4,7 +4,6 @@ import type { PaginationArgs } from './pagination.types';
 
 const meta = {
     title: 'Components/Pagination',
-    tags: ['autodocs'],
     render: ({ currentPage, totalPages }: PaginationArgs): string => {
         const safeTotal = Math.max(3, Math.floor(totalPages));
         const safeCurrent = Math.min(Math.max(1, Math.floor(currentPage)), safeTotal);
@@ -61,8 +60,9 @@ const meta = {
         layout: 'padded',
         docs: {
             description: {
-                component:
-                    'Pagination bar with centered list. Use <code>a.pagination-list-item-link</code> for navigable pages, <code>span.pagination-list-item-text</code> for the current page, and <code>a.pagination-list-item-control</code> for previous/next controls. Focus-visible styling is part of the component contract.',
+                component: `Pagination — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -78,57 +78,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Canonical pagination example with a mid-range active page.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Adjust current and total pages to preview the active state and control spacing.',
-            },
-        },
-    },
-};
-
-export const EdgeStates: Story = {
-    render: (): string => `
-        <div class="d-grid gap-4">
-            <nav class="pagination" aria-label="Pagination start state">
-                <ul class="pagination-list" role="list">
-                    <li class="pagination-list-item">
-                        <a class="pagination-list-item-control" href="#prev" aria-label="Previous" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="pagination-list-item"><span class="pagination-list-item-text" aria-current="page">1</span></li>
-                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#2">2</a></li>
-                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#3">3</a></li>
-                    <li class="pagination-list-item">
-                        <a class="pagination-list-item-control" href="#next" aria-label="Next">Next</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="pagination" aria-label="Pagination end state">
-                <ul class="pagination-list" role="list">
-                    <li class="pagination-list-item">
-                        <a class="pagination-list-item-control" href="#prev" aria-label="Previous">Previous</a>
-                    </li>
-                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#8">8</a></li>
-                    <li class="pagination-list-item"><a class="pagination-list-item-link" href="#9">9</a></li>
-                    <li class="pagination-list-item"><span class="pagination-list-item-text" aria-current="page">10</span></li>
-                    <li class="pagination-list-item">
-                        <a class="pagination-list-item-control" href="#next" aria-label="Next" aria-disabled="true">Next</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    `,
-    parameters: {
-        controls: { disable: true },
-        docs: {
-            description: {
-                story: 'Edge-state reference for first and last page behavior, including disabled previous and next controls.',
             },
         },
     },

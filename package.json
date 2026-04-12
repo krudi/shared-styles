@@ -29,6 +29,7 @@
     },
     "type": "module",
     "workspaces": [
+        "addons/*",
         "packages/*",
         "apps/*"
     ],
@@ -50,16 +51,22 @@
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/stylelint-config": "^0.1.1",
-        "@types/node": "^24.0.0",
-        "typescript": "^5.9.2"
+        "@storybook/addon-docs": "^10.3.5",
+        "@types/node": "^25.5.2",
+        "eslint-plugin-storybook": "^10.3.5",
+        "react": "^19.2.5",
+        "react-dom": "^19.2.5",
+        "storybook": "^10.3.5",
+        "typescript": "^6.0.2",
+        "vite": "^8.0.4"
     },
     "devDependencies": {
         "@krudi/eslint-config": "^0.1.8",
         "@krudi/prettier-config": "^0.1.8",
         "@krudi/typescript-config": "^0.1.9",
-        "turbo": "^2.9.3"
+        "turbo": "^2.9.4"
     },
-    "packageManager": "npm@11.7.0",
+    "packageManager": "npm@11.12.1",
     "engines": {
         "node": ">= 24.14.0",
         "npm": ">= 11.6.4"

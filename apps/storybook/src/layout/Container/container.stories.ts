@@ -4,7 +4,6 @@ import type { ContainerArgs } from './container.types';
 
 const meta = {
     title: 'Layout/Container',
-    tags: ['autodocs'],
     render: (): string => `
         <h2 class="h4 mt-0">Container</h2>
         <div class="container">
@@ -15,7 +14,9 @@ const meta = {
     parameters: {
         docs: {
             description: {
-                component: 'Container constraints for responsive page composition.',
+                component: `Container — purpose-driven component from the design system. Use this component for its primary role in the UI, follow the system tokens for spacing and colour, and ensure a clear accessible name is provided. Follow keyboard and screen-reader best practices when the component is interactive.
+
+Design tokens are documented below.`,
             },
         },
     },
@@ -31,16 +32,6 @@ export const Default: Story = {
         docs: {
             description: {
                 story: 'Use <code>.container</code> to center content and cap the design width across breakpoints.',
-            },
-        },
-    },
-};
-
-export const Playground: Story = {
-    parameters: {
-        docs: {
-            description: {
-                story: 'Use the container utility when you need consistent page-width alignment.',
             },
         },
     },

@@ -1,53 +1,53 @@
 .badge {
-    padding-block: var(--badge-padding-block);
-    padding-inline: var(--badge-padding-inline);
-    background-color: var(--badge-background-color);
+    padding-block: var(--krd-badge-padding-block);
+    padding-inline: var(--krd-badge-padding-inline);
+    background-color: var(--krd-badge-background-color);
     display: inline-flex;
-    color: var(--badge-color);
-    border-width: var(--badge-border-width);
-    border-style: var(--badge-border-style);
-    border-color: var(--badge-border-color);
-    border-radius: var(--badge-border-radius);
-    font-size: var(--badge-font-size);
-    font-weight: var(--badge-font-weight);
-    line-height: var(--badge-line-height);
+    color: var(--krd-badge-color);
+    border-width: var(--krd-badge-border-width);
+    border-style: var(--krd-badge-border-style);
+    border-color: var(--krd-badge-border-color);
+    border-radius: var(--krd-badge-border-radius);
+    font-size: var(--krd-badge-font-size);
+    font-weight: var(--krd-badge-font-weight);
+    line-height: var(--krd-badge-line-height);
 }
 
 .badge-default {
-    --badge-background-color: var(--primary);
-    --badge-color: var(--primary-foreground);
-    --badge-border-width: 0;
-    --badge-border-style: initial;
-    --badge-border-color: none;
+    --krd-badge-background-color: var(--krd-color-primary);
+    --krd-badge-color: var(--krd-color-primary-foreground);
+    --krd-badge-border-width: 0;
+    --krd-badge-border-style: initial;
+    --krd-badge-border-color: none;
 }
 
 .badge-secondary {
-    --badge-background-color: var(--secondary);
-    --badge-color: var(--secondary-foreground);
-    --badge-border-width: 0;
-    --badge-border-style: initial;
-    --badge-border-color: none;
+    --krd-badge-background-color: var(--krd-color-secondary);
+    --krd-badge-color: var(--krd-color-secondary-foreground);
+    --krd-badge-border-width: 0;
+    --krd-badge-border-style: initial;
+    --krd-badge-border-color: none;
 }
 
 .badge-destructive {
-    --badge-background-color: var(--destructive);
-    --badge-color: var(--destructive-foreground);
-    --badge-border-width: 0;
-    --badge-border-style: initial;
-    --badge-border-color: none;
+    --krd-badge-background-color: var(--krd-color-destructive);
+    --krd-badge-color: var(--krd-color-destructive-foreground);
+    --krd-badge-border-width: 0;
+    --krd-badge-border-style: initial;
+    --krd-badge-border-color: none;
 }
 
 .badge-outline {
-    --badge-background-color: transparent;
-    --badge-color: var(--foreground);
-    --badge-border-width: 1px;
-    --badge-border-style: solid;
-    --badge-border-color: var(--border);
+    --krd-badge-background-color: transparent;
+    --krd-badge-color: var(--krd-color-foreground);
+    --krd-badge-border-width: 1px;
+    --krd-badge-border-style: solid;
+    --krd-badge-border-color: var(--krd-color-border);
 }
 
 @media (prefers-contrast: more) {
     .badge {
-        border-width: max(2px, var(--badge-border-width));
+        border-width: max(2px, var(--krd-badge-border-width));
         border-style: solid;
         border-color: currentcolor;
     }

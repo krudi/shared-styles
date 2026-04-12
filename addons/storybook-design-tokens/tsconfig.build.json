@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "emitDeclarationOnly": false
+  },
+  "include": ["src/index.tsx", "src/preset.ts", "src/types.ts", "src/virtual-module.d.ts"]
+}
