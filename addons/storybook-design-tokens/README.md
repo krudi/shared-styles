@@ -36,6 +36,29 @@ import * as Stories from './button.stories';
 <DesignTokenDocs of={Stories} />
 ```
 
+You can also target a group directly:
+
+```mdx
+<DesignTokenDocs group="Components/Button" />
+```
+
+Story files may opt into one or more groups with the `designTokens` parameter:
+
+```ts
+const meta = {
+  title: 'Components/Button',
+  parameters: {
+    designTokens: 'Components/Button',
+  },
+};
+```
+
+## Options
+
+| Option    | Type       | Description                                                                                       |
+| :-------- | :--------- | :------------------------------------------------------------------------------------------------ |
+| `sources` | `string[]` | CSS files, resolved relative to Storybook's config directory, that contain `@tokens` annotations. |
+
 ## CSS Annotations
 
 Token groups are discovered from CSS comment blocks:
