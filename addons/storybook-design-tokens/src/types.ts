@@ -15,13 +15,7 @@ export type DesignTokensAddonOptions = {
   sources?: string[];
 };
 
-export type DesignTokensParameter =
-  | string
-  | string[]
-  | {
-      group?: string | string[];
-      groups?: string[];
-    };
+export type DesignTokensParameter = string | string[];
 
 export type StoryMetaLike = {
   default?: {

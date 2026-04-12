@@ -1,0 +1,41 @@
+* text=auto eol=lf
+
+# TypeScript
+*.ts                text eol=lf
+*.js                text eol=lf
+
+# Configuration & metadata
+*.json              text eol=lf diff=json
+
+# Documentation
+*.md                text eol=lf diff=markdown
+
+# Styles & markup
+*.svg               text eol=lf
+
+# Binary assets
+*.png               binary
+*.jpg               binary
+*.jpeg              binary
+*.gif               binary
+*.webp              binary
+*.ico               binary
+
+# Export rules
+dist/               -export-ignore
+dist/**             -export-ignore
+LICENSE             -export-ignore
+README.md           -export-ignore
+package.json        -export-ignore
+.cache/             export-ignore
+.cache/**           export-ignore
+.turbo/             export-ignore
+.turbo/**           export-ignore
+node_modules/       export-ignore
+node_modules/**     export-ignore
+src/                export-ignore
+src/**              export-ignore
+.gitignore          export-ignore
+.gitattributes      export-ignore
+.prettierignore     export-ignore
+prettier.config.ts  export-ignore

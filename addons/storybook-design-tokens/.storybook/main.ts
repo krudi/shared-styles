@@ -9,7 +9,7 @@ const config = defineMain({
     {
       name: import.meta.resolve('./local-preset.ts'),
       options: {
-        sources: ['../src/fixtures/tokens.css'],
+        sources: [],
       },
     },
   ],

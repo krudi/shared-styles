@@ -1,10 +1,14 @@
 # @krudi/storybook-design-tokens
 
-Storybook addon for rendering annotated `--krd-*` CSS custom properties as design token tables in docs pages.
+Show CSS custom properties as token tables in Storybook Docs.
 
-## Usage
+Point the addon at the CSS files that contain `@tokens` comments, then render
+`<DesignTokenDocs of={Stories} />` in MDX. Stories choose their tokens with
+`parameters.designTokens`.
 
-Register the addon in `.storybook/main.ts` and pass the CSS files that contain token annotations:
+## Setup
+
+Register the addon in `.storybook/main.ts`.
 
 ```ts
 import type { StorybookConfig } from '@storybook/html-vite';
@@ -27,7 +31,9 @@ const config: StorybookConfig = {
 export default config;
 ```
 
-In MDX docs:
+Paths in `sources` are resolved from the Storybook config directory.
+
+Then add the docs block to an MDX page.
 
 ```mdx
 import { DesignTokenDocs } from '@krudi/storybook-design-tokens';
@@ -36,13 +42,7 @@ import * as Stories from './button.stories';
 <DesignTokenDocs of={Stories} />
 ```
 
-You can also target a group directly:
-
-```mdx
-<DesignTokenDocs group="Components/Button" />
-```
-
-Story files may opt into one or more groups with the `designTokens` parameter:
+Set `designTokens` on the story.
 
 ```ts
 const meta = {
@@ -61,7 +61,7 @@ const meta = {
 
 ## CSS Annotations
 
-Token groups are discovered from CSS comment blocks:
+Add an `@tokens` comment before the custom properties you want to list.
 
 ```css
 /**

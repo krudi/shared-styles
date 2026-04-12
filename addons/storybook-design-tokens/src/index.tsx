@@ -11,7 +11,6 @@ type DesignTokensTableProps = {
 };
 
 type DesignTokenDocsProps = {
-  group?: string | string[];
   of?: StoryMetaLike;
   title?: string;
 };
@@ -34,10 +33,6 @@ function getGroupsFromStoryMeta(of?: StoryMetaLike): string[] {
 
   if (typeof parameter === 'string' || Array.isArray(parameter)) {
     return normalizeGroupIds(parameter);
-  }
-
-  if (parameter && typeof parameter === 'object') {
-    return normalizeGroupIds(parameter.groups ?? parameter.group);
   }
 
   return normalizeGroupIds(of?.default?.title);
@@ -75,8 +70,8 @@ export function DesignTokensTable({ rows, title = 'Design Tokens' }: DesignToken
   );
 }
 
-export function DesignTokenDocs({ group, of, title = 'Design Tokens' }: DesignTokenDocsProps) {
-  const groupIds = normalizeGroupIds(group).length ? normalizeGroupIds(group) : getGroupsFromStoryMeta(of);
+export function DesignTokenDocs({ of, title = 'Design Tokens' }: DesignTokenDocsProps) {
+  const groupIds = getGroupsFromStoryMeta(of);
 
   const matchingGroups = groupIds
     .map((groupId) => designTokens[groupId])
