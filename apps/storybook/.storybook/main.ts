@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         {
-            name: '@krudi/storybook-design-tokens',
+            name: getAbsolutePath('@krudi/storybook-design-tokens'),
             options: {
                 sources: [
                     '../../../packages/styles/src/styles/palette.css',

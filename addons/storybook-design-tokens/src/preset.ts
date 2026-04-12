@@ -18,9 +18,15 @@ type PresetConfig = {
 };
 
 function getAddonOptions(options: PresetConfig): DesignTokensAddonOptions {
-  const matchedPreset = options.presetsList?.find((preset) => preset.name?.includes(PACKAGE_NAME));
+  const matchedPreset = options.presetsList?.find((preset) => {
+    const presetName = preset.name ?? '';
 
-  return matchedPreset?.options ?? {};
+    return presetName.includes(PACKAGE_NAME) || path.basename(presetName).includes('storybook-design-tokens');
+  });
+
+  return (
+    matchedPreset?.options ?? options.presetsList?.find((preset) => preset.options?.sources?.length)?.options ?? {}
+  );
 }
 
 function cleanCommentLine(line: string): string {
