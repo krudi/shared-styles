@@ -52,8 +52,19 @@
             "outputLogs": "new-only"
         },
         "test": {
-            "dependsOn": ["^test:storybook"],
+            "dependsOn": ["^build"],
+            "inputs": ["$TURBO_DEFAULT$", "**/*.test.ts", "**/*.test.tsx", "vitest.config.ts", "vitest.setup.ts"],
             "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "test:coverage": {
+            "dependsOn": ["^build"],
+            "inputs": ["$TURBO_DEFAULT$", "**/*.test.ts", "**/*.test.tsx", "vitest.config.ts", "vitest.setup.ts"],
+            "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "test:storybook:run": {
+            "dependsOn": ["^test:storybook", "@krudi/styles#build"],
             "outputLogs": "new-only"
         },
         "preview": {
