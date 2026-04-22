@@ -1,0 +1,52 @@
+* text=auto eol=lf
+
+# TypeScript & Vue
+*.ts                text eol=lf
+*.js                text eol=lf
+*.d.ts              text eol=lf
+*.vue               text eol=lf
+
+# Configuration & metadata
+*.json              text eol=lf diff=json
+*.tsbuildinfo       text eol=lf
+tsconfig*.json      text eol=lf diff=json
+
+# Documentation
+*.md                text eol=lf diff=markdown
+
+# Binary assets
+*.png               binary
+*.jpg               binary
+*.jpeg              binary
+*.gif               binary
+*.webp              binary
+*.ico               binary
+*.ttf               binary
+*.otf               binary
+*.woff              binary
+*.woff2             binary
+
+# Export rules
+dist/               -export-ignore
+dist/**             -export-ignore
+LICENSE             -export-ignore
+README.md           -export-ignore
+package.json        -export-ignore
+.cache/             export-ignore
+.cache/**           export-ignore
+.turbo/             export-ignore
+.turbo/**           export-ignore
+node_modules/       export-ignore
+node_modules/**     export-ignore
+src/                export-ignore
+src/**              export-ignore
+.gitignore          export-ignore
+.gitattributes      export-ignore
+.prettierignore     export-ignore
+env.d.ts            export-ignore
+eslint.config.ts    export-ignore
+prettier.config.ts  export-ignore
+tsconfig*.json      export-ignore
+vite.config.ts      export-ignore
+vitest.config.ts    export-ignore
+vitest.setup.ts     export-ignore
