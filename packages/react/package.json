@@ -1,0 +1,82 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@krudi/react",
+    "version": "0.1.0",
+    "private": false,
+    "description": "React component wrappers for @krudi/styles CSS classes.",
+    "keywords": [
+        "react",
+        "components",
+        "ui",
+        "css",
+        "krudi"
+    ],
+    "homepage": "https://github.com/krudi/shared-styles#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/shared-styles/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/krudi/shared-styles.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "krudi",
+        "email": "patryk.kudlik@gmail.com",
+        "url": "https://krudi.io"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "clean": "rm -rf .turbo .cache dist node_modules",
+        "dev": "vite build --watch",
+        "lint:eslint": "eslint --flag unstable_native_nodejs_ts_config . --cache --cache-location .cache/.eslintcache",
+        "lint:eslint:fix": "eslint --flag unstable_native_nodejs_ts_config . --fix --cache --cache-location .cache/.eslintcache",
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "test:watch": "vitest",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "peerDependencies": {
+        "react": ">=19",
+        "react-dom": ">=19"
+    },
+    "devDependencies": {
+        "@krudi/eslint-config": "^0.1.8",
+        "@krudi/prettier-config": "^0.1.8",
+        "@krudi/typescript-config": "^0.1.9",
+        "@types/node": "^25.5.2",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "@vitejs/plugin-react": "^6.0.1",
+        "react": "^19.2.5",
+        "react-dom": "^19.2.5",
+        "typescript": "^6.0.2",
+        "vite": "^8.0.4",
+        "vite-plugin-dts": "^4.5.4",
+        "vitest": "^4.1.2",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@vitest/coverage-v8": "^4.1.5",
+        "jsdom": "^29.0.2"
+    },
+    "engines": {
+        "node": ">= 24.14.0"
+    }
+}
