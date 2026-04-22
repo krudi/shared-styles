@@ -1,0 +1,25 @@
+# Dependencies files
+node_modules
+
+# Build output files
+dist
+
+# Environment files
+*.env
+!.env-*
+
+# Git files
+.gitignore
+.gitkeep
+
+# Tooling files
+.prettierignore
+.turbo
+.cache
+*.tsbuildinfo
+
+# Lock files
+package-lock.json
+
+# Test coverage
+coverage
