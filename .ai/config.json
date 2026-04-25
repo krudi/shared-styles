@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "project": {
+    "name": "shared-styles",
+    "description": "npm monorepo — CSS design tokens, reset, layout utilities, early components for @krudi/* projects",
+    "type": "npm-monorepo",
+    "status": "active",
+    "blastRadius": "high"
+  },
+  "stack": {
+    "language": "typescript",
+    "runtime": "node",
+    "packageManager": "npm",
+    "buildTool": "turbo",
+    "storybook": true
+  },
+  "commands": {
+    "build": "npm run build",
+    "dev": "npm run dev",
+    "lint": "npm run lint",
+    "typecheck": "npm run typecheck",
+    "test:storybook": "npm run test:storybook",
+    "clean": "npm run clean"
+  },
+  "consumers": ["impuls", "krudi-io"],
+  "dependencies": {
+    "configs": "shared-configs"
+  },
+  "docs": {
+    "agentsFile": "AGENTS.md",
+    "claudeFile": "CLAUDE.md",
+    "rules": ".ai/rules/npm-monorepo.md",
+    "lessons": ".ai/memory/lessons.md"
+  }
+}
