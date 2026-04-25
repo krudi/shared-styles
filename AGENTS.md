@@ -104,3 +104,26 @@ Design tokens in `packages/tokens/` are CSS custom properties — the authoritat
 ## Rules
 
 @.ai/rules/npm-monorepo.md
+
+---
+
+## For Claude Code
+
+### Slash commands
+
+| Command | What it does |
+|---------|---|
+| `/test` | Build, lint, typecheck, and run Storybook tests |
+
+### Rules loaded automatically
+
+| Rule file | Applied to |
+|-----------|---|
+| `.ai/rules/npm-monorepo.md` | `package.json`, `turbo.json`, `**/*.ts` |
+
+### Constraints
+
+- CSS custom properties (`var(--krudi-*)`) are the source of truth — never suggest hardcoded color/spacing values
+- Renaming a token is a breaking change — check usages in `impuls` and `krudi-io` first
+- Always verify changes visually in Storybook before publishing
+- This monorepo depends on `shared-configs` — do not duplicate linting rules here
