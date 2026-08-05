@@ -37,38 +37,33 @@
         "build": "turbo run build",
         "clean": "turbo clean && rm -rf .turbo node_modules",
         "dev": "turbo run dev --parallel",
-        "lint:eslint": "turbo run lint:eslint",
-        "lint:eslint:fix": "turbo run lint:eslint:fix",
-        "lint:prettier": "turbo run lint:prettier",
-        "lint:prettier:fix": "turbo run lint:prettier:fix",
-        "lint:stylelint": "turbo run lint:stylelint",
-        "lint:stylelint:fix": "turbo run lint:stylelint:fix",
+        "format:ox": "oxfmt .",
+        "format:ox:check": "oxfmt --check .",
+        "lint": "npm run lint:ox && npm run format:ox:check",
+        "lint:ox": "oxlint .",
+        "lint:ox:fix": "oxlint . --fix",
         "test:storybook": "turbo run test:storybook",
         "test:storybook:coverage": "turbo run test:storybook:coverage",
         "typecheck": "turbo run typecheck"
     },
     "overrides": {
-        "@krudi/eslint-config": "^0.1.8",
-        "@krudi/prettier-config": "^0.1.8",
-        "@krudi/stylelint-config": "^0.1.1",
-        "@storybook/addon-docs": "^10.3.5",
-        "@types/node": "^25.5.2",
-        "eslint-plugin-storybook": "^10.3.5",
-        "react": "^19.2.5",
-        "react-dom": "^19.2.5",
-        "storybook": "^10.3.5",
+        "@storybook/addon-docs": "^10.5.6",
+        "@types/node": "^26.1.2",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "storybook": "^10.5.6",
         "typescript": "^6.0.2",
-        "vite": "^8.0.4"
+        "vite": "^8.2.0"
     },
     "devDependencies": {
-        "@krudi/eslint-config": "^0.1.8",
-        "@krudi/prettier-config": "^0.1.8",
         "@krudi/typescript-config": "^0.1.9",
-        "turbo": "^2.9.4"
+        "oxfmt": "^0.62.0",
+        "oxlint": "^1.77.0",
+        "turbo": "^2.10.8"
     },
-    "packageManager": "npm@11.12.1",
+    "packageManager": "npm@12.0.2",
     "engines": {
-        "node": ">= 24.14.0",
-        "npm": ">= 11.6.4"
+        "node": ">= 24.19.0",
+        "npm": ">= 12.0.0"
     }
 }

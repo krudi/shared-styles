@@ -28,10 +28,6 @@
         "build": "npm --workspace @krudi/storybook-design-tokens run build && storybook build --docs",
         "clean": "rm -rf .turbo .cache node_modules storybook-static",
         "dev": "npm --workspace @krudi/storybook-design-tokens run build && storybook dev --port 44877",
-        "lint:eslint": "eslint --flag unstable_native_nodejs_ts_config . --cache --cache-location .cache/.eslintcache",
-        "lint:eslint:fix": "eslint --flag unstable_native_nodejs_ts_config . --fix --cache --cache-location .cache/.eslintcache",
-        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
-        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
         "preview": "serve storybook-static --listen 44877",
         "test:storybook": "vitest --project storybook",
         "test:storybook:coverage": "vitest --project storybook --coverage",
@@ -42,27 +38,24 @@
         "@krudi/styles": "*"
     },
     "devDependencies": {
-        "@chromatic-com/storybook": "^5.1.1",
-        "@krudi/eslint-config": "^0.1.8",
-        "@krudi/prettier-config": "^0.1.8",
-        "@storybook/addon-a11y": "^10.3.5",
-        "@storybook/addon-docs": "^10.3.5",
-        "@storybook/addon-links": "^10.3.5",
-        "@storybook/addon-themes": "^10.3.5",
-        "@storybook/addon-vitest": "^10.3.5",
-        "@storybook/html-vite": "^10.3.5",
-        "@types/node": "^25.5.2",
-        "@vitest/browser-playwright": "^4.1.2",
-        "@vitest/coverage-v8": "^4.1.2",
-        "eslint-plugin-storybook": "10.3.5",
-        "playwright": "^1.59.1",
+        "@chromatic-com/storybook": "^5.2.1",
+        "@storybook/addon-a11y": "^10.5.6",
+        "@storybook/addon-docs": "^10.5.6",
+        "@storybook/addon-links": "^10.5.6",
+        "@storybook/addon-themes": "^10.5.6",
+        "@storybook/addon-vitest": "^10.5.6",
+        "@storybook/html-vite": "^10.5.6",
+        "@types/node": "^26.1.2",
+        "@vitest/browser-playwright": "^4.1.10",
+        "@vitest/coverage-v8": "^4.1.10",
+        "playwright": "^1.62.1",
         "remark-gfm": "^4.0.1",
-        "storybook": "^10.3.5",
+        "storybook": "^10.5.6",
         "typescript": "^6.0.2",
-        "vite": "^8.0.4",
-        "vitest": "^4.1.2"
+        "vite": "^8.2.0",
+        "vitest": "^4.1.10"
     },
     "engines": {
-        "node": ">= 24.14.0"
+        "node": ">= 24.19.0"
     }
 }

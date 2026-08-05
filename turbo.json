@@ -21,27 +21,6 @@
             "outputs": [".cache/tsbuildinfo.json"],
             "outputLogs": "new-only"
         },
-        "lint:eslint": {
-            "outputs": [".cache/.eslintcache"],
-            "outputLogs": "new-only"
-        },
-        "lint:eslint:fix": {
-            "cache": false
-        },
-        "lint:prettier": {
-            "outputs": [".cache/.prettiercache"],
-            "outputLogs": "new-only"
-        },
-        "lint:prettier:fix": {
-            "cache": false
-        },
-        "lint:stylelint": {
-            "outputs": [".cache/.stylelintcache"],
-            "outputLogs": "new-only"
-        },
-        "lint:stylelint:fix": {
-            "cache": false
-        },
         "test:storybook": {
             "dependsOn": ["^test:storybook", "@krudi/styles#build"],
             "outputLogs": "new-only"
