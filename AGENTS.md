@@ -1,6 +1,7 @@
 # Shared Styles
 
-npm workspaces monorepo providing shared CSS foundations, design tokens, utilities, and early components for `@krudi/*` projects. Includes a Storybook for visual development and review.
+npm workspaces monorepo providing shared CSS foundations, design tokens, utilities, and early components for `@krudi/*`
+projects. Includes a Storybook for visual development and review.
 
 ## Stack
 
@@ -26,7 +27,7 @@ npm workspaces monorepo providing shared CSS foundations, design tokens, utiliti
 ```bash
 npm run build            # build all packages (Turbo)
 npm run dev              # watch mode + Storybook
-npm run lint             # lint all packages
+npm run lint             # oxlint + oxfmt --check
 npm run typecheck        # typecheck all packages
 npm run test:storybook   # run Storybook tests (visual regression)
 npm run clean            # clean dist/ and .turbo/
@@ -52,11 +53,13 @@ turbo.json              # build pipeline
 
 ## Architecture
 
-Design tokens in `packages/tokens/` are CSS custom properties — the authoritative source for all color, typography, spacing, and animation values. Consumer projects reference these via `var(--krudi-*)`.
+Design tokens in `packages/tokens/` are CSS custom properties — the authoritative source for all color, typography,
+spacing, and animation values. Consumer projects reference these via `var(--krudi-*)`.
 
 **Consumers:** `impuls`, `krudi-io`
 
 **Design token workflow:**
+
 1. Token change in `packages/tokens/`
 2. Build: `npm run build`
 3. Visual review in Storybook
@@ -81,13 +84,14 @@ Design tokens in `packages/tokens/` are CSS custom properties — the authoritat
 4. Run `npm run build`
 5. Publish: `npm publish --workspaces`
 
-**Token rename warning:** renaming a CSS custom property is a breaking change — audit all `var(--krudi-*)` usages in consumers before renaming.
+**Token rename warning:** renaming a CSS custom property is a breaking change — audit all `var(--krudi-*)` usages in
+consumers before renaming.
 
 ---
 
 ## Cross-project context
 
-- **Depends on:** `shared-configs` for ESLint, TypeScript, Prettier, Stylelint configs
+- **Depends on:** `shared-configs` for the TypeScript config
 - **Consumed by:** `impuls`, `krudi-io`
 - Breaking token changes require consumer updates — coordinate before publishing
 
@@ -103,27 +107,12 @@ Design tokens in `packages/tokens/` are CSS custom properties — the authoritat
 
 ## Rules
 
-@.ai/rules/npm-monorepo.md
+@.ai/rules/npm-monorepo.md @.ai/memory/lessons.md @.ai/skills/commit/SKILL.md @.ai/skills/pr/SKILL.md
+@.ai/skills/retrospective/SKILL.md @.ai/skills/test/SKILL.md
 
----
-
-## For Claude Code
-
-### Slash commands
-
-| Command | What it does |
-|---------|---|
-| `/test` | Build, lint, typecheck, and run Storybook tests |
-
-### Rules loaded automatically
-
-| Rule file | Applied to |
-|-----------|---|
-| `.ai/rules/npm-monorepo.md` | `package.json`, `turbo.json`, `**/*.ts` |
-
-### Constraints
+## Constraints
 
 - CSS custom properties (`var(--krudi-*)`) are the source of truth — never suggest hardcoded color/spacing values
 - Renaming a token is a breaking change — check usages in `impuls` and `krudi-io` first
 - Always verify changes visually in Storybook before publishing
-- This monorepo depends on `shared-configs` — do not duplicate linting rules here
+- Lint and format with oxlint + oxfmt from the repo root — no per-package lint config

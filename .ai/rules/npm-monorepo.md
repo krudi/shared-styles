@@ -17,14 +17,14 @@ turbo.json         # Turbo pipeline config
 
 ## Package names
 
-All packages use the `@krudi/` scope: `@krudi/eslint-config`, `@krudi/styles`, etc.
+All packages use the `@krudi/` scope: `@krudi/typescript-config`, `@krudi/styles`, etc.
 
 ## Commands (run from workspace root)
 
 ```bash
 npm run build        # build all packages (Turbo)
 npm run dev          # watch mode for all packages
-npm run lint         # lint all packages
+npm run lint             # oxlint + oxfmt --check
 npm run typecheck    # typecheck all packages
 npm run clean        # clean dist/ and .turbo/
 ```

@@ -1,3 +1,10 @@
+---
+name: test
+description: Run the project's full verification suite (lint, typecheck, build, and tests where present). Use when asked to verify, check, or test the project before a commit or PR.
+---
+
+# Test
+
 Run the full quality check for shared-styles:
 
 1. `npm run build` — build all packages (Turbo)
