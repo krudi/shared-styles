@@ -14,16 +14,16 @@ Uses native `<details>`/`<summary>` — no JavaScript required for open/close be
 ## Usage
 
 ```tsx
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@krudi/react'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@krudi/react';
 
 <Accordion>
-  <AccordionItem>
-    <AccordionTrigger>What is this?</AccordionTrigger>
-    <AccordionContent>This is the answer.</AccordionContent>
-  </AccordionItem>
-  <AccordionItem open>
-    <AccordionTrigger>Open by default</AccordionTrigger>
-    <AccordionContent>This panel starts open.</AccordionContent>
-  </AccordionItem>
-</Accordion>
+    <AccordionItem>
+        <AccordionTrigger>What is this?</AccordionTrigger>
+        <AccordionContent>This is the answer.</AccordionContent>
+    </AccordionItem>
+    <AccordionItem open>
+        <AccordionTrigger>Open by default</AccordionTrigger>
+        <AccordionContent>This panel starts open.</AccordionContent>
+    </AccordionItem>
+</Accordion>;
 ```

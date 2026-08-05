@@ -1,15 +1,8 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+
 import { cn } from '../utils.js';
 
-export type ButtonVariant =
-    | 'default'
-    | 'secondary'
-    | 'destructive'
-    | 'outline'
-    | 'ghost'
-    | 'icon'
-    | 'link'
-    | 'close';
+export type ButtonVariant = 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'icon' | 'link' | 'close';
 
 export type ButtonSize = 'default' | 'sm';
 
@@ -36,7 +29,10 @@ export interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement>
 
 export function ButtonLink({ variant = 'link', size, className, children, ...props }: ButtonLinkProps) {
     return (
-        <a className={cn('btn', `btn-${variant}`, size === 'sm' && 'btn-sm', className)} {...props}>
+        <a
+            className={cn('btn', `btn-${variant}`, size === 'sm' && 'btn-sm', className)}
+            {...props}
+        >
             {children}
         </a>
     );

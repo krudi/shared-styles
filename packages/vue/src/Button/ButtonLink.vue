@@ -7,7 +7,10 @@ defineProps<{
 </script>
 
 <template>
-    <a :href="href" :class="['btn', `btn-${variant ?? 'link'}`, size === 'sm' && 'btn-sm']">
+    <a
+        :href="href"
+        :class="['btn', `btn-${variant ?? 'link'}`, size === 'sm' && 'btn-sm']"
+    >
         <slot />
     </a>
 </template>

@@ -9,7 +9,7 @@ React Badge component using `@krudi/styles` CSS classes.
 ## Usage
 
 ```tsx
-import { Badge } from '@krudi/react'
+import { Badge } from '@krudi/react';
 
-<Badge variant="secondary">New</Badge>
+<Badge variant="secondary">New</Badge>;
 ```

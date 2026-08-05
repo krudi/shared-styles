@@ -23,7 +23,11 @@ function handleClose() {
 </script>
 
 <template>
-    <dialog ref="dialogRef" class="modal" @close="handleClose">
+    <dialog
+        ref="dialogRef"
+        class="modal"
+        @close="handleClose"
+    >
         <slot />
     </dialog>
 </template>

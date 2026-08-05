@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ImgHTMLAttributes } from 'react';
+
 import { cn } from '../utils.js';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -7,7 +8,10 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 export function Card({ variant, className, children, ...props }: CardProps) {
     return (
-        <div className={cn('card', variant && `card-${variant}`, className)} {...props}>
+        <div
+            className={cn('card', variant && `card-${variant}`, className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -15,7 +19,10 @@ export function Card({ variant, className, children, ...props }: CardProps) {
 
 export function CardMedia({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-media', className)} {...props}>
+        <div
+            className={cn('card-media', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -23,7 +30,10 @@ export function CardMedia({ className, children, ...props }: HTMLAttributes<HTML
 
 export function CardContent({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-content', className)} {...props}>
+        <div
+            className={cn('card-content', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -31,7 +41,10 @@ export function CardContent({ className, children, ...props }: HTMLAttributes<HT
 
 export function CardHeader({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-content-header', className)} {...props}>
+        <div
+            className={cn('card-content-header', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -39,7 +52,10 @@ export function CardHeader({ className, children, ...props }: HTMLAttributes<HTM
 
 export function CardBody({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-content-body', className)} {...props}>
+        <div
+            className={cn('card-content-body', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -47,7 +63,10 @@ export function CardBody({ className, children, ...props }: HTMLAttributes<HTMLD
 
 export function CardFooter({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-content-footer', className)} {...props}>
+        <div
+            className={cn('card-content-footer', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -55,7 +74,10 @@ export function CardFooter({ className, children, ...props }: HTMLAttributes<HTM
 
 export function CardActions({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('card-footer-actions', className)} {...props}>
+        <div
+            className={cn('card-footer-actions', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -63,7 +85,10 @@ export function CardActions({ className, children, ...props }: HTMLAttributes<HT
 
 export function CardTitle({ className, children, ...props }: HTMLAttributes<HTMLHeadingElement>) {
     return (
-        <h3 className={cn('card-header-title', className)} {...props}>
+        <h3
+            className={cn('card-header-title', className)}
+            {...props}
+        >
             {children}
         </h3>
     );
@@ -71,7 +96,10 @@ export function CardTitle({ className, children, ...props }: HTMLAttributes<HTML
 
 export function CardSubtitle({ className, children, ...props }: HTMLAttributes<HTMLParagraphElement>) {
     return (
-        <p className={cn('card-header-subtitle', className)} {...props}>
+        <p
+            className={cn('card-header-subtitle', className)}
+            {...props}
+        >
             {children}
         </p>
     );
@@ -80,5 +108,10 @@ export function CardSubtitle({ className, children, ...props }: HTMLAttributes<H
 export interface CardImageProps extends ImgHTMLAttributes<HTMLImageElement> {}
 
 export function CardImage({ className, ...props }: CardImageProps) {
-    return <img className={className} {...props} />;
+    return (
+        <img
+            className={className}
+            {...props}
+        />
+    );
 }

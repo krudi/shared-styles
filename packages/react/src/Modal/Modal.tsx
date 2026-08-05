@@ -1,4 +1,5 @@
 import { useEffect, useRef, type DialogHTMLAttributes, type HTMLAttributes } from 'react';
+
 import { cn } from '../utils.js';
 
 export interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
@@ -28,7 +29,11 @@ export function Modal({ open, onClose, className, children, ...props }: ModalPro
     }, [onClose]);
 
     return (
-        <dialog ref={ref} className={cn('modal', className)} {...props}>
+        <dialog
+            ref={ref}
+            className={cn('modal', className)}
+            {...props}
+        >
             {children}
         </dialog>
     );
@@ -36,7 +41,10 @@ export function Modal({ open, onClose, className, children, ...props }: ModalPro
 
 export function ModalHeader({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('modal-header', className)} {...props}>
+        <div
+            className={cn('modal-header', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -44,7 +52,10 @@ export function ModalHeader({ className, children, ...props }: HTMLAttributes<HT
 
 export function ModalBody({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('modal-body', className)} {...props}>
+        <div
+            className={cn('modal-body', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -52,7 +63,10 @@ export function ModalBody({ className, children, ...props }: HTMLAttributes<HTML
 
 export function ModalFooter({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('modal-footer', className)} {...props}>
+        <div
+            className={cn('modal-footer', className)}
+            {...props}
+        >
             {children}
         </div>
     );

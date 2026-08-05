@@ -12,13 +12,13 @@ Vue Alert components using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { Alert, AlertTitle, AlertDescription } from '@krudi/vue'
+import { Alert, AlertTitle, AlertDescription } from '@krudi/vue';
 </script>
 
 <template>
-  <Alert variant="destructive">
-    <AlertTitle>Error</AlertTitle>
-    <AlertDescription>Something went wrong.</AlertDescription>
-  </Alert>
+    <Alert variant="destructive">
+        <AlertTitle>Error</AlertTitle>
+        <AlertDescription>Something went wrong.</AlertDescription>
+    </Alert>
 </template>
 ```

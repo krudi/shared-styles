@@ -10,14 +10,14 @@ Vue ButtonGroup component using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { Button, ButtonGroup } from '@krudi/vue'
+import { Button, ButtonGroup } from '@krudi/vue';
 </script>
 
 <template>
-  <ButtonGroup>
-    <Button variant="outline">One</Button>
-    <Button variant="outline">Two</Button>
-    <Button variant="outline">Three</Button>
-  </ButtonGroup>
+    <ButtonGroup>
+        <Button variant="outline">One</Button>
+        <Button variant="outline">Two</Button>
+        <Button variant="outline">Three</Button>
+    </ButtonGroup>
 </template>
 ```

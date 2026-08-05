@@ -13,17 +13,18 @@ Uses native `<details>`/`<summary>` — no JavaScript required for open/close be
 
 ```vue
 <script setup>
-import { AccordionGroup, AccordionItem } from '@krudi/vue'
+import { AccordionGroup, AccordionItem } from '@krudi/vue';
 </script>
 
 <template>
-  <AccordionGroup>
-    <AccordionItem title="What is this?">
-      This is the answer.
-    </AccordionItem>
-    <AccordionItem title="Open by default" :open="true">
-      This panel starts open.
-    </AccordionItem>
-  </AccordionGroup>
+    <AccordionGroup>
+        <AccordionItem title="What is this?"> This is the answer. </AccordionItem>
+        <AccordionItem
+            title="Open by default"
+            :open="true"
+        >
+            This panel starts open.
+        </AccordionItem>
+    </AccordionGroup>
 </template>
 ```

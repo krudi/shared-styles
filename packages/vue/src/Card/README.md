@@ -18,24 +18,34 @@ Vue Card compound components using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { Card, CardContent, CardHeader, CardTitle, CardSubtitle, CardBody, CardFooter, CardActions, Button } from '@krudi/vue'
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+    CardSubtitle,
+    CardBody,
+    CardFooter,
+    CardActions,
+    Button,
+} from '@krudi/vue';
 </script>
 
 <template>
-  <Card variant="white">
-    <CardContent>
-      <CardHeader>
-        <CardTitle>Card title</CardTitle>
-        <CardSubtitle>Subtitle</CardSubtitle>
-      </CardHeader>
-      <CardBody>Card content goes here.</CardBody>
-      <CardFooter>
-        <CardActions>
-          <Button>Primary</Button>
-          <Button variant="outline">Secondary</Button>
-        </CardActions>
-      </CardFooter>
-    </CardContent>
-  </Card>
+    <Card variant="white">
+        <CardContent>
+            <CardHeader>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Subtitle</CardSubtitle>
+            </CardHeader>
+            <CardBody>Card content goes here.</CardBody>
+            <CardFooter>
+                <CardActions>
+                    <Button>Primary</Button>
+                    <Button variant="outline">Secondary</Button>
+                </CardActions>
+            </CardFooter>
+        </CardContent>
+    </Card>
 </template>
 ```

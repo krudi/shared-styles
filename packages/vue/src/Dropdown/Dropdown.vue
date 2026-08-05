@@ -15,7 +15,10 @@ onUnmounted(() => document.removeEventListener('mousedown', onClickOutside));
 </script>
 
 <template>
-    <div ref="dropdownRef" :class="['dropdown', open && 'is-open']">
+    <div
+        ref="dropdownRef"
+        :class="['dropdown', open && 'is-open']"
+    >
         <button
             type="button"
             class="dropdown-trigger"
@@ -24,7 +27,10 @@ onUnmounted(() => document.removeEventListener('mousedown', onClickOutside));
             @click="open = !open"
         >
             <slot name="trigger" />
-            <span class="dropdown-summary-icon" aria-hidden="true" />
+            <span
+                class="dropdown-summary-icon"
+                aria-hidden="true"
+            />
         </button>
         <ul
             v-if="open"

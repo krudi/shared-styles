@@ -5,7 +5,10 @@ defineProps<{
 </script>
 
 <template>
-    <div role="alert" :class="['alert', variant === 'destructive' && 'alert-destructive']">
+    <div
+        role="alert"
+        :class="['alert', variant === 'destructive' && 'alert-destructive']"
+    >
         <slot />
     </div>
 </template>

@@ -12,11 +12,11 @@ Closes on outside click. Trigger content is passed via the `trigger` prop.
 ## Usage
 
 ```tsx
-import { Dropdown, DropdownItem } from '@krudi/react'
+import { Dropdown, DropdownItem } from '@krudi/react';
 
 <Dropdown trigger="Options">
-  <DropdownItem href="/profile">Profile</DropdownItem>
-  <DropdownItem href="/settings">Settings</DropdownItem>
-  <DropdownItem onSelect={() => signOut()}>Sign out</DropdownItem>
-</Dropdown>
+    <DropdownItem href="/profile">Profile</DropdownItem>
+    <DropdownItem href="/settings">Settings</DropdownItem>
+    <DropdownItem onSelect={() => signOut()}>Sign out</DropdownItem>
+</Dropdown>;
 ```

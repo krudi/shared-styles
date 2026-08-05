@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type AnchorHTMLAttributes, type HTMLAttributes, type ReactNode } from 'react';
+
 import { cn } from '../utils.js';
 
 export interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
@@ -20,7 +21,11 @@ export function Dropdown({ trigger, className, children, ...props }: DropdownPro
     }, []);
 
     return (
-        <div ref={ref} className={cn('dropdown', open && 'is-open', className)} {...props}>
+        <div
+            ref={ref}
+            className={cn('dropdown', open && 'is-open', className)}
+            {...props}
+        >
             <button
                 type="button"
                 className="dropdown-trigger"
@@ -29,7 +34,10 @@ export function Dropdown({ trigger, className, children, ...props }: DropdownPro
                 onClick={() => setOpen((v) => !v)}
             >
                 {trigger}
-                <span className="dropdown-summary-icon" aria-hidden="true" />
+                <span
+                    className="dropdown-summary-icon"
+                    aria-hidden="true"
+                />
             </button>
             <ul
                 className="dropdown-list"
@@ -57,11 +65,18 @@ export function DropdownItem({ href, current, onSelect, className, children, ...
     };
 
     return (
-        <li className={cn('dropdown-list-item', className)} {...props}>
+        <li
+            className={cn('dropdown-list-item', className)}
+            {...props}
+        >
             {href ? (
                 <a {...linkProps}>{children}</a>
             ) : (
-                <button type="button" className="dropdown-list-item-link" onClick={onSelect}>
+                <button
+                    type="button"
+                    className="dropdown-list-item-link"
+                    onClick={onSelect}
+                >
                     {children}
                 </button>
             )}

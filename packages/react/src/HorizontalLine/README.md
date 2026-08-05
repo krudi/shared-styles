@@ -9,7 +9,7 @@ React HorizontalLine component using `@krudi/styles` CSS classes.
 ## Usage
 
 ```tsx
-import { HorizontalLine } from '@krudi/react'
+import { HorizontalLine } from '@krudi/react';
 
-<HorizontalLine />
+<HorizontalLine />;
 ```

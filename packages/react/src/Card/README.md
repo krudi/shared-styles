@@ -18,21 +18,31 @@ React Card compound components using `@krudi/styles` CSS classes.
 ## Usage
 
 ```tsx
-import { Card, CardContent, CardHeader, CardTitle, CardSubtitle, CardBody, CardFooter, CardActions, Button } from '@krudi/react'
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+    CardSubtitle,
+    CardBody,
+    CardFooter,
+    CardActions,
+    Button,
+} from '@krudi/react';
 
 <Card variant="white">
-  <CardContent>
-    <CardHeader>
-      <CardTitle>Card title</CardTitle>
-      <CardSubtitle>Subtitle</CardSubtitle>
-    </CardHeader>
-    <CardBody>Card content goes here.</CardBody>
-    <CardFooter>
-      <CardActions>
-        <Button>Primary</Button>
-        <Button variant="outline">Secondary</Button>
-      </CardActions>
-    </CardFooter>
-  </CardContent>
-</Card>
+    <CardContent>
+        <CardHeader>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Subtitle</CardSubtitle>
+        </CardHeader>
+        <CardBody>Card content goes here.</CardBody>
+        <CardFooter>
+            <CardActions>
+                <Button>Primary</Button>
+                <Button variant="outline">Secondary</Button>
+            </CardActions>
+        </CardFooter>
+    </CardContent>
+</Card>;
 ```

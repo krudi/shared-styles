@@ -13,15 +13,15 @@ Closes on outside click. Trigger content is passed via the `#trigger` slot.
 
 ```vue
 <script setup>
-import { Dropdown, DropdownItem } from '@krudi/vue'
+import { Dropdown, DropdownItem } from '@krudi/vue';
 </script>
 
 <template>
-  <Dropdown>
-    <template #trigger>Options</template>
-    <DropdownItem href="/profile">Profile</DropdownItem>
-    <DropdownItem href="/settings">Settings</DropdownItem>
-    <DropdownItem @select="signOut">Sign out</DropdownItem>
-  </Dropdown>
+    <Dropdown>
+        <template #trigger>Options</template>
+        <DropdownItem href="/profile">Profile</DropdownItem>
+        <DropdownItem href="/settings">Settings</DropdownItem>
+        <DropdownItem @select="signOut">Sign out</DropdownItem>
+    </Dropdown>
 </template>
 ```

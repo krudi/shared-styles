@@ -3,10 +3,7 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        dts({ tsconfigPath: './tsconfig.json', rollupTypes: true }),
-    ],
+    plugins: [vue(), dts({ tsconfigPath: './tsconfig.json', rollupTypes: true })],
     build: {
         lib: {
             entry: 'src/index.ts',

@@ -15,12 +15,20 @@ Vue Button components using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { Button, ButtonLink } from '@krudi/vue'
+import { Button, ButtonLink } from '@krudi/vue';
 </script>
 
 <template>
-  <Button variant="default">Save</Button>
-  <Button variant="outline" size="sm">Cancel</Button>
-  <ButtonLink href="/home" variant="link">Go home</ButtonLink>
+    <Button variant="default">Save</Button>
+    <Button
+        variant="outline"
+        size="sm"
+        >Cancel</Button
+    >
+    <ButtonLink
+        href="/home"
+        variant="link"
+        >Go home</ButtonLink
+    >
 </template>
 ```

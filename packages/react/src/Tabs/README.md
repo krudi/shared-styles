@@ -13,16 +13,16 @@ React Tabs compound components using `@krudi/styles` CSS classes.
 ## Usage
 
 ```tsx
-import { Tabs, TabsList, TabsTrigger, TabsPanels, TabsPanel } from '@krudi/react'
+import { Tabs, TabsList, TabsTrigger, TabsPanels, TabsPanel } from '@krudi/react';
 
 <Tabs defaultTab="overview">
-  <TabsList>
-    <TabsTrigger tabId="overview">Overview</TabsTrigger>
-    <TabsTrigger tabId="details">Details</TabsTrigger>
-  </TabsList>
-  <TabsPanels>
-    <TabsPanel tabId="overview">Overview content</TabsPanel>
-    <TabsPanel tabId="details">Details content</TabsPanel>
-  </TabsPanels>
-</Tabs>
+    <TabsList>
+        <TabsTrigger tabId="overview">Overview</TabsTrigger>
+        <TabsTrigger tabId="details">Details</TabsTrigger>
+    </TabsList>
+    <TabsPanels>
+        <TabsPanel tabId="overview">Overview content</TabsPanel>
+        <TabsPanel tabId="details">Details content</TabsPanel>
+    </TabsPanels>
+</Tabs>;
 ```

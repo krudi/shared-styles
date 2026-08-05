@@ -15,21 +15,21 @@ Uses the native `<dialog>` element with `showModal()`/`close()`. Bind `v-model` 
 
 ```vue
 <script setup>
-import { ref } from 'vue'
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@krudi/vue'
+import { ref } from 'vue';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@krudi/vue';
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 </script>
 
 <template>
-  <Button @click="isOpen = true">Open modal</Button>
+    <Button @click="isOpen = true">Open modal</Button>
 
-  <Modal v-model="isOpen">
-    <ModalHeader>Title</ModalHeader>
-    <ModalBody>Modal content.</ModalBody>
-    <ModalFooter>
-      <Button @click="isOpen = false">Close</Button>
-    </ModalFooter>
-  </Modal>
+    <Modal v-model="isOpen">
+        <ModalHeader>Title</ModalHeader>
+        <ModalBody>Modal content.</ModalBody>
+        <ModalFooter>
+            <Button @click="isOpen = false">Close</Button>
+        </ModalFooter>
+    </Modal>
 </template>
 ```

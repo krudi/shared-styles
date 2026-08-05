@@ -10,10 +10,10 @@ Vue HorizontalLine component using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { HorizontalLine } from '@krudi/vue'
+import { HorizontalLine } from '@krudi/vue';
 </script>
 
 <template>
-  <HorizontalLine />
+    <HorizontalLine />
 </template>
 ```

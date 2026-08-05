@@ -6,10 +6,16 @@ defineProps<{
 </script>
 
 <template>
-    <details class="accordion-details" :open="open">
+    <details
+        class="accordion-details"
+        :open="open"
+    >
         <summary class="accordion-summary">
             <span class="accordion-summary-title">{{ title }}</span>
-            <span class="accordion-summary-icon" aria-hidden="true" />
+            <span
+                class="accordion-summary-icon"
+                aria-hidden="true"
+            />
         </summary>
         <div class="accordion-content">
             <slot />

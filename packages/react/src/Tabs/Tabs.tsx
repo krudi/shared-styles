@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, type ButtonHTMLAttributes, type HTMLAttributes } from 'react';
+
 import { cn } from '../utils.js';
 
 interface TabsContextValue {
@@ -20,7 +21,14 @@ export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
     onTabChange?: (id: string) => void;
 }
 
-export function Tabs({ defaultTab = '', activeTab: controlled, onTabChange, className, children, ...props }: TabsProps) {
+export function Tabs({
+    defaultTab = '',
+    activeTab: controlled,
+    onTabChange,
+    className,
+    children,
+    ...props
+}: TabsProps) {
     const [internal, setInternal] = useState(defaultTab);
     const activeTab = controlled ?? internal;
 
@@ -31,7 +39,10 @@ export function Tabs({ defaultTab = '', activeTab: controlled, onTabChange, clas
 
     return (
         <TabsContext.Provider value={{ activeTab, setActiveTab }}>
-            <div className={cn('tabs', className)} {...props}>
+            <div
+                className={cn('tabs', className)}
+                {...props}
+            >
                 {children}
             </div>
         </TabsContext.Provider>
@@ -40,7 +51,11 @@ export function Tabs({ defaultTab = '', activeTab: controlled, onTabChange, clas
 
 export function TabsList({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div role="tablist" className={cn('tabs-list', className)} {...props}>
+        <div
+            role="tablist"
+            className={cn('tabs-list', className)}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -70,7 +85,10 @@ export function TabsTrigger({ tabId, className, children, ...props }: TabsTrigge
 
 export function TabsPanels({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={cn('tabs-panels', className)} {...props}>
+        <div
+            className={cn('tabs-panels', className)}
+            {...props}
+        >
             {children}
         </div>
     );

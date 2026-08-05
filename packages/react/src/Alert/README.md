@@ -11,10 +11,10 @@ React Alert component using `@krudi/styles` CSS classes.
 ## Usage
 
 ```tsx
-import { Alert, AlertTitle, AlertDescription } from '@krudi/react'
+import { Alert, AlertTitle, AlertDescription } from '@krudi/react';
 
 <Alert variant="destructive">
-  <AlertTitle>Error</AlertTitle>
-  <AlertDescription>Something went wrong.</AlertDescription>
-</Alert>
+    <AlertTitle>Error</AlertTitle>
+    <AlertDescription>Something went wrong.</AlertDescription>
+</Alert>;
 ```

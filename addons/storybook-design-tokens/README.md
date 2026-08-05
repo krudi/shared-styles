@@ -2,9 +2,8 @@
 
 Show CSS custom properties as token tables in Storybook Docs.
 
-Point the addon at the CSS files that contain `@tokens` comments, then render
-`<DesignTokenDocs of={Stories} />` in MDX. Stories choose their tokens with
-`parameters.designTokens`.
+Point the addon at the CSS files that contain `@tokens` comments, then render `<DesignTokenDocs of={Stories} />` in MDX.
+Stories choose their tokens with `parameters.designTokens`.
 
 ## Setup
 
@@ -14,18 +13,18 @@ Register the addon in `.storybook/main.ts`.
 import type { StorybookConfig } from '@storybook/html-vite';
 
 const config: StorybookConfig = {
-  addons: [
-    {
-      name: '@krudi/storybook-design-tokens',
-      options: {
-        sources: [
-          '../../../packages/styles/src/styles/palette.css',
-          '../../../packages/styles/src/styles/theme.css',
-          '../../../packages/styles/src/styles/variables.css',
-        ],
-      },
-    },
-  ],
+    addons: [
+        {
+            name: '@krudi/storybook-design-tokens',
+            options: {
+                sources: [
+                    '../../../packages/styles/src/styles/palette.css',
+                    '../../../packages/styles/src/styles/theme.css',
+                    '../../../packages/styles/src/styles/variables.css',
+                ],
+            },
+        },
+    ],
 };
 
 export default config;
@@ -46,10 +45,10 @@ Set `designTokens` on the story.
 
 ```ts
 const meta = {
-  title: 'Components/Button',
-  parameters: {
-    designTokens: 'Components/Button',
-  },
+    title: 'Components/Button',
+    parameters: {
+        designTokens: 'Components/Button',
+    },
 };
 ```
 

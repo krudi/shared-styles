@@ -10,10 +10,10 @@ Vue Badge component using `@krudi/styles` CSS classes.
 
 ```vue
 <script setup>
-import { Badge } from '@krudi/vue'
+import { Badge } from '@krudi/vue';
 </script>
 
 <template>
-  <Badge variant="secondary">New</Badge>
+    <Badge variant="secondary">New</Badge>
 </template>
 ```

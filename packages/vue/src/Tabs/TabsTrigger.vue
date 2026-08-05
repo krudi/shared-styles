@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue';
+
 import { TABS_KEY, type TabsContext } from './tabs-context.js';
 
 const props = defineProps<{
