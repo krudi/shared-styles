@@ -1,45 +1,44 @@
 name: Lint (styles package)
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-    paths:
-      - "packages/styles/**"
+    pull_request:
+        types:
+            - opened
+            - synchronize
+            - reopened
+        paths:
+            - 'packages/styles/**'
 
 concurrency:
-  group: lint-styles-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+    group: lint-styles-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  lint:
-    if: ${{ github.actor != 'dependabot[bot]' }}
-    timeout-minutes: 15
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        lint-commands:
-          - "npm run lint:stylelint"
+    lint:
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                lint-commands:
+                    - 'npm run lint:stylelint'
 
-    steps:
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
-      - name: Checkout repository
-        uses: actions/checkout@v6
+            - name: Set up Node.js
+              uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
+              with:
+                  cache: npm
+                  node-version-file: .nvmrc
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          cache: npm
-          node-version-file: .nvmrc
+            - name: Install dependencies
+              run: npm ci --no-audit --no-fund
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run lint command
-        run: ${{ matrix.lint-commands }}
+            - name: Run lint command
+              run: ${{ matrix.lint-commands }}
