@@ -1,37 +1,28 @@
 # Environment files
 *.env
+.env*
+!.env*.example
 !.env-*
 
 # Dependencies files
 node_modules
 
 # Build output files
-dist
 build
+dist
 dev-dist
+storybook-static
+coverage
 
-# Tooling caches files
+# Tooling cache files
 .turbo
-.cache/.eslintcache
-.eslint-config-inspector
-.cache/.prettiercache
-.cache/.stylelintcache
-.cache/tsbuildinfo.json
+.cache
+*.tsbuildinfo
+build-storybook.log
+debug-storybook.log
 
 # OS files
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Compiled artifacts files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Secrets files
-*.der
-*.key
-*.pem
+Thumbs.db

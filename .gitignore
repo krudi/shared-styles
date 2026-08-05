@@ -1,33 +1,33 @@
-# Storybook files
-storybook-static
-
 # Environment files
 *.env
+.env*
+!.env*.example
 !.env-*
 
 # Dependencies files
 node_modules
 
 # Build output files
-dist
 build
+dist
 dev-dist
 storybook-static
 coverage
 
-# Tooling caches files
+# Tooling cache files
 .turbo
-.cache/.eslintcache
-.eslint-config-inspector
-.cache/.prettiercache
-.cache/.stylelintcache
-.cache/tsbuildinfo.json
+.cache
+*.tsbuildinfo
 debug-storybook.log
+
+# Agent tooling files
+.claude/settings.local.json
 
 # OS files
 .DS_Store
 .AppleDouble
 .LSOverride
+Thumbs.db
 
 # Compiled artifacts files
 *.com
