@@ -15,9 +15,9 @@ should generally ship with a Storybook story in the same change.
 | `npm run preview`                 | Serve the built Storybook     |
 | `npm run test:storybook`          | Run Vitest story tests        |
 | `npm run test:storybook:coverage` | Run story tests with coverage |
-| `npm run lint:eslint`             | Lint JS/TS                    |
-| `npm run lint:prettier`           | Check formatting              |
 | `npm run typecheck`               | TypeScript type checks        |
+
+Run `npm run lint` from the repository root for shared Oxlint and Oxfmt checks.
 
 ## Coverage
 

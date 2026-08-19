@@ -260,15 +260,10 @@ introduced for old or new elements.
 
 ## Scripts
 
-| Command                      | Description                 |
-| ---------------------------- | --------------------------- |
-| `npm run build`              | Build CSS and JS to `dist/` |
-| `npm run dev`                | Watch TypeScript and CSS    |
-| `npm run lint:eslint`        | Lint TS                     |
-| `npm run lint:eslint:fix`    | Fix TS lint issues          |
-| `npm run lint:stylelint`     | Lint CSS                    |
-| `npm run lint:stylelint:fix` | Fix CSS lint issues         |
-| `npm run lint:prettier`      | Check formatting            |
-| `npm run lint:prettier:fix`  | Format write                |
-| `npm run typecheck`          | TypeScript type checks      |
-| `npm run clean`              | Remove caches/node_modules  |
+| Command                     | Description                              |
+| --------------------------- | ---------------------------------------- |
+| `npm run build`             | Build CSS and JS to `dist/`              |
+| `npm run dev`               | Watch TypeScript and CSS                 |
+| `npm run typecheck`         | TypeScript type checks                   |
+| `npm run clean`             | Remove package caches and `node_modules` |
+| `npm run lint` (repository) | Run the shared Oxlint and Oxfmt checks   |

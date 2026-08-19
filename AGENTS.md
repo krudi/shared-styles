@@ -13,7 +13,7 @@ projects. Includes a Storybook for visual development and review.
 
 ## Onboarding
 
-**Prerequisites:** Node.js ≥ 20.
+**Prerequisites:** Node.js ≥ 24.19.0.
 
 1. `npm install`
 2. `npm run build` — build all packages
