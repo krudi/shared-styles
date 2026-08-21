@@ -1,12 +1,21 @@
 {
     "$schema": "./node_modules/oxlint/configuration_schema.json",
-    "plugins": ["eslint", "typescript", "react", "unicorn", "import"],
+    "plugins": ["eslint", "typescript", "react", "unicorn", "import", "oxc", "promise", "jsx-a11y", "vitest", "vue"],
+    "options": {
+        "reportUnusedDisableDirectives": "warn"
+    },
     "categories": {
-        "correctness": "error"
+        "correctness": "error",
+        "suspicious": "warn",
+        "perf": "warn"
     },
     "rules": {
         "react/rules-of-hooks": "error",
-        "react/no-children-prop": "off"
+        "react/no-children-prop": "off",
+        "react/react-in-jsx-scope": "off",
+        "jsx-a11y/alt-text": "warn",
+        "jsx-a11y/no-noninteractive-element-to-interactive-role": "warn",
+        "jsx-a11y/prefer-tag-over-role": "warn"
     },
     "ignorePatterns": [
         ".agents",
