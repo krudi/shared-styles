@@ -131,10 +131,8 @@
          * @tokens Base/Typography
          */
 
-        /* Typography */
         --krd-typography-hyphenate-limit-chars: auto;
 
-        /* Body */
         --krd-body-font-size-sm: var(--krd-typography-body-text-font-size-sm);
         --krd-body-font-size: var(--krd-typography-body-text-font-size);
         --krd-body-font-size-lg: var(--krd-typography-body-text-font-size-lg);
@@ -145,7 +143,6 @@
         --krd-body-line-height-xl: var(--krd-typography-body-text-line-height-xl);
         --krd-body-font-weight: var(--krd-typography-body-text-font-weight);
 
-        /* Headings */
         --krd-heading-1: var(--krd-typography-heading-1);
         --krd-heading-2: var(--krd-body-font-size-xl);
         --krd-heading-3: var(--krd-body-font-size-lg);
@@ -164,14 +161,12 @@
         --krd-heading-text-wrap: var(--krd-typography-heading-text-wrap);
         --krd-heading-font-family: var(--krd-typography-heading-font-family);
 
-        /* Font size */
         --krd-font-size-xs: var(--krd-typography-font-size-xs);
         --krd-font-size-sm: var(--krd-typography-font-size-sm);
         --krd-font-size-md: var(--krd-body-font-size);
         --krd-font-size-lg: var(--krd-typography-font-size-lg);
         --krd-font-size-xl: var(--krd-typography-font-size-xl);
 
-        /* Link */
         --krd-a-color: var(--krd-links-color);
         --krd-a-color-hover: var(--krd-links-hover-color);
         --krd-a-text-decoration-line: var(--krd-links-text-decoration-line);
@@ -187,7 +182,6 @@
         --krd-a-font-weight: var(--krd-links-font-weight);
         --krd-a-line-height: var(--krd-links-line-height);
 
-        /* Paraphraph */
         --krd-p-margin-block-start: var(--krd-space-2);
         --krd-p-font-family: var(--krd-body-font-family);
         --krd-p-font-size: var(--krd-body-font-size);
@@ -199,11 +193,9 @@
         --krd-p-line-height-lg: var(--krd-body-line-height-lg);
         --krd-p-color: var(--krd-color-foreground);
 
-        /* Svg */
         --krd-svg-width: 1em;
         --krd-svg-height: 1em;
 
-        /* Utilities */
         --krd-base-line-height: var(--krd-typography-base-line-height);
         --krd-transition-duration-fast: 0.15s;
         --krd-transition-duration: 0.3s;
@@ -218,25 +210,18 @@
         --krd-outline-offset: var(--krd-focus-outline-offset);
         --krd-outline-offset-tight: var(--krd-focus-outline-offset-tight);
 
-        /* Body */
         --krd-body-background-color: var(--krd-color-background);
         --krd-body-color: var(--krd-color-foreground);
         --krd-body-font-family: var(--krd-typography-font-family);
 
-        /* Z-index orders */
         --krd-z-index-navigation: 999;
         --krd-z-index-dropdown: 998;
         --krd-z-index-modal: 99990;
-
-        /*
-            Elements
-        */
 
         /**
          * @tokens Components/Modal
          */
 
-        /* Modal */
         --krd-modal-header-border-bottom-width: var(--krd-modal-border-width);
         --krd-modal-header-border-bottom-style: var(--krd-modal-border-style);
         --krd-modal-header-border-bottom-color: var(--krd-modal-border-color);
@@ -248,7 +233,6 @@
          * @tokens Components/Blockquote
          */
 
-        /* Blockquote */
         --krd-blockquote-padding-block: 1.5rem;
         --krd-blockquote-padding-inline: 1.5rem;
         --krd-blockquote-border-width: 0.25rem;
@@ -258,7 +242,6 @@
          * @tokens Components/Accordion
          */
 
-        /* Accordion */
         --krd-accordion-details-border-width: 0;
         --krd-accordion-details-border-style: solid;
         --krd-accordion-details-border-color: transparent;
@@ -276,7 +259,6 @@
          * @tokens Components/Alert
          */
 
-        /* Alert */
         --krd-alert-margin-block-block: var(--krd-alert-margin-block);
         --krd-alert-destructive-background-color: color-mix(
             in srgb,
@@ -299,7 +281,6 @@
          * @tokens Components/Card
          */
 
-        /* Card */
         --krd-card-subtitle-font-size: var(--krd-font-size-xs);
         --krd-card-subtitle-font-weight: 600;
         --krd-card-subtitle-line-height: var(--krd-base-line-height);
@@ -318,7 +299,6 @@
          * @tokens Components/Block Navigation
          */
 
-        /* Block Navigation */
         --krd-block-navigation-gap: var(--krd-space-4);
         --krd-block-navigation-columns: 1;
         --krd-block-navigation-item-min-height: 7.5rem;
@@ -343,7 +323,6 @@
          * @tokens Forms/Fieldset
          */
 
-        /* Forms: Fieldset */
         --krd-form-fieldset-padding-block: 1.25rem;
         --krd-form-fieldset-padding-inline: 1.25rem;
         --krd-form-fieldset-margin-block-start: var(--krd-space-8);
@@ -358,7 +337,6 @@
          * @tokens Forms/Legend
          */
 
-        /* Forms: Legend */
         --krd-form-legend-margin-block-end: var(--krd-space-4);
         --krd-form-legend-form-weight: 500;
         --krd-form-legend-form-size: var(--krd-body-font-size);
@@ -368,7 +346,6 @@
          * @tokens Forms/Input, Forms/Select, Forms/Input Group
          */
 
-        /* Forms: Input */
         --krd-form-input-padding-block: var(--krd-inputs-padding-block);
         --krd-form-input-padding-inline: var(--krd-inputs-padding-inline);
         --krd-form-input-background-color: var(--krd-inputs-background-color);
@@ -388,7 +365,6 @@
          * @tokens Forms/Radio
          */
 
-        /* Form: Radio */
         --krd-form-radio-margin-block-end: var(--krd-space-1);
         --krd-form-radio-label-gap: var(--krd-space-1);
         --krd-form-radio-input-width: 1rem;
@@ -410,7 +386,6 @@
          * @tokens Forms/Checkbox
          */
 
-        /* Form: Checkbox */
         --krd-form-checkbox-margin-block-end: var(--krd-space-1);
         --krd-form-checkbox-label-gap: var(--krd-space-1);
         --krd-form-checkbox-input-width: 1rem;
@@ -435,7 +410,6 @@
         --krd-form-checkbox-input-indicator-color: var(--krd-color-primary-foreground);
         --krd-form-checkbox-input-border-radius: 0.125rem;
 
-        /* Form: Datalist */
         --krd-form-datalist-margin-block-start: var(--krd-space-1);
         --krd-form-datalist-padding-block: 0.5rem;
         --krd-form-datalist-padding-inline: 0.5rem;
@@ -453,7 +427,6 @@
          * @tokens Forms/Label
          */
 
-        /* Forms: Label */
         --krd-form-block-margin-block-end: var(--krd-space-6);
         --krd-form-label-margin-block-end: var(--krd-space-1);
         --krd-form-label-font-weight: 500;
@@ -464,7 +437,6 @@
          * @tokens Forms/Text
          */
 
-        /* Forms: Text */
         --krd-form-text-margin-block-start: var(--krd-space-1);
         --krd-form-text-font-size: var(--krd-font-size-sm);
         --krd-form-text-line-height: var(--krd-base-line-height);
@@ -476,7 +448,6 @@
          * @tokens Components/Horizontal Line
          */
 
-        /* Horizontal Line */
         --krd-hr-height: 1px;
         --krd-hr-margin-block: var(--krd-space-6);
         --krd-hr-background-color: var(--krd-color-border);
@@ -486,7 +457,6 @@
          * @tokens Components/Dropdown
          */
 
-        /* Dropdown */
         --krd-dropdown-trigger-padding-block: 0.5rem;
         --krd-dropdown-trigger-padding-inline: 0.75rem;
         --krd-dropdown-trigger-border-width: 1px;
@@ -524,7 +494,6 @@
          * @tokens Components/Pricing Table
          */
 
-        /* Pricing Table */
         --krd-pricing-table-card-background-color: var(--krd-card-background-color);
         --krd-pricing-table-card-border-width: 1px;
         --krd-pricing-table-card-border-style: solid;
@@ -570,7 +539,6 @@
          * @tokens Components/Tabs
          */
 
-        /* Tabs */
         --krd-tabs-gap: var(--krd-space-4);
         --krd-tabs-list-background: var(--krd-color-surface-subtle);
         --krd-tabs-list-border-width: 1px;
@@ -612,7 +580,6 @@
          * @tokens Components/ThemeSwitch
          */
 
-        /* Theme Switch */
         --krd-theme-switch-size: 2.5rem;
         --krd-theme-switch-icon-width: 1.125rem;
         --krd-theme-switch-icon-height: 1.125rem;

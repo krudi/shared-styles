@@ -1,4 +1,3 @@
-/* Component bundle */
 @import './_badge.css' layer(krd-components);
 @import './_accordion.css' layer(krd-components);
 @import './_alert.css' layer(krd-components);

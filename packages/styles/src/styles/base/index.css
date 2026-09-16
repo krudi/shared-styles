@@ -1,4 +1,3 @@
-/* Base reset + typography foundations */
 @import './_reset.css' layer(krd-base);
 @import './_base.css' layer(krd-base);
 @import './_focus.css' layer(krd-base);

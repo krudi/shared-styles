@@ -50,7 +50,6 @@
     }
 }
 
-/* Standard variants */
 .btn-default {
     --krd-button-background-color: var(--krd-color-primary);
     --krd-button-color-emphasis: var(--krd-color-primary-foreground);
@@ -76,7 +75,6 @@
     --krd-button-hover: color-mix(in srgb, var(--krd-color-destructive) 85%, var(--krd-color-foreground));
 }
 
-/* Outline */
 .btn-outline {
     --krd-button-background-color: transparent;
     --krd-button-color-emphasis: var(--krd-color-foreground);
@@ -86,7 +84,6 @@
     --krd-button-hover: var(--krd-color-surface-subtle);
 }
 
-/* Ghost */
 .btn-ghost {
     --krd-button-background-color: transparent;
     --krd-button-color-emphasis: var(--krd-color-foreground);
@@ -96,7 +93,6 @@
     --krd-button-hover: var(--krd-color-surface-subtle);
 }
 
-/* Button with icon */
 .btn-icon {
     --krd-button-background-color: var(--krd-color-muted);
     --krd-button-hover: var(--krd-color-surface-subtle-hover);
@@ -113,7 +109,6 @@
     fill: var(--krd-button-color-emphasis);
 }
 
-/* Linked button */
 .btn-link {
     --krd-button-background-color: transparent;
     --krd-button-color-emphasis: var(--krd-button-link-color);
@@ -136,7 +131,6 @@
     background-color: transparent;
 }
 
-/* Close button */
 .btn-close {
     --krd-button-padding-block: 0;
     --krd-button-padding-inline: 0;
@@ -149,7 +143,6 @@
     justify-content: center;
 }
 
-/* Size */
 .btn-sm {
     padding-block: var(--krd-button-sm-padding-block);
     padding-inline: var(--krd-button-sm-padding-inline);
