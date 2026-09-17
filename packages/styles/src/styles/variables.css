@@ -1,12 +1,5 @@
 @layer krd-variables {
     :root {
-        /*
-            System tokens
-            Public `--krd-*` tokens are defined directly in `palette.css`,
-            `theme.css`, and this file. This layer defines the component and
-            composed values used by the CSS package itself.
-        */
-
         /**
          * @tokens Components/Accordion
          */

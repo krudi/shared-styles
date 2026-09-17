@@ -33,6 +33,8 @@ reset styles, layout primitives, and early components/utilities.
 - `packages/styles` – CSS package (`@krudi/styles`) with palette, theme, tokens, base, layout, HTML, components, forms,
   utilities, and JS helpers
 - `packages/icons` – SVG assets package (`@krudi/icons`) with common link/contact icons
+- `packages/react` – React component wrappers (`@krudi/react`) for `@krudi/styles` CSS classes
+- `packages/vue` – Vue component wrappers (`@krudi/vue`) for `@krudi/styles` CSS classes
 - `apps/storybook` – HTML Storybook (`@krudi/storybook`) for visual checks, docs, and tests
 
 ## Using `@krudi/styles`

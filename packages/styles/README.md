@@ -14,8 +14,6 @@ progressive-enhancement helpers. Built for personal projects.
 - `base` / `layout` / `html` – global element and structural styling
 - `components` / `forms` / `utilities` – opt-in authoring layers
 
-For a deeper explanation, see [../../docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md).
-
 ## Exports
 
 CSS entrypoints:
@@ -248,13 +246,9 @@ If you are installing the package into another project, use the generated `--krd
 These tokens are intended to be the main project-level customization points. Lower-level implementation values should
 usually stay unchanged unless you have a specific component need.
 
-See [../../docs/TOKEN_GUIDELINES.md](../../docs/TOKEN_GUIDELINES.md) for the rule of thumb on when new tokens should be
-introduced for old or new elements.
-
 ## Coverage and Documentation
 
 - Storybook is the primary visual documentation surface for components, forms, layout, utilities, and tokens.
-- The coverage tracker lives in [../../docs/COMPONENT_COVERAGE.md](../../docs/COMPONENT_COVERAGE.md).
 - When adding a new component, update the bundle import, add at least one Storybook story, and document any new public
   tokens.
 

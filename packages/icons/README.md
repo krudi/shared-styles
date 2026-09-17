@@ -25,3 +25,11 @@ a[href^='https://']::after {
     background-image: url('@krudi/icons/arrow-up-right-from-square.svg');
 }
 ```
+
+## Scripts
+
+Run from `packages/icons`, or via `npm run build --workspace @krudi/icons` from the repo root:
+
+| Command          | Description                                        |
+| ----------------- | --------------------------------------------------- |
+| `npm run build`   | Optimize SVGs from `src` into `dist` with SVGO      |

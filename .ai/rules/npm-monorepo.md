@@ -17,7 +17,7 @@ turbo.json         # Turbo pipeline config
 
 ## Package names
 
-All packages use the `@krudi/` scope: `@krudi/typescript-config`, `@krudi/styles`, etc.
+All packages use the `@krudi/` scope: `@krudi/styles`, `@krudi/react`, `@krudi/vue`, etc.
 
 ## Commands (run from workspace root)
 

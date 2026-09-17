@@ -91,7 +91,7 @@ consumers before renaming.
 
 ## Cross-project context
 
-- **Depends on:** `shared-configs` for the TypeScript config
+- TypeScript config is local to this repo (`tsconfig.json` per package), not shared
 - **Consumed by:** `impuls`, `krudi-io`
 - Breaking token changes require consumer updates — coordinate before publishing
 
