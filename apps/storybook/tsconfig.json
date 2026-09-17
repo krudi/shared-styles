@@ -1,8 +1,27 @@
 {
-    "extends": "@krudi/typescript-config/base.json",
-    "include": ["src/**/*", ".storybook/**/*", "vitest.config.ts"],
+    "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022", "DOM"],
+        "module": "Preserve",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noEmit": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "checkJs": false,
+        "allowJs": false,
+        "incremental": true,
+        "tsBuildInfoFile": "./.cache/tsbuildinfo.json",
+        "disableSourceOfProjectReferenceRedirect": true,
         "types": ["vite/client"]
     },
+    "include": ["src/**/*", ".storybook/**/*", "vitest.config.ts"],
     "exclude": ["node_modules"]
 }
