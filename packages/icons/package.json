@@ -36,10 +36,10 @@
         "build": "rm -rf dist && svgo -f src -o dist",
         "clean": "rm -rf .cache dist node_modules"
     },
-    "devDependencies": {
-        "svgo": "^4.1.0"
-    },
     "engines": {
         "node": ">= 24.19.0"
+    },
+    "devDependencies": {
+        "svgo": "^4.1.0"
     }
 }
