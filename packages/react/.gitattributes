@@ -42,9 +42,6 @@ src/                export-ignore
 src/**              export-ignore
 .gitignore          export-ignore
 .gitattributes      export-ignore
-.prettierignore     export-ignore
-eslint.config.ts    export-ignore
-prettier.config.ts  export-ignore
 tsconfig*.json      export-ignore
 vite.config.ts      export-ignore
 vitest.config.ts    export-ignore

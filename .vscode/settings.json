@@ -46,6 +46,9 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "oxc.oxc-vscode"
     },
+    "[vue]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
     "[dotenv]": {
         "editor.formatOnSave": false,
         "editor.defaultFormatter": null

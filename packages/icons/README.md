@@ -14,8 +14,8 @@ Import an icon (works with bundlers that handle asset imports):
 
 ```js
 import externalLink from '@krudi/icons/arrow-up-right-from-square.svg';
-import phone from '@krudi/icons/square-phone.svg';
 import envelope from '@krudi/icons/envelope.svg';
+import phone from '@krudi/icons/square-phone.svg';
 ```
 
 Or reference directly in CSS:
