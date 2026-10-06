@@ -49,10 +49,10 @@ Each component folder contains a `README.md` with props, variants, and a usage e
 
 Run from `packages/react`, or via `npm run <script> --workspace @krudi/react` from the repo root:
 
-| Command                | Description                          |
-| ----------------------- | ------------------------------------- |
-| `npm run build`         | Build the package with Vite           |
-| `npm run dev`           | Rebuild on file changes (Vite watch)  |
-| `npm run test`          | Run the Vitest test suite             |
-| `npm run test:coverage` | Run tests with coverage               |
-| `npm run typecheck`     | Type-check with `tsc`                 |
+| Command                 | Description                          |
+| ----------------------- | ------------------------------------ |
+| `npm run build`         | Build the package with Vite          |
+| `npm run dev`           | Rebuild on file changes (Vite watch) |
+| `npm run test`          | Run the Vitest test suite            |
+| `npm run test:coverage` | Run tests with coverage              |
+| `npm run typecheck`     | Type-check with `tsc`                |

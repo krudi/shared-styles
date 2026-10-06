@@ -27,4 +27,5 @@ Run `npm run lint` from the repository root for shared Oxlint and Oxfmt checks.
 - Forms docs: controls, utilities, and validation examples
 - Component docs: all bundled components should have a story
 
-The explicit coverage tracker lives in [../../docs/COMPONENT_COVERAGE.md](../../docs/COMPONENT_COVERAGE.md).
+Stories live under [`src/`](src/), one folder per area (`base`, `brand`, `components`, `forms`, `html`, `layout`,
+`theme`, `utilities`).
