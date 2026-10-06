@@ -43,8 +43,8 @@
         "build": "vite build",
         "clean": "rm -rf .turbo .cache dist node_modules",
         "dev": "vite build --watch",
-        "test": "vitest run",
-        "test:coverage": "vitest run --coverage",
+        "test": "vitest run --passWithNoTests",
+        "test:coverage": "vitest run --coverage --passWithNoTests",
         "test:watch": "vitest",
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
@@ -53,21 +53,17 @@
         "react-dom": ">=19"
     },
     "devDependencies": {
-        "@types/node": "^24.13.3",
+        "@testing-library/jest-dom": "^7.0.1",
+        "@types/node": "^24.19.1",
         "@types/react": "^19.2.18",
-        "@types/react-dom": "^19.2.4",
-        "@vitejs/plugin-react": "^6.0.5",
+        "@vitejs/plugin-react": "^6.1.2",
+        "@vitest/coverage-v8": "^4.1.11",
+        "jsdom": "^30.1.2",
         "react": "^19.2.8",
-        "react-dom": "^19.2.8",
         "typescript": "^6.0.2",
-        "vite": "^8.2.0",
-        "vite-plugin-dts": "^5.0.3",
-        "vitest": "^4.1.10",
-        "@testing-library/react": "^16.3.2",
-        "@testing-library/user-event": "^14.6.3",
-        "@testing-library/jest-dom": "^7.0.0",
-        "@vitest/coverage-v8": "^4.1.10",
-        "jsdom": "^30.0.1"
+        "unplugin-dts": "^1.1.2",
+        "vite": "^8.3.3",
+        "vitest": "^4.1.11"
     },
     "engines": {
         "node": ">= 24.19.0"

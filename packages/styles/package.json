@@ -28,6 +28,7 @@
     },
     "type": "module",
     "exports": {
+        ".": "./dist/styles/index.css",
         "./css": "./dist/styles/index.css",
         "./css/palette": "./dist/styles/palette.css",
         "./css/variables": "./dist/styles/variables.css",
@@ -56,29 +57,30 @@
     },
     "main": "./dist/styles/index.css",
     "style": "./dist/styles/index.css",
+    "sideEffects": [
+        "**/*.css"
+    ],
     "files": [
-        "assets",
         "dist",
         "README.md",
         "LICENSE"
     ],
     "scripts": {
-        "build": "tsc -b tsconfig.build.json && postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map",
-        "clean": "rm -rf .turbo .cache node_modules",
-        "dev": "tsc -p tsconfig.json --watch & postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map --watch",
+        "build": "rm -rf dist && tsc -p tsconfig.build.json && postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map",
+        "clean": "rm -rf .turbo .cache dist node_modules",
+        "dev": "tsc -p tsconfig.build.json --watch & postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map --watch",
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "dependencies": {
         "@krudi/icons": "*"
     },
     "devDependencies": {
-        "@types/node": "^24.13.3",
-        "autoprefixer": "^10.5.4",
-        "cssnano": "^8.0.3",
-        "postcss": "^8.5.25",
+        "@types/node": "^24.19.1",
+        "autoprefixer": "^10.6.1",
+        "postcss": "^8.5.29",
         "postcss-cli": "^11.0.1",
         "postcss-import": "^16.1.1",
-        "postcss-nesting": "^14.0.1",
+        "postcss-nesting": "^14.0.3",
         "typescript": "^6.0.2"
     },
     "engines": {

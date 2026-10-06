@@ -36,7 +36,10 @@
             "types": "./dist/index.d.ts",
             "default": "./dist/index.js"
         },
-        "./preset": "./dist/preset.js",
+        "./preset": {
+            "types": "./dist/preset.d.ts",
+            "default": "./dist/preset.js"
+        },
         "./package.json": "./package.json"
     },
     "files": [
@@ -49,31 +52,31 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsc -p tsconfig.build.json",
+        "build": "rm -rf dist && tsc -p tsconfig.build.json",
         "build:storybook": "npm run build && storybook build -c .storybook",
-        "clean": "rm -rf .cache dist node_modules",
+        "clean": "rm -rf .turbo .cache dist node_modules",
         "dev": "npm run build && storybook dev -p 44878 -c .storybook",
-        "prebuild": "node -e \"fs.rmSync('./dist', { recursive: true, force: true })\"",
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "devDependencies": {
-        "@storybook/addon-docs": "^10.5.6",
-        "@storybook/react-vite": "^10.5.6",
-        "@types/node": "^24.13.3",
+        "@storybook/addon-docs": "^10.6.1",
+        "@storybook/react-vite": "^10.6.1",
+        "@types/node": "^24.19.1",
         "@types/react": "^19.2.18",
-        "@types/react-dom": "^19.2.4",
-        "@vitejs/plugin-react": "^6.0.5",
+        "@types/react-dom": "^19.2.7",
+        "@vitejs/plugin-react": "^6.1.2",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
-        "storybook": "^10.5.6",
+        "storybook": "^10.6.1",
         "typescript": "^6.0.2",
-        "vite": "^8.2.0"
+        "vite": "^8.3.3"
     },
     "engines": {
         "node": ">= 24.19.0"
     },
     "peerDependencies": {
-        "storybook": "^10.0.0"
+        "storybook": "^10.0.0",
+        "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     },
     "storybook": {
         "displayName": "Design Tokens",
