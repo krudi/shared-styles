@@ -1,4 +1,4 @@
-name: Lint
+name: Knip
 
 on:
     push:
@@ -11,15 +11,8 @@ on:
             - 'package.json'
             - 'package-lock.json'
             - '.nvmrc'
-            - 'turbo.json'
-            - 'tsconfig.json'
             - 'knip.json'
-            - 'lefthook.yml'
-            - '.oxlintrc.json'
-            - '.oxfmtrc.json'
-            - '*.md'
-            - '.github/**'
-            - '.vscode/**'
+            - '.github/workflows/knip.yaml'
     pull_request:
         types:
             - opened
@@ -32,33 +25,20 @@ on:
             - 'package.json'
             - 'package-lock.json'
             - '.nvmrc'
-            - 'turbo.json'
-            - 'tsconfig.json'
             - 'knip.json'
-            - 'lefthook.yml'
-            - '.oxlintrc.json'
-            - '.oxfmtrc.json'
-            - '*.md'
-            - '.github/**'
-            - '.vscode/**'
+            - '.github/workflows/knip.yaml'
 
 concurrency:
-    group: lint-${{ github.workflow }}-${{ github.ref }}
+    group: knip-${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
     contents: read
 
 jobs:
-    lint:
+    knip:
         runs-on: ubuntu-latest
         timeout-minutes: 10
-        strategy:
-            fail-fast: false
-            matrix:
-                lint-commands:
-                    - 'npm run lint:ox'
-                    - 'npm run format:ox:check'
 
         steps:
             - name: Checkout repository
@@ -76,5 +56,5 @@ jobs:
             - name: Install dependencies
               run: npm ci --no-audit --no-fund
 
-            - name: Run lint command
-              run: ${{ matrix.lint-commands }}
+            - name: Run dependency/export audit
+              run: npm run knip

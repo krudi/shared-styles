@@ -4,11 +4,31 @@ on:
     push:
         branches:
             - main
+        paths:
+            - 'addons/**'
+            - 'apps/**'
+            - 'packages/**'
+            - 'package.json'
+            - 'package-lock.json'
+            - '.nvmrc'
+            - 'turbo.json'
+            - 'tsconfig.json'
+            - '.github/workflows/build.yaml'
     pull_request:
         types:
             - opened
             - synchronize
             - reopened
+        paths:
+            - 'addons/**'
+            - 'apps/**'
+            - 'packages/**'
+            - 'package.json'
+            - 'package-lock.json'
+            - '.nvmrc'
+            - 'turbo.json'
+            - 'tsconfig.json'
+            - '.github/workflows/build.yaml'
 
 concurrency:
     group: build-${{ github.workflow }}-${{ github.ref }}

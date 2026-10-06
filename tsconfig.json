@@ -1,6 +1,13 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
+        "exactOptionalPropertyTypes": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedSideEffectImports": true,
+        "verbatimModuleSyntax": true,
+        "noFallthroughCasesInSwitch": true,
         "paths": {
             "@krudi/styles/*": ["./packages/styles/src/*"]
         }

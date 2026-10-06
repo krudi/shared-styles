@@ -1,4 +1,4 @@
-export type BlockNavigationItem = {
+type BlockNavigationItem = {
     href: string;
     label: string;
 };

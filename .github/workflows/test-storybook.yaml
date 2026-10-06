@@ -4,12 +4,32 @@ on:
     push:
         branches:
             - main
+        paths:
+            - 'addons/**'
+            - 'apps/**'
+            - 'packages/**'
+            - 'package.json'
+            - 'package-lock.json'
+            - '.nvmrc'
+            - 'turbo.json'
+            - 'tsconfig.json'
+            - '.github/workflows/test-storybook.yaml'
 
     pull_request:
         types:
             - opened
             - synchronize
             - reopened
+        paths:
+            - 'addons/**'
+            - 'apps/**'
+            - 'packages/**'
+            - 'package.json'
+            - 'package-lock.json'
+            - '.nvmrc'
+            - 'turbo.json'
+            - 'tsconfig.json'
+            - '.github/workflows/test-storybook.yaml'
 
 concurrency:
     group: test-storybook-${{ github.workflow }}-${{ github.ref }}

@@ -45,6 +45,4 @@ Use these docs as the source of truth:
 - `README.md`
 - `packages/styles/README.md`
 - `apps/storybook/README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/COMPONENT_COVERAGE.md`
-- `docs/TOKEN_GUIDELINES.md`
+- `AGENTS.md`

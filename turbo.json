@@ -1,10 +1,11 @@
 {
-    "$schema": "https://turborepo.com/schema.json",
+    "$schema": "https://turborepo.dev/schema.json",
     "ui": "tui",
+    "agentGuidance": false,
     "tasks": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**", "storybook-static/**", ".cache/tsbuildinfo.json"],
+            "outputs": ["dist/**", "storybook-static/**"],
             "inputs": ["$TURBO_DEFAULT$", "**/.env*"],
             "outputLogs": "new-only"
         },
@@ -16,7 +17,7 @@
             "cache": false
         },
         "typecheck": {
-            "dependsOn": ["^typecheck"],
+            "dependsOn": ["^typecheck", "^build"],
             "inputs": ["$TURBO_DEFAULT$", "**/*.ts", "**/*.tsx", "tsconfig*.json"],
             "outputs": [".cache/tsbuildinfo.json"],
             "outputLogs": "new-only"

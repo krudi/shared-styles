@@ -9,6 +9,13 @@
         "jsxImportSource": "vue",
         "strict": true,
         "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedSideEffectImports": true,
+        "verbatimModuleSyntax": true,
+        "noFallthroughCasesInSwitch": true,
         "noEmit": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
@@ -22,6 +29,6 @@
         "tsBuildInfoFile": "./.cache/tsbuildinfo.json",
         "disableSourceOfProjectReferenceRedirect": true
     },
-    "include": ["src/**/*", "env.d.ts"],
+    "include": ["src/**/*", "env.d.ts", "vite.config.ts", "vitest.config.ts"],
     "exclude": ["node_modules", "dist"]
 }

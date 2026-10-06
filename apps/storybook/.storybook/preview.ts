@@ -1,7 +1,7 @@
 import '@krudi/styles/css';
 import './preview.css';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import type { Preview } from '@storybook/html';
+import type { Preview } from '@storybook/html-vite';
 import { MINIMAL_VIEWPORTS } from 'storybook/viewport';
 
 const preview: Preview = {

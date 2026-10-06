@@ -1,0 +1,25 @@
+{
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "workspaces": {
+        "packages/styles": {
+            "entry": ["src/scripts/*.ts"],
+            "project": ["src/scripts/**/*.ts"],
+            "ignoreDependencies": ["@krudi/icons"]
+        },
+        "packages/react": {
+            "project": ["*.ts", "src/**/*.{ts,tsx}"]
+        },
+        "packages/vue": {
+            "project": ["*.ts", "src/**/*.{ts,vue}"]
+        },
+        "addons/storybook-design-tokens": {
+            "entry": ["src/index.tsx", "src/preset.ts", "preset.js"],
+            "project": ["*.{js,ts}", ".storybook/**/*.ts", "src/**/*.{ts,tsx,mdx}"],
+            "ignoreUnresolved": ["^file://"]
+        },
+        "apps/storybook": {
+            "entry": [".storybook/*.ts", "src/**/*.stories.ts", "src/**/*.mdx"],
+            "project": ["*.ts", ".storybook/**/*.ts", "src/**/*.{ts,mdx}"]
+        }
+    }
+}
