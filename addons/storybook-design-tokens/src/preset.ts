@@ -3,7 +3,7 @@ import path from 'node:path';
 
 import { mergeConfig, type PluginOption } from 'vite';
 
-import type { DesignTokenGroup, DesignTokensAddonOptions, DesignTokensData } from './types';
+import type { DesignTokenGroup, DesignTokensAddonOptions, DesignTokensData } from './types.js';
 
 const PACKAGE_NAME = '@krudi/storybook-design-tokens';
 const VIRTUAL_MODULE_ID = 'virtual:krudi-storybook-design-tokens';

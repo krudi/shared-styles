@@ -1,9 +1,9 @@
 import react from '@vitejs/plugin-react';
+import dts from 'unplugin-dts/vite';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    plugins: [react(), dts({ tsconfigPath: './tsconfig.json', rollupTypes: true })],
+    plugins: [react(), dts({ tsconfigPath: './tsconfig.json', entryRoot: 'src', include: ['src'] })],
     build: {
         lib: {
             entry: 'src/index.ts',

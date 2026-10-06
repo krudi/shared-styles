@@ -1,9 +1,21 @@
 import vue from '@vitejs/plugin-vue';
+import dts from 'unplugin-dts/vite';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    plugins: [vue(), dts({ tsconfigPath: './tsconfig.json', rollupTypes: true })],
+    plugins: [
+        vue(),
+        dts({
+            tsconfigPath: './tsconfig.json',
+            entryRoot: 'src',
+            include: ['src'],
+            processor: 'vue',
+            beforeWriteFile: (filePath, content) => ({
+                filePath,
+                content: content.replaceAll(/(from '\.{1,2}\/[^']+\.vue)'/g, "$1.js'"),
+            }),
+        }),
+    ],
     build: {
         lib: {
             entry: 'src/index.ts',

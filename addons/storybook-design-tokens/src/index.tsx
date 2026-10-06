@@ -1,9 +1,9 @@
 import React from 'react';
 import designTokens from 'virtual:krudi-storybook-design-tokens';
 
-import type { DesignTokenGroup, DesignTokenRow, StoryMetaLike } from './types';
+import type { DesignTokenGroup, DesignTokenRow, StoryMetaLike } from './types.js';
 
-export type { DesignTokenGroup, DesignTokenRow, DesignTokensAddonOptions, DesignTokensData } from './types';
+export type { DesignTokenGroup, DesignTokenRow, DesignTokensAddonOptions, DesignTokensData } from './types.js';
 
 type DesignTokensTableProps = {
     rows?: readonly DesignTokenRow[];
@@ -75,7 +75,7 @@ export function DesignTokenDocs({ of, title = 'Design Tokens' }: DesignTokenDocs
 
     const matchingGroups = groupIds
         .map((groupId) => designTokens[groupId])
-        .filter((entry): entry is DesignTokenGroup => Boolean(entry && entry.rows.length));
+        .filter((entry): entry is DesignTokenGroup => Boolean(entry?.rows.length));
 
     if (!matchingGroups.length) {
         return null;

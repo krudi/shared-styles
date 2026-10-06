@@ -5,7 +5,7 @@ export type DesignTokenRow = {
 
 export type DesignTokenGroup = {
     id: string;
-    presenter?: string;
+    presenter?: string | undefined;
     rows: DesignTokenRow[];
 };
 
@@ -15,7 +15,7 @@ export type DesignTokensAddonOptions = {
     sources?: string[];
 };
 
-export type DesignTokensParameter = string | string[];
+type DesignTokensParameter = string | string[];
 
 export type StoryMetaLike = {
     default?: {

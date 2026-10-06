@@ -1,5 +1,5 @@
 declare module 'virtual:krudi-storybook-design-tokens' {
-    import type { DesignTokensData } from './types';
+    import type { DesignTokensData } from './types.js';
 
     export const designTokens: DesignTokensData;
 
