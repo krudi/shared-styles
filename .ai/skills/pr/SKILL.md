@@ -13,7 +13,8 @@ description: Create a pull request for the current branch with a conventional ti
 4. Draft the PR:
    - **Title**: `type(scope): description` — conventional commit format, ≤ 70 chars
    - **Summary**: 2–3 bullet points on what changed and WHY
-   - **Test plan**: markdown checklist of what to verify before merging
+   - **Test plan**: checklist of the commands from the AGENTS.md verification table rows that match the diff, plus
+     Storybook visual review for style changes
 5. Create: `gh pr create --title "..." --body "$(cat <<'EOF' ... EOF)"`
 
 ## Never
@@ -21,3 +22,4 @@ description: Create a pull request for the current branch with a conventional ti
 - Force-push (`--force`)
 - Use a title that doesn't follow conventional commit format
 - Create a PR from `main` or `master`
+- Include secrets, `.env` contents, or local-only environment files

@@ -5,13 +5,10 @@ description: Run the project's full verification suite (lint, typecheck, build, 
 
 # Test
 
-Run the full quality check for shared-styles:
+AGENTS.md is the single source for which checks to run:
 
-1. `npm run build` — build all packages (Turbo)
-2. `npm run lint` — lint all packages
-3. `npm run typecheck` — typecheck all packages
-4. `npm run test:storybook` — run Storybook visual tests
-5. Report all failures with package name and file:line references
-6. If all pass, confirm with a one-line summary
+1. Pick the rows of its verification table that match the changed workspaces (`git status`, `git diff HEAD`).
+2. For cross-cutting changes or a final handoff, run its cross-cutting row in full.
 
-Note: visual changes should also be reviewed manually in Storybook (`npm run dev`) before publishing.
+Report failures with package name, file:line references and the exact command; if all pass, confirm with a one-line
+summary. Visual changes also need a manual review in Storybook before publishing.

@@ -20,8 +20,13 @@ description: Create a conventional commit for staged or unstaged changes. Inspec
 
 `feat` · `fix` · `docs` · `style` · `refactor` · `perf` · `test` · `build` · `ci` · `chore` · `revert`
 
+## Scopes
+
+Use the workspace or area: `styles`, `icons`, `react`, `vue`, `storybook`, `addon`, `release`, `deps`, `tooling`,
+`vscode`, `agents`, `a11y`.
+
 ## Never
 
 - Skip hooks (`--no-verify`)
 - Amend existing commits unless explicitly asked
-- Stage `.env` files or secrets
+- Stage `.env` files, secrets, or build output (`dist/`, `storybook-static/`, `coverage/`)
