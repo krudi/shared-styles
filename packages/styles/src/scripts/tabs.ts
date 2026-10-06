@@ -77,7 +77,7 @@ export const wireTabs = (root: HTMLElement | null): (() => void) => {
     const onKeydown = (event: KeyboardEvent): void => {
         const currentTab = event.target instanceof HTMLButtonElement ? event.target : null;
 
-        if (!currentTab || currentTab.getAttribute('role') !== 'tab') {
+        if (currentTab?.getAttribute('role') !== 'tab') {
             return;
         }
 
@@ -87,7 +87,7 @@ export const wireTabs = (root: HTMLElement | null): (() => void) => {
             return;
         }
 
-        let nextIndex: number | null = null;
+        let nextIndex: number;
 
         switch (event.key) {
             case 'ArrowRight':
@@ -108,7 +108,7 @@ export const wireTabs = (root: HTMLElement | null): (() => void) => {
                 return;
         }
 
-        const nextTab = nextIndex === null ? null : tabs[nextIndex];
+        const nextTab = tabs[nextIndex];
 
         if (!nextTab) {
             return;
