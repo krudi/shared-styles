@@ -47,9 +47,5 @@ src/                export-ignore
 src/**              export-ignore
 .gitignore          export-ignore
 .gitattributes      export-ignore
-.prettierignore     export-ignore
-eslint.config.ts    export-ignore
-postcss.config.json export-ignore
-prettier.config.ts  export-ignore
-stylelint.config.ts export-ignore
+postcss.config.mjs  export-ignore
 tsconfig*.json      export-ignore

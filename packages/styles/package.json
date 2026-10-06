@@ -27,6 +27,8 @@
         "url": "https://krudi.io"
     },
     "type": "module",
+    "main": "./dist/styles/index.css",
+    "style": "./dist/styles/index.css",
     "exports": {
         ".": "./dist/styles/index.css",
         "./css": "./dist/styles/index.css",
@@ -55,21 +57,22 @@
         "./utilities": "./dist/styles/utilities/index.css",
         "./html": "./dist/styles/html/index.css"
     },
-    "main": "./dist/styles/index.css",
-    "style": "./dist/styles/index.css",
-    "sideEffects": [
-        "**/*.css"
-    ],
     "files": [
         "dist",
         "README.md",
         "LICENSE"
+    ],
+    "sideEffects": [
+        "**/*.css"
     ],
     "scripts": {
         "build": "rm -rf dist && tsc -p tsconfig.build.json && postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map",
         "clean": "rm -rf .turbo .cache dist node_modules",
         "dev": "tsc -p tsconfig.build.json --watch & postcss \"src/styles/**/*.css\" --base src/styles --dir dist/styles --map --watch",
         "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "engines": {
+        "node": ">= 24.19.0"
     },
     "dependencies": {
         "@krudi/icons": "*"
@@ -82,8 +85,5 @@
         "postcss-import": "^16.1.1",
         "postcss-nesting": "^14.0.3",
         "typescript": "^6.0.2"
-    },
-    "engines": {
-        "node": ">= 24.19.0"
     }
 }
