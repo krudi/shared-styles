@@ -23,7 +23,7 @@ onUnmounted(() => document.removeEventListener('mousedown', onClickOutside));
             type="button"
             class="dropdown-trigger"
             :aria-expanded="open"
-            aria-haspopup="listbox"
+            aria-haspopup="menu"
             @click="open = !open"
         >
             <slot name="trigger" />
@@ -35,7 +35,7 @@ onUnmounted(() => document.removeEventListener('mousedown', onClickOutside));
         <ul
             v-if="open"
             class="dropdown-list"
-            role="listbox"
+            role="menu"
             style="display: flex; flex-direction: column; opacity: 1"
         >
             <slot />

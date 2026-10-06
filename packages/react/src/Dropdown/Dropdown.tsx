@@ -30,7 +30,7 @@ export function Dropdown({ trigger, className, children, ...props }: DropdownPro
                 type="button"
                 className="dropdown-trigger"
                 aria-expanded={open}
-                aria-haspopup="listbox"
+                aria-haspopup="menu"
                 onClick={() => setOpen((v) => !v)}
             >
                 {trigger}
@@ -41,7 +41,7 @@ export function Dropdown({ trigger, className, children, ...props }: DropdownPro
             </button>
             <ul
                 className="dropdown-list"
-                role="listbox"
+                role="menu"
                 style={open ? { display: 'flex', flexDirection: 'column', opacity: '1' } : undefined}
             >
                 {children}
@@ -60,6 +60,7 @@ export function DropdownItem({ href, current, onSelect, className, children, ...
     const linkProps: AnchorHTMLAttributes<HTMLAnchorElement> = {
         href,
         className: 'dropdown-list-item-link',
+        role: 'menuitem',
         'aria-current': current ? 'page' : undefined,
         onClick: onSelect,
     };
@@ -75,6 +76,7 @@ export function DropdownItem({ href, current, onSelect, className, children, ...
                 <button
                     type="button"
                     className="dropdown-list-item-link"
+                    role="menuitem"
                     onClick={onSelect}
                 >
                     {children}

@@ -15,6 +15,7 @@ const emit = defineEmits<{
             v-if="href"
             :href="href"
             class="dropdown-list-item-link"
+            role="menuitem"
             :aria-current="current ? 'page' : undefined"
         >
             <slot />
@@ -23,6 +24,7 @@ const emit = defineEmits<{
             v-else
             type="button"
             class="dropdown-list-item-link"
+            role="menuitem"
             @click="emit('select')"
         >
             <slot />

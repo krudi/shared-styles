@@ -1,4 +1,12 @@
-import { createContext, useContext, useState, type ButtonHTMLAttributes, type HTMLAttributes } from 'react';
+import {
+    createContext,
+    useCallback,
+    useContext,
+    useMemo,
+    useState,
+    type ButtonHTMLAttributes,
+    type HTMLAttributes,
+} from 'react';
 
 import { cn } from '../utils.js';
 
@@ -32,13 +40,18 @@ export function Tabs({
     const [internal, setInternal] = useState(defaultTab);
     const activeTab = controlled ?? internal;
 
-    function setActiveTab(id: string) {
-        setInternal(id);
-        onTabChange?.(id);
-    }
+    const setActiveTab = useCallback(
+        (id: string) => {
+            setInternal(id);
+            onTabChange?.(id);
+        },
+        [onTabChange]
+    );
+
+    const contextValue = useMemo(() => ({ activeTab, setActiveTab }), [activeTab, setActiveTab]);
 
     return (
-        <TabsContext.Provider value={{ activeTab, setActiveTab }}>
+        <TabsContext.Provider value={contextValue}>
             <div
                 className={cn('tabs', className)}
                 {...props}

@@ -105,12 +105,15 @@ export function CardSubtitle({ className, children, ...props }: HTMLAttributes<H
     );
 }
 
-export interface CardImageProps extends ImgHTMLAttributes<HTMLImageElement> {}
+export interface CardImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+    alt: string;
+}
 
-export function CardImage({ className, ...props }: CardImageProps) {
+export function CardImage({ className, alt, ...props }: CardImageProps) {
     return (
         <img
             className={className}
+            alt={alt}
             {...props}
         />
     );
