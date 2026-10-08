@@ -37,8 +37,8 @@ Do not create competing documentation; update the owner instead.
 packages/styles/                  # @krudi/styles — palette, theme, tokens (variables.css), base, layout, html,
                                   #   components, forms, utilities (src/styles) and JS helpers (src/scripts)
 packages/icons/                   # @krudi/icons — SVG assets, optimised by svgo into dist/
-packages/react/                   # @krudi/react — React wrappers for @krudi/styles classes (Vite, Vitest)
-packages/vue/                     # @krudi/vue — Vue wrappers for @krudi/styles classes (Vite, Vitest, vue-tsc)
+packages/react/                   # @krudi/react — React wrappers for @krudi/styles classes (Vite)
+packages/vue/                     # @krudi/vue — Vue wrappers for @krudi/styles classes (Vite, vue-tsc)
 addons/storybook-design-tokens/   # @krudi/storybook-design-tokens — Storybook addon for token docs
 apps/storybook/                   # @krudi/storybook (private) — HTML stories, Vitest story tests
 turbo.json                        # task pipeline
@@ -89,5 +89,5 @@ declaring a change complete, widen to every area it crosses. CI runs `lint:ox`, 
 | cross-cutting, tooling, markdown | `npm run verify:static` (typecheck, lint, knip)                                          | `npm run verify:static && npm run build && npm run test:storybook`        |
 
 `npm run test:storybook` needs Playwright Chromium (`npm exec -- playwright install chromium`); if it is missing, report
-that rather than skipping the check. `@krudi/react` and `@krudi/vue` have no unit tests yet (their `test` script passes
-with zero tests) and Storybook covers only the HTML/CSS surface, so typecheck and build are what verify them.
+that rather than skipping the check. `@krudi/react` and `@krudi/vue` have no unit tests and no test runner; Storybook
+covers only the HTML/CSS surface, so typecheck and build are what verify them.

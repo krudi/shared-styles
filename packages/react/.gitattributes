@@ -44,5 +44,3 @@ src/**              export-ignore
 .gitattributes      export-ignore
 tsconfig*.json      export-ignore
 vite.config.ts      export-ignore
-vitest.config.ts    export-ignore
-vitest.setup.ts     export-ignore

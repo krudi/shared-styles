@@ -47,25 +47,18 @@
         "build": "vite build",
         "clean": "rm -rf .turbo .cache dist node_modules",
         "dev": "vite build --watch",
-        "test": "vitest run --passWithNoTests",
-        "test:coverage": "vitest run --coverage --passWithNoTests",
-        "test:watch": "vitest",
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "engines": {
         "node": ">= 24.19.0"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^7.0.1",
         "@types/node": "^24.19.1",
         "@types/react": "^19.2.18",
         "@vitejs/plugin-react": "^6.1.2",
-        "@vitest/coverage-v8": "^4.1.11",
-        "jsdom": "^30.1.2",
         "react": "^19.2.8",
         "typescript": "^6.0.2",
         "unplugin-dts": "^1.1.2",
-        "vite": "^8.3.3",
-        "vitest": "^4.1.11"
+        "vite": "^8.3.3"
     }
 }

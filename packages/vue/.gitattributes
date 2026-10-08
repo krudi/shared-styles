@@ -45,5 +45,3 @@ src/**              export-ignore
 env.d.ts            export-ignore
 tsconfig*.json      export-ignore
 vite.config.ts      export-ignore
-vitest.config.ts    export-ignore
-vitest.setup.ts     export-ignore
