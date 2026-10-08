@@ -30,19 +30,27 @@ jobs:
               env:
                   VERSION: ${{ inputs.version }}
               run: |
+                  if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+                    echo "Releases run only from main, not '$GITHUB_REF'."
+                    exit 1
+                  fi
                   if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
                     echo "Version must be a semantic version like 0.5.0 or 0.5.0-beta.1."
                     exit 1
                   fi
 
-    release:
+    deploy:
         needs: validate
+        if: github.ref == 'refs/heads/main'
         runs-on: ubuntu-latest
-        timeout-minutes: 15
+        timeout-minutes: 30
         permissions:
             contents: write
-        outputs:
-            tag: ${{ steps.package-meta.outputs.tag }}
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - name: Checkout repository
               uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
@@ -54,6 +62,9 @@ jobs:
               with:
                   cache: npm
                   node-version-file: .nvmrc
+
+            - name: Set up npm
+              run: npm install --global "npm@$(node -p "require('./package.json').packageManager.split('@')[1]")"
 
             - name: Read current package metadata
               id: package-meta
@@ -123,27 +134,52 @@ jobs:
                     fi
                   done
 
-            - name: Commit version bump
+            - name: Install dependencies
+              run: npm ci --no-audit --no-fund
+
+            - name: Build Storybook workspace
+              run: npm run build -- --filter=@krudi/storybook...
+
+            - name: Typecheck Storybook workspace
+              run: npm run typecheck -- --filter=@krudi/storybook...
+
+            - name: Lint
+              run: npm run lint
+
+            - name: Commit version bump and tag locally
               shell: bash
               env:
                   OLD_VERSION: ${{ steps.package-meta.outputs.old_version }}
                   NEW_VERSION: ${{ inputs.version }}
+                  TAG_NAME: ${{ steps.package-meta.outputs.tag }}
               run: |
                   set -euo pipefail
                   git config user.name "github-actions[bot]"
                   git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
                   git add apps/storybook/package.json package-lock.json
                   git commit -m "chore(release): bump @krudi/storybook from ${OLD_VERSION} to ${NEW_VERSION}"
-                  git push origin "HEAD:${GITHUB_REF_NAME}"
+                  git tag "$TAG_NAME"
+                  git push --dry-run --atomic origin "HEAD:${GITHUB_REF_NAME}" "refs/tags/${TAG_NAME}"
 
-            - name: Create tag
+            - name: Setup GitHub Pages
+              uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
+
+            - name: Upload Storybook artifact
+              uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
+              with:
+                  path: apps/storybook/storybook-static
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128
+
+            - name: Push version bump and tag
               shell: bash
               env:
                   TAG_NAME: ${{ steps.package-meta.outputs.tag }}
               run: |
                   set -euo pipefail
-                  git tag "$TAG_NAME"
-                  git push origin "$TAG_NAME"
+                  git push --atomic origin "HEAD:${GITHUB_REF_NAME}" "refs/tags/${TAG_NAME}"
 
             - name: Create GitHub release
               shell: bash
@@ -158,48 +194,3 @@ jobs:
                     LATEST_FLAG="--latest"
                   fi
                   gh release create "$TAG_NAME" --title "$TAG_NAME" --generate-notes $LATEST_FLAG
-
-    deploy:
-        needs: release
-        runs-on: ubuntu-latest
-        timeout-minutes: 15
-        permissions:
-            contents: read
-            pages: write
-            id-token: write
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Checkout release tag
-              uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
-              with:
-                  fetch-depth: 1
-                  ref: ${{ needs.release.outputs.tag }}
-
-            - name: Set up Node.js
-              uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
-              with:
-                  cache: npm
-                  node-version-file: .nvmrc
-
-            - name: Set up npm
-              run: npm install --global "npm@$(node -p "require('./package.json').packageManager.split('@')[1]")"
-
-            - name: Install dependencies
-              run: npm ci --no-audit --no-fund
-
-            - name: Build Storybook workspace
-              run: npm run build -- --filter=@krudi/storybook...
-
-            - name: Setup GitHub Pages
-              uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
-
-            - name: Upload Storybook artifact
-              uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
-              with:
-                  path: apps/storybook/storybook-static
-
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128

@@ -57,10 +57,11 @@ turbo.json                        # task pipeline
 ### Release
 
 Each publishable package (`styles`, `icons`, `react`, `vue`) is versioned and released independently through its
-`Release (@krudi/<name>)` GitHub workflow (`.github/workflows/release-<name>.yaml`, manual `workflow_dispatch` with the
-new version). The workflow bumps the version, commits, tags `@krudi/<name>@<version>`, builds and runs
-`npm publish --workspace=@krudi/<name>`. Never bump versions or publish locally. Storybook is deployed by
-`deploy-storybook.yaml`.
+`Release (@krudi/<name>)` GitHub workflow (`.github/workflows/release-<name>.yaml` calling `release-package.yaml`,
+manual `workflow_dispatch` on `main` with the new version). The workflow bumps the version locally, builds, typechecks,
+lints and runs `npm pack --dry-run`, then `npm publish --workspace=@krudi/<name>`; only after a successful publish does
+it push the bump commit and the `@krudi/<name>@<version>` tag and create the GitHub release. Never bump versions or
+publish locally. Storybook is deployed the same way by `deploy-storybook.yaml`.
 
 Before triggering a release: review the change in Storybook and confirm existing stories still render correctly.
 
