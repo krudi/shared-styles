@@ -15,5 +15,6 @@
 @import './_modal.css' layer(krd-components);
 @import './_pagination.css' layer(krd-components);
 @import './_pricing-table.css' layer(krd-components);
+@import './_skip-link.css' layer(krd-components);
 @import './_tabs.css' layer(krd-components);
 @import './_theme-switch.css' layer(krd-components);

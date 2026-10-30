@@ -54,6 +54,7 @@ JS helpers:
 - `Modal`
 - `Pagination`
 - `Pricing Table`
+- `Skip Link`
 - `Tabs`
 - `Theme Switch`
 
