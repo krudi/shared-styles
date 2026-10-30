@@ -223,6 +223,20 @@
         --krd-modal-footer-border-top-color: var(--krd-modal-border-color);
 
         /**
+         * @tokens Components/Breadcrumb
+         */
+        --krd-breadcrumb-padding-block: var(--krd-space-2);
+        --krd-breadcrumb-gap: var(--krd-space-1);
+        --krd-breadcrumb-min-height: 2.75rem;
+        --krd-breadcrumb-font-size: var(--krd-font-size-sm);
+        --krd-breadcrumb-separator: '/';
+        --krd-breadcrumb-separator-color: var(--krd-color-muted-foreground);
+        --krd-breadcrumb-link-color: var(--krd-links-color);
+        --krd-breadcrumb-link-color-hover: var(--krd-links-hover-color);
+        --krd-breadcrumb-current-color: var(--krd-color-foreground);
+        --krd-breadcrumb-current-font-weight: 600;
+
+        /**
          * @tokens Components/Blockquote
          */
 

@@ -42,6 +42,7 @@ JS helpers:
 - `Badge`
 - `Block Navigation`
 - `Blockquote`
+- `Breadcrumb`
 - `Button`
 - `Button Group`
 - `Card`

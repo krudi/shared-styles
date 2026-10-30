@@ -3,6 +3,7 @@
 @import './_alert.css' layer(krd-components);
 @import './_block-navigation.css' layer(krd-components);
 @import './_blockquote.css' layer(krd-components);
+@import './_breadcrumb.css' layer(krd-components);
 @import './_card.css' layer(krd-components);
 @import './_button-group.css' layer(krd-components);
 @import './_button.css' layer(krd-components);
