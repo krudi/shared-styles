@@ -47,6 +47,7 @@ JS helpers:
 - `Button Group`
 - `Card`
 - `Dropdown`
+- `Figure`
 - `Horizontal Line`
 - `List`
 - `Modal`

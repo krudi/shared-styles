@@ -1,0 +1,38 @@
+.figure {
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: var(--krd-figure-gap);
+}
+
+.figure-fluid {
+    display: flex;
+    width: 100%;
+}
+
+.figure-media,
+.figure-media img,
+.figure > picture,
+.figure > img,
+.figure > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.figure-fluid .figure-media,
+.figure-fluid .figure-media img,
+.figure-fluid > picture,
+.figure-fluid > img,
+.figure-fluid > a > img {
+    width: 100%;
+}
+
+.figure-caption {
+    padding-inline: var(--krd-figure-caption-padding-inline);
+    border-inline-start: var(--krd-figure-caption-border-width) solid var(--krd-figure-caption-border-color);
+    color: var(--krd-figure-caption-color);
+    font-size: var(--krd-figure-caption-font-size);
+    line-height: var(--krd-figure-caption-line-height);
+}

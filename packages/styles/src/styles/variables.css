@@ -237,6 +237,17 @@
         --krd-breadcrumb-current-font-weight: 600;
 
         /**
+         * @tokens Components/Figure
+         */
+        --krd-figure-gap: var(--krd-space-1);
+        --krd-figure-caption-padding-inline: var(--krd-space-2);
+        --krd-figure-caption-border-width: 0.25rem;
+        --krd-figure-caption-border-color: var(--krd-color-primary);
+        --krd-figure-caption-color: var(--krd-color-muted-foreground);
+        --krd-figure-caption-font-size: var(--krd-font-size-sm);
+        --krd-figure-caption-line-height: var(--krd-body-line-height-sm);
+
+        /**
          * @tokens Components/Blockquote
          */
 
