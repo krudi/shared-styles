@@ -72,13 +72,13 @@
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "engines": {
-        "node": ">= 24.19.0"
+        "node": ">= 26.13.0"
     },
     "dependencies": {
         "@krudi/icons": "*"
     },
     "devDependencies": {
-        "@types/node": "^24.19.1",
+        "@types/node": "^26.6.6",
         "autoprefixer": "^10.6.1",
         "postcss": "^8.5.29",
         "postcss-cli": "^11.0.1",

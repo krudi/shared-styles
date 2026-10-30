@@ -49,10 +49,10 @@
         "typecheck": "vue-tsc -p tsconfig.json --noEmit"
     },
     "engines": {
-        "node": ">= 24.19.0"
+        "node": ">= 26.13.0"
     },
     "devDependencies": {
-        "@types/node": "^24.19.1",
+        "@types/node": "^26.6.6",
         "@vitejs/plugin-vue": "^6.0.9",
         "@vue/language-core": "^3.3.12",
         "typescript": "^6.0.2",

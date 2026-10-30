@@ -34,7 +34,7 @@
         "typecheck": "npm --workspace @krudi/storybook-design-tokens run build && tsc -p tsconfig.json --noEmit"
     },
     "engines": {
-        "node": ">= 24.19.0"
+        "node": ">= 26.13.0"
     },
     "dependencies": {
         "@krudi/storybook-design-tokens": "*",
@@ -47,7 +47,7 @@
         "@storybook/addon-themes": "^10.6.1",
         "@storybook/addon-vitest": "^10.6.1",
         "@storybook/html-vite": "^10.6.1",
-        "@types/node": "^24.19.1",
+        "@types/node": "^26.6.6",
         "@vitest/browser-playwright": "^4.1.11",
         "@vitest/coverage-v8": "^4.1.11",
         "playwright": "^1.63.0",
