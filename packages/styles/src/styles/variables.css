@@ -282,6 +282,25 @@
         --krd-skip-link-outline-color: var(--krd-color-foreground);
 
         /**
+         * @tokens Components/Table
+         */
+        --krd-table-font-size: var(--krd-font-size-md);
+        --krd-table-cell-padding-block: var(--krd-space-2);
+        --krd-table-cell-padding-inline: var(--krd-space-3);
+        --krd-table-border-width: 1px;
+        --krd-table-border-color: var(--krd-color-border);
+        --krd-table-head-border-width: 2px;
+        --krd-table-head-background-color: var(--krd-color-surface-subtle);
+        --krd-table-head-color: var(--krd-color-surface-foreground);
+        --krd-table-head-font-weight: 600;
+        --krd-table-caption-padding-block-end: var(--krd-space-2);
+        --krd-table-caption-color: var(--krd-color-foreground);
+        --krd-table-caption-font-weight: 600;
+        --krd-table-foot-color: var(--krd-color-muted-foreground);
+        --krd-table-foot-font-size: var(--krd-font-size-sm);
+        --krd-table-stripe-background-color: var(--krd-color-surface-subtle);
+
+        /**
          * @tokens Components/Blockquote
          */
 

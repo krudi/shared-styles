@@ -55,6 +55,7 @@ JS helpers:
 - `Pagination`
 - `Pricing Table`
 - `Skip Link`
+- `Table`
 - `Tabs`
 - `Theme Switch`
 

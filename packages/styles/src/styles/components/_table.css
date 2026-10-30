@@ -1,0 +1,55 @@
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: var(--krd-table-font-size);
+    text-align: start;
+}
+
+.table caption {
+    padding-block-end: var(--krd-table-caption-padding-block-end);
+    color: var(--krd-table-caption-color);
+    font-weight: var(--krd-table-caption-font-weight);
+    text-align: start;
+    caption-side: top;
+}
+
+.table th,
+.table td {
+    padding-block: var(--krd-table-cell-padding-block);
+    padding-inline: var(--krd-table-cell-padding-inline);
+    border-block-end: var(--krd-table-border-width) solid var(--krd-table-border-color);
+    text-align: start;
+    vertical-align: top;
+}
+
+.table th {
+    color: var(--krd-table-head-color);
+    font-weight: var(--krd-table-head-font-weight);
+}
+
+.table thead th {
+    background-color: var(--krd-table-head-background-color);
+    border-block-end-width: var(--krd-table-head-border-width);
+}
+
+.table tfoot td,
+.table tfoot th {
+    color: var(--krd-table-foot-color);
+    font-size: var(--krd-table-foot-font-size);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: var(--krd-table-stripe-background-color);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: var(--krd-table-border-width) solid var(--krd-table-border-color);
+}
