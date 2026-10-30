@@ -248,6 +248,26 @@
         --krd-figure-caption-line-height: var(--krd-body-line-height-sm);
 
         /**
+         * @tokens Components/File List
+         */
+        --krd-file-list-gap: var(--krd-space-1);
+        --krd-file-list-item-gap: var(--krd-space-2);
+        --krd-file-list-item-padding-block: var(--krd-space-2);
+        --krd-file-list-item-padding-inline: var(--krd-space-2);
+        --krd-file-list-item-border-width: 1px;
+        --krd-file-list-item-border-color: var(--krd-color-border);
+        --krd-file-list-item-border-radius: var(--krd-radius-sm);
+        --krd-file-list-item-background-color: var(--krd-color-surface);
+        --krd-file-list-icon-size: 2.5rem;
+        --krd-file-list-icon-color: var(--krd-color-primary);
+        --krd-file-list-body-gap: 0.25rem;
+        --krd-file-list-link-color: var(--krd-links-color);
+        --krd-file-list-link-font-weight: 600;
+        --krd-file-list-meta-color: var(--krd-color-muted-foreground);
+        --krd-file-list-meta-font-size: var(--krd-font-size-sm);
+        --krd-file-list-meta-gap: 0.375rem;
+
+        /**
          * @tokens Components/Blockquote
          */
 

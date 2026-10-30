@@ -48,6 +48,7 @@ JS helpers:
 - `Card`
 - `Dropdown`
 - `Figure`
+- `File List`
 - `Horizontal Line`
 - `List`
 - `Modal`

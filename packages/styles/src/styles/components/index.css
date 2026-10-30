@@ -9,6 +9,7 @@
 @import './_button.css' layer(krd-components);
 @import './_dropdown.css' layer(krd-components);
 @import './_figure.css' layer(krd-components);
+@import './_file-list.css' layer(krd-components);
 @import './_horizontal-line.css' layer(krd-components);
 @import './_list.css' layer(krd-components);
 @import './_modal.css' layer(krd-components);
