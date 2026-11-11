@@ -1,47 +1,26 @@
-name: Test (Storybook)
+name: CI
 
 on:
     push:
         branches:
             - main
-        paths:
-            - 'addons/**'
-            - 'apps/**'
-            - 'packages/**'
-            - 'package.json'
-            - 'package-lock.json'
-            - '.nvmrc'
-            - 'turbo.json'
-            - 'tsconfig.json'
-            - '.github/workflows/test-storybook.yaml'
-
     pull_request:
         types:
             - opened
             - synchronize
             - reopened
-        paths:
-            - 'addons/**'
-            - 'apps/**'
-            - 'packages/**'
-            - 'package.json'
-            - 'package-lock.json'
-            - '.nvmrc'
-            - 'turbo.json'
-            - 'tsconfig.json'
-            - '.github/workflows/test-storybook.yaml'
 
 concurrency:
-    group: test-storybook-${{ github.workflow }}-${{ github.ref }}
+    group: ci-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
     contents: read
 
 jobs:
-    test-storybook:
-        timeout-minutes: 30
+    ci:
         runs-on: ubuntu-latest
+        timeout-minutes: 45
 
         steps:
             - name: Checkout repository
@@ -59,10 +38,28 @@ jobs:
             - name: Install dependencies
               run: npm ci --no-audit --no-fund
 
-            - name: Build Storybook workspace
-              run: npm run build -- --filter=@krudi/storybook...
+            - name: Lint
+              if: ${{ !cancelled() }}
+              run: npm run lint:ox
+
+            - name: Format
+              if: ${{ !cancelled() }}
+              run: npm run format:ox:check
+
+            - name: Typecheck
+              if: ${{ !cancelled() }}
+              run: npm run typecheck
+
+            - name: Knip
+              if: ${{ !cancelled() }}
+              run: npm run knip
+
+            - name: Build
+              if: ${{ !cancelled() }}
+              run: npm run build
 
             - name: Resolve Playwright version
+              if: ${{ !cancelled() }}
               id: playwright-version
               shell: bash
               run: |
@@ -70,13 +67,16 @@ jobs:
                   echo "version=$version" >> "$GITHUB_OUTPUT"
 
             - name: Restore Playwright browser cache
+              if: ${{ !cancelled() }}
               uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25
               with:
                   key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
                   path: ~/.cache/ms-playwright
 
             - name: Install Playwright browsers
+              if: ${{ !cancelled() }}
               run: npm exec -- playwright install --with-deps chromium
 
-            - name: Run Storybook tests
+            - name: Storybook tests
+              if: ${{ !cancelled() }}
               run: npm run test:storybook
