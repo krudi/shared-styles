@@ -14,7 +14,7 @@ npm workspaces + Turbo monorepo providing shared CSS foundations, design tokens,
 | Storybook scripts and story coverage               | `apps/storybook/README.md`                             |
 | Design-token docs addon                            | `addons/storybook-design-tokens/README.md`             |
 | Conventions, verification, release                 | This file                                              |
-| Repeatable workflows (commit, PR, test, …)         | `.ai/skills/<name>/SKILL.md` — pick by its description |
+| Repeatable workflows (commit, PR)                  | `.ai/skills/<name>/SKILL.md` — pick by its description |
 | Third-party skills                                 | `skills-lock.json` (`npx skills`)                      |
 
 Do not create competing documentation; update the owner instead.
