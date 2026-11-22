@@ -57,8 +57,8 @@
         "@vue/language-core": "^3.3.14",
         "typescript": "^6.0.3",
         "unplugin-dts": "^1.1.2",
-        "vite": "^8.3.5",
-        "vue": "^3.5.44",
+        "vite": "^8.3.8",
+        "vue": "^3.5.45",
         "vue-tsc": "^3.3.14"
     }
 }

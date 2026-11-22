@@ -15,8 +15,8 @@ Uses the native `<dialog>` element with `showModal()`/`close()`. Bind `v-model` 
 
 ```vue
 <script setup>
-import { ref } from 'vue';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@krudi/vue';
+import { ref } from 'vue';
 
 const isOpen = ref(false);
 </script>
