@@ -1,94 +1,23 @@
-# @krudi/shared-styles
+# shared-styles
 
-Shared CSS foundations, utilities, and components extracted for reuse across personal projects. Includes design tokens,
-reset styles, layout primitives, and early components/utilities.
-
-### Packages
-
-| Package                                                      | Description                                                            | Version                                                                                                 | Additional Information                                                                                                   |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [@krudi/styles](https://www.npmjs.com/package/@krudi/styles) | Shared CSS foundations, tokens, reset, layout, components, utilities   | ![NPM Version](https://img.shields.io/npm/v/@krudi/styles)                                              | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/styles) ![NPM License](https://img.shields.io/npm/l/@krudi/styles) |
-| [@krudi/icons](https://www.npmjs.com/package/@krudi/icons)   | Standalone SVG assets (external link, phone, envelope)                 | ![NPM Version](https://img.shields.io/npm/v/@krudi/icons)                                               | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/icons) ![NPM License](https://img.shields.io/npm/l/@krudi/icons)   |
-| [@krudi/react](https://www.npmjs.com/package/@krudi/react)   | React component wrappers for `@krudi/styles` CSS classes               | ![NPM Version](https://img.shields.io/npm/v/@krudi/react)                                               | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/react) ![NPM License](https://img.shields.io/npm/l/@krudi/react)   |
-| [@krudi/vue](https://www.npmjs.com/package/@krudi/vue)       | Vue component wrappers for `@krudi/styles` CSS classes                 | ![NPM Version](https://img.shields.io/npm/v/@krudi/vue)                                                 | ![NPM Downloads](https://img.shields.io/npm/dm/@krudi/vue) ![NPM License](https://img.shields.io/npm/l/@krudi/vue)       |
-| [@krudi/storybook](./apps/storybook)                         | HTML Storybook workspace for visual checks and Vitest Storybook runner | ![Workflow](https://img.shields.io/github/actions/workflow/status/krudi/shared-styles/ci.yaml?label=CI) | [Live preview](https://krudi.github.io/shared-styles/)                                                                   |
-
-> [!WARNING]
->
-> `@krudi/styles` is built for personal use and is still in active development. Expect breaking changes and limited
-> support while it evolves.
+Shared CSS foundations, tokens, components and icons, with React and Vue wrappers, for reuse across personal projects.
 
 ## Quick start
 
-> [!NOTE]
->
-> You need to have [Node.js](https://github.com/nodejs) installed on your computer before running this project.
+Requires Node.js 26.13.0 (`.nvmrc`).
 
-1. First clone this repository and navigate into your project directory
+1. Clone this repository and navigate into the project directory
 2. Install the dependencies: `npm install`
 3. Run the development server: `npm run dev`
 
-## Workspaces
+## Commands for linting/fixing files
 
-- `packages/styles` – CSS package (`@krudi/styles`) with palette, theme, tokens, base, layout, HTML, components, forms,
-  utilities, and JS helpers
-- `packages/icons` – SVG assets package (`@krudi/icons`) with common link/contact icons
-- `packages/react` – React component wrappers (`@krudi/react`) for `@krudi/styles` CSS classes
-- `packages/vue` – Vue component wrappers (`@krudi/vue`) for `@krudi/styles` CSS classes
-- `apps/storybook` – HTML Storybook (`@krudi/storybook`) for visual checks, docs, and tests
-
-## Using `@krudi/styles`
-
-Install the package (published build lives in `packages/styles`):
-
-```sh
-npm install @krudi/styles
-```
-
-Import everything:
-
-```css
-@import '@krudi/styles/css';
-```
-
-Or compose layers:
-
-```css
-/* Required core */
-@import '@krudi/styles/css/palette' layer(palette);
-@import '@krudi/styles/css/variables' layer(variables);
-@import '@krudi/styles/css/theme' layer(theme);
-
-/* Recommended reset + layout */
-@import '@krudi/styles/css/base' layer(base);
-@import '@krudi/styles/css/layout' layer(layout);
-@import '@krudi/styles/css/forms' layer(forms);
-
-/* Optional pieces */
-@import '@krudi/styles/css/components' layer(components);
-@import '@krudi/styles/css/utilities' layer(utilities);
-
-/* Additional layers if needed */
-@import '@krudi/styles/css/html' layer(html);
-```
-
-See [`packages/styles/README.md`](./packages/styles/README.md) for entrypoints and override guidance
-
-## Commands
-
-Workspace-level scripts:
-
-- `npm run build` – build all workspaces
-- `npm run dev` – run workspace dev scripts in parallel
-- `npm run test:storybook` – run Storybook-based tests
-- `npm run typecheck` – type-check all workspaces
-
-Linting/fixing:
-
-Navigate into your project directory and start linting your files.
-
+- `npm run verify:static`: typecheck, lint and Knip
 - `npm run lint`: runs the shared Oxlint and Oxfmt checks
 - `npm run lint:ox`: lints JavaScript and TypeScript
 - `npm run lint:ox:fix`: fixes supported Oxlint findings
 - `npm run format:ox`: formats supported repository files
 - `npm run format:ox:check`: checks formatting without writing files
+- `npm run typecheck`: type-checks all workspaces
+- `npm run knip`: reports unused files, exports and dependencies
+- `npm run test:storybook`: runs the Storybook-based tests

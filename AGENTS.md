@@ -7,15 +7,15 @@ npm workspaces + Turbo monorepo providing shared CSS foundations, design tokens,
 
 ## Where knowledge lives
 
-| Question                                           | Source                                                 |
-| -------------------------------------------------- | ------------------------------------------------------ |
-| Packages, quick start, consuming `@krudi/styles`   | `README.md`                                            |
-| A package's entrypoints, API and override guidance | `packages/<name>/README.md`                            |
-| Storybook scripts and story coverage               | `apps/storybook/README.md`                             |
-| Design-token docs addon                            | `addons/storybook-design-tokens/README.md`             |
-| Conventions, verification, release                 | This file                                              |
-| Repeatable workflows (commit, PR)                  | `.ai/skills/<name>/SKILL.md` — pick by its description |
-| Third-party skills                                 | `skills-lock.json` (`npx skills`)                      |
+| Question                                          | Source                                                 |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| Quick start and repository commands               | `README.md`                                            |
+| A package's usage, entrypoints, API and overrides | `packages/<name>/README.md`                            |
+| Storybook scripts and story coverage              | `apps/storybook/README.md`                             |
+| Design-token docs addon                           | `addons/storybook-design-tokens/README.md`             |
+| Conventions, verification, release                | This file                                              |
+| Repeatable workflows (commit, PR)                 | `.ai/skills/<name>/SKILL.md` — pick by its description |
+| Third-party skills                                | `skills-lock.json` (`npx skills`)                      |
 
 Do not create competing documentation; update the owner instead.
 
